@@ -1,40 +1,25 @@
+import { LuTrendingUp, LuMapPin, LuCar, LuClock, LuLeaf } from 'react-icons/lu';
+
 const metrics = [
   {
     value: '1 000 000+',
     label: 'Treceri zilnice',
-    icon: (
-      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+    icon: <LuTrendingUp className="w-6 h-6 text-green-600" />,
   },
   {
     value: '200+',
     label: 'Locații implementate',
-    icon: (
-      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    icon: <LuMapPin className="w-6 h-6 text-green-600" />,
   },
   {
     value: '50 000+',
     label: 'Locuri de parcare administrate',
-    icon: (
-      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-      </svg>
-    ),
+    icon: <LuCar className="w-6 h-6 text-green-600" />,
   },
   {
     value: '99,9%',
     label: 'Disponibilitate sistem',
-    icon: (
-      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    icon: <LuClock className="w-6 h-6 text-green-600" />,
   },
 ];
 
@@ -47,9 +32,7 @@ export default function Statistics() {
             {/* Left tagline */}
             <div className="flex items-start gap-4 lg:w-64 shrink-0">
               <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shrink-0">
-                <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17 8C8 10 5.9 16.17 3.82 19.96 3.32 20.88 4.39 21.8 5.22 21.17 7.5 19.43 10.15 17 12 17c0 0 1-1 2-3 1.33-2.67 2.33-5.33 3-8z" />
-                </svg>
+                <LuLeaf className="w-7 h-7 text-white" />
               </div>
               <p className="text-gray-900 font-bold text-lg leading-snug">
                 Tehnologie inteligentă pentru viitor sustenabil

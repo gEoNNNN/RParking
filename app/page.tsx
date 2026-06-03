@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import BenefitsBar from './components/BenefitsBar';
@@ -13,8 +15,20 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      <HeroSection />
+      <div className="relative">
+        <Navbar />
+        <Link href="/" className="absolute top-4 left-6 z-50">
+          <Image
+            src="/img/logo.png"
+            alt="RTi Parking Logo"
+            width={210}
+            height={80}
+            priority
+            className="object-contain"
+          />
+        </Link>
+        <HeroSection />
+      </div>
       <BenefitsBar />
       <ProductEcosystem />
       <HowItWorks />

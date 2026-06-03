@@ -24,7 +24,7 @@ const products = [
   },
   {
     title: 'BackOffice',
-    description: 'Administrare completă în timp real.',
+    description: 'Administrare completă si detaliata în timp real.',
     link: '#backoffice',
     image: null,
     isPhoto: false,
@@ -84,7 +84,7 @@ function BackOfficeIllustration() {
 export default function ProductEcosystem() {
   return (
     <section id="products" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-screen-2xl mx-auto px-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-3">
@@ -95,7 +95,7 @@ export default function ProductEcosystem() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {products.map((product) => (
             <div
               key={product.title}
