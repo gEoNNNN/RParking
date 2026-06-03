@@ -1,4 +1,5 @@
-import { LuTrendingUp, LuMapPin, LuCar, LuClock, LuLeaf } from 'react-icons/lu';
+import Image from 'next/image';
+import { LuTrendingUp, LuMapPin, LuCar, LuClock } from 'react-icons/lu';
 
 const metrics = [
   {
@@ -27,12 +28,12 @@ export default function Statistics() {
   return (
     <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-green-50 border border-green-100 rounded-2xl px-8 py-8">
+        <div data-reveal="scale" className="border border-green-100 rounded-2xl px-8 py-8" style={{ backgroundColor: '#f0f4ea' }}>
           <div className="flex flex-col lg:flex-row items-center gap-8">
             {/* Left tagline */}
             <div className="flex items-start gap-4 lg:w-64 shrink-0">
-              <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shrink-0">
-                <LuLeaf className="w-7 h-7 text-white" />
+              <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                <Image src="/img/leaf.png" alt="leaf" width={80} height={80} className="w-full h-full object-cover" />
               </div>
               <p className="text-gray-900 font-bold text-lg leading-snug">
                 Tehnologie inteligentă pentru viitor sustenabil
@@ -46,7 +47,7 @@ export default function Statistics() {
             <div className="flex flex-wrap justify-center lg:justify-start gap-10 flex-1">
               {metrics.map((m, idx) => (
                 <div key={idx} className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white border border-green-200 rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 bg-white border border-green-200 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 hover:scale-125 hover:border-green-500 hover:shadow-md hover:shadow-green-200/60 cursor-pointer">
                     {m.icon}
                   </div>
                   <div>

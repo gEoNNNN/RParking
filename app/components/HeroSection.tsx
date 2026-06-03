@@ -64,42 +64,42 @@ export default function HeroSection() {
         {/* ── Left content ──────────────────────────────────────── */}
         <div className="w-full lg:w-[50%] pt-32 pb-12">
           {/* Heading */}
-          <h1 className="text-7xl md:text-8xl font-black leading-tight mb-3">
+          <h1 data-reveal className="text-7xl md:text-8xl font-black leading-tight mb-3">
             <span className="text-green-600">R</span>
             <span className="text-gray-900">Parking</span>
           </h1>
 
           {/* Subtitle */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug mb-5">
+          <h2 data-reveal data-reveal-delay="120" className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug mb-5">
             Soluția inteligentă pentru<br />parcări moderne
           </h2>
 
           {/* Description */}
-          <p className="text-gray-800 text-xl leading-relaxed mb-12 max-w-lg font-medium">
+          <p data-reveal data-reveal-delay="220" className="text-gray-800 text-xl leading-relaxed mb-12 max-w-lg font-medium">
             Control complet al accesului, plăților și monitorizării
             într-o platformă integrată de hardware și software
             dezvoltată și produsă în Republica Moldova.
           </p>
 
           {/* CTA buttons */}
-          <div className="flex flex-wrap items-center gap-4 mb-20">
+          <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-20">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-colors text-sm shadow-md shadow-green-600/25"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
             >
               Solicită demonstrație
               <LuArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-colors text-sm bg-white/60 hover:bg-white"
+              className="inline-flex items-center border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"
             >
               Cere ofertă
             </a>
           </div>
 
           {/* Bottom badge strip */}
-          <div className="flex flex-wrap gap-x-6 gap-y-3">
+          <div data-reveal data-reveal-delay="460" className="flex flex-wrap gap-x-6 gap-y-3">
             {badges.map((b) => (
               <div key={b.line1} className="flex items-center gap-2">
                 {b.icon}
@@ -112,11 +112,11 @@ export default function HeroSection() {
         </div>
 
         {/* ── Right feature cards ───────────────────────────────── */}
-        <div className="hidden lg:flex flex-col gap-2 ml-110 mr-6 w-64 shrink-0 mt-64">
+        <div data-reveal="fade-right" data-reveal-delay="200" className="hidden lg:flex flex-col gap-2 ml-110 mr-6 w-64 shrink-0 mt-64">
           {featureCards.map((card) => (
             <div
               key={card.title}
-              className="flex items-center gap-2 px-4 py-5 cursor-pointer transition-colors rounded-xl bg-black/65 hover:bg-black/80 backdrop-blur-sm shadow-lg"
+              className="flex items-center gap-2 px-4 py-5 cursor-pointer transition-all duration-200 rounded-xl bg-black/65 hover:bg-black/80 backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-x-1"
             >
               <div className="w-11 h-11 flex items-center justify-center shrink-0">
                 {card.icon}

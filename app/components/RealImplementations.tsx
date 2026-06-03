@@ -15,7 +15,7 @@ export default function RealImplementations() {
     <section id="implementations" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div data-reveal="fade" className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-3">Implementări reale</h2>
           <div className="w-10 h-0.5 bg-green-500 mx-auto" />
         </div>
@@ -25,15 +25,16 @@ export default function RealImplementations() {
           {images.map((src, idx) => (
             <div
               key={idx}
-              className="relative h-48 min-w-42 flex-1 rounded-lg overflow-hidden shrink-0"
+              className="relative h-48 min-w-42 flex-1 rounded-lg overflow-hidden shrink-0 group cursor-pointer"
             >
               <Image
                 src={src}
                 alt={`Implementare ${idx + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
                 sizes="(max-width: 768px) 170px, 20vw"
               />
+              <div className="absolute inset-0 bg-green-800/0 group-hover:bg-green-800/20 transition-colors duration-300" />
             </div>
           ))}
         </div>
@@ -59,7 +60,7 @@ export default function RealImplementations() {
 
           <a
             href="#implementations"
-            className="shrink-0 border border-green-600 text-green-700 hover:bg-green-50 font-medium text-sm px-6 py-2.5 rounded-md transition-colors"
+            className="shrink-0 border border-green-600 text-green-700 hover:bg-green-600 hover:text-white font-medium text-sm px-6 py-2.5 rounded-md transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-green-600/30"
           >
             Vezi toate implementările
           </a>

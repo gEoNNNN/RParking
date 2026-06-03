@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-3">
-              <Image src="/img/logo.png" alt="RTi Parking" width={100} height={40} className="object-contain" />
+              <Image src="/img/logo.png" alt="RTi Parking" width={300} height={120} className="object-contain" />
             </div>
             <p className="text-gray-500 text-xs leading-relaxed max-w-50">
               RParking este un produs dezvoltat si produs de RTi in Republica Moldova.

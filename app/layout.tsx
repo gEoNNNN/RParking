@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import ScrollAnimations from "./components/ScrollAnimations";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -28,7 +29,10 @@ export default function RootLayout({
       lang="ro"
       className={`${manrope.variable} ${inter.variable} antialiased`}
     >
-      <body className={`min-h-screen ${inter.className}`}>{children}</body>
+      <body className={`min-h-screen ${inter.className}`}>
+        <ScrollAnimations />
+        {children}
+      </body>
     </html>
   );
 }

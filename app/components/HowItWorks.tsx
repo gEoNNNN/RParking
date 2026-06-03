@@ -20,7 +20,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-16 bg-white">
       <div className="max-w-screen-2xl mx-auto px-8">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div data-reveal="fade" className="text-center mb-14">
           <h2 className="text-3xl font-bold text-gray-900 mb-3">Cum funcționează</h2>
           <div className="w-10 h-0.5 bg-green-500 mx-auto" />
         </div>
@@ -31,7 +31,7 @@ export default function HowItWorks() {
             <Fragment key={step.title}>
               {/* Step block */}
               <div className="flex flex-col items-center gap-3 w-28 shrink-0">
-                <div className="w-24 h-24 rounded-full bg-white shadow-md border border-green-100 flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full bg-white shadow-md border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
                   {step.icon}
                 </div>
                 <p className="text-gray-700 text-sm font-semibold text-center leading-tight">

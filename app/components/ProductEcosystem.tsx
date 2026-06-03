@@ -86,7 +86,7 @@ export default function ProductEcosystem() {
     <section id="products" className="py-16 bg-white">
       <div className="max-w-screen-2xl mx-auto px-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div data-reveal="fade" className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-3">
             Ecosistemul{' '}
             <span className="text-green-600">R</span>Parking
@@ -96,10 +96,12 @@ export default function ProductEcosystem() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {products.map((product) => (
+          {products.map((product, idx) => (
             <div
               key={product.title}
-              className="group border border-gray-200 hover:border-green-300 hover:shadow-lg rounded-xl overflow-hidden transition-all bg-white"
+              data-reveal
+              data-reveal-delay={String(idx * 100)}
+              className="group border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-xl overflow-hidden transition-all duration-300 bg-white"
             >
               {/* Image area */}
               <div className="h-52 bg-gray-50 flex items-center justify-center overflow-hidden">
