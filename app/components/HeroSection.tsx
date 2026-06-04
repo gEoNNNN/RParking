@@ -99,7 +99,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom badge strip */}
-          <div data-reveal data-reveal-delay="460" className="flex flex-wrap gap-x-6 gap-y-3">
+          <div data-reveal data-reveal-delay="460" className="grid grid-cols-3 gap-x-6 gap-y-3 w-fit">
             {badges.map((b) => (
               <div key={b.line1} className="flex items-center gap-2">
                 {b.icon}

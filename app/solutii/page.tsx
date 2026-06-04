@@ -78,15 +78,15 @@ export default function SolutiiPage() {
         {/* ── Hero ── */}
         <section className="relative w-full min-h-[75vh] flex items-center overflow-hidden">
           {/* Background */}
-          <div className="absolute inset-0">
-            <Image src="/img/home.png" alt="" fill className="object-cover object-center" priority />
+          <div className="absolute inset-0 bg-gray-900">
+            <Image src="/img/home.png" alt="" fill className="object-contain object-center" priority />
           </div>
           {/* Left-only dark fog — only behind text */}
           <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/70 to-transparent pointer-events-none" style={{ width: '70%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-40">
-            <div className="max-w-2xl">
-              <h1 data-reveal className="text-5xl md:text-6xl font-black text-white leading-tight mb-4">
+            <div className="max-w-4xl">
+              <h1 data-reveal className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
                 Soluții pentru fiecare tip<br />de parcare
               </h1>
               <div data-reveal data-reveal-delay="150" className="w-12 h-1 bg-green-400 mb-6 rounded-full" />

@@ -23,7 +23,7 @@ export default function TargetAudience() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div data-reveal="fade" className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-3">
             Pentru cine este <span className="text-green-600">R</span>Parking
           </h2>
           <div className="w-16 h-1 bg-green-600 mx-auto rounded-full"></div>

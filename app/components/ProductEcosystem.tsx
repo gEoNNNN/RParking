@@ -5,29 +5,30 @@ const products = [
     title: 'Entry Point',
     description: 'Terminal de intrare cu ANPR, QR/NFC și barieră.',
     link: '#entry-point',
-    image: '/img/photo_2026-05-27_15-39-20.jpg',
+    image: '/img/produs1.png',
     isPhoto: true,
   },
   {
     title: 'Exit Point',
     description: 'Terminal de ieșire cu validare și control acces.',
     link: '#exit-point',
-    image: '/img/photo_2026-05-27_15-49-11.jpg',
+    image: '/img/produs2.png',
     isPhoto: true,
   },
   {
     title: 'Pay Point',
     description: 'Terminal de plată cu card, numerar și rest.',
     link: '#pay-point',
-    image: '/img/photo_2026-05-27_13-06-37.jpg',
+    image: '/img/produs3.png',
     isPhoto: true,
   },
   {
     title: 'BackOffice',
     description: 'Administrare completă si detaliata în timp real.',
     link: '#backoffice',
-    image: null,
-    isPhoto: false,
+    image: '/img/produs4.jpg',
+    isPhoto: true,
+    cover: true,
   },
 ];
 
@@ -87,7 +88,7 @@ export default function ProductEcosystem() {
       <div className="max-w-screen-2xl mx-auto px-10">
         {/* Header */}
         <div data-reveal="fade" className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-3">
             Ecosistemul{' '}
             <span className="text-green-600">R</span>Parking
           </h2>
@@ -104,22 +105,31 @@ export default function ProductEcosystem() {
               className="group border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-xl overflow-hidden transition-all duration-300 bg-white"
             >
               {/* Image area */}
-              <div className="h-52 bg-gray-50 flex items-center justify-center overflow-hidden">
+              <div className="h-52 bg-gray-50 relative flex items-center justify-center overflow-hidden">
                 {product.isPhoto && product.image ? (
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    width={300}
-                    height={280}
-                    className="object-contain h-48 w-auto"
-                  />
+                  (product as { cover?: boolean }).cover ? (
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      width={300}
+                      height={280}
+                      className="object-contain h-48 w-auto"
+                    />
+                  )
                 ) : (
                   <BackOfficeIllustration />
                 )}
               </div>
 
               <div className="p-5">
-                <h3 className="text-gray-900 font-bold text-base mb-1.5">{product.title}</h3>
+                <h3 className="text-gray-900 font-extrabold text-xl mb-1.5">{product.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{product.description}</p>
                 <a
                   href={product.link}

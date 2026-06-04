@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-100 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-gray-400 text-xs">© 2024 RTi. Toate drepturile rezervate.</p>
+          <p className="text-gray-400 text-xs">© 2026 RTi. Toate drepturile rezervate.</p>
           <div className="flex gap-5">
             <Link href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">Politica de confidentialitate</Link>
             <Link href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">Termeni si conditii</Link>

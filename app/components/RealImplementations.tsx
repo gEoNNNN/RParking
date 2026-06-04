@@ -1,3 +1,5 @@
+'use client';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const images = [
@@ -11,12 +13,20 @@ const images = [
 ];
 
 export default function RealImplementations() {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setLightbox(null); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
   return (
     <section id="implementations" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div data-reveal="fade" className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">Implementări reale</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Implementări reale</h2>
           <div className="w-10 h-0.5 bg-green-500 mx-auto" />
         </div>
 
@@ -26,6 +36,7 @@ export default function RealImplementations() {
             <div
               key={idx}
               className="relative h-48 min-w-42 flex-1 rounded-lg overflow-hidden shrink-0 group cursor-pointer"
+              onClick={() => setLightbox(src)}
             >
               <Image
                 src={src}
@@ -66,6 +77,36 @@ export default function RealImplementations() {
           </a>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-5 right-5 text-white/80 hover:text-white transition-colors z-10"
+            onClick={() => setLightbox(null)}
+            aria-label="Închide"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div
+            className="relative w-full max-w-5xl max-h-[88vh] aspect-video"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={lightbox}
+              alt=""
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
