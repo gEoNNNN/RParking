@@ -40,6 +40,7 @@ const gallery = [
   { image: '/img/implementari/pay%20point.png', title: 'Pay Point', description: 'Plăți cash și card, chitanță automată, interfață intuitivă.' },
   { image: '/img/implementari/control%20acces.png', title: 'Control acces', description: 'Echipamente moderne pentru verificare rapidă și sigură.' },
   { image: '/img/implementari/instalare%20profesionala.png', title: 'Instalare profesională', description: 'Implementare curată, integrată perfect în infrastructura parcării.' },
+  { image: '/img/implementari/RParking%20back%20office.png', title: 'Monitorizare BackOffice', description: 'Dashboard centralizat pentru control și raportare în timp real.' },
 ];
 
 const usedProducts = [
