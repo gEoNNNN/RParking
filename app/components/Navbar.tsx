@@ -72,7 +72,7 @@ export default function Navbar() {
       </div>
 
       {/* Fog/mist gradient that fades from white into the hero image below */}
-      {!pathname.startsWith('/solutii') && !pathname.startsWith('/platforma-rparking') && (
+      {!pathname.startsWith('/solutii') && !pathname.startsWith('/platforma-rparking') && !pathname.startsWith('/products') && (
         <div className="absolute top-full left-0 right-0 h-14 bg-linear-to-b from-white via-white/65 to-transparent pointer-events-none" />
       )}
 

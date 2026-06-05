@@ -4,7 +4,7 @@ const products = [
   {
     title: 'Entry Point',
     description: 'Terminal de intrare cu ANPR, QR/NFC și barieră.',
-    link: '#entry-point',
+    link: '/products/entry-point',
     image: '/img/produs1.png',
     isPhoto: true,
   },
