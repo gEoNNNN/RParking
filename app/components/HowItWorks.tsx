@@ -18,7 +18,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-16 bg-white">
-      <div className="max-w-screen-2xl mx-auto px-8">
+      <div className="max-w-screen-2xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div data-reveal="fade" className="text-center mb-14">
           <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Cum funcționează</h2>
@@ -26,12 +26,12 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps row */}
-        <div className="flex items-start w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-8 gap-x-4 lg:flex lg:items-start lg:w-full">
           {steps.map((step, idx) => (
             <Fragment key={step.title}>
               {/* Step block */}
-              <div className="flex flex-col items-center gap-3 w-28 shrink-0">
-                <div className="w-24 h-24 rounded-full bg-white shadow-md border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
+              <div className="flex flex-col items-center gap-3 lg:w-28 shrink-0">
+                <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-white shadow-md border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
                   {step.icon}
                 </div>
                 <p className="text-gray-700 text-sm font-semibold text-center leading-tight">
@@ -39,9 +39,9 @@ export default function HowItWorks() {
                 </p>
               </div>
 
-              {/* Arrow centered between circles */}
+              {/* Arrow centered between circles — desktop only */}
               {idx < steps.length - 1 && (
-                <div className="flex-1 flex justify-center mt-10">
+                <div className="hidden lg:flex flex-1 justify-center mt-10">
                   <FaArrowRightLong className="text-green-700 shrink-0" style={{ fontSize: '1.5rem' }} />
                 </div>
               )}

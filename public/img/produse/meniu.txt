@@ -1,0 +1,17 @@
+Structura meniului
+
+Produse
+
+Entry Point
+Exit Point CardPass
+Exit Point Ticket
+Pay Point
+BackOffice
+
+Astfel, fiecare produs poate avea și propria pagină individuală SEO:
+
+/products/entry-point
+/products/exit-point-cardpass
+/products/exit-point-ticket
+/products/pay-point
+/products/backoffice

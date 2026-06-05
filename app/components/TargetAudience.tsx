@@ -28,10 +28,10 @@ export default function TargetAudience() {
           </h2>
           <div className="w-16 h-1 bg-green-600 mx-auto rounded-full"></div>
         </div>
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-6">
           {audiences.map((a) => (
             <div key={a.title} className="flex flex-col items-center gap-3 text-center">
-              <div className="w-24 h-24 rounded-full bg-green-50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-green-100 hover:shadow-lg hover:shadow-green-200/50 cursor-pointer">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-green-50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-green-100 hover:shadow-lg hover:shadow-green-200/50 cursor-pointer">
                 {a.icon}
               </div>
               <span className="text-gray-700 text-sm font-bold leading-tight">{a.title}</span>

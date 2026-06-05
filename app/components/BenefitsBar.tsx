@@ -42,37 +42,35 @@ const metrics = [
 
 export default function BenefitsBar() {
   return (
-    <section className="relative">
-      {/* Image sets the section height */}
-      <img src="/img/bg%20cards.png" alt="" className="w-full object-cover block" />
+    <section className="relative bg-green-900 overflow-hidden">
+      {/* Image as covering background */}
+      <img src="/img/bg%20cards.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
 
-      {/* Content overlaid on top */}
-      <div className="absolute inset-0 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 w-full">
-          <div className="flex flex-col lg:flex-row items-center gap-10">
-            {/* Left tagline */}
-            <div className="flex items-center gap-3 lg:w-72 shrink-0">
-              <LiaLeafSolid className="w-16 h-16 text-green-400 shrink-0" />
-              <p className="text-white text-2xl font-bold leading-snug whitespace-nowrap">
-                Parcări mai eficiente,<br />orașe mai verzi.
-              </p>
-            </div>
+      {/* Content defines the height */}
+      <div className="relative max-w-7xl mx-auto px-6 w-full py-10 lg:py-14">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
+          {/* Left tagline */}
+          <div className="flex items-center gap-3 lg:w-72 shrink-0">
+            <LiaLeafSolid className="w-14 h-14 lg:w-16 lg:h-16 text-green-400 shrink-0" />
+            <p className="text-white text-xl lg:text-2xl font-bold leading-snug">
+              Parcări mai eficiente,<br />orașe mai verzi.
+            </p>
+          </div>
 
-            {/* Divider */}
-            <div className="hidden lg:block w-px h-16 bg-green-600" />
+          {/* Divider */}
+          <div className="hidden lg:block w-px h-16 bg-green-600" />
 
-            {/* Metrics */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-10 flex-1">
-              {metrics.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  {item.icon}
-                  <div>
-                    <p className="text-white text-2xl font-black leading-none">{item.value}</p>
-                    <p className="text-white/70 text-xs mt-0.5">{item.label}</p>
-                  </div>
+          {/* Metrics */}
+          <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-6 lg:gap-10 flex-1">
+            {metrics.map((item, idx) => (
+              <div key={idx} className="flex items-center gap-3">
+                {item.icon}
+                <div>
+                  <p className="text-white text-2xl font-black leading-none">{item.value}</p>
+                  <p className="text-white/70 text-xs mt-0.5">{item.label}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

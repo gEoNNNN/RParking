@@ -78,8 +78,8 @@ export default function SolutiiPage() {
         {/* ── Hero ── */}
         <section className="relative w-full min-h-[75vh] flex items-center overflow-hidden">
           {/* Background */}
-          <div className="absolute inset-0 bg-gray-900">
-            <Image src="/img/home.png" alt="" fill className="object-contain object-center" priority />
+          <div className="absolute inset-0">
+            <Image src="/img/home.png" alt="" fill className="object-cover object-center" quality={95} priority />
           </div>
           {/* Left-only dark fog — only behind text */}
           <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/70 to-transparent pointer-events-none" style={{ width: '70%' }} />
@@ -116,7 +116,7 @@ export default function SolutiiPage() {
               <div key={d.title} data-reveal data-reveal-delay={String(idx * 100)} className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-white">
                 {/* Image with icon badge */}
                 <div className="relative h-48 overflow-hidden">
-                  <Image src={d.image} alt={d.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={d.image} alt={d.title} fill quality={95} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute bottom-3 left-3 w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center shadow-md">
                     {d.icon}
                   </div>
@@ -169,14 +169,14 @@ export default function SolutiiPage() {
             </div>
 
             {/* Right: video */}
-            <div data-reveal="fade-right" className="relative rounded-2xl overflow-hidden shadow-lg">
+            <div data-reveal="fade-right" className="relative rounded-2xl overflow-hidden shadow-lg aspect-video w-full">
               <video
                 src="/img/video.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
               {/* Green bottom card */}
               <div className="absolute bottom-0 left-0 right-0 bg-green-800/90 backdrop-blur-sm px-5 py-4">

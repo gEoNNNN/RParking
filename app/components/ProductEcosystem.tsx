@@ -26,9 +26,8 @@ const products = [
     title: 'BackOffice',
     description: 'Administrare completă si detaliata în timp real.',
     link: '#backoffice',
-    image: '/img/produs4.jpg',
-    isPhoto: true,
-    cover: true,
+    image: null,
+    isPhoto: false,
   },
 ];
 
@@ -85,7 +84,7 @@ function BackOfficeIllustration() {
 export default function ProductEcosystem() {
   return (
     <section id="products" className="py-16 bg-white">
-      <div className="max-w-screen-2xl mx-auto px-10">
+      <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div data-reveal="fade" className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 mb-3">

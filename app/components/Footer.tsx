@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-3">
-              <Image src="/img/logo.png" alt="RTi Parking" width={300} height={120} className="object-contain" />
+              <Image src="/img/logo.png" alt="RTi Parking" width={300} height={120} className="object-contain" style={{ transform: 'translateX(-35px)' }} />
             </div>
             <p className="text-gray-500 text-xs leading-relaxed max-w-50">
               RParking este un produs dezvoltat si produs de RTi in Republica Moldova.
@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-900 font-semibold text-sm mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-gray-500 text-sm">+373 60 000 11</li>
+              <li className="flex items-center gap-2 text-gray-500 text-sm">+373 069116121</li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">office@rti.md</li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">Chisinau, Republica Moldova</li>
             </ul>

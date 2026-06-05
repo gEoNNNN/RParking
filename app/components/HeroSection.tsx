@@ -1,4 +1,4 @@
-import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock } from 'react-icons/lu';
+import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
 
 const featureCards = [
   {
@@ -49,6 +49,11 @@ const badges = [
     line2: 'ușoare',
     icon: <LuClock className="w-7 h-7 text-green-600 shrink-0" />,
   },
+  {
+    line1: 'Instalare',
+    line2: 'rapidă',
+    icon: <LuZap className="w-7 h-7 text-green-600 shrink-0" />,
+  },
 ];
 
 export default function HeroSection() {
@@ -60,29 +65,29 @@ export default function HeroSection() {
         style={{ backgroundImage: "url('/img/mainbg.png')" }}
       />
 
-      <div className="relative z-10 w-full flex items-start min-h-[95vh] pt-20 pl-8 lg:pl-16 pr-6 pb-16">
+      <div className="relative z-10 w-full flex items-start min-h-[80vh] lg:min-h-[95vh] pt-20 px-5 sm:px-8 lg:pl-16 lg:pr-6 pb-16">
         {/* ── Left content ──────────────────────────────────────── */}
-        <div className="w-full lg:w-[50%] pt-32 pb-12">
+        <div className="w-full lg:w-[50%] pt-16 md:pt-28 lg:pt-32 pb-12">
           {/* Heading */}
-          <h1 data-reveal className="text-7xl md:text-8xl font-black leading-tight mb-3">
+          <h1 data-reveal className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-3">
             <span className="text-green-600">R</span>
             <span className="text-gray-900">Parking</span>
           </h1>
 
           {/* Subtitle */}
-          <h2 data-reveal data-reveal-delay="120" className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug mb-5">
+          <h2 data-reveal data-reveal-delay="120" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug mb-5">
             Soluția inteligentă pentru<br />parcări moderne
           </h2>
 
           {/* Description */}
-          <p data-reveal data-reveal-delay="220" className="text-gray-800 text-xl leading-relaxed mb-12 max-w-lg font-medium">
+          <p data-reveal data-reveal-delay="220" className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-lg font-medium">
             Control complet al accesului, plăților și monitorizării
             într-o platformă integrată de hardware și software
             dezvoltată și produsă în Republica Moldova.
           </p>
 
           {/* CTA buttons */}
-          <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-20">
+          <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-12 md:mb-20">
             <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
@@ -99,8 +104,8 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom badge strip */}
-          <div data-reveal data-reveal-delay="460" className="grid grid-cols-3 gap-x-6 gap-y-3 w-fit">
-            {badges.map((b) => (
+          <div data-reveal data-reveal-delay="460" className="grid grid-cols-2 gap-x-6 gap-y-3 w-fit">
+            {badges.map((b, i) => (
               <div key={b.line1} className="flex items-center gap-2">
                 {b.icon}
                 <span className="text-sm font-semibold text-gray-800 leading-tight">
