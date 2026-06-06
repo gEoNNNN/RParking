@@ -7,42 +7,42 @@ import {
   LuCheck, LuArrowRight, LuChevronRight, LuHouse,
   LuQrCode, LuRadioTower, LuCreditCard, LuVolume2, LuMonitor, LuCar,
   LuCamera, LuServer, LuThermometer, LuZap, LuWifi, LuBox, LuPuzzle,
-  LuLightbulb, LuWallet, LuLogOut, LuLayoutDashboard,
+  LuLightbulb, LuWallet, LuShieldCheck, LuLayoutDashboard, LuBuilding2,
 } from 'react-icons/lu';
 import { TbBarrierBlock } from 'react-icons/tb';
 import { FaParking } from 'react-icons/fa';
 
 const heroFeatures = [
-  'QR Code',
-  'Asistență vocală',
-  'NFC / RFID',
-  'Integrare cu bariere',
-  'Emitere card acces',
-  'Management centralizat',
+  'Validare card',
+  'Control acces',
+  'Validare NFC',
+  'Comunicare cu BackOffice',
+  'Citire QR Code',
+  'Deschidere barieră',
 ];
 
 const keyFeatures = [
-  { title: 'QR Code', accent: 'Scanner', desc: 'Scanează rapid și procesează codurile QR.', icon: <LuQrCode className="w-6 h-6 text-green-600" /> },
-  { title: 'NFC / RFID', accent: 'Reader', desc: 'Citește carduri și tag-uri NFC / RFID.', icon: <LuRadioTower className="w-6 h-6 text-green-600" /> },
-  { title: 'Emitere', accent: 'card acces', desc: 'Emite carduri de acces pentru utilizatori.', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
-  { title: 'Asistență', accent: 'vocală', desc: 'Ghidaj audio clar pentru utilizatori.', icon: <LuVolume2 className="w-6 h-6 text-green-600" /> },
-  { title: 'Integrare', accent: 'bariere', desc: 'Deschidere automată a barierei.', icon: <TbBarrierBlock className="w-6 h-6 text-green-600" /> },
-  { title: 'Management', accent: 'centralizat', desc: 'Control și monitorizare în timp real din BackOffice.', icon: <LuMonitor className="w-6 h-6 text-green-600" /> },
+  { title: 'Validare', accent: 'card', desc: 'Citește și validează cardurile de acces emise la intrare.', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
+  { title: 'NFC', accent: 'Reader', desc: 'Suportă tag-uri și carduri NFC pentru acces rapid.', icon: <LuRadioTower className="w-6 h-6 text-green-600" /> },
+  { title: 'QR Code', accent: 'Scanner', desc: 'Scanează codurile QR pentru validare și ieșire.', icon: <LuQrCode className="w-6 h-6 text-green-600" /> },
+  { title: 'Control', accent: 'acces', desc: 'Verificare în timp real și autorizare ieșire.', icon: <LuShieldCheck className="w-6 h-6 text-green-600" /> },
+  { title: 'Comunicare', accent: 'BackOffice', desc: 'Schimb de date securizat cu platforma centrală.', icon: <LuMonitor className="w-6 h-6 text-green-600" /> },
+  { title: 'Deschidere', accent: 'barieră', desc: 'Deschidere automată a barierei după validare.', icon: <TbBarrierBlock className="w-6 h-6 text-green-600" /> },
 ];
 
 const steps = [
-  { title: 'Mașina ajunge la Entry Point', desc: 'Vehiculul se apropie de terminalul de intrare.', icon: <LuCar className="w-8 h-8 text-green-600" /> },
-  { title: 'Scanare QR Code / card', desc: 'Utilizatorul scanează codul QR sau apropie cardul.', icon: <LuQrCode className="w-8 h-8 text-green-600" /> },
-  { title: 'Emitere card de acces', desc: 'Stația eliberează cardul de acces.', icon: <LuCreditCard className="w-8 h-8 text-green-600" /> },
+  { title: 'Mașina se prezintă la Exit Point', desc: 'Vehiculul se apropie de terminalul de ieșire.', icon: <LuCar className="w-8 h-8 text-green-600" /> },
+  { title: 'Utilizatorul prezintă cardul de acces', desc: 'Cardul, tag-ul NFC sau codul QR este scanat.', icon: <LuCreditCard className="w-8 h-8 text-green-600" /> },
+  { title: 'Sistemul validează accesul', desc: 'Verificare în timp real cu platforma centrală.', icon: <LuShieldCheck className="w-8 h-8 text-green-600" /> },
   { title: 'Bariera se deschide automat', desc: 'Bariera se ridică automat după validare.', icon: <TbBarrierBlock className="w-8 h-8 text-green-600" /> },
-  { title: 'Acces permis în parcare', desc: 'Vehiculul intră, accesul fiind înregistrat.', icon: <FaParking className="w-7 h-7 text-green-600" /> },
+  { title: 'Ieșirea din parcare este permisă', desc: 'Vehiculul iese, ieșirea fiind înregistrată.', icon: <FaParking className="w-7 h-7 text-green-600" /> },
 ];
 
 const hardware = [
   { n: 1, title: 'Monitor IP65 7"', desc: 'Ecran tactil rezistent' },
-  { n: 2, title: 'NFC / RFID Reader', desc: 'Citire carduri și tag-uri' },
-  { n: 3, title: 'QR Code Scanner', desc: 'Scanner 1D / 2D' },
-  { n: 4, title: 'Card Issuing Machine', desc: 'Emitere card acces' },
+  { n: 2, title: 'NFC Reader', desc: 'Citire carduri și tag-uri' },
+  { n: 3, title: 'QR Code Scanner', desc: 'Scanare 1D / 2D' },
+  { n: 4, title: 'Card Reader', desc: 'Citire carduri de proximitate' },
   { n: 5, title: 'Speaker', desc: 'Asistență vocală' },
   { n: 6, title: 'Service Button', desc: 'Apel operator' },
 ];
@@ -60,35 +60,35 @@ const specs = [
   { label: 'Display', value: '7" Touch IP65', icon: <LuMonitor className="w-4 h-4 text-gray-400" /> },
   { label: 'QR Scanner', value: '1D / 2D', icon: <LuQrCode className="w-4 h-4 text-gray-400" /> },
   { label: 'NFC / RFID', value: '13.56 MHz', icon: <LuRadioTower className="w-4 h-4 text-gray-400" /> },
-  { label: 'Card Issuing', value: 'Automat', icon: <LuCreditCard className="w-4 h-4 text-gray-400" /> },
-  { label: 'Speaker', value: '2W / 4Ω', icon: <LuVolume2 className="w-4 h-4 text-gray-400" /> },
+  { label: 'Card Reader', value: 'ISO 14443A/B', icon: <LuCreditCard className="w-4 h-4 text-gray-400" /> },
+  { label: 'Speaker', value: '2W / 8Ω', icon: <LuVolume2 className="w-4 h-4 text-gray-400" /> },
   { label: 'LED Status', value: 'Da', icon: <LuLightbulb className="w-4 h-4 text-gray-400" /> },
   { label: 'Comunicație', value: 'Ethernet / 4G', icon: <LuWifi className="w-4 h-4 text-gray-400" /> },
   { label: 'Protocol', value: 'TCP/IP, HTTPS', icon: <LuServer className="w-4 h-4 text-gray-400" /> },
-  { label: 'Temperatură', value: '-20°C ~ +60°C', icon: <LuThermometer className="w-4 h-4 text-gray-400" /> },
+  { label: 'Temperatură', value: '-30°C ~ +60°C', icon: <LuThermometer className="w-4 h-4 text-gray-400" /> },
   { label: 'Alimentare', value: '220V AC', icon: <LuZap className="w-4 h-4 text-gray-400" /> },
   { label: 'Material', value: 'Metal IP54', icon: <LuBox className="w-4 h-4 text-gray-400" /> },
   { label: 'Integrare API', value: 'Da', icon: <LuPuzzle className="w-4 h-4 text-gray-400" /> },
 ];
 
 const integrations = [
-  { label: 'QR Code', icon: <LuQrCode className="w-7 h-7 text-green-600" /> },
-  { label: 'NFC / RFID', icon: <LuRadioTower className="w-7 h-7 text-green-600" /> },
   { label: 'Carduri acces', icon: <LuCreditCard className="w-7 h-7 text-green-600" /> },
+  { label: 'NFC / RFID', icon: <LuRadioTower className="w-7 h-7 text-green-600" /> },
+  { label: 'QR Code', icon: <LuQrCode className="w-7 h-7 text-green-600" /> },
   { label: 'ANPR', icon: <LuCamera className="w-7 h-7 text-green-600" /> },
   { label: 'Bariere', icon: <TbBarrierBlock className="w-7 h-7 text-green-600" /> },
   { label: 'Pay Point', icon: <LuWallet className="w-7 h-7 text-green-600" /> },
-  { label: 'Exit Point', icon: <LuLogOut className="w-7 h-7 text-green-600" /> },
   { label: 'BackOffice', icon: <LuLayoutDashboard className="w-7 h-7 text-green-600" /> },
+  { label: 'Sisteme terțe', icon: <LuBuilding2 className="w-7 h-7 text-green-600" /> },
 ];
 
 const ecosystem = [
+  { title: 'Entry Point', desc: 'Stație de intrare care emite cardul de acces.', href: '/products/entry-point', image: '/img/produs1.png', icon: null },
   { title: 'Pay Point', desc: 'Plată automată cu numerar și card.', href: '/products/pay-point', image: '/img/produs3.png', icon: null },
-  { title: 'Exit Point', desc: 'Stație de ieșire cu card sau tichet.', href: '/products/exit-point-cardpass', image: '/img/produs2.png', icon: null },
   { title: 'BackOffice', desc: 'Administrare și raportare în timp real.', href: '/products/backoffice', image: null, icon: <LuLayoutDashboard className="w-10 h-10 text-green-600" /> },
 ];
 
-export default function EntryPointPage() {
+export default function ExitPointCardPassPage() {
   return (
     <main>
       {/* Navbar + Logo */}
@@ -115,18 +115,18 @@ export default function EntryPointPage() {
               <LuChevronRight className="w-4 h-4" />
               <Link href="/#products" className="hover:text-green-400 transition-colors">Produse</Link>
               <LuChevronRight className="w-4 h-4" />
-              <span className="text-white font-medium">Entry Point</span>
+              <span className="text-white font-medium">Exit Point CardPass</span>
             </nav>
 
             <div className="max-w-2xl">
               <p data-reveal data-reveal-delay="80" className="text-green-400 font-bold tracking-wide text-sm mb-4">
-                ENTRY POINT
+                EXIT POINT
               </p>
               <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-5">
-                Entry Point
+                Exit Point <span className="block text-green-500">CardPass</span>
               </h1>
               <p data-reveal data-reveal-delay="250" className="text-gray-300 text-lg leading-relaxed max-w-xl mb-8">
-                Stație inteligentă pentru controlul accesului în parcări moderne.
+                Stație inteligentă pentru validarea cardurilor și ieșirea rapidă din parcare.
               </p>
 
               {/* Feature checkmarks */}
@@ -231,7 +231,7 @@ export default function EntryPointPage() {
               {/* Diagram */}
               <div className="relative bg-gray-50 rounded-2xl p-4 flex items-center justify-center">
                 <div className="relative">
-                  <Image src="/img/produs1.png" alt="Entry Point componente" width={240} height={360} className="h-[360px] w-auto object-contain" />
+                  <Image src="/img/produs2.png" alt="Exit Point CardPass componente" width={240} height={360} className="h-[360px] w-auto object-contain" />
                   {callouts.map((c) => (
                     <span
                       key={c.n}
@@ -260,13 +260,13 @@ export default function EntryPointPage() {
 
             {/* Right: environmental photo */}
             <div data-reveal="fade-right" className="lg:col-span-2 relative rounded-2xl overflow-hidden min-h-[320px]">
-              <Image src="/img/produse/entry point.png" alt="Entry Point instalat" fill className="object-cover" />
+              <Image src="/img/produse/entry point.png" alt="Exit Point CardPass instalat" fill className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Specificații tehnice + Integrare completă ── */}
+      {/* ── Specificații tehnice + Integrare și compatibilitate ── */}
       <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-10">
@@ -292,7 +292,7 @@ export default function EntryPointPage() {
             {/* Integrations */}
             <div data-reveal="fade-right">
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">Integrare completă</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">Integrare și compatibilitate</h2>
                 <div className="w-12 h-0.5 bg-green-500" />
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -362,7 +362,7 @@ export default function EntryPointPage() {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div data-reveal="fade-left" className="max-w-xl">
             <h2 className="text-3xl md:text-4xl font-black text-white mb-3 leading-tight">
-              Doriți să automatizați <span className="text-green-500">accesul</span> în parcarea dvs.?
+              Doriți o soluție <span className="text-green-500">completă</span> pentru parcarea dvs.?
             </h2>
             <p className="text-gray-400 text-base mb-8">
               Echipa noastră vă stă la dispoziție pentru a vă oferi cea mai bună soluție adaptată nevoilor dvs.

@@ -71,7 +71,7 @@ export default function SolutiiPage() {
       {/* Navbar + Logo */}
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-4 left-6 z-50">
+        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
