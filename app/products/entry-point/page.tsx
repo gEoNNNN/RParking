@@ -100,13 +100,23 @@ export default function EntryPointPage() {
 
         {/* ── Hero ── */}
         <section className="relative w-full overflow-hidden bg-white">
-          {/* Full image — shown completely at its natural ratio, no crop */}
-          <Image src="/img/produse/entry point.png" alt="" width={1627} height={967} className="w-full h-auto block" quality={95} priority />
-          {/* White fog */}
-          <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
+          {/* Desktop: Image right with fog | Mobile: Image top, text below */}
+          <div className="hidden lg:flex justify-end">
+            <Image src="/img/produse/entry point.png" alt="" width={1627} height={967} className="w-[82%] h-auto block" quality={95} priority />
+          </div>
+          {/* Desktop fog */}
+          <div className="hidden lg:block absolute inset-0 bg-linear-to-r from-white via-white/98 via-20% via-white/90 via-40% via-white/75 via-60% to-transparent pointer-events-none" style={{ width: '58%' }} />
 
-          <div className="absolute inset-0 z-10 flex items-center px-6 lg:px-10 pt-20">
-            <div className="max-w-2xl">
+          {/* Mobile image */}
+          <div className="lg:hidden absolute inset-0">
+            <Image src="/img/produse/entry point.png" alt="" fill className="object-cover object-center" quality={95} priority />
+          </div>
+          {/* Mobile fog */}
+          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-30% via-white/85 via-50% to-transparent pointer-events-none" />
+
+          {/* Content */}
+          <div className="relative lg:absolute lg:inset-0 z-10 flex flex-col justify-start pt-36 lg:pt-52 pb-12 px-6 lg:pl-48 min-h-[500px] lg:min-h-0">
+            <div className="max-w-xl">
               {/* Breadcrumb */}
               <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
                 <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
@@ -224,42 +234,59 @@ export default function EntryPointPage() {
             <div className="w-12 h-0.5 bg-green-500" />
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-8 items-stretch">
-            {/* Left: diagram + list */}
-            <div data-reveal="fade-left" className="lg:col-span-3 grid sm:grid-cols-2 gap-6 items-center">
-              {/* Diagram */}
-              <div className="relative bg-gray-50 rounded-2xl p-4 flex items-center justify-center">
-                <div className="relative">
-                  <Image src="/img/produs1.png" alt="Entry Point componente" width={240} height={360} className="h-[360px] w-auto object-contain" />
-                  {callouts.map((c) => (
-                    <span
-                      key={c.n}
-                      style={{ top: c.top, left: c.left }}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-green-600 text-white text-[11px] font-bold flex items-center justify-center ring-2 ring-white shadow-md"
-                    >
-                      {c.n}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* List */}
-              <ul className="space-y-4">
-                {hardware.map((h) => (
-                  <li key={h.n} className="flex items-start gap-3">
-                    <span className="w-7 h-7 rounded-full bg-green-600 text-white text-xs font-bold flex items-center justify-center shrink-0">{h.n}</span>
-                    <div>
-                      <p className="text-gray-900 font-bold text-sm leading-tight">{h.title}</p>
-                      <p className="text-gray-500 text-xs">{h.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+            {/* Left: technical diagram with labels */}
+            <div data-reveal="fade-left" className="bg-white rounded-2xl p-4 flex items-center justify-center border border-gray-100">
+              <Image src="/img/produse/entry point.jpg" alt="Entry Point componente" width={600} height={800} className="h-[480px] w-auto object-contain" />
             </div>
 
-            {/* Right: environmental photo */}
-            <div data-reveal="fade-right" className="lg:col-span-2 relative rounded-2xl overflow-hidden min-h-[320px]">
-              <Image src="/img/produse/entry point.png" alt="Entry Point instalat" fill className="object-cover" />
+            {/* Right: component descriptions */}
+            <div data-reveal="fade-right" className="flex flex-col justify-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Componente principale</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">1</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Monitor 7 inch</p>
+                    <p className="text-gray-500 text-sm">Antivandalism, IP65, afișaj tactil rezistent</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">2</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">NFC Reader</p>
+                    <p className="text-gray-500 text-sm">Citire carduri RFID/NFC pentru acces rapid</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">3</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">2D / QR Code Scanner</p>
+                    <p className="text-gray-500 text-sm">Scanare coduri QR și coduri de bare 2D</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">4</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Card Issuing Machine</p>
+                    <p className="text-gray-500 text-sm">Dispenser automat pentru carduri temporare</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">5</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Built-in Speaker</p>
+                    <p className="text-gray-500 text-sm">Difuzor integrat pentru asistență vocală</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">6</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Service Button</p>
+                    <p className="text-gray-500 text-sm">Buton de ajutor pentru asistență la distanță</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

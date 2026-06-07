@@ -98,74 +98,70 @@ export default function ExitPointCardPassPage() {
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
-        {/* ── Hero (white + green) ── */}
-        <section className="relative w-full min-h-[88vh] flex items-center overflow-hidden bg-white">
-          <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-green-50 to-transparent pointer-events-none" />
-          <div className="absolute top-0 left-0 w-1.5 h-full bg-green-500 pointer-events-none" />
+        {/* ── Hero ── */}
+        <section className="relative w-full overflow-hidden bg-white">
+          {/* Desktop: Image right with fog | Mobile: Image top, text below */}
+          <div className="hidden lg:flex justify-end">
+            <Image src="/img/produse/entry point.png" alt="" width={1627} height={967} className="w-[82%] h-auto block" quality={95} priority />
+          </div>
+          {/* Desktop fog */}
+          <div className="hidden lg:block absolute inset-0 bg-linear-to-r from-white via-white/98 via-20% via-white/90 via-40% via-white/75 via-60% to-transparent pointer-events-none" style={{ width: '58%' }} />
 
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-28 pt-36">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* LEFT: text */}
-              <div>
-                {/* Breadcrumb */}
-                <nav data-reveal className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-                  <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                    <LuHouse className="w-4 h-4" /> Acasă
-                  </Link>
-                  <LuChevronRight className="w-4 h-4" />
-                  <Link href="/#products" className="hover:text-green-600 transition-colors">Produse</Link>
-                  <LuChevronRight className="w-4 h-4" />
-                  <span className="text-gray-700 font-medium">Exit Point CardPass</span>
-                </nav>
+          {/* Mobile image */}
+          <div className="lg:hidden absolute inset-0">
+            <Image src="/img/produse/entry point.png" alt="" fill className="object-cover object-center" quality={95} priority />
+          </div>
+          {/* Mobile fog */}
+          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-30% via-white/85 via-50% to-transparent pointer-events-none" />
 
-                <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
-                  EXIT POINT
-                </p>
-                <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
-                  Exit Point <span className="block text-green-500">CardPass</span>
-                </h1>
-                <p data-reveal data-reveal-delay="250" className="text-gray-500 text-lg leading-relaxed max-w-xl mb-8">
-                  Stație inteligentă pentru validarea cardurilor și ieșirea rapidă din parcare.
-                </p>
+          {/* Content */}
+          <div className="relative lg:absolute lg:inset-0 z-10 flex flex-col justify-start pt-36 lg:pt-52 pb-12 px-6 lg:pl-48 min-h-[500px] lg:min-h-0">
+            <div className="max-w-xl">
+              {/* Breadcrumb */}
+              <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+                <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
+                  <LuHouse className="w-4 h-4" /> Acasă
+                </Link>
+                <LuChevronRight className="w-4 h-4" />
+                <Link href="/products" className="hover:text-green-600 transition-colors">Produse</Link>
+                <LuChevronRight className="w-4 h-4" />
+                <span className="text-gray-700 font-medium">Exit Point CardPass</span>
+              </nav>
 
-                {/* Feature checkmarks */}
-                <div data-reveal data-reveal-delay="340" className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 max-w-lg">
-                  {heroFeatures.map((f) => (
-                    <div key={f} className="flex items-center gap-2">
-                      <LuCheck className="w-5 h-5 text-green-500 shrink-0" />
-                      <span className="text-gray-700 text-sm font-semibold">{f}</span>
-                    </div>
-                  ))}
-                </div>
+              <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
+                EXIT POINT
+              </p>
+              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
+                Exit Point <span className="text-green-600">CardPass</span>
+              </h1>
+              <p data-reveal data-reveal-delay="250" className="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">
+                Stație inteligentă pentru validarea cardurilor și ieșirea rapidă din parcare.
+              </p>
 
-                {/* CTA buttons */}
-                <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
-                  <Link
-                    href="/#contact"
-                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:shadow-lg hover:shadow-green-600/50 hover:scale-105 active:scale-95"
-                  >
-                    Solicită ofertă <LuArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/#contact"
-                    className="inline-flex items-center gap-2 border border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm hover:bg-green-50 hover:scale-105 active:scale-95"
-                  >
-                    Programare demonstrație
-                  </Link>
-                </div>
+              {/* Feature checkmarks */}
+              <div data-reveal data-reveal-delay="340" className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 max-w-lg">
+                {heroFeatures.map((f) => (
+                  <div key={f} className="flex items-center gap-2">
+                    <LuCheck className="w-5 h-5 text-green-500 shrink-0" />
+                    <span className="text-gray-700 text-sm font-semibold">{f}</span>
+                  </div>
+                ))}
               </div>
 
-              {/* RIGHT: product image */}
-              <div data-reveal="fade-right" data-reveal-delay="200" className="relative hidden lg:flex items-center justify-center">
-                <div className="absolute w-80 h-80 bg-green-100 rounded-full blur-3xl opacity-60" />
-                <Image
-                  src="/img/produs2.png"
-                  alt="Exit Point CardPass terminal"
-                  width={380}
-                  height={500}
-                  className="relative z-10 object-contain h-[460px] w-auto drop-shadow-2xl"
-                  priority
-                />
+              {/* CTA buttons */}
+              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/#contact"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
+                >
+                  Solicită ofertă <LuArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/#contact"
+                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/70 hover:bg-white hover:scale-105 active:scale-95"
+                >
+                  Programare demonstrație
+                </Link>
               </div>
             </div>
           </div>
@@ -238,42 +234,59 @@ export default function ExitPointCardPassPage() {
             <div className="w-12 h-0.5 bg-green-500" />
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-8 items-stretch">
-            {/* Left: diagram + list */}
-            <div data-reveal="fade-left" className="lg:col-span-3 grid sm:grid-cols-2 gap-6 items-center">
-              {/* Diagram */}
-              <div className="relative bg-gray-50 rounded-2xl p-4 flex items-center justify-center">
-                <div className="relative">
-                  <Image src="/img/produs2.png" alt="Exit Point CardPass componente" width={240} height={360} className="h-[360px] w-auto object-contain" />
-                  {callouts.map((c) => (
-                    <span
-                      key={c.n}
-                      style={{ top: c.top, left: c.left }}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-green-600 text-white text-[11px] font-bold flex items-center justify-center ring-2 ring-white shadow-md"
-                    >
-                      {c.n}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* List */}
-              <ul className="space-y-4">
-                {hardware.map((h) => (
-                  <li key={h.n} className="flex items-start gap-3">
-                    <span className="w-7 h-7 rounded-full bg-green-600 text-white text-xs font-bold flex items-center justify-center shrink-0">{h.n}</span>
-                    <div>
-                      <p className="text-gray-900 font-bold text-sm leading-tight">{h.title}</p>
-                      <p className="text-gray-500 text-xs">{h.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+            {/* Left: technical diagram with labels */}
+            <div data-reveal="fade-left" className="bg-white rounded-2xl p-4 flex items-center justify-center border border-gray-100">
+              <Image src="/img/produse/exit point.jpg" alt="Exit Point CardPass componente" width={600} height={800} className="h-[480px] w-auto object-contain" />
             </div>
 
-            {/* Right: environmental photo */}
-            <div data-reveal="fade-right" className="lg:col-span-2 relative rounded-2xl overflow-hidden min-h-[320px]">
-              <Image src="/img/produse/entry point.png" alt="Exit Point CardPass instalat" fill className="object-cover" />
+            {/* Right: component descriptions */}
+            <div data-reveal="fade-right" className="flex flex-col justify-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Componente principale</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">1</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Monitor 7 inch</p>
+                    <p className="text-gray-500 text-sm">Antivandalism, IP65, afișaj tactil rezistent</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">2</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">NFC Reader</p>
+                    <p className="text-gray-500 text-sm">Citire carduri pentru validare și ieșire</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">3</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">2D / QR Code Scanner</p>
+                    <p className="text-gray-500 text-sm">Scanare coduri QR pentru validare rapidă</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">4</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Card Reader</p>
+                    <p className="text-gray-500 text-sm">Cititor magnetic pentru carduri de acces</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">5</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Built-in Speaker</p>
+                    <p className="text-gray-500 text-sm">Difuzor pentru confirmări audio și ghidare</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center shrink-0">6</div>
+                  <div>
+                    <p className="text-gray-900 font-semibold">Service Button</p>
+                    <p className="text-gray-500 text-sm">Buton de ajutor pentru asistență operațională</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -20,6 +20,7 @@ const navLinks: NavLink[] = [
     ],
   },
   { label: 'Platforma RParking', href: '/platforma-rparking' },
+  { label: 'Aplicație mobilă', href: '/aplicatie-mobila' },
   { label: 'Implementări', href: '/implementari' },
   { label: 'Despre noi',   href: '/despre-noi' },
   { label: 'Contact',      href: '/#contact' },

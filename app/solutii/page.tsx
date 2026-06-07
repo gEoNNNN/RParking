@@ -8,7 +8,7 @@ import { IoBusinessOutline } from 'react-icons/io5';
 import { SlPlane } from 'react-icons/sl';
 import { FaRegHospital } from 'react-icons/fa';
 import { BiHotel } from 'react-icons/bi';
-import { LuSettings2, LuZap, LuHeadphones, LuTrendingUp, LuShieldCheck, LuMapPin, LuArrowRight, LuCheck } from 'react-icons/lu';
+import { LuSettings2, LuZap, LuHeadphones, LuTrendingUp, LuShieldCheck, LuMapPin, LuArrowRight, LuCheck, LuHouse, LuChevronRight } from 'react-icons/lu';
 import { LiaLeafSolid } from 'react-icons/lia';
 
 const domains = [
@@ -81,16 +81,25 @@ export default function SolutiiPage() {
           <div className="absolute inset-0">
             <Image src="/img/home.png" alt="" fill className="object-cover object-center" quality={95} priority />
           </div>
-          {/* Left-only dark fog — only behind text */}
-          <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/70 to-transparent pointer-events-none" style={{ width: '70%' }} />
+          {/* White fog from the left */}
+          <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-40">
+            {/* Breadcrumb */}
+            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+              <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
+                <LuHouse className="w-4 h-4" /> Acasă
+              </Link>
+              <LuChevronRight className="w-4 h-4" />
+              <span className="text-gray-700 font-medium">Soluții</span>
+            </nav>
+
             <div className="max-w-4xl">
-              <h1 data-reveal className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
+              <h1 data-reveal className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
                 Soluții pentru fiecare tip<br />de parcare
               </h1>
-              <div data-reveal data-reveal-delay="150" className="w-12 h-1 bg-green-400 mb-6 rounded-full" />
-              <p data-reveal data-reveal-delay="280" className="text-white/85 text-xl leading-relaxed max-w-lg">
+              <div data-reveal data-reveal-delay="150" className="w-12 h-1 bg-green-500 mb-6 rounded-full" />
+              <p data-reveal data-reveal-delay="280" className="text-gray-600 text-xl leading-relaxed max-w-lg">
                 RParking oferă soluții complete și flexibile pentru
                 orice tip de parcare: de la spații rezidențiale până la
                 parcări municipale sau aeroporturi.
@@ -178,8 +187,8 @@ export default function SolutiiPage() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              {/* Green bottom card */}
-              <div className="absolute bottom-0 left-0 right-0 bg-green-800/90 backdrop-blur-sm px-5 py-4">
+              {/* Green bottom card - desktop only */}
+              <div className="hidden lg:block absolute bottom-0 left-0 right-0 bg-green-800/90 backdrop-blur-sm px-5 py-4">
                 <div className="flex items-start gap-3">
                   <LiaLeafSolid className="w-8 h-8 text-green-300 shrink-0 mt-0.5" />
                   <div>
@@ -188,6 +197,18 @@ export default function SolutiiPage() {
                       Soluții eficiente energic, prietenoase cu mediul și construite pentru viitor.
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+            {/* Green card below video - mobile only */}
+            <div className="lg:hidden mt-4 bg-green-800 rounded-xl px-5 py-4">
+              <div className="flex items-start gap-3">
+                <LiaLeafSolid className="w-8 h-8 text-green-300 shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-white font-bold text-sm">Tehnologie verde pentru parcări inteligente</p>
+                  <p className="text-green-200 text-xs mt-0.5 leading-snug">
+                    Soluții eficiente energic, prietenoase cu mediul și construite pentru viitor.
+                  </p>
                 </div>
               </div>
             </div>

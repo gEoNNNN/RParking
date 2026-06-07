@@ -42,7 +42,7 @@ const metrics = [
 
 export default function BenefitsBar() {
   return (
-    <section className="relative bg-green-900 overflow-hidden">
+    <section className="relative bg-green-900 overflow-hidden hidden min-[1500px]:block">
       {/* Background image sets the height and is shown in full (no crop) */}
       <img src="/img/bg%20cards.png" alt="" className="block w-full h-auto" />
 

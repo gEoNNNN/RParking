@@ -140,12 +140,14 @@ export default function ProductsPage() {
 
         {/* ── Hero ── */}
         <section className="relative w-full overflow-hidden bg-white">
-          {/* Full image — shown completely at its natural ratio, no crop */}
-          <Image src="/img/produse/produse.png" alt="" width={1693} height={929} className="w-full h-auto block" quality={95} priority />
-          {/* White fog */}
-          <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
+          {/* Smaller image with white space on left */}
+          <div className="flex justify-end">
+            <Image src="/img/produse/produse.png" alt="" width={1693} height={929} className="w-[82%] h-auto block" quality={95} priority />
+          </div>
+          {/* Smooth gradient fog - gradual transition */}
+          <div className="absolute inset-0 bg-linear-to-r from-white via-white/98 via-20% via-white/90 via-40% via-white/75 via-60% to-transparent pointer-events-none" style={{ width: '58%' }} />
 
-          <div className="absolute inset-0 z-10 flex flex-col justify-center px-6 lg:px-10 pt-20">
+          <div className="absolute inset-0 z-10 flex flex-col justify-start pt-52 pb-12 px-6 lg:pl-48">
             {/* Breadcrumb */}
             <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
               <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
@@ -155,7 +157,7 @@ export default function ProductsPage() {
               <span className="text-gray-700 font-medium">Produse</span>
             </nav>
 
-            <div className="max-w-2xl">
+            <div className="max-w-xl">
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 PRODUSE
               </p>

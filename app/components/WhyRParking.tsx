@@ -41,7 +41,7 @@ export default function WhyRParking() {
             </div>
 
             {/* Right – pc.png image */}
-            <div className="relative hidden lg:block min-h-full bg-gray-50">
+            <div className="relative hidden lg:block min-h-full bg-white">
               <Image
                 src="/img/pc.png"
                 alt="RParking BackOffice Dashboard"

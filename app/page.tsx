@@ -5,7 +5,6 @@ import HeroSection from './components/HeroSection';
 import BenefitsBar from './components/BenefitsBar';
 import ProductEcosystem from './components/ProductEcosystem';
 import HowItWorks from './components/HowItWorks';
-import Statistics from './components/Statistics';
 import RealImplementations from './components/RealImplementations';
 import TargetAudience from './components/TargetAudience';
 import WhyRParking from './components/WhyRParking';
@@ -32,7 +31,6 @@ export default function Home() {
       <BenefitsBar />
       <ProductEcosystem />
       <HowItWorks />
-      <Statistics />
       <RealImplementations />
       <TargetAudience />
       <WhyRParking />

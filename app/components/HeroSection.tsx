@@ -1,4 +1,4 @@
-import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
+import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap, LuHouse } from 'react-icons/lu';
 
 const featureCards = [
   {
@@ -64,10 +64,19 @@ export default function HeroSection() {
         className="absolute inset-x-0 bottom-0 top-20 bg-cover bg-center"
         style={{ backgroundImage: "url('/img/mainbg.png')" }}
       />
+      {/* White overlay for mobile only */}
+      <div className="absolute inset-0 bg-white/85 lg:hidden pointer-events-none" />
 
-      <div className="relative z-10 w-full flex items-start min-h-[80vh] lg:min-h-[95vh] pt-20 px-5 sm:px-8 lg:pl-16 lg:pr-6 pb-16">
+      <div className="relative z-10 w-full flex items-start min-h-[80vh] lg:min-h-[95vh] pt-8 px-5 sm:px-8 lg:pl-16 lg:pr-6 pb-16">
         {/* ── Left content ──────────────────────────────────────── */}
-        <div className="w-full lg:w-[50%] pt-16 md:pt-28 lg:pt-32 pb-12">
+        <div className="w-full lg:w-[50%] pt-4 md:pt-12 lg:pt-20 pb-12">
+          {/* Breadcrumb */}
+          <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+            <span className="flex items-center gap-1 text-gray-700 font-medium">
+              <LuHouse className="w-4 h-4" /> Acasă
+            </span>
+          </nav>
+
           {/* Heading */}
           <h1 data-reveal className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-3">
             <span className="text-green-600">R</span>
@@ -114,10 +123,28 @@ export default function HeroSection() {
               </div>
             ))}
           </div>
+
+          {/* Mobile feature cards - 2 rows grid */}
+          <div data-reveal data-reveal-delay="500" className="xl:hidden mt-12 grid grid-cols-2 gap-3">
+            {featureCards.map((card) => (
+              <div
+                key={card.title}
+                className="flex items-center gap-3 px-3 py-3 rounded-xl bg-green-600 text-white shadow-lg"
+              >
+                <div className="w-9 h-9 flex items-center justify-center shrink-0 bg-white/20 rounded-lg">
+                  {card.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-sm leading-tight truncate">{card.title}</p>
+                  <p className="text-green-100 text-xs">{card.subtitle}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* ── Right feature cards ───────────────────────────────── */}
-        <div data-reveal="fade-right" data-reveal-delay="200" className="hidden lg:flex flex-col gap-2 ml-110 mr-6 w-64 shrink-0 mt-64">
+        <div data-reveal="fade-right" data-reveal-delay="200" className="hidden xl:flex flex-col gap-2 xl:ml-110 xl:mr-6 xl:w-64 xl:shrink-0 xl:mt-64">
           {featureCards.map((card) => (
             <div
               key={card.title}

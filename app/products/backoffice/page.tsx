@@ -83,8 +83,8 @@ export default function BackOfficePage() {
         {/* ── Hero (white + green) ── */}
         <section className="relative w-full min-h-[88vh] flex items-center overflow-hidden bg-white">
           <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-green-50 to-transparent pointer-events-none" />
-          <div className="absolute top-0 left-0 w-1.5 h-full bg-green-500 pointer-events-none" />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-16 pt-36 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-16 pt-36">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
               {/* Breadcrumb */}
@@ -135,69 +135,127 @@ export default function BackOfficePage() {
               </div>
             </div>
 
-            {/* Right: green dashboard illustration */}
-            <div data-reveal="fade-left" className="relative hidden lg:flex items-center justify-center">
-              <div className="absolute w-80 h-80 bg-green-100 rounded-full blur-3xl opacity-60" />
-              <div className="relative z-10 bg-white rounded-2xl shadow-2xl border border-gray-100 w-full max-w-lg overflow-hidden">
-                {/* Browser chrome */}
-                <div className="bg-gray-50 border-b border-gray-100 px-4 py-2.5 flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-300" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-300" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <div className="flex-1 ml-2 h-5 bg-white border border-gray-200 rounded text-[10px] text-gray-400 flex items-center px-2 max-w-56">backoffice.rparking.md</div>
+            {/* Right: BackOffice dashboard - EXACT screenshot match */}
+            <div data-reveal="fade-left" className="relative flex items-center justify-center mt-8 lg:mt-0 w-full">
+              <div className="hidden lg:block absolute w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-50" />
+              <div className="relative z-10 bg-white rounded-2xl shadow-2xl border border-gray-200 w-full max-w-3xl overflow-hidden">
+                {/* Top Header - exact match */}
+                <div className="bg-slate-600 px-3 lg:px-4 py-2 flex items-center justify-between">
+                  <div className="flex items-center gap-2 lg:gap-3">
+                    <div className="w-5 h-5 flex flex-col justify-center gap-0.5">
+                      <div className="w-full h-0.5 bg-white" />
+                      <div className="w-full h-0.5 bg-white" />
+                      <div className="w-full h-0.5 bg-white" />
+                    </div>
+                    <span className="text-white font-medium text-xs lg:text-sm">Parking Control Panel</span>
+                  </div>
+                  <div className="hidden sm:flex items-center gap-4 text-white/90 text-xs">
+                    <div className="w-4 h-4 border border-white/60 rounded-full" />
+                    <div className="w-4 h-4 border border-white/60 rounded-full" />
+                    <span className="hidden md:inline">Support</span>
+                    <span className="hidden md:inline">Logout</span>
+                    <span className="flex items-center gap-1">● EN</span>
+                  </div>
                 </div>
-                {/* Dashboard body */}
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-gray-900 font-bold text-sm">Dashboard Parcare</p>
-                    <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">● Live</span>
+                {/* Main Content with Sidebar */}
+                <div className="flex flex-col md:flex-row">
+                  {/* Left Sidebar - hidden on mobile */}
+                  <div className="hidden md:block w-28 lg:w-32 bg-white border-b md:border-b-0 md:border-r border-gray-200 p-2">
+                    <div className="text-[9px] text-gray-400 mb-2 font-medium">Menu</div>
+                    {[
+                      { icon: '■', label: 'Monitoring', active: false },
+                      { icon: '▤', label: 'Reports', active: false, arrow: true },
+                      { icon: '▤', label: 'Graphics', active: false, arrow: true },
+                      { icon: '●', label: 'Number of payments', active: true },
+                      { icon: '▤', label: 'Number of tickets', active: false },
+                      { icon: '⚙', label: 'Setting', active: false, arrow: true },
+                      { icon: '$', label: 'Money', active: false, arrow: true },
+                      { icon: '▤', label: 'Tickets', active: false },
+                      { icon: '▤', label: 'Tickets With Gifts', active: false },
+                      { icon: '▤', label: 'History Detect', active: false },
+                      { icon: '▤', label: 'Used Access List', active: false },
+                      { icon: '▤', label: 'Custom Services', active: false },
+                      { icon: '▤', label: 'Main Information', active: false },
+                    ].map((item, i) => (
+                      <div key={i} className={`flex items-center gap-1.5 py-1 px-1.5 rounded mb-0.5 text-[9px] ${item.active ? 'bg-indigo-50 text-indigo-600' : 'text-gray-600 hover:bg-gray-50'}`}>
+                        <span className={item.active ? 'text-indigo-500' : 'text-gray-400'}>{item.icon}</span>
+                        <span className="truncate">{item.label}</span>
+                        {item.arrow && <span className="ml-auto text-gray-400">›</span>}
+                      </div>
+                    ))}
                   </div>
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-3 mb-4">
-                    <div className="bg-green-50 rounded-lg p-3">
-                      <p className="text-[10px] text-gray-500 mb-1">Vehicule azi</p>
-                      <p className="text-sm font-black text-gray-900">247</p>
-                      <p className="text-[10px] text-green-600 font-semibold">+12%</p>
+                  {/* Main Panel */}
+                  <div className="flex-1 p-3 lg:p-4">
+                    {/* Section Title */}
+                    <div className="text-indigo-600 text-xs font-medium mb-3">Number of payments</div>
+                    {/* Legend */}
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-3 h-3 bg-teal-400 rounded-sm" />
+                        <span className="text-[10px] text-gray-500">Cash</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-3 h-3 bg-indigo-600 rounded-sm" />
+                        <span className="text-[10px] text-gray-500">Card</span>
+                      </div>
                     </div>
-                    <div className="bg-green-50 rounded-lg p-3">
-                      <p className="text-[10px] text-gray-500 mb-1">Încasări</p>
-                      <p className="text-sm font-black text-gray-900">4.8K lei</p>
-                      <p className="text-[10px] text-green-600 font-semibold">+8%</p>
-                    </div>
-                    <div className="bg-green-50 rounded-lg p-3">
-                      <p className="text-[10px] text-gray-500 mb-1">Ocupare</p>
-                      <p className="text-sm font-black text-gray-900">82%</p>
-                      <p className="text-[10px] text-green-600 font-semibold">+5%</p>
-                    </div>
-                  </div>
-                  {/* Chart */}
-                  <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                    <p className="text-[10px] text-gray-500 mb-2 font-semibold">Intrări pe oră</p>
-                    <div className="flex items-end gap-1 h-14">
-                      {[30, 55, 45, 70, 60, 85, 75, 90, 65, 80, 70, 95].map((h, i) => (
-                        <div key={i} className="flex-1 bg-green-500 rounded-t opacity-80" style={{ height: `${h}%` }} />
-                      ))}
-                    </div>
-                  </div>
-                  {/* Transactions */}
-                  <div className="space-y-1.5">
-                    <p className="text-[10px] text-gray-500 font-semibold mb-2">Tranzacții recente</p>
-                    <div className="flex items-center justify-between bg-gray-50 rounded px-3 py-1.5">
-                      <span className="text-[11px] font-mono font-semibold text-gray-700">B-123-XYZ</span>
-                      <span className="text-[11px] font-bold text-green-600">2.50 lei</span>
-                    </div>
-                    <div className="flex items-center justify-between bg-gray-50 rounded px-3 py-1.5">
-                      <span className="text-[11px] font-mono font-semibold text-gray-700">MS-456-AB</span>
-                      <span className="text-[11px] font-bold text-green-600">5.00 lei</span>
-                    </div>
-                    <div className="flex items-center justify-between bg-gray-50 rounded px-3 py-1.5">
-                      <span className="text-[11px] font-mono font-semibold text-gray-700">GL-789-CD</span>
-                      <span className="text-[11px] font-bold text-green-600">3.50 lei</span>
+                    {/* Chart Area */}
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      {/* Chart */}
+                      <div className="flex-1">
+                        <div className="flex items-end gap-1 h-24 sm:h-28 border-b border-l border-gray-300 pb-1 pl-1">
+                          {[
+                            [3,18], [5,22], [8,20], [6,28], [12,30], [10,32], [14,28], [12,35], [16,38], [20,42], [22,45], [12,48],
+                            [8,28], [6,22], [4,18], [3,15], [5,12], [4,10], [6,8], [5,6]
+                          ].slice(0, 12).map((vals, i) => (
+                            <div key={i} className="flex-1 flex items-end gap-0.5">
+                              <div className="flex-1 bg-teal-400 rounded-t" style={{ height: `${vals[0] * 1.5}px` }} />
+                              <div className="flex-1 bg-indigo-600 rounded-t" style={{ height: `${vals[1] * 1.2}px` }} />
+                            </div>
+                          ))}
+                        </div>
+                        {/* Date labels */}
+                        <div className="flex text-[7px] sm:text-[8px] text-gray-500 mt-1 px-1">
+                          <span className="flex-1 text-center">27.05</span>
+                          <span className="flex-1 text-center">28.05</span>
+                          <span className="flex-1 text-center">29.05</span>
+                          <span className="flex-1 text-center">30.05</span>
+                          <span className="flex-1 text-center">31.05</span>
+                          <span className="flex-1 text-center">01.06</span>
+                          <span className="flex-1 text-center">02.06</span>
+                        </div>
+                        {/* Buttons */}
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          <span className="text-[8px] sm:text-[9px] bg-indigo-600 text-white px-2 py-1 rounded-sm font-medium">LAST 7 DAYS</span>
+                          <span className="text-[8px] sm:text-[9px] bg-indigo-100 text-indigo-700 px-2 py-1 rounded-sm font-medium">LAST MONTH</span>
+                          <span className="hidden sm:inline text-[8px] sm:text-[9px] bg-indigo-100 text-indigo-700 px-2 py-1 rounded-sm font-medium">LAST THREE MONTHS</span>
+                        </div>
+                      </div>
+                      {/* Right Statistics */}
+                      <div className="w-full sm:w-24 flex flex-row sm:flex-col justify-between sm:justify-start pt-2 gap-2 sm:gap-0">
+                        <div className="sm:mb-3">
+                          <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Card:</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">165</p>
+                        </div>
+                        <div className="sm:mb-3">
+                          <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Cash:</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">57</p>
+                        </div>
+                        <div className="sm:mb-3">
+                          <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Tickets:</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">216</p>
+                        </div>
+                        <div>
+                          <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Payments:</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">222</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </section>
       </div>
