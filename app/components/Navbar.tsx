@@ -11,18 +11,17 @@ const navLinks: NavLink[] = [
   { label: 'Soluții',      href: '/solutii' },
   {
     label: 'Produse',
-    href: '/#products',
+    href: '/products',
     children: [
-      { label: 'Entry Point',         href: '/products/entry-point' },
-      { label: 'Exit Point CardPass', href: '/products/exit-point-cardpass' },
-      { label: 'Exit Point Ticket',   href: '/products/exit-point-ticket' },
-      { label: 'Pay Point',           href: '/products/pay-point' },
-      { label: 'BackOffice',          href: '/products/backoffice' },
+      { label: 'Entry Point',  href: '/products/entry-point' },
+      { label: 'Exit Point',   href: '/products/exit-point-cardpass' },
+      { label: 'Pay Point',    href: '/products/pay-point' },
+      { label: 'BackOffice',   href: '/products/backoffice' },
     ],
   },
   { label: 'Platforma RParking', href: '/platforma-rparking' },
   { label: 'Implementări', href: '/implementari' },
-  { label: 'Despre noi',   href: '/#about' },
+  { label: 'Despre noi',   href: '/despre-noi' },
   { label: 'Contact',      href: '/#contact' },
 ];
 

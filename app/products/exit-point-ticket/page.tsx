@@ -5,25 +5,26 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import {
   LuCheck, LuArrowRight, LuChevronRight, LuHouse,
-  LuQrCode, LuRadioTower, LuCreditCard, LuVolume2, LuMonitor, LuCar,
+  LuQrCode, LuRadioTower, LuVolume2, LuMonitor, LuCar,
   LuCamera, LuServer, LuThermometer, LuZap, LuWifi, LuBox, LuPuzzle,
   LuLightbulb, LuWallet, LuShieldCheck, LuLayoutDashboard, LuBuilding2,
+  LuTicket, LuScanLine,
 } from 'react-icons/lu';
 import { TbBarrierBlock } from 'react-icons/tb';
 import { FaParking } from 'react-icons/fa';
 
 const heroFeatures = [
-  'Validare card',
+  'Validare tichet',
   'Control acces',
-  'Validare NFC',
+  'Citire cod de bare',
   'Comunicare cu BackOffice',
   'Citire QR Code',
   'Deschidere barieră',
 ];
 
 const keyFeatures = [
-  { title: 'Validare', accent: 'card', desc: 'Citește și validează cardurile de acces emise la intrare.', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
-  { title: 'NFC', accent: 'Reader', desc: 'Suportă tag-uri și carduri NFC pentru acces rapid.', icon: <LuRadioTower className="w-6 h-6 text-green-600" /> },
+  { title: 'Validare', accent: 'tichet', desc: 'Citește și validează tichetele emise la intrare.', icon: <LuTicket className="w-6 h-6 text-green-600" /> },
+  { title: 'Cod de bare', accent: 'Scanner', desc: 'Scanează codurile de bare de pe tichet.', icon: <LuScanLine className="w-6 h-6 text-green-600" /> },
   { title: 'QR Code', accent: 'Scanner', desc: 'Scanează codurile QR pentru validare și ieșire.', icon: <LuQrCode className="w-6 h-6 text-green-600" /> },
   { title: 'Control', accent: 'acces', desc: 'Verificare în timp real și autorizare ieșire.', icon: <LuShieldCheck className="w-6 h-6 text-green-600" /> },
   { title: 'Comunicare', accent: 'BackOffice', desc: 'Schimb de date securizat cu platforma centrală.', icon: <LuMonitor className="w-6 h-6 text-green-600" /> },
@@ -32,7 +33,7 @@ const keyFeatures = [
 
 const steps = [
   { title: 'Mașina se prezintă la Exit Point', desc: 'Vehiculul se apropie de terminalul de ieșire.', icon: <LuCar className="w-8 h-8 text-green-600" /> },
-  { title: 'Utilizatorul prezintă cardul de acces', desc: 'Cardul, tag-ul NFC sau codul QR este scanat.', icon: <LuCreditCard className="w-8 h-8 text-green-600" /> },
+  { title: 'Utilizatorul introduce sau scanează tichetul', desc: 'Tichetul de hârtie sau digital este scanat.', icon: <LuTicket className="w-8 h-8 text-green-600" /> },
   { title: 'Sistemul validează accesul', desc: 'Verificare în timp real cu platforma centrală.', icon: <LuShieldCheck className="w-8 h-8 text-green-600" /> },
   { title: 'Bariera se deschide automat', desc: 'Bariera se ridică automat după validare.', icon: <TbBarrierBlock className="w-8 h-8 text-green-600" /> },
   { title: 'Ieșirea din parcare este permisă', desc: 'Vehiculul iese, ieșirea fiind înregistrată.', icon: <FaParking className="w-7 h-7 text-green-600" /> },
@@ -40,9 +41,9 @@ const steps = [
 
 const hardware = [
   { n: 1, title: 'Monitor IP65 7"', desc: 'Ecran tactil rezistent' },
-  { n: 2, title: 'NFC Reader', desc: 'Citire carduri și tag-uri' },
+  { n: 2, title: 'Ticket Reader', desc: 'Citire și validare tichete' },
   { n: 3, title: 'QR Code Scanner', desc: 'Scanare 1D / 2D' },
-  { n: 4, title: 'Card Reader', desc: 'Citire carduri de proximitate' },
+  { n: 4, title: 'NFC Reader', desc: 'Citire carduri și tag-uri' },
   { n: 5, title: 'Speaker', desc: 'Asistență vocală' },
   { n: 6, title: 'Service Button', desc: 'Apel operator' },
 ];
@@ -58,9 +59,9 @@ const callouts = [
 
 const specs = [
   { label: 'Display', value: '7" Touch IP65', icon: <LuMonitor className="w-4 h-4 text-gray-400" /> },
+  { label: 'Ticket Reader', value: 'Cod de bare / QR', icon: <LuTicket className="w-4 h-4 text-gray-400" /> },
   { label: 'QR Scanner', value: '1D / 2D', icon: <LuQrCode className="w-4 h-4 text-gray-400" /> },
   { label: 'NFC / RFID', value: '13.56 MHz', icon: <LuRadioTower className="w-4 h-4 text-gray-400" /> },
-  { label: 'Card Reader', value: 'ISO 14443A/B', icon: <LuCreditCard className="w-4 h-4 text-gray-400" /> },
   { label: 'Speaker', value: '2W / 8Ω', icon: <LuVolume2 className="w-4 h-4 text-gray-400" /> },
   { label: 'LED Status', value: 'Da', icon: <LuLightbulb className="w-4 h-4 text-gray-400" /> },
   { label: 'Comunicație', value: 'Ethernet / 4G', icon: <LuWifi className="w-4 h-4 text-gray-400" /> },
@@ -72,8 +73,8 @@ const specs = [
 ];
 
 const integrations = [
-  { label: 'Carduri acces', icon: <LuCreditCard className="w-7 h-7 text-green-600" /> },
-  { label: 'NFC / RFID', icon: <LuRadioTower className="w-7 h-7 text-green-600" /> },
+  { label: 'Tichete', icon: <LuTicket className="w-7 h-7 text-green-600" /> },
+  { label: 'Cod de bare', icon: <LuScanLine className="w-7 h-7 text-green-600" /> },
   { label: 'QR Code', icon: <LuQrCode className="w-7 h-7 text-green-600" /> },
   { label: 'ANPR', icon: <LuCamera className="w-7 h-7 text-green-600" /> },
   { label: 'Bariere', icon: <TbBarrierBlock className="w-7 h-7 text-green-600" /> },
@@ -83,12 +84,12 @@ const integrations = [
 ];
 
 const ecosystem = [
-  { title: 'Entry Point', desc: 'Stație de intrare care emite cardul de acces.', href: '/products/entry-point', image: '/img/produs1.png', icon: null },
+  { title: 'Entry Point', desc: 'Stație de intrare care emite tichetul de parcare.', href: '/products/entry-point', image: '/img/produs1.png', icon: null },
   { title: 'Pay Point', desc: 'Plată automată cu numerar și card.', href: '/products/pay-point', image: '/img/produs3.png', icon: null },
   { title: 'BackOffice', desc: 'Administrare și raportare în timp real.', href: '/products/backoffice', image: null, icon: <LuLayoutDashboard className="w-10 h-10 text-green-600" /> },
 ];
 
-export default function ExitPointCardPassPage() {
+export default function ExitPointTicketPage() {
   return (
     <main>
       {/* Navbar + Logo */}
@@ -115,17 +116,17 @@ export default function ExitPointCardPassPage() {
                   <LuChevronRight className="w-4 h-4" />
                   <Link href="/#products" className="hover:text-green-600 transition-colors">Produse</Link>
                   <LuChevronRight className="w-4 h-4" />
-                  <span className="text-gray-700 font-medium">Exit Point CardPass</span>
+                  <span className="text-gray-700 font-medium">Exit Point Ticket</span>
                 </nav>
 
                 <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                   EXIT POINT
                 </p>
                 <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
-                  Exit Point <span className="block text-green-500">CardPass</span>
+                  Exit Point <span className="block text-green-500">Ticket</span>
                 </h1>
                 <p data-reveal data-reveal-delay="250" className="text-gray-500 text-lg leading-relaxed max-w-xl mb-8">
-                  Stație inteligentă pentru validarea cardurilor și ieșirea rapidă din parcare.
+                  Stație inteligentă pentru validarea tichetelor și ieșirea rapidă din parcare.
                 </p>
 
                 {/* Feature checkmarks */}
@@ -160,7 +161,7 @@ export default function ExitPointCardPassPage() {
                 <div className="absolute w-80 h-80 bg-green-100 rounded-full blur-3xl opacity-60" />
                 <Image
                   src="/img/produs2.png"
-                  alt="Exit Point CardPass terminal"
+                  alt="Exit Point Ticket terminal"
                   width={380}
                   height={500}
                   className="relative z-10 object-contain h-[460px] w-auto drop-shadow-2xl"
@@ -183,7 +184,7 @@ export default function ExitPointCardPassPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
             {keyFeatures.map((f, idx) => (
               <div
-                key={f.title}
+                key={f.title + f.accent}
                 data-reveal
                 data-reveal-delay={String((idx % 6) * 80)}
                 className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-5"
@@ -239,12 +240,10 @@ export default function ExitPointCardPassPage() {
           </div>
 
           <div className="grid lg:grid-cols-5 gap-8 items-stretch">
-            {/* Left: diagram + list */}
             <div data-reveal="fade-left" className="lg:col-span-3 grid sm:grid-cols-2 gap-6 items-center">
-              {/* Diagram */}
               <div className="relative bg-gray-50 rounded-2xl p-4 flex items-center justify-center">
                 <div className="relative">
-                  <Image src="/img/produs2.png" alt="Exit Point CardPass componente" width={240} height={360} className="h-[360px] w-auto object-contain" />
+                  <Image src="/img/produs2.png" alt="Exit Point Ticket componente" width={240} height={360} className="h-[360px] w-auto object-contain" />
                   {callouts.map((c) => (
                     <span
                       key={c.n}
@@ -257,7 +256,6 @@ export default function ExitPointCardPassPage() {
                 </div>
               </div>
 
-              {/* List */}
               <ul className="space-y-4">
                 {hardware.map((h) => (
                   <li key={h.n} className="flex items-start gap-3">
@@ -271,19 +269,17 @@ export default function ExitPointCardPassPage() {
               </ul>
             </div>
 
-            {/* Right: environmental photo */}
             <div data-reveal="fade-right" className="lg:col-span-2 relative rounded-2xl overflow-hidden min-h-[320px]">
-              <Image src="/img/produse/entry point.png" alt="Exit Point CardPass instalat" fill className="object-cover" />
+              <Image src="/img/produse/entry point.png" alt="Exit Point Ticket instalat" fill className="object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Specificații tehnice + Integrare și compatibilitate ── */}
+      {/* ── Specificații tehnice + Integrare ── */}
       <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-10">
-            {/* Specs */}
             <div data-reveal="fade-left">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-3">Specificații tehnice</h2>
@@ -302,7 +298,6 @@ export default function ExitPointCardPassPage() {
               </div>
             </div>
 
-            {/* Integrations */}
             <div data-reveal="fade-right">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-3">Integrare și compatibilitate</h2>

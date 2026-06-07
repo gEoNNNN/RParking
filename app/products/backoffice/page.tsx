@@ -1,0 +1,432 @@
+import { Fragment } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import {
+  LuCheck, LuArrowRight, LuChevronRight, LuHouse,
+  LuLayoutDashboard, LuFileText, LuUsers, LuTag, LuBell, LuShieldCheck,
+  LuServer, LuCloud, LuActivity, LuSettings, LuWallet,
+  LuLogIn, LuLogOut, LuCamera, LuCpu, LuBuilding2,
+  LuLock, LuDatabase, LuClock, LuCreditCard,
+} from 'react-icons/lu';
+import { TbBarrierBlock } from 'react-icons/tb';
+
+const heroFeatures = [
+  'Monitorizare în timp real',
+  'Evenimente și alerte',
+  'Rapoarte și statistici avansate',
+  'Integrare completă cu echipamente',
+  'Management utilizatori și tarife',
+  'Acces securizat și audit trail',
+];
+
+const keyFeatures = [
+  { title: 'Dashboard', accent: 'în timp real', desc: 'Vizualizează instant performanța parcărilor și indicatorii cheie.', icon: <LuLayoutDashboard className="w-6 h-6 text-green-600" /> },
+  { title: 'Rapoarte', accent: 'și statistici', desc: 'Rapoarte personalizate pentru încasări, tranzacții și ocupare.', icon: <LuFileText className="w-6 h-6 text-green-600" /> },
+  { title: 'Management', accent: 'utilizatori', desc: 'Roluri și permisiuni flexibile pentru echipa ta.', icon: <LuUsers className="w-6 h-6 text-green-600" /> },
+  { title: 'Tarife', accent: 'și reguli', desc: 'Configurează tarife, promoții și reguli de acces.', icon: <LuTag className="w-6 h-6 text-green-600" /> },
+  { title: 'Alerte', accent: 'și notificări', desc: 'Primești notificări pentru evenimente importante în sistem.', icon: <LuBell className="w-6 h-6 text-green-600" /> },
+  { title: 'Securitate', accent: 'avansată', desc: 'Acces securizat, loguri complete și audit trail.', icon: <LuShieldCheck className="w-6 h-6 text-green-600" /> },
+];
+
+const steps = [
+  { title: 'Datele sunt colectate automat de la echipamente', desc: 'Entry, Exit, Pay Point trimit date continuu.', icon: <LuServer className="w-8 h-8 text-green-600" /> },
+  { title: 'Informațiile sunt transmise securizat în BackOffice', desc: 'Conexiune criptată și protejată.', icon: <LuCloud className="w-8 h-8 text-green-600" /> },
+  { title: 'Datele sunt procesate și centralizate în rapoarte', desc: 'Agregare automată și structurare pe categorii.', icon: <LuFileText className="w-8 h-8 text-green-600" /> },
+  { title: 'Obții statistici și alerte relevante în timp real', desc: 'Notificări inteligente pentru orice eveniment.', icon: <LuBell className="w-8 h-8 text-green-600" /> },
+  { title: 'Iei decizii mai bune și optimizezi performanța', desc: 'Date clare pentru o administrare eficientă.', icon: <LuSettings className="w-8 h-8 text-green-600" /> },
+];
+
+const modules = [
+  { n: 1, title: 'Monitorizare live', desc: 'Stare echipamente, tranzacții și alerte în timp real.', icon: <LuActivity className="w-5 h-5 text-green-600" /> },
+  { n: 2, title: 'Rapoarte avansate', desc: 'Rapoarte financiare, operaționale și de ocupare personalizate.', icon: <LuFileText className="w-5 h-5 text-green-600" /> },
+  { n: 3, title: 'Management financiar', desc: 'Încasări, plăți, rambursări și reconcilieri automate.', icon: <LuWallet className="w-5 h-5 text-green-600" /> },
+  { n: 4, title: 'Management acces', desc: 'Utilizatori, roluri, permisiuni și politici de acces.', icon: <LuUsers className="w-5 h-5 text-green-600" /> },
+  { n: 5, title: 'Configurare sistem', desc: 'Tarife, zone, reguli, ore de funcționare și integrări.', icon: <LuSettings className="w-5 h-5 text-green-600" /> },
+];
+
+const integrations = [
+  { label: 'Entry Point', icon: <LuLogIn className="w-7 h-7 text-green-600" /> },
+  { label: 'Exit Point', icon: <LuLogOut className="w-7 h-7 text-green-600" /> },
+  { label: 'Pay Point', icon: <LuWallet className="w-7 h-7 text-green-600" /> },
+  { label: 'Bariere', icon: <TbBarrierBlock className="w-7 h-7 text-green-600" /> },
+  { label: 'ANPR Camera', icon: <LuCamera className="w-7 h-7 text-green-600" /> },
+  { label: 'Validatoare', icon: <LuCreditCard className="w-7 h-7 text-green-600" /> },
+  { label: 'Dispozitive IoT', icon: <LuCpu className="w-7 h-7 text-green-600" /> },
+  { label: 'Sisteme terțe', icon: <LuBuilding2 className="w-7 h-7 text-green-600" /> },
+];
+
+const security = [
+  { text: 'Conexiune criptată end-to-end', icon: <LuLock className="w-5 h-5 text-green-400" /> },
+  { text: 'Backup automat și replicare în cloud', icon: <LuDatabase className="w-5 h-5 text-green-400" /> },
+  { text: 'Disponibilitate ridicată 24/7', icon: <LuClock className="w-5 h-5 text-green-400" /> },
+  { text: 'Audit și trasabilitate completă', icon: <LuShieldCheck className="w-5 h-5 text-green-400" /> },
+];
+
+const ecosystem = [
+  { title: 'Entry Point', desc: 'Stație de intrare care emite cardul de acces.', href: '/products/entry-point', image: '/img/produs1.png', icon: null },
+  { title: 'Exit Point', desc: 'Stație de ieșire cu validare card sau tichet.', href: '/products/exit-point-cardpass', image: '/img/produs2.png', icon: null },
+  { title: 'Pay Point', desc: 'Plată automată cu numerar și card.', href: '/products/pay-point', image: '/img/produs3.png', icon: null },
+];
+
+export default function BackOfficePage() {
+  return (
+    <main>
+      {/* Navbar + Logo */}
+      <div className="relative">
+        <Navbar />
+        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+          <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
+        </Link>
+
+        {/* ── Hero (white + green) ── */}
+        <section className="relative w-full min-h-[88vh] flex items-center overflow-hidden bg-white">
+          <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-bl from-green-50 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-green-500 pointer-events-none" />
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-16 pt-36 grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: text */}
+            <div>
+              {/* Breadcrumb */}
+              <nav data-reveal className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+                <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
+                  <LuHouse className="w-4 h-4" /> Acasă
+                </Link>
+                <LuChevronRight className="w-4 h-4" />
+                <Link href="/#products" className="hover:text-green-600 transition-colors">Produse</Link>
+                <LuChevronRight className="w-4 h-4" />
+                <span className="text-gray-700 font-medium">BackOffice</span>
+              </nav>
+
+              <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
+                BACKOFFICE
+              </p>
+              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
+                BackOffice
+              </h1>
+              <p data-reveal data-reveal-delay="250" className="text-gray-500 text-lg leading-relaxed max-w-xl mb-8">
+                Platforma centralizată pentru administrarea și monitorizarea inteligentă a parcărilor.
+              </p>
+
+              {/* Feature checkmarks */}
+              <div data-reveal data-reveal-delay="340" className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 max-w-lg">
+                {heroFeatures.map((f) => (
+                  <div key={f} className="flex items-center gap-2">
+                    <LuCheck className="w-5 h-5 text-green-500 shrink-0" />
+                    <span className="text-gray-700 text-sm font-semibold">{f}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA buttons */}
+              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/#contact"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:shadow-lg hover:shadow-green-600/50 hover:scale-105 active:scale-95"
+                >
+                  Solicită ofertă <LuArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/#contact"
+                  className="inline-flex items-center gap-2 border border-gray-300 hover:border-gray-500 text-gray-800 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm hover:bg-gray-50 hover:scale-105 active:scale-95"
+                >
+                  Programare demonstrație
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: green dashboard illustration */}
+            <div data-reveal="fade-left" className="relative hidden lg:flex items-center justify-center">
+              <div className="absolute w-80 h-80 bg-green-100 rounded-full blur-3xl opacity-60" />
+              <div className="relative z-10 bg-white rounded-2xl shadow-2xl border border-gray-100 w-full max-w-lg overflow-hidden">
+                {/* Browser chrome */}
+                <div className="bg-gray-50 border-b border-gray-100 px-4 py-2.5 flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-300" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-300" />
+                  <div className="w-3 h-3 rounded-full bg-green-400" />
+                  <div className="flex-1 ml-2 h-5 bg-white border border-gray-200 rounded text-[10px] text-gray-400 flex items-center px-2 max-w-56">backoffice.rparking.md</div>
+                </div>
+                {/* Dashboard body */}
+                <div className="p-5">
+                  <div className="flex items-center justify-between mb-4">
+                    <p className="text-gray-900 font-bold text-sm">Dashboard Parcare</p>
+                    <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">● Live</span>
+                  </div>
+                  {/* Stats */}
+                  <div className="grid grid-cols-3 gap-3 mb-4">
+                    <div className="bg-green-50 rounded-lg p-3">
+                      <p className="text-[10px] text-gray-500 mb-1">Vehicule azi</p>
+                      <p className="text-sm font-black text-gray-900">247</p>
+                      <p className="text-[10px] text-green-600 font-semibold">+12%</p>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-3">
+                      <p className="text-[10px] text-gray-500 mb-1">Încasări</p>
+                      <p className="text-sm font-black text-gray-900">4.8K lei</p>
+                      <p className="text-[10px] text-green-600 font-semibold">+8%</p>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-3">
+                      <p className="text-[10px] text-gray-500 mb-1">Ocupare</p>
+                      <p className="text-sm font-black text-gray-900">82%</p>
+                      <p className="text-[10px] text-green-600 font-semibold">+5%</p>
+                    </div>
+                  </div>
+                  {/* Chart */}
+                  <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                    <p className="text-[10px] text-gray-500 mb-2 font-semibold">Intrări pe oră</p>
+                    <div className="flex items-end gap-1 h-14">
+                      {[30, 55, 45, 70, 60, 85, 75, 90, 65, 80, 70, 95].map((h, i) => (
+                        <div key={i} className="flex-1 bg-green-500 rounded-t opacity-80" style={{ height: `${h}%` }} />
+                      ))}
+                    </div>
+                  </div>
+                  {/* Transactions */}
+                  <div className="space-y-1.5">
+                    <p className="text-[10px] text-gray-500 font-semibold mb-2">Tranzacții recente</p>
+                    <div className="flex items-center justify-between bg-gray-50 rounded px-3 py-1.5">
+                      <span className="text-[11px] font-mono font-semibold text-gray-700">B-123-XYZ</span>
+                      <span className="text-[11px] font-bold text-green-600">2.50 lei</span>
+                    </div>
+                    <div className="flex items-center justify-between bg-gray-50 rounded px-3 py-1.5">
+                      <span className="text-[11px] font-mono font-semibold text-gray-700">MS-456-AB</span>
+                      <span className="text-[11px] font-bold text-green-600">5.00 lei</span>
+                    </div>
+                    <div className="flex items-center justify-between bg-gray-50 rounded px-3 py-1.5">
+                      <span className="text-[11px] font-mono font-semibold text-gray-700">GL-789-CD</span>
+                      <span className="text-[11px] font-bold text-green-600">3.50 lei</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── Funcționalități principale ── */}
+      <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
+        <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+          <div data-reveal="fade" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Funcționalități principale</h2>
+            <div className="w-12 h-0.5 bg-green-500" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
+            {keyFeatures.map((f, idx) => (
+              <div
+                key={f.title}
+                data-reveal
+                data-reveal-delay={String((idx % 6) * 80)}
+                className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-5"
+              >
+                <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-4">
+                  {f.icon}
+                </div>
+                <h3 className="text-gray-900 font-bold text-base leading-tight mb-1.5">
+                  {f.title} <span className="block text-green-600">{f.accent}</span>
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Cum funcționează? ── */}
+      <section className="py-16 bg-white">
+        <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+          <div data-reveal="fade" className="text-center mb-14">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Cum funcționează?</h2>
+            <div className="w-12 h-0.5 bg-green-500 mx-auto" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-start gap-y-10 gap-x-4">
+            {steps.map((step, idx) => (
+              <Fragment key={step.title}>
+                <div className="flex flex-col items-center text-center gap-3 lg:flex-1">
+                  <div className="w-24 h-24 rounded-full bg-green-50 border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
+                    {step.icon}
+                  </div>
+                  <p className="text-gray-900 font-bold text-sm leading-tight">{step.title}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed max-w-44">{step.desc}</p>
+                </div>
+                {idx < steps.length - 1 && (
+                  <div className="hidden lg:flex items-center pt-12">
+                    <LuArrowRight className="w-6 h-6 text-green-500 shrink-0" />
+                  </div>
+                )}
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Module și capabilități ── */}
+      <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
+        <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+          <div data-reveal="fade" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Module și capabilități</h2>
+            <div className="w-12 h-0.5 bg-green-500" />
+          </div>
+
+          <div className="grid lg:grid-cols-5 gap-8 items-center">
+            {/* Module list */}
+            <div data-reveal="fade-left" className="lg:col-span-2 space-y-4">
+              {modules.map((m) => (
+                <div key={m.n} className="flex items-start gap-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 p-5">
+                  <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                    {m.icon}
+                  </div>
+                  <div>
+                    <p className="text-gray-900 font-bold text-sm leading-tight mb-1">{m.title}</p>
+                    <p className="text-gray-500 text-xs leading-relaxed">{m.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Dashboard screenshot collage */}
+            <div data-reveal="fade-right" className="lg:col-span-3 relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-200">
+              <Image
+                src="/img/produse/backoffice.png"
+                alt="BackOffice dashboard"
+                width={900}
+                height={560}
+                className="w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Integrare completă + Securitate ── */}
+      <section className="py-16 bg-white">
+        <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-10">
+            {/* Integrations */}
+            <div data-reveal="fade-left">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">Integrare completă</h2>
+                <div className="w-12 h-0.5 bg-green-500" />
+              </div>
+              <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                BackOffice se integrează nativ cu toate echipamentele și modulele din ecosistemul <span className="text-green-600 font-semibold">RParking</span>.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {integrations.map((i) => (
+                  <div key={i.label} className="flex flex-col items-center text-center gap-2">
+                    <div className="w-16 h-16 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-green-300">
+                      {i.icon}
+                    </div>
+                    <span className="text-gray-700 text-xs font-semibold leading-tight">{i.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Security */}
+            <div data-reveal="fade-right">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">Securitate și fiabilitate</h2>
+                <div className="w-12 h-0.5 bg-green-500" />
+              </div>
+              <div className="relative bg-gray-900 rounded-2xl p-7 overflow-hidden">
+                {/* Glow */}
+                <div className="absolute -top-10 -right-10 w-48 h-48 bg-green-500/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative">
+                  <div className="w-14 h-14 rounded-2xl bg-green-600/20 border border-green-600/30 flex items-center justify-center mb-6">
+                    <LuShieldCheck className="w-7 h-7 text-green-400" />
+                  </div>
+                  <ul className="space-y-4">
+                    {security.map((s) => (
+                      <li key={s.text} className="flex items-center gap-3">
+                        {s.icon}
+                        <span className="text-gray-200 text-sm font-medium">{s.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Compatibil cu ecosistemul RParking ── */}
+      <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
+        <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+          <div data-reveal="fade" className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              Compatibil cu ecosistemul <span className="text-green-600">RParking</span>
+            </h2>
+            <div className="w-12 h-0.5 bg-green-500 mx-auto" />
+          </div>
+
+          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-4">
+            {ecosystem.map((e, idx) => (
+              <Fragment key={e.title}>
+                <Link
+                  href={e.href}
+                  data-reveal
+                  data-reveal-delay={String(idx * 100)}
+                  className="flex-1 flex items-center gap-4 bg-white rounded-2xl border border-gray-200 hover:border-green-300 hover:shadow-md transition-all duration-300 p-5"
+                >
+                  <div className="relative w-20 h-20 bg-gray-50 rounded-xl flex items-center justify-center shrink-0 overflow-hidden">
+                    {e.image ? (
+                      <Image src={e.image} alt={e.title} width={70} height={70} className="object-contain h-16 w-auto" />
+                    ) : (
+                      e.icon
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-gray-900 font-bold text-base mb-1">{e.title}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">{e.desc}</p>
+                  </div>
+                </Link>
+                {idx < ecosystem.length - 1 && (
+                  <div className="hidden lg:flex items-center text-green-500">
+                    <LuChevronRight className="w-5 h-5" />
+                    <LuChevronRight className="w-5 h-5 -ml-3" />
+                  </div>
+                )}
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Bottom CTA (dark) ── */}
+      <section className="relative py-20 bg-gray-950 overflow-hidden">
+        <div className="absolute inset-y-0 right-0 w-1/2 hidden lg:block">
+          <Image src="/img/pc.png" alt="" fill className="object-cover opacity-20" />
+          <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-950/70 to-transparent" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+          <div data-reveal="fade-left" className="max-w-xl">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-3 leading-tight">
+              Transformă datele în <span className="text-green-500">decizii inteligente</span>.
+            </h2>
+            <p className="text-gray-400 text-base mb-8">
+              Descoperă cum BackOffice te ajută să crești eficiența și veniturile parcărilor tale.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95 whitespace-nowrap"
+              >
+                Solicită ofertă <LuArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/#contact"
+                className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-8 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/5 hover:bg-white/10 hover:scale-105 active:scale-95 whitespace-nowrap"
+              >
+                Programare demonstrație
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}

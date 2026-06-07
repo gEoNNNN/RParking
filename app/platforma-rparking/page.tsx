@@ -65,33 +65,32 @@ export default function PlatformaRParkingPage() {
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
-        {/* ── Hero (dark) ── */}
-        <section className="relative w-full min-h-[85vh] flex items-center overflow-hidden bg-gray-950">
+        {/* ── Hero ── */}
+        <section className="relative w-full min-h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
             <Image src="/img/platforma-rparking/hero.png" alt="" fill className="object-cover object-center" quality={95} priority />
           </div>
-          {/* Dark fog from the left for text readability */}
-          <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-950/80 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gray-950/30 pointer-events-none" />
+          {/* White fog — left side, fades into the image on the right */}
+          <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-36">
             {/* Breadcrumb */}
-            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-300 mb-6">
-              <Link href="/" className="flex items-center gap-1 hover:text-green-400 transition-colors">
+            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+              <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
                 <LuHouse className="w-4 h-4" /> Acasă
               </Link>
               <LuChevronRight className="w-4 h-4" />
-              <span className="text-white font-medium">Platforma RParking</span>
+              <span className="text-gray-700 font-medium">Platforma RParking</span>
             </nav>
 
             <div className="max-w-2xl">
-              <p data-reveal data-reveal-delay="80" className="text-green-400 font-bold tracking-wide text-sm mb-4">
+              <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 PLATFORMA RPARKING
               </p>
-              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-5">
-                Tehnologie inteligentă care <span className="text-green-500">simplifică</span> parcările.
+              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
+                Tehnologie inteligentă care <span className="text-green-600">simplifică</span> parcările.
               </h1>
-              <p data-reveal data-reveal-delay="250" className="text-gray-300 text-lg leading-relaxed max-w-xl mb-8">
+              <p data-reveal data-reveal-delay="250" className="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">
                 RParking combină echipamente inteligente, software avansat și conectivitate securizată
                 într-o platformă unitară și scalabilă.
               </p>
@@ -106,7 +105,7 @@ export default function PlatformaRParkingPage() {
                 </Link>
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/5 hover:bg-white/10 hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/70 hover:bg-white hover:scale-105 active:scale-95"
                 >
                   Programare demo
                 </Link>
@@ -116,8 +115,8 @@ export default function PlatformaRParkingPage() {
               <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-x-8 gap-y-3">
                 {heroBadges.map((b) => (
                   <div key={b} className="flex items-center gap-2">
-                    <LuCheck className="w-5 h-5 text-green-400 shrink-0" />
-                    <span className="text-gray-200 text-sm font-semibold">{b}</span>
+                    <LuCheck className="w-5 h-5 text-green-500 shrink-0" />
+                    <span className="text-gray-700 text-sm font-semibold">{b}</span>
                   </div>
                 ))}
               </div>

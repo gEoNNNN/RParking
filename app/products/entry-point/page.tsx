@@ -98,34 +98,33 @@ export default function EntryPointPage() {
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
-        {/* ── Hero (dark) ── */}
-        <section className="relative w-full min-h-[88vh] flex items-center overflow-hidden bg-gray-950">
-          <div className="absolute inset-0">
-            <Image src="/img/produse/entry point.png" alt="" fill className="object-cover object-center" quality={95} priority />
-          </div>
-          <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-950/80 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gray-950/30 pointer-events-none" />
+        {/* ── Hero ── */}
+        <section className="relative w-full overflow-hidden bg-white">
+          {/* Full image — shown completely at its natural ratio, no crop */}
+          <Image src="/img/produse/entry point.png" alt="" width={1627} height={967} className="w-full h-auto block" quality={95} priority />
+          {/* White fog */}
+          <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
 
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-28 pt-36">
-            {/* Breadcrumb */}
-            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-300 mb-6">
-              <Link href="/" className="flex items-center gap-1 hover:text-green-400 transition-colors">
-                <LuHouse className="w-4 h-4" /> Acasă
-              </Link>
-              <LuChevronRight className="w-4 h-4" />
-              <Link href="/#products" className="hover:text-green-400 transition-colors">Produse</Link>
-              <LuChevronRight className="w-4 h-4" />
-              <span className="text-white font-medium">Entry Point</span>
-            </nav>
-
+          <div className="absolute inset-0 z-10 flex items-center px-6 lg:px-10 pt-20">
             <div className="max-w-2xl">
-              <p data-reveal data-reveal-delay="80" className="text-green-400 font-bold tracking-wide text-sm mb-4">
+              {/* Breadcrumb */}
+              <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+                <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
+                  <LuHouse className="w-4 h-4" /> Acasă
+                </Link>
+                <LuChevronRight className="w-4 h-4" />
+                <Link href="/products" className="hover:text-green-600 transition-colors">Produse</Link>
+                <LuChevronRight className="w-4 h-4" />
+                <span className="text-gray-700 font-medium">Entry Point</span>
+              </nav>
+
+              <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 ENTRY POINT
               </p>
-              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-5">
+              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
                 Entry Point
               </h1>
-              <p data-reveal data-reveal-delay="250" className="text-gray-300 text-lg leading-relaxed max-w-xl mb-8">
+              <p data-reveal data-reveal-delay="250" className="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">
                 Stație inteligentă pentru controlul accesului în parcări moderne.
               </p>
 
@@ -133,8 +132,8 @@ export default function EntryPointPage() {
               <div data-reveal data-reveal-delay="340" className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mb-8 max-w-lg">
                 {heroFeatures.map((f) => (
                   <div key={f} className="flex items-center gap-2">
-                    <LuCheck className="w-5 h-5 text-green-400 shrink-0" />
-                    <span className="text-gray-200 text-sm font-semibold">{f}</span>
+                    <LuCheck className="w-5 h-5 text-green-500 shrink-0" />
+                    <span className="text-gray-700 text-sm font-semibold">{f}</span>
                   </div>
                 ))}
               </div>
@@ -143,13 +142,13 @@ export default function EntryPointPage() {
               <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:shadow-lg hover:shadow-green-600/50 hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
                 >
                   Solicită ofertă <LuArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/5 hover:bg-white/10 hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/70 hover:bg-white hover:scale-105 active:scale-95"
                 >
                   Programare demonstrație
                 </Link>
