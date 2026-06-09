@@ -2,36 +2,30 @@
 
 import Link from 'next/link';
 import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
-import { useLanguage } from './LanguageProvider';
-
 
 export default function HeroSection() {
-  const { t } = useLanguage();
-  const p = t.products;
-  const h = t.hero;
-
   const featureCards = [
     {
-      title: p.entryPoint,
-      subtitle: p.entrySubtitle,
+      title: 'Entry Point',
+      subtitle: 'Acces automat',
       icon: <LuLogIn className="w-8 h-8 text-white" />,
       href: '/products/entry-point',
     },
     {
-      title: p.exitPoint,
-      subtitle: p.exitSubtitle,
+      title: 'Exit Point',
+      subtitle: 'Ieșire controlată',
       icon: <LuLogOut className="w-8 h-8 text-white" />,
       href: '/products/exit-point-cardpass',
     },
     {
-      title: p.payPoint,
-      subtitle: p.paySubtitle,
+      title: 'Pay Point',
+      subtitle: 'Plăți rapide',
       icon: <LuCreditCard className="w-8 h-8 text-white" />,
       href: '/products/pay-point',
     },
     {
-      title: p.backoffice,
-      subtitle: p.backofficeSubtitle,
+      title: 'BackOffice',
+      subtitle: 'Control total',
       icon: <LuLayoutDashboard className="w-8 h-8 text-white" />,
       href: '/products/backoffice',
     },
@@ -39,33 +33,33 @@ export default function HeroSection() {
 
   const badges = [
     {
-      line1: h.badge1.split(' ')[0] + (h.badge1.split(' ')[1] ? ' ' + h.badge1.split(' ')[1] : ''),
-      line2: h.badge1.split(' ')[2] || '',
+      line1: 'Dezvoltat în',
+      line2: 'Moldova',
       icon: <LuPlane className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: h.badge2.split(' ')[0] + (h.badge2.split(' ')[1] ? ' ' + h.badge2.split(' ')[1] : ''),
-      line2: h.badge2.split(' ')[2] + ' ' + (h.badge2.split(' ')[3] || ''),
+      line1: 'Hardware &',
+      line2: 'Software propriu',
       icon: <LuSettings2 className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: h.badge3.split(' ')[0] + ' ' + (h.badge3.split(' ')[1] || ''),
-      line2: h.badge3.split(' ')[2] || '',
+      line1: 'Support tehnic',
+      line2: 'dedicat',
       icon: <LuUsers className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: h.badge4.split(' ')[0] || '',
-      line2: h.badge4.split(' ')[1] + ' ' + (h.badge4.split(' ')[2] || ''),
+      line1: 'Securizat',
+      line2: 'și fiabil',
       icon: <LuShieldCheck className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: h.badge5.split(' ')[0] || '',
-      line2: h.badge5.split(' ')[1] || '',
+      line1: 'Integrări',
+      line2: 'ușoare',
       icon: <LuClock className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: h.badge6.split(' ')[0] || '',
-      line2: h.badge6.split(' ')[1] || '',
+      line1: 'Instalare',
+      line2: 'rapidă',
       icon: <LuZap className="w-7 h-7 text-green-600 shrink-0" />,
     },
   ];
@@ -92,12 +86,12 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <h2 data-reveal data-reveal-delay="120" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug mb-5">
-            {h.subtitle}
+            Soluția inteligentă pentru parcări moderne
           </h2>
 
           {/* Description */}
           <p data-reveal data-reveal-delay="220" className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-lg font-medium">
-            {h.description}
+            Control complet al accesului, plăților și monitorizării într-o platformă integrată de hardware și software dezvoltată și produsă în Republica Moldova.
           </p>
 
           {/* CTA buttons */}
@@ -106,14 +100,14 @@ export default function HeroSection() {
               href="#contact"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
             >
-              {t.cta.requestQuote}
+              Solicită ofertă
               <LuArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#contact"
               className="inline-flex items-center border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"
             >
-              {t.cta.requestQuote}
+              Solicită ofertă
             </a>
           </div>
 

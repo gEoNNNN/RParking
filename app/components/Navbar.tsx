@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { LuMenu, LuX, LuChevronDown } from 'react-icons/lu';
-import LanguageSwitcher from './LanguageSwitcher';
 
 type NavLink = { label: string; href: string; children?: { label: string; href: string }[] };
 
@@ -18,6 +17,7 @@ const navLinks: NavLink[] = [
       { label: 'Exit Point',   href: '/products/exit-point-cardpass' },
       { label: 'Pay Point',    href: '/products/pay-point' },
       { label: 'BackOffice',   href: '/products/backoffice' },
+      { label: 'RAccess WC',   href: '/products/raccess-wc' },
     ],
   },
   { label: 'Platforma RParking', href: '/platforma-rparking' },
@@ -101,7 +101,6 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex-1 hidden lg:flex justify-end items-center gap-3">
-          <LanguageSwitcher />
           <Link
             href="/#contact"
             className="bg-green-600 hover:bg-green-500 text-white text-base font-bold px-5 py-2.5 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-105 active:scale-95 hover:shadow-md hover:shadow-green-600/30"
@@ -192,9 +191,6 @@ export default function Navbar() {
           >
             Solicită demo
           </Link>
-          <div className="pt-2 border-t border-gray-100 flex justify-center">
-            <LanguageSwitcher />
-          </div>
         </div>
       )}
     </nav>

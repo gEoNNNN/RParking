@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LuMapPin, LuQrCode, LuWallet, LuInfo, LuDownload } from 'react-icons/lu';
@@ -21,7 +24,23 @@ const features = [
   },
 ];
 
+const mockupImages = [
+  '/img/mockup1.png',
+  '/img/mockup2.png',
+  '/img/mockup3.png',
+  '/img/mockup4.png',
+];
+
 export default function MobileAppSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % mockupImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -31,8 +50,8 @@ export default function MobileAppSection() {
             <span className="text-green-600 font-semibold text-sm uppercase tracking-wide mb-2 block">
               Aplicație mobilă
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Parchează inteligent cu <span className="text-green-600">RParking</span> App
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 whitespace-nowrap">
+              Parchează inteligent cu <span className="text-green-600">RParking App</span>
             </h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
               Descarcă aplicația și ai control total asupra parcărilor tale direct de pe telefon.
@@ -70,21 +89,37 @@ export default function MobileAppSection() {
             </Link>
           </div>
 
-          {/* Right - Mockup */}
+          {/* Right - Mockup Carousel */}
           <div data-reveal="fade-left" className="relative flex justify-center">
             <div className="relative w-72 md:w-80">
               {/* Phone frame background */}
               <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 rounded-[40px] blur-2xl opacity-60" />
               
-              {/* Mockup image */}
-              <Image
-                src="/img/mockup.png"
-                alt="RParking App Mockup"
-                width={320}
-                height={640}
-                className="relative z-10 w-full h-auto rounded-3xl shadow-2xl"
-                style={{ objectFit: 'contain' }}
-              />
+              {/* Carousel images */}
+              <div className="relative z-10 w-full aspect-[320/640] rounded-3xl overflow-hidden shadow-2xl">
+                {mockupImages.map((src, idx) => (
+                  <Image
+                    key={src}
+                    src={src}
+                    alt={`RParking App Mockup ${idx + 1}`}
+                    fill
+                    className={`object-cover transition-opacity duration-500 ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                    priority={idx === 0}
+                  />
+                ))}
+              </div>
+              
+              {/* Indicators */}
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                {mockupImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-colors ${idx === currentIndex ? 'bg-green-600' : 'bg-gray-300'}`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
