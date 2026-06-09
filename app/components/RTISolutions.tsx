@@ -6,20 +6,20 @@ const rtiProducts = [
   {
     title: 'RParking',
     description: 'Automatizare completă a parcărilor.',
-    image: '/img/logo.png',
+    image: '/img/rparkingcarnobg.png',
     href: '/products',
   },
   {
     title: 'RAccess WC',
     description: 'Control acces și taxare pentru grupuri sanitare publice.',
     image: '/img/wc.png',
-    href: '#',
+    href: '/products/raccess-wc',
   },
   {
     title: 'RChange',
     description: 'Automat self-service pentru schimb valutar și servicii automate.',
     image: '/img/exchange.png',
-    href: '#',
+    href: '#/products/rchange',
   },
 ];
 
@@ -40,19 +40,20 @@ export default function RTISolutions() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {rtiProducts.map((product, idx) => (
-            <div
+            <Link
               key={product.title}
+              href={product.href}
               data-reveal
               data-reveal-delay={String(idx * 100)}
-              className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-green-300 transition-all duration-300"
+              className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-green-300 transition-all duration-300 block"
             >
-              {/* Image */}
+              {/* Image - larger for RParking only */}
               <div className="relative h-48 bg-gray-100 flex items-center justify-center p-6">
                 <Image
                   src={product.image}
                   alt={product.title}
-                  width={120}
-                  height={80}
+                  width={idx === 0 ? 180 : 120}
+                  height={idx === 0 ? 120 : 80}
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -65,14 +66,11 @@ export default function RTISolutions() {
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                   {product.description}
                 </p>
-                <Link
-                  href={product.href}
-                  className="inline-flex items-center gap-2 text-green-600 font-semibold text-sm hover:text-green-700 transition-colors"
-                >
+                <span className="inline-flex items-center gap-2 text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
                   Detalii <LuArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

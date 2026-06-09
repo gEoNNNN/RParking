@@ -88,10 +88,7 @@ export default function BackOfficePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
-              <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
-                BACKOFFICE
-              </p>
-              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
+              <h1 data-reveal data-reveal-delay="80" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
                 BackOffice
               </h1>
               <p data-reveal data-reveal-delay="250" className="text-gray-500 text-lg leading-relaxed max-w-xl mb-8">

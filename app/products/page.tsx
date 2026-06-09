@@ -144,10 +144,7 @@ export default function ProductsPage() {
 
           <div className="relative lg:absolute inset-0 z-10 flex flex-col justify-start pt-32 sm:pt-36 lg:pt-52 pb-12 px-6 lg:pl-24">
             <div className="max-w-xl">
-              <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
-                PRODUSE
-              </p>
-              <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
+              <h1 data-reveal data-reveal-delay="80" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
                 Produsele <span className="text-green-600">RParking</span>
               </h1>
               <p data-reveal data-reveal-delay="250" className="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">

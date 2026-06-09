@@ -17,7 +17,6 @@ const navLinks: NavLink[] = [
       { label: 'Exit Point',   href: '/products/exit-point-cardpass' },
       { label: 'Pay Point',    href: '/products/pay-point' },
       { label: 'BackOffice',   href: '/products/backoffice' },
-      { label: 'RAccess WC',   href: '/products/raccess-wc' },
     ],
   },
   { label: 'Platforma RParking', href: '/platforma-rparking' },

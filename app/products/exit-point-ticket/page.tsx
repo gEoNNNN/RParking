@@ -119,10 +119,7 @@ export default function ExitPointTicketPage() {
                   <span className="text-gray-700 font-medium">Exit Point Ticket</span>
                 </nav>
 
-                <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
-                  EXIT POINT
-                </p>
-                <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
+                <h1 data-reveal data-reveal-delay="80" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
                   Exit Point <span className="block text-green-500">Ticket</span>
                 </h1>
                 <p data-reveal data-reveal-delay="250" className="text-gray-500 text-lg leading-relaxed max-w-xl mb-8">

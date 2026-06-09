@@ -29,8 +29,12 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-900 font-semibold text-sm mb-4">Soluțiile RTI Systems</h4>
             <ul className="space-y-2.5">
-              {['RParking', 'RAccess WC', 'RChange'].map((item) => (
-                <li key={item}><Link href="#" className="text-gray-500 text-sm hover:text-green-600 transition-colors">{item}</Link></li>
+              {[
+                { name: 'RParking', href: '/products' },
+                { name: 'RAccess WC', href: '/products/raccess-wc' },
+                { name: 'RChange', href: '/products/rchange' },
+              ].map((item) => (
+                <li key={item.name}><Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors">{item.name}</Link></li>
               ))}
             </ul>
           </div>
