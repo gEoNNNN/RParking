@@ -6,8 +6,10 @@ import BenefitsBar from './components/BenefitsBar';
 import ProductEcosystem from './components/ProductEcosystem';
 import HowItWorks from './components/HowItWorks';
 import RealImplementations from './components/RealImplementations';
+import MobileAppSection from './components/MobileAppSection';
 import TargetAudience from './components/TargetAudience';
 import WhyRParking from './components/WhyRParking';
+import RTISolutions from './components/RTISolutions';
 import CTABanner from './components/CTABanner';
 import Footer from './components/Footer';
 
@@ -32,8 +34,10 @@ export default function Home() {
       <ProductEcosystem />
       <HowItWorks />
       <RealImplementations />
+      <MobileAppSection />
       <TargetAudience />
       <WhyRParking />
+      <RTISolutions />
       <CTABanner />
       <Footer />
     </main>

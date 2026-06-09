@@ -40,7 +40,6 @@ const gallery = [
   { image: '/img/implementari/pay%20point.png', title: 'Pay Point', description: 'Plăți cash și card, chitanță automată, interfață intuitivă.' },
   { image: '/img/implementari/control%20acces.png', title: 'Control acces', description: 'Echipamente moderne pentru verificare rapidă și sigură.' },
   { image: '/img/implementari/instalare%20profesionala.png', title: 'Instalare profesională', description: 'Implementare curată, integrată perfect în infrastructura parcării.' },
-  { image: '/img/implementari/RParking%20back%20office.png', title: 'Monitorizare BackOffice', description: 'Dashboard centralizat pentru control și raportare în timp real.' },
 ];
 
 const usedProducts = [
@@ -88,15 +87,6 @@ export default function ImplementariPage() {
           <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-36">
-            {/* Breadcrumb */}
-            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                <LuHouse className="w-4 h-4" /> Acasă
-              </Link>
-              <LuChevronRight className="w-4 h-4" />
-              <span className="text-gray-700 font-medium">Implementări</span>
-            </nav>
-
             <div className="max-w-2xl">
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-3">
                 IMPLEMENTARE REALĂ
@@ -202,7 +192,7 @@ export default function ImplementariPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {gallery.map((g, idx) => (
-              <div key={g.title} data-reveal data-reveal-delay={String((idx % 4) * 100)} className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-white">
+              <div key={g.title} data-reveal data-reveal-delay={String((idx % 4) * 100)} className={`group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-white ${g.title === 'Pay Point' ? 'lg:col-span-2' : ''}`}>
                 <div className="relative h-44 overflow-hidden">
                   <Image src={g.image} alt={g.title} fill quality={95} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>

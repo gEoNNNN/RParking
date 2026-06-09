@@ -9,6 +9,7 @@ import {
   LuServer, LuCloud, LuActivity, LuSettings, LuWallet,
   LuLogIn, LuLogOut, LuCamera, LuCpu, LuBuilding2,
   LuLock, LuDatabase, LuClock, LuCreditCard,
+  LuTrendingUp, LuZap, LuCalendar,
 } from 'react-icons/lu';
 import { TbBarrierBlock } from 'react-icons/tb';
 
@@ -87,17 +88,6 @@ export default function BackOfficePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
-              {/* Breadcrumb */}
-              <nav data-reveal className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-                <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                  <LuHouse className="w-4 h-4" /> Acasă
-                </Link>
-                <LuChevronRight className="w-4 h-4" />
-                <Link href="/#products" className="hover:text-green-600 transition-colors">Produse</Link>
-                <LuChevronRight className="w-4 h-4" />
-                <span className="text-gray-700 font-medium">BackOffice</span>
-              </nav>
-
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 BACKOFFICE
               </p>
@@ -138,23 +128,23 @@ export default function BackOfficePage() {
             {/* Right: BackOffice dashboard - EXACT screenshot match */}
             <div data-reveal="fade-left" className="relative flex items-center justify-center mt-8 lg:mt-0 w-full">
               <div className="hidden lg:block absolute w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-50" />
-              <div className="relative z-10 bg-white rounded-2xl shadow-2xl border border-gray-200 w-full max-w-3xl overflow-hidden">
-                {/* Top Header - exact match */}
-                <div className="bg-slate-600 px-3 lg:px-4 py-2 flex items-center justify-between">
+              <div className="relative z-10 bg-white rounded-2xl shadow-2xl border border-gray-200 w-full max-w-3xl overflow-hidden group hover:shadow-3xl transition-shadow duration-500">
+                {/* Top Header - interactive */}
+                <div className="bg-slate-600 px-3 lg:px-4 py-2 flex items-center justify-between hover:bg-slate-700 transition-colors duration-300 cursor-pointer">
                   <div className="flex items-center gap-2 lg:gap-3">
-                    <div className="w-5 h-5 flex flex-col justify-center gap-0.5">
+                    <div className="w-5 h-5 flex flex-col justify-center gap-0.5 group/menu cursor-pointer hover:scale-110 transition-transform">
+                      <div className="w-full h-0.5 bg-white group-hover/menu:w-4 transition-all" />
                       <div className="w-full h-0.5 bg-white" />
-                      <div className="w-full h-0.5 bg-white" />
-                      <div className="w-full h-0.5 bg-white" />
+                      <div className="w-full h-0.5 bg-white group-hover/menu:w-3 transition-all" />
                     </div>
                     <span className="text-white font-medium text-xs lg:text-sm">Parking Control Panel</span>
                   </div>
                   <div className="hidden sm:flex items-center gap-4 text-white/90 text-xs">
-                    <div className="w-4 h-4 border border-white/60 rounded-full" />
-                    <div className="w-4 h-4 border border-white/60 rounded-full" />
-                    <span className="hidden md:inline">Support</span>
-                    <span className="hidden md:inline">Logout</span>
-                    <span className="flex items-center gap-1">● EN</span>
+                    <div className="w-4 h-4 border border-white/60 rounded-full hover:bg-white/20 hover:scale-110 transition-all cursor-pointer" />
+                    <div className="w-4 h-4 border border-white/60 rounded-full hover:bg-white/20 hover:scale-110 transition-all cursor-pointer" />
+                    <span className="hidden md:inline hover:text-white hover:scale-105 transition-all cursor-pointer">Support</span>
+                    <span className="hidden md:inline hover:text-red-300 hover:scale-105 transition-all cursor-pointer">Logout</span>
+                    <span className="flex items-center gap-1 hover:text-white cursor-pointer hover:scale-105 transition-all">● EN</span>
                   </div>
                 </div>
                 {/* Main Content with Sidebar */}
@@ -177,10 +167,10 @@ export default function BackOfficePage() {
                       { icon: '▤', label: 'Custom Services', active: false },
                       { icon: '▤', label: 'Main Information', active: false },
                     ].map((item, i) => (
-                      <div key={i} className={`flex items-center gap-1.5 py-1 px-1.5 rounded mb-0.5 text-[9px] ${item.active ? 'bg-indigo-50 text-indigo-600' : 'text-gray-600 hover:bg-gray-50'}`}>
-                        <span className={item.active ? 'text-indigo-500' : 'text-gray-400'}>{item.icon}</span>
+                      <div key={i} className={`flex items-center gap-1.5 py-1 px-1.5 rounded mb-0.5 text-[9px] cursor-pointer transition-all duration-200 hover:scale-105 hover:translate-x-1 ${item.active ? 'bg-indigo-50 text-indigo-600 shadow-sm' : 'text-gray-600 hover:bg-gray-50'}`}>
+                        <span className={item.active ? 'text-indigo-500' : 'text-gray-400 group-hover:text-indigo-500'}>{item.icon}</span>
                         <span className="truncate">{item.label}</span>
-                        {item.arrow && <span className="ml-auto text-gray-400">›</span>}
+                        {item.arrow && <span className="ml-auto text-gray-400 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all">›</span>}
                       </div>
                     ))}
                   </div>
@@ -208,9 +198,9 @@ export default function BackOfficePage() {
                             [3,18], [5,22], [8,20], [6,28], [12,30], [10,32], [14,28], [12,35], [16,38], [20,42], [22,45], [12,48],
                             [8,28], [6,22], [4,18], [3,15], [5,12], [4,10], [6,8], [5,6]
                           ].slice(0, 12).map((vals, i) => (
-                            <div key={i} className="flex-1 flex items-end gap-0.5">
-                              <div className="flex-1 bg-teal-400 rounded-t" style={{ height: `${vals[0] * 1.5}px` }} />
-                              <div className="flex-1 bg-indigo-600 rounded-t" style={{ height: `${vals[1] * 1.2}px` }} />
+                            <div key={i} className="flex-1 flex items-end gap-0.5 group/bar cursor-pointer">
+                              <div className="flex-1 bg-teal-400 rounded-t hover:bg-teal-300 transition-all duration-300 group-hover/bar:brightness-110" style={{ height: `${vals[0] * 1.5}px` }} />
+                              <div className="flex-1 bg-indigo-600 rounded-t hover:bg-indigo-500 transition-all duration-300 group-hover/bar:brightness-110" style={{ height: `${vals[1] * 1.2}px` }} />
                             </div>
                           ))}
                         </div>
@@ -226,28 +216,28 @@ export default function BackOfficePage() {
                         </div>
                         {/* Buttons */}
                         <div className="flex flex-wrap gap-2 mt-3">
-                          <span className="text-[8px] sm:text-[9px] bg-indigo-600 text-white px-2 py-1 rounded-sm font-medium">LAST 7 DAYS</span>
-                          <span className="text-[8px] sm:text-[9px] bg-indigo-100 text-indigo-700 px-2 py-1 rounded-sm font-medium">LAST MONTH</span>
-                          <span className="hidden sm:inline text-[8px] sm:text-[9px] bg-indigo-100 text-indigo-700 px-2 py-1 rounded-sm font-medium">LAST THREE MONTHS</span>
+                          <span className="text-[8px] sm:text-[9px] bg-indigo-600 text-white px-2 py-1 rounded-sm font-medium cursor-pointer hover:bg-indigo-700 hover:scale-105 transition-all shadow-md">LAST 7 DAYS</span>
+                          <span className="text-[8px] sm:text-[9px] bg-indigo-100 text-indigo-700 px-2 py-1 rounded-sm font-medium cursor-pointer hover:bg-indigo-200 hover:scale-105 transition-all">LAST MONTH</span>
+                          <span className="hidden sm:inline text-[8px] sm:text-[9px] bg-indigo-100 text-indigo-700 px-2 py-1 rounded-sm font-medium cursor-pointer hover:bg-indigo-200 hover:scale-105 transition-all">LAST THREE MONTHS</span>
                         </div>
                       </div>
                       {/* Right Statistics */}
                       <div className="w-full sm:w-24 flex flex-row sm:flex-col justify-between sm:justify-start pt-2 gap-2 sm:gap-0">
-                        <div className="sm:mb-3">
+                        <div className="sm:mb-3 cursor-pointer hover:bg-gray-50 rounded px-1 py-0.5 transition-all hover:scale-105">
                           <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Card:</p>
-                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">165</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none hover:text-indigo-600 transition-colors">165</p>
                         </div>
-                        <div className="sm:mb-3">
+                        <div className="sm:mb-3 cursor-pointer hover:bg-gray-50 rounded px-1 py-0.5 transition-all hover:scale-105">
                           <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Cash:</p>
-                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">57</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none hover:text-indigo-600 transition-colors">57</p>
                         </div>
-                        <div className="sm:mb-3">
+                        <div className="sm:mb-3 cursor-pointer hover:bg-gray-50 rounded px-1 py-0.5 transition-all hover:scale-105">
                           <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Tickets:</p>
-                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">216</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none hover:text-indigo-600 transition-colors">216</p>
                         </div>
-                        <div>
+                        <div className="cursor-pointer hover:bg-gray-50 rounded px-1 py-0.5 transition-all hover:scale-105">
                           <p className="text-[8px] sm:text-[9px] text-gray-500 mb-0.5">Total Payments:</p>
-                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none">222</p>
+                          <p className="text-base sm:text-lg font-semibold text-gray-800 leading-none hover:text-indigo-600 transition-colors">222</p>
                         </div>
                       </div>
                     </div>
@@ -390,6 +380,10 @@ export default function BackOfficePage() {
               <div className="relative bg-gray-900 rounded-2xl p-7 overflow-hidden">
                 {/* Glow */}
                 <div className="absolute -top-10 -right-10 w-48 h-48 bg-green-500/15 rounded-full blur-3xl pointer-events-none" />
+                {/* Decorative icon - right side */}
+                <div className="absolute top-1/2 right-4 -translate-y-1/2 opacity-20">
+                  <LuLock className="w-40 h-40 text-green-400" />
+                </div>
                 <div className="relative">
                   <div className="w-14 h-14 rounded-2xl bg-green-600/20 border border-green-600/30 flex items-center justify-center mb-6">
                     <LuShieldCheck className="w-7 h-7 text-green-400" />
@@ -458,25 +452,44 @@ export default function BackOfficePage() {
           <Image src="/img/pc.png" alt="" fill className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-950/70 to-transparent" />
         </div>
+        {/* Decorative elements - right side */}
+        <div className="absolute top-1/2 right-20 -translate-y-1/2 hidden lg:flex flex-col gap-6 opacity-20">
+          <div className="w-20 h-20 rounded-2xl bg-green-500/30 border border-green-500/50 flex items-center justify-center backdrop-blur-sm">
+            <LuLayoutDashboard className="w-10 h-10 text-green-400" />
+          </div>
+          <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/30 flex items-center justify-center backdrop-blur-sm ml-12">
+            <LuZap className="w-10 h-10 text-white" />
+          </div>
+          <div className="w-20 h-20 rounded-2xl bg-green-500/30 border border-green-500/50 flex items-center justify-center backdrop-blur-sm">
+            <LuTrendingUp className="w-10 h-10 text-green-400" />
+          </div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-          <div data-reveal="fade-left" className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-3 leading-tight">
-              Transformă datele în <span className="text-green-500">decizii inteligente</span>.
-            </h2>
-            <p className="text-gray-400 text-base mb-8">
-              Descoperă cum BackOffice te ajută să crești eficiența și veniturile parcărilor tale.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left - Text */}
+            <div data-reveal="fade-right">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">
+                Transformă datele în <span className="text-green-500">decizii inteligente</span>.
+              </h2>
+              <p className="text-gray-400 text-lg mb-8 max-w-lg">
+                Descoperă cum BackOffice te ajută să crești eficiența și veniturile parcărilor tale.
+              </p>
+            </div>
+            {/* Right - Buttons */}
+            <div data-reveal="fade-left" className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 text-base shadow-lg shadow-green-600/30 hover:scale-105 active:scale-95 whitespace-nowrap"
               >
-                Solicită ofertă <LuArrowRight className="w-4 h-4" />
+                <LuFileText className="w-5 h-5" />
+                Solicită ofertă
+                <LuArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-8 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/5 hover:bg-white/10 hover:scale-105 active:scale-95 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/40 hover:border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 text-base whitespace-nowrap"
               >
+                <LuCalendar className="w-5 h-5" />
                 Programare demonstrație
               </Link>
             </div>

@@ -15,8 +15,6 @@ const heroBadges = [
   { label: 'Dezvoltați în\nRepublica Moldova', icon: <LuMapPin className="w-5 h-5 text-green-600" /> },
   { label: 'Hardware\npropriu', icon: <LuCode className="w-5 h-5 text-green-600" /> },
   { label: 'Software\npropriu', icon: <LuMonitor className="w-5 h-5 text-green-600" /> },
-  { label: 'Suport tehnic\nlocal', icon: <LuHeadphones className="w-5 h-5 text-green-600" /> },
-  { label: 'Integrare\ncomplexă', icon: <LuPuzzle className="w-5 h-5 text-green-600" /> },
 ];
 
 const aboutPoints = [
@@ -111,15 +109,6 @@ export default function DespreNoiPage() {
           <div className="hidden lg:block absolute inset-0 bg-linear-to-r from-white via-white/95 via-30% via-white/80 via-50% to-transparent pointer-events-none" style={{ width: '50%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-36">
-            {/* Breadcrumb */}
-            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                <LuHouse className="w-4 h-4" /> Acasă
-              </Link>
-              <LuChevronRight className="w-4 h-4" />
-              <span className="text-gray-700 font-medium">Despre noi</span>
-            </nav>
-
             <div className="max-w-3xl">
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 DESPRE NOI
@@ -127,19 +116,19 @@ export default function DespreNoiPage() {
               <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
                 Construim viitorul<br />parcărilor inteligente
               </h1>
-              <p data-reveal data-reveal-delay="250" className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-10">
+              <p data-reveal data-reveal-delay="250" className="text-gray-600 text-lg leading-relaxed max-w-xl mb-10">
                 RParking dezvoltă și implementează soluții complete pentru automatizarea parcărilor,
                 combinând hardware propriu, software avansat și suport local într-o platformă unică.
               </p>
 
-              {/* Hero badges */}
-              <div data-reveal data-reveal-delay="340" className="grid grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+              {/* Hero badges - horizontal compact layout */}
+              <div data-reveal data-reveal-delay="340" className="flex flex-wrap gap-2">
                 {heroBadges.map((b) => (
-                  <div key={b.label} className="flex flex-col items-center gap-2 text-center">
-                    <div className="w-12 h-12 rounded-2xl bg-green-50 border border-green-200 flex items-center justify-center">
+                  <div key={b.label} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-green-300 transition-all">
+                    <div className="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
                       {b.icon}
                     </div>
-                    <span className="text-gray-600 text-xs font-semibold leading-tight whitespace-pre-line">{b.label}</span>
+                    <span className="text-gray-700 text-xs font-medium leading-tight whitespace-pre-line">{b.label}</span>
                   </div>
                 ))}
               </div>

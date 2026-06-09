@@ -1,25 +1,30 @@
-import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap, LuHouse } from 'react-icons/lu';
+import Link from 'next/link';
+import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
 
 const featureCards = [
   {
     title: 'Entry Point',
     subtitle: 'Acces automat',
     icon: <LuLogIn className="w-8 h-8 text-white" />,
+    href: '/products/entry-point',
   },
   {
     title: 'Exit Point',
     subtitle: 'Ieșire controlată',
     icon: <LuLogOut className="w-8 h-8 text-white" />,
+    href: '/products/exit-point-cardpass',
   },
   {
     title: 'Pay Point',
     subtitle: 'Plăți rapide',
     icon: <LuCreditCard className="w-8 h-8 text-white" />,
+    href: '/products/pay-point',
   },
   {
     title: 'BackOffice',
     subtitle: 'Control total',
     icon: <LuLayoutDashboard className="w-8 h-8 text-white" />,
+    href: '/products/backoffice',
   },
 ];
 
@@ -70,13 +75,6 @@ export default function HeroSection() {
       <div className="relative z-10 w-full flex items-start min-h-[80vh] lg:min-h-[95vh] pt-8 px-5 sm:px-8 lg:pl-16 lg:pr-6 pb-16">
         {/* ── Left content ──────────────────────────────────────── */}
         <div className="w-full lg:w-[50%] pt-4 md:pt-12 lg:pt-20 pb-12">
-          {/* Breadcrumb */}
-          <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-            <span className="flex items-center gap-1 text-gray-700 font-medium">
-              <LuHouse className="w-4 h-4" /> Acasă
-            </span>
-          </nav>
-
           {/* Heading */}
           <h1 data-reveal className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-3">
             <span className="text-green-600">R</span>
@@ -113,9 +111,9 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom badge strip */}
-          <div data-reveal data-reveal-delay="460" className="grid grid-cols-2 gap-x-6 gap-y-3 w-fit">
+          <div data-reveal data-reveal-delay="460" className="grid grid-cols-3 gap-4 w-fit">
             {badges.map((b, i) => (
-              <div key={b.line1} className="flex items-center gap-2">
+              <div key={b.line1} className="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-white/80 transition-colors">
                 {b.icon}
                 <span className="text-sm font-semibold text-gray-800 leading-tight">
                   {b.line1}<br />{b.line2}
@@ -127,9 +125,10 @@ export default function HeroSection() {
           {/* Mobile feature cards - 2 rows grid */}
           <div data-reveal data-reveal-delay="500" className="xl:hidden mt-12 grid grid-cols-2 gap-3">
             {featureCards.map((card) => (
-              <div
+              <Link
                 key={card.title}
-                className="flex items-center gap-3 px-3 py-3 rounded-xl bg-green-600 text-white shadow-lg"
+                href={card.href}
+                className="flex items-center gap-3 px-3 py-3 rounded-xl bg-green-600 text-white shadow-lg hover:bg-green-500 transition-colors"
               >
                 <div className="w-9 h-9 flex items-center justify-center shrink-0 bg-white/20 rounded-lg">
                   {card.icon}
@@ -138,7 +137,7 @@ export default function HeroSection() {
                   <p className="font-bold text-sm leading-tight truncate">{card.title}</p>
                   <p className="text-green-100 text-xs">{card.subtitle}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -146,8 +145,9 @@ export default function HeroSection() {
         {/* ── Right feature cards ───────────────────────────────── */}
         <div data-reveal="fade-right" data-reveal-delay="200" className="hidden xl:flex flex-col gap-2 xl:ml-110 xl:mr-6 xl:w-64 xl:shrink-0 xl:mt-64">
           {featureCards.map((card) => (
-            <div
+            <Link
               key={card.title}
+              href={card.href}
               className="flex items-center gap-2 px-4 py-5 cursor-pointer transition-all duration-200 rounded-xl bg-black/65 hover:bg-black/80 backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-x-1"
             >
               <div className="w-11 h-11 flex items-center justify-center shrink-0">
@@ -157,7 +157,7 @@ export default function HeroSection() {
                 <p className="text-white font-bold text-base leading-tight">{card.title}</p>
                 <p className="text-gray-300 text-sm mt-0.5">{card.subtitle}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

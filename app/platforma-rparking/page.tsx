@@ -74,15 +74,6 @@ export default function PlatformaRParkingPage() {
           <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-36">
-            {/* Breadcrumb */}
-            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                <LuHouse className="w-4 h-4" /> Acasă
-              </Link>
-              <LuChevronRight className="w-4 h-4" />
-              <span className="text-gray-700 font-medium">Platforma RParking</span>
-            </nav>
-
             <div className="max-w-2xl">
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 PLATFORMA RPARKING

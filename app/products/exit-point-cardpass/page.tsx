@@ -100,34 +100,27 @@ export default function ExitPointCardPassPage() {
 
         {/* ── Hero ── */}
         <section className="relative w-full overflow-hidden bg-white">
-          {/* Desktop: Image right with fog | Mobile: Image top, text below */}
-          <div className="hidden lg:flex justify-end">
-            <Image src="/img/produse/entry point.png" alt="" width={1627} height={967} className="w-[82%] h-auto block" quality={95} priority />
+          {/* Desktop: Image full width from left */}
+          <div className="hidden lg:block overflow-hidden" style={{ maxHeight: '85vh' }}>
+            <Image src="/img/produse/entry point.png" alt="" width={1627} height={967} className="w-full h-auto block object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
-          {/* Desktop fog */}
-          <div className="hidden lg:block absolute inset-0 bg-linear-to-r from-white via-white/98 via-20% via-white/90 via-40% via-white/75 via-60% to-transparent pointer-events-none" style={{ width: '58%' }} />
+          {/* Desktop fog - compact over text area */}
+          <div className="hidden lg:block absolute inset-0 pointer-events-none" 
+            style={{ 
+              background: 'radial-gradient(ellipse 60% 110% at 5% 45%, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 20%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.6) 60%, transparent 80%)'
+            }} 
+          />
 
           {/* Mobile image */}
-          <div className="lg:hidden absolute inset-0">
-            <Image src="/img/produse/entry point.png" alt="" fill className="object-cover object-center" quality={95} priority />
+          <div className="lg:hidden absolute inset-0 overflow-hidden" style={{ maxHeight: '60vh' }}>
+            <Image src="/img/produse/entry point.png" alt="" fill className="object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Mobile fog */}
           <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-30% via-white/85 via-50% to-transparent pointer-events-none" />
 
           {/* Content */}
-          <div className="relative lg:absolute lg:inset-0 z-10 flex flex-col justify-start pt-36 lg:pt-52 pb-12 px-6 lg:pl-48 min-h-[500px] lg:min-h-0">
+          <div className="relative lg:absolute lg:inset-0 z-10 flex flex-col justify-start pt-36 lg:pt-52 pb-12 px-6 lg:pl-24 min-h-[500px] lg:min-h-0">
             <div className="max-w-xl">
-              {/* Breadcrumb */}
-              <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-                <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                  <LuHouse className="w-4 h-4" /> Acasă
-                </Link>
-                <LuChevronRight className="w-4 h-4" />
-                <Link href="/products" className="hover:text-green-600 transition-colors">Produse</Link>
-                <LuChevronRight className="w-4 h-4" />
-                <span className="text-gray-700 font-medium">Exit Point CardPass</span>
-              </nav>
-
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 EXIT POINT
               </p>

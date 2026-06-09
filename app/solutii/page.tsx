@@ -85,15 +85,6 @@ export default function SolutiiPage() {
           <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-40">
-            {/* Breadcrumb */}
-            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                <LuHouse className="w-4 h-4" /> Acasă
-              </Link>
-              <LuChevronRight className="w-4 h-4" />
-              <span className="text-gray-700 font-medium">Soluții</span>
-            </nav>
-
             <div className="max-w-4xl">
               <h1 data-reveal className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
                 Soluții pentru fiecare tip<br />de parcare
@@ -143,9 +134,6 @@ export default function SolutiiPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="#contact" className="inline-flex items-center gap-1 text-green-600 font-semibold text-sm hover:gap-2 transition-all">
-                    Vezi detalii <LuArrowRight className="w-4 h-4" />
-                  </Link>
                 </div>
               </div>
             ))}

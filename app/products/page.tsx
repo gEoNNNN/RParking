@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import {
-  LuArrowRight, LuCheck, LuChevronRight, LuHouse,
+  LuArrowRight, LuCheck,
   LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard,
   LuFileText, LuShieldCheck, LuSettings2, LuZap, LuPuzzle,
 } from 'react-icons/lu';
@@ -140,23 +140,18 @@ export default function ProductsPage() {
 
         {/* ── Hero ── */}
         <section className="relative w-full overflow-hidden bg-white">
-          {/* Smaller image with white space on left */}
-          <div className="flex justify-end">
-            <Image src="/img/produse/produse.png" alt="" width={1693} height={929} className="w-[82%] h-auto block" quality={95} priority />
+          {/* Image full width from left */}
+          <div className="hidden lg:block overflow-hidden" style={{ maxHeight: '85vh' }}>
+            <Image src="/img/produse/produse.png" alt="" width={1693} height={929} className="w-full h-auto block object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
-          {/* Smooth gradient fog - gradual transition */}
-          <div className="absolute inset-0 bg-linear-to-r from-white via-white/98 via-20% via-white/90 via-40% via-white/75 via-60% to-transparent pointer-events-none" style={{ width: '58%' }} />
+          {/* Desktop fog - compact over text area */}
+          <div className="hidden lg:block absolute inset-0 pointer-events-none" 
+            style={{ 
+              background: 'radial-gradient(ellipse 60% 110% at 5% 45%, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 20%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.6) 60%, transparent 80%)'
+            }} 
+          />
 
-          <div className="absolute inset-0 z-10 flex flex-col justify-start pt-52 pb-12 px-6 lg:pl-48">
-            {/* Breadcrumb */}
-            <nav data-reveal className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="flex items-center gap-1 hover:text-green-600 transition-colors">
-                <LuHouse className="w-4 h-4" /> Acasă
-              </Link>
-              <LuChevronRight className="w-4 h-4" />
-              <span className="text-gray-700 font-medium">Produse</span>
-            </nav>
-
+          <div className="absolute inset-0 z-10 flex flex-col justify-start pt-52 pb-12 px-6 lg:pl-24">
             <div className="max-w-xl">
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 PRODUSE
@@ -214,13 +209,13 @@ export default function ProductsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {products.map((p, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {products.slice(0, 7).map((p, idx) => (
               <div
                 key={p.title}
                 data-reveal
                 data-reveal-delay={String(idx * 80)}
-                className="group flex flex-col border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl overflow-hidden transition-all duration-300 bg-white"
+                className={`group flex flex-col border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl overflow-hidden transition-all duration-300 bg-white ${p.title === 'BackOffice' ? 'xl:col-span-2' : ''}`}
               >
                 {/* Image area */}
                 <div className="h-52 bg-gray-50 relative flex items-center justify-center overflow-hidden">
