@@ -32,11 +32,11 @@ const keyFeatures = [
 ];
 
 const steps = [
-  { title: 'Datele sunt colectate automat de la echipamente', desc: 'Entry, Exit, Pay Point trimit date continuu.', icon: <LuServer className="w-8 h-8 text-green-600" /> },
-  { title: 'Informațiile sunt transmise securizat în BackOffice', desc: 'Conexiune criptată și protejată.', icon: <LuCloud className="w-8 h-8 text-green-600" /> },
-  { title: 'Datele sunt procesate și centralizate în rapoarte', desc: 'Agregare automată și structurare pe categorii.', icon: <LuFileText className="w-8 h-8 text-green-600" /> },
-  { title: 'Obții statistici și alerte relevante în timp real', desc: 'Notificări inteligente pentru orice eveniment.', icon: <LuBell className="w-8 h-8 text-green-600" /> },
-  { title: 'Iei decizii mai bune și optimizezi performanța', desc: 'Date clare pentru o administrare eficientă.', icon: <LuSettings className="w-8 h-8 text-green-600" /> },
+  { title: 'Datele sunt colectate automat de la echipamente', desc: 'Entry, Exit, Pay Point trimit date continuu.', icon: <LuServer className="w-16 h-16 text-green-600" /> },
+  { title: 'Informațiile sunt transmise securizat în BackOffice', desc: 'Conexiune criptată și protejată.', icon: <LuCloud className="w-16 h-16 text-green-600" /> },
+  { title: 'Datele sunt procesate și centralizate în rapoarte', desc: 'Agregare automată și structurare pe categorii.', icon: <LuFileText className="w-16 h-16 text-green-600" /> },
+  { title: 'Obții statistici și alerte relevante în timp real', desc: 'Notificări inteligente pentru orice eveniment.', icon: <LuBell className="w-16 h-16 text-green-600" /> },
+  { title: 'Iei decizii mai bune și optimizezi performanța', desc: 'Date clare pentru o administrare eficientă.', icon: <LuSettings className="w-16 h-16 text-green-600" /> },
 ];
 
 const modules = [
@@ -291,7 +291,7 @@ export default function BackOfficePage() {
             {steps.map((step, idx) => (
               <Fragment key={step.title}>
                 <div className="flex flex-col items-center text-center gap-3 lg:flex-1">
-                  <div className="w-24 h-24 rounded-full bg-green-50 border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
+                  <div className="w-32 h-32 rounded-full bg-green-50 border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
                     {step.icon}
                   </div>
                   <p className="text-gray-900 font-bold text-sm leading-tight">{step.title}</p>

@@ -131,28 +131,48 @@ export default function Navbar() {
           {navLinks.map((link) =>
             link.children ? (
               <div key={link.label} className="border-b border-gray-50">
-                <button
-                  type="button"
-                  onClick={() => setProdOpen((v) => !v)}
-                  className="w-full flex items-center justify-between text-gray-700 hover:text-green-600 text-sm font-medium py-2"
-                >
-                  {link.label}
-                  <LuChevronDown className={`w-4 h-4 transition-transform duration-300 ${prodOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {prodOpen && (
-                  <div className="flex flex-col pl-3 pb-2">
-                    {link.children.map((c) => (
-                      <Link
-                        key={c.label}
-                        href={c.href}
-                        className="py-2 text-sm text-gray-600 hover:text-green-600"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {c.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                {/* Header with link to products page and toggle button */}
+                <div className="flex items-center justify-between py-2">
+                  <Link
+                    href={link.href}
+                    className="flex-1 text-gray-700 hover:text-green-600 text-sm font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      e.preventDefault();
+                      setProdOpen(!prodOpen);
+                    }}
+                    className="p-2 text-gray-500 hover:text-green-600"
+                    aria-label="Toggle products menu"
+                  >
+                    <LuChevronDown className={`w-4 h-4 transition-transform duration-300 ${prodOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+                <div className={`flex flex-col pl-3 pb-2 overflow-hidden transition-all duration-300 ${prodOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  {/* Link to all products */}
+                  <Link
+                    href="/products"
+                    className="py-2 text-sm font-semibold text-green-600 hover:text-green-700"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Vezi toate produsele →
+                  </Link>
+                  {link.children.map((c) => (
+                    <Link
+                      key={c.label}
+                      href={c.href}
+                      className="py-2 text-sm text-gray-600 hover:text-green-600"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {c.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             ) : (
               <Link

@@ -32,11 +32,11 @@ const keyFeatures = [
 ];
 
 const steps = [
-  { title: 'Șoferul selectează opțiunea de plată', desc: 'Pe ecranul tactil, intuitiv și multilingv.', icon: <LuPointer className="w-8 h-8 text-green-600" /> },
-  { title: 'Alege metoda de plată (card sau numerar)', desc: 'Card bancar, numerar sau plată contactless.', icon: <LuCreditCard className="w-8 h-8 text-green-600" /> },
-  { title: 'Sistemul validează plata', desc: 'Procesare securizată și verificare în timp real.', icon: <LuShieldCheck className="w-8 h-8 text-green-600" /> },
-  { title: 'Primește bon fiscal și restul', desc: 'Bon fiscal emis și rest returnat dacă este cazul.', icon: <LuReceipt className="w-8 h-8 text-green-600" /> },
-  { title: 'Ieșirea din parcare este permisă', desc: 'Acces validat pentru ieșirea din parcare.', icon: <FaParking className="w-7 h-7 text-green-600" /> },
+  { title: 'Șoferul selectează opțiunea de plată', desc: 'Pe ecranul tactil, intuitiv și multilingv.', icon: <LuPointer className="w-16 h-16 text-green-600" /> },
+  { title: 'Alege metoda de plată (card sau numerar)', desc: 'Card bancar, numerar sau plată contactless.', icon: <LuCreditCard className="w-16 h-16 text-green-600" /> },
+  { title: 'Sistemul validează plata', desc: 'Procesare securizată și verificare în timp real.', icon: <LuShieldCheck className="w-16 h-16 text-green-600" /> },
+  { title: 'Primește bon fiscal și restul', desc: 'Bon fiscal emis și rest returnat dacă este cazul.', icon: <LuReceipt className="w-16 h-16 text-green-600" /> },
+  { title: 'Ieșirea din parcare este permisă', desc: 'Acces validat pentru ieșirea din parcare.', icon: <FaParking className="w-14 h-14 text-green-600" /> },
 ];
 
 const hardware = [
@@ -117,7 +117,7 @@ export default function PayPointPage() {
           />
 
           {/* Mobile image */}
-          <div className="lg:hidden absolute inset-0 overflow-hidden" style={{ maxHeight: '60vh' }}>
+          <div className="lg:hidden absolute inset-0 overflow-hidden" style={{ maxHeight: '85vh' }}>
             <Image src="/img/produse/paypoint.png" alt="" fill className="object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Mobile fog */}
@@ -207,7 +207,7 @@ export default function PayPointPage() {
             {steps.map((step, idx) => (
               <Fragment key={step.title}>
                 <div className="flex flex-col items-center text-center gap-3 lg:flex-1">
-                  <div className="w-24 h-24 rounded-full bg-green-50 border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
+                  <div className="w-32 h-32 rounded-full bg-green-50 border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
                     {step.icon}
                   </div>
                   <p className="text-gray-900 font-bold text-sm leading-tight">{step.title}</p>
@@ -333,7 +333,7 @@ export default function PayPointPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-3">Integrare și compatibilitate</h2>
                 <div className="w-12 h-0.5 bg-green-500" />
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10">
                 {integrations.map((i) => (
                   <div key={i.label} className="flex flex-col items-center text-center gap-2">
                     <div className="w-16 h-16 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-green-300">

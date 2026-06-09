@@ -12,6 +12,7 @@ export const translations = {
     hero: {
       title: 'RParking',
       subtitle: 'Soluția inteligentă pentru parcări moderne',
+      description: 'Control complet al accesului, plăților și monitorizării într-o platformă integrată de hardware și software dezvoltată și produsă în Republica Moldova.',
       badge1: 'Dezvoltat în Moldova',
       badge2: 'Hardware & Software propriu',
       badge3: 'Support tehnic dedicat',
@@ -131,6 +132,7 @@ export const translations = {
     hero: {
       title: 'RParking',
       subtitle: 'Умное решение для современных парковок',
+      description: 'Полный контроль доступа, платежей и мониторинга в интегрированной платформе аппаратного и программного обеспечения, разработанной и произведенной в Республике Молдова.',
       badge1: 'Разработано в Молдове',
       badge2: 'Собственное оборудование и ПО',
       badge3: 'Выделенная техподдержка',
@@ -250,6 +252,7 @@ export const translations = {
     hero: {
       title: 'RParking',
       subtitle: 'The smart solution for modern parking',
+      description: 'Complete control of access, payments and monitoring in an integrated hardware and software platform developed and manufactured in the Republic of Moldova.',
       badge1: 'Developed in Moldova',
       badge2: 'Own Hardware & Software',
       badge3: 'Dedicated tech support',

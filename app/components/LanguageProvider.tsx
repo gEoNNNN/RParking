@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from 'react';
 import { Locale, locales, defaultLocale } from '../lib/i18n';
 import { getTranslations } from '../lib/translations';
 
@@ -15,11 +15,22 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(defaultLocale);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Load saved locale from localStorage on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedLocale = localStorage.getItem('locale') as Locale;
+      if (savedLocale && locales.includes(savedLocale)) {
+        setLocaleState(savedLocale);
+      }
+      setIsLoaded(true);
+    }
+  }, []);
 
   const setLocale = useCallback((newLocale: Locale) => {
     if (locales.includes(newLocale)) {
       setLocaleState(newLocale);
-      // Store preference in localStorage
       if (typeof window !== 'undefined') {
         localStorage.setItem('locale', newLocale);
       }

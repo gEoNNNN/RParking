@@ -78,7 +78,7 @@ export default function MobileAppSection() {
               
               {/* Mockup image */}
               <Image
-                src="/img/mockup.jfif"
+                src="/img/mockup.png"
                 alt="RParking App Mockup"
                 width={320}
                 height={640}

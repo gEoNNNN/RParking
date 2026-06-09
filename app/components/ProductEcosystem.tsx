@@ -11,7 +11,7 @@ const products = [
   {
     title: 'Exit Point',
     description: 'Terminal de ieșire cu validare și control acces.',
-    link: '/products/exit-point',
+    link: '/products/exit-point-cardpass',
     image: '/img/produs2.png',
     isPhoto: true,
   },

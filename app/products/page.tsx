@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import {
   LuArrowRight, LuCheck,
   LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard,
-  LuFileText, LuShieldCheck, LuSettings2, LuZap, LuPuzzle,
+  LuShieldCheck, LuSettings2, LuZap, LuPuzzle,
 } from 'react-icons/lu';
 
 const products = [
@@ -26,32 +26,19 @@ const products = [
     ],
   },
   {
-    title: 'Exit Point CardPass',
+    title: 'Exit Point',
     subtitle: 'Stație de ieșire',
     href: '/products/exit-point-cardpass',
     image: '/img/produs2.png',
     icon: <LuLogOut className="w-6 h-6 text-green-600" />,
-    desc: 'Permite validarea cardurilor și ieșirea rapidă din parcare.',
+    desc: 'Stație de ieșire pentru validarea cardurilor, tichetelor și ieșirea rapidă din parcare.',
     features: [
-      'Validare card',
-      'Validare NFC',
-      'Citire QR',
-      'Control acces',
-      'Comunicare cu BackOffice',
-    ],
-  },
-  {
-    title: 'Exit Point Ticket',
-    subtitle: 'Stație de ieșire',
-    href: '/products/exit-point-ticket',
-    image: '/img/produs2.png',
-    icon: <LuFileText className="w-6 h-6 text-green-600" />,
-    desc: 'Stație de ieșire pentru sistemele bazate pe tichete.',
-    features: [
+      'Validare card NFC',
+      'Citire QR Code',
       'Validare tichet',
       'Verificare plată',
-      'Deschidere automată barieră',
-      'Comunicare cu serverul central',
+      'Control acces barieră',
+      'Comunicare cu BackOffice',
     ],
   },
   {
@@ -139,8 +126,12 @@ export default function ProductsPage() {
         </Link>
 
         {/* ── Hero ── */}
-        <section className="relative w-full overflow-hidden bg-white">
-          {/* Image full width from left */}
+        <section className="relative w-full overflow-hidden bg-white min-h-[60vh] lg:min-h-0">
+          {/* Mobile Background Image */}
+          <div className="lg:hidden absolute inset-0">
+            <Image src="/img/produse/produse.png" alt="" fill className="object-cover object-center opacity-20" quality={95} priority />
+          </div>
+          {/* Image full width from left - Desktop */}
           <div className="hidden lg:block overflow-hidden" style={{ maxHeight: '85vh' }}>
             <Image src="/img/produse/produse.png" alt="" width={1693} height={929} className="w-full h-auto block object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
@@ -151,7 +142,7 @@ export default function ProductsPage() {
             }} 
           />
 
-          <div className="absolute inset-0 z-10 flex flex-col justify-start pt-52 pb-12 px-6 lg:pl-24">
+          <div className="relative lg:absolute inset-0 z-10 flex flex-col justify-start pt-32 sm:pt-36 lg:pt-52 pb-12 px-6 lg:pl-24">
             <div className="max-w-xl">
               <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
                 PRODUSE
@@ -209,13 +200,13 @@ export default function ProductsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.slice(0, 7).map((p, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+            {products.map((p, idx) => (
               <div
                 key={p.title}
                 data-reveal
                 data-reveal-delay={String(idx * 80)}
-                className={`group flex flex-col border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl overflow-hidden transition-all duration-300 bg-white ${p.title === 'BackOffice' ? 'xl:col-span-2' : ''}`}
+                className="group flex flex-col border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl overflow-hidden transition-all duration-300 bg-white"
               >
                 {/* Image area */}
                 <div className="h-52 bg-gray-50 relative flex items-center justify-center overflow-hidden">

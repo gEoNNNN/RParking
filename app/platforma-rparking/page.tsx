@@ -70,8 +70,9 @@ export default function PlatformaRParkingPage() {
           <div className="absolute inset-0">
             <Image src="/img/platforma-rparking/hero.png" alt="" fill className="object-cover object-center" quality={95} priority />
           </div>
-          {/* White fog — left side, fades into the image on the right */}
-          <div className="absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
+          {/* White fog - mobile full, desktop 75% */}
+          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 to-white/70 pointer-events-none" />
+          <div className="hidden lg:block absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-36">
             <div className="max-w-2xl">

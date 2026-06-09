@@ -1,67 +1,74 @@
+'use client';
+
 import Link from 'next/link';
 import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
+import { useLanguage } from './LanguageProvider';
 
-const featureCards = [
-  {
-    title: 'Entry Point',
-    subtitle: 'Acces automat',
-    icon: <LuLogIn className="w-8 h-8 text-white" />,
-    href: '/products/entry-point',
-  },
-  {
-    title: 'Exit Point',
-    subtitle: 'Ieșire controlată',
-    icon: <LuLogOut className="w-8 h-8 text-white" />,
-    href: '/products/exit-point-cardpass',
-  },
-  {
-    title: 'Pay Point',
-    subtitle: 'Plăți rapide',
-    icon: <LuCreditCard className="w-8 h-8 text-white" />,
-    href: '/products/pay-point',
-  },
-  {
-    title: 'BackOffice',
-    subtitle: 'Control total',
-    icon: <LuLayoutDashboard className="w-8 h-8 text-white" />,
-    href: '/products/backoffice',
-  },
-];
-
-const badges = [
-  {
-    line1: 'Dezvoltat în',
-    line2: 'Moldova',
-    icon: <LuPlane className="w-7 h-7 text-green-600 shrink-0" />,
-  },
-  {
-    line1: 'Hardware &',
-    line2: 'Software propriu',
-    icon: <LuSettings2 className="w-7 h-7 text-green-600 shrink-0" />,
-  },
-  {
-    line1: 'Support tehnic',
-    line2: 'dedicat',
-    icon: <LuUsers className="w-7 h-7 text-green-600 shrink-0" />,
-  },
-  {
-    line1: 'Securizat',
-    line2: 'și fiabil',
-    icon: <LuShieldCheck className="w-7 h-7 text-green-600 shrink-0" />,
-  },
-  {
-    line1: 'Integrări',
-    line2: 'ușoare',
-    icon: <LuClock className="w-7 h-7 text-green-600 shrink-0" />,
-  },
-  {
-    line1: 'Instalare',
-    line2: 'rapidă',
-    icon: <LuZap className="w-7 h-7 text-green-600 shrink-0" />,
-  },
-];
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+  const p = t.products;
+  const h = t.hero;
+
+  const featureCards = [
+    {
+      title: p.entryPoint,
+      subtitle: p.entrySubtitle,
+      icon: <LuLogIn className="w-8 h-8 text-white" />,
+      href: '/products/entry-point',
+    },
+    {
+      title: p.exitPoint,
+      subtitle: p.exitSubtitle,
+      icon: <LuLogOut className="w-8 h-8 text-white" />,
+      href: '/products/exit-point-cardpass',
+    },
+    {
+      title: p.payPoint,
+      subtitle: p.paySubtitle,
+      icon: <LuCreditCard className="w-8 h-8 text-white" />,
+      href: '/products/pay-point',
+    },
+    {
+      title: p.backoffice,
+      subtitle: p.backofficeSubtitle,
+      icon: <LuLayoutDashboard className="w-8 h-8 text-white" />,
+      href: '/products/backoffice',
+    },
+  ];
+
+  const badges = [
+    {
+      line1: h.badge1.split(' ')[0] + (h.badge1.split(' ')[1] ? ' ' + h.badge1.split(' ')[1] : ''),
+      line2: h.badge1.split(' ')[2] || '',
+      icon: <LuPlane className="w-7 h-7 text-green-600 shrink-0" />,
+    },
+    {
+      line1: h.badge2.split(' ')[0] + (h.badge2.split(' ')[1] ? ' ' + h.badge2.split(' ')[1] : ''),
+      line2: h.badge2.split(' ')[2] + ' ' + (h.badge2.split(' ')[3] || ''),
+      icon: <LuSettings2 className="w-7 h-7 text-green-600 shrink-0" />,
+    },
+    {
+      line1: h.badge3.split(' ')[0] + ' ' + (h.badge3.split(' ')[1] || ''),
+      line2: h.badge3.split(' ')[2] || '',
+      icon: <LuUsers className="w-7 h-7 text-green-600 shrink-0" />,
+    },
+    {
+      line1: h.badge4.split(' ')[0] || '',
+      line2: h.badge4.split(' ')[1] + ' ' + (h.badge4.split(' ')[2] || ''),
+      icon: <LuShieldCheck className="w-7 h-7 text-green-600 shrink-0" />,
+    },
+    {
+      line1: h.badge5.split(' ')[0] || '',
+      line2: h.badge5.split(' ')[1] || '',
+      icon: <LuClock className="w-7 h-7 text-green-600 shrink-0" />,
+    },
+    {
+      line1: h.badge6.split(' ')[0] || '',
+      line2: h.badge6.split(' ')[1] || '',
+      icon: <LuZap className="w-7 h-7 text-green-600 shrink-0" />,
+    },
+  ];
   return (
     <section className="relative w-full overflow-hidden">
       {/* Background image — starts below navbar, not full-screen height */}
@@ -71,10 +78,12 @@ export default function HeroSection() {
       />
       {/* White overlay for mobile only */}
       <div className="absolute inset-0 bg-white/85 lg:hidden pointer-events-none" />
+      {/* White fog behind badges - desktop oval shape */}
+      <div className="hidden lg:block absolute bottom-[-5%] left-[-10%] w-[70%] h-[60%] bg-radial-gradient from-white/95 via-white/80 to-transparent pointer-events-none rounded-full blur-3xl" style={{ background: 'radial-gradient(ellipse 80% 60% at 30% 70%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 70%)' }} />
 
-      <div className="relative z-10 w-full flex items-start min-h-[80vh] lg:min-h-[95vh] pt-8 px-5 sm:px-8 lg:pl-16 lg:pr-6 pb-16">
+      <div className="relative z-10 w-full flex items-start min-h-[80vh] lg:min-h-[95vh] pt-24 sm:pt-28 lg:pt-8 px-5 sm:px-8 lg:pl-16 lg:pr-6 pb-16">
         {/* ── Left content ──────────────────────────────────────── */}
-        <div className="w-full lg:w-[50%] pt-4 md:pt-12 lg:pt-20 pb-12">
+        <div className="w-full lg:w-[50%] pt-8 md:pt-12 lg:pt-20 pb-12">
           {/* Heading */}
           <h1 data-reveal className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-3">
             <span className="text-green-600">R</span>
@@ -83,14 +92,12 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <h2 data-reveal data-reveal-delay="120" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug mb-5">
-            Soluția inteligentă pentru<br />parcări moderne
+            {h.subtitle}
           </h2>
 
           {/* Description */}
           <p data-reveal data-reveal-delay="220" className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-lg font-medium">
-            Control complet al accesului, plăților și monitorizării
-            într-o platformă integrată de hardware și software
-            dezvoltată și produsă în Republica Moldova.
+            {h.description}
           </p>
 
           {/* CTA buttons */}
@@ -99,14 +106,14 @@ export default function HeroSection() {
               href="#contact"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
             >
-              Solicită demonstrație
+              {t.cta.requestQuote}
               <LuArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#contact"
               className="inline-flex items-center border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"
             >
-              Cere ofertă
+              {t.cta.requestQuote}
             </a>
           </div>
 
