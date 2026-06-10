@@ -17,7 +17,7 @@ export default function CTABanner() {
           {/* Buttons */}
           <div className="flex flex-wrap gap-5 shrink-0">
             <a
-              href="#demo"
+              href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-12 py-5 rounded-md transition-colors text-lg"
             >
               Solicită demo

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
@@ -8,6 +9,40 @@ import {
   LuQrCode, LuCloud, LuServer, LuCode, LuWifi, LuScanLine, LuHouse,
 } from 'react-icons/lu';
 import { TbBarrierBlock } from 'react-icons/tb';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Implementări RParking – Proiecte reale în Moldova',
+  description:
+    'Vezi proiectele reale implementate cu sistemul RParking: centre comerciale, business centre, parcări rezidențiale. Peste 1.000.000 de treceri zilnice.',
+  keywords: [
+    'implementari parcare',
+    'proiecte parcare Moldova',
+    'sistem parcare Chișinău',
+    'parcare automatizata reala',
+    'exemplu parcare',
+    'case study parcare',
+    'RParking implementări',
+  ],
+  alternates: {
+    canonical: '/implementari',
+  },
+  openGraph: {
+    title: 'Implementări RParking – Proiecte reale în Moldova',
+    description:
+      'Vezi proiectele reale implementate cu sistemul RParking. Peste 1.000.000 de treceri zilnice.',
+    url: `${SITE_URL}/implementari`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Implementări RParking',
+      },
+    ],
+  },
+};
 
 const heroBadges = [
   { label: 'Automatizare completă', icon: <LuZap className="w-5 h-5 text-green-600" /> },
@@ -73,7 +108,7 @@ export default function ImplementariPage() {
       {/* Navbar + Logo */}
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
@@ -295,7 +330,7 @@ export default function ImplementariPage() {
           </div>
           <Link
             data-reveal="fade-right"
-            href="/#contact"
+            href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3.5 rounded-md transition-all duration-200 text-sm hover:scale-105 active:scale-95 whitespace-nowrap"
           >
             Solicită demonstrație <LuArrowRight className="w-4 h-4" />

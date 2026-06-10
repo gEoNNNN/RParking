@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,6 +13,41 @@ import {
   LuTrendingUp, LuZap, LuCalendar,
 } from 'react-icons/lu';
 import { TbBarrierBlock } from 'react-icons/tb';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'BackOffice – Platformă de management parcare | RParking',
+  description:
+    'Platformă cloud pentru managementul parcărilor: rapoarte în timp real, monitorizare echipamente, administrare tarife, acces mobil.',
+  keywords: [
+    'software management parcare',
+    'platformă management parcare',
+    'monitorizare parcare',
+    'rapoarte parcare',
+    'administrare tarife',
+    'BackOffice cloud',
+    'RParking BackOffice',
+    'SaaS parcare',
+  ],
+  alternates: {
+    canonical: '/products/backoffice',
+  },
+  openGraph: {
+    title: 'BackOffice – Platformă de management parcare',
+    description:
+      'Soluție completă pentru managementul parcărilor: rapoarte, monitorizare, administrare.',
+    url: `${SITE_URL}/products/backoffice`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'BackOffice RParking',
+      },
+    ],
+  },
+};
 
 const heroFeatures = [
   'Monitorizare în timp real',
@@ -77,7 +113,7 @@ export default function BackOfficePage() {
       {/* Navbar + Logo */}
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 

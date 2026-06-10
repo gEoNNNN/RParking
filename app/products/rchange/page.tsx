@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
@@ -9,6 +10,41 @@ import {
   LuBus, LuCamera, LuMonitor, LuSettings,
   LuWifi, LuSmartphone, LuWallet,
 } from 'react-icons/lu';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'RChange – Schimb valutar automat 24/7 | RParking',
+  description:
+    'Aparat de schimb valutar self-service: acceptă bancnote, eliberează monede, ecran tactil, disponibil non-stop, integrare BackOffice.',
+  keywords: [
+    'schimb valutar automat',
+    'aparat schimb valutar',
+    'exchange machine',
+    'schimb bancnote monede',
+    'dispenser monede',
+    'validator bancnote',
+    'RChange',
+    'schimb valutar self-service',
+  ],
+  alternates: {
+    canonical: '/products/rchange',
+  },
+  openGraph: {
+    title: 'RChange – Schimb valutar automat 24/7',
+    description:
+      'Soluție self-service pentru schimb valutar: acceptă bancnote, eliberează monede, disponibil non-stop.',
+    url: `${SITE_URL}/products/rchange`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'RChange RParking',
+      },
+    ],
+  },
+};
 
 const heroFeatures = [
   'Disponibil non-stop',
@@ -62,7 +98,7 @@ export default function RChangePage() {
     <>
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
       </div>
@@ -340,7 +376,7 @@ export default function RChangePage() {
                   <LuArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/#contact"
+                  href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200"
                 >
                   Programează demonstrație

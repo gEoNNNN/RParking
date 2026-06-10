@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
@@ -7,6 +8,45 @@ import {
   LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard,
   LuShieldCheck, LuSettings2, LuZap, LuPuzzle,
 } from 'react-icons/lu';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Produse RParking – Sisteme automate de parcare',
+  description:
+    'Echipamente complete pentru automatizarea parcărilor: Entry Point, Exit Point, Pay Point, BackOffice, RAccess WC, RChange. Hardware și software dezvoltate în Moldova.',
+  keywords: [
+    'echipamente parcare',
+    'sistem automatizare parcare',
+    'terminal intrare parcare',
+    'terminal ieșire parcare',
+    'terminal plată parcare',
+    'software management parcare',
+    'bariere automate',
+    'control acces parcare',
+    'validator carduri',
+    'validator bancnote',
+    'schimb valutar automat',
+    'RParking produse',
+  ],
+  alternates: {
+    canonical: '/products',
+  },
+  openGraph: {
+    title: 'Produse RParking – Echipamente complete pentru parcări',
+    description:
+      'Soluții hardware și software pentru automatizarea completă a parcărilor: control acces, plăți automate, monitorizare.',
+    url: `${SITE_URL}/products`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Produse RParking',
+      },
+    ],
+  },
+};
 
 const products = [
   {
@@ -121,7 +161,7 @@ export default function ProductsPage() {
       {/* Navbar + Logo */}
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
@@ -298,13 +338,13 @@ export default function ProductsPage() {
           </p>
           <div data-reveal data-reveal-delay="200" className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/#contact"
+              href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95"
             >
               Solicită demonstrație <LuArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/#contact"
+              href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-md transition-all duration-200 text-sm bg-white/10 hover:bg-white/20 hover:scale-105 active:scale-95"
             >
               Cere ofertă

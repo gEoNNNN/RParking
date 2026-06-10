@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
@@ -10,6 +11,41 @@ import { FaRegHospital } from 'react-icons/fa';
 import { BiHotel } from 'react-icons/bi';
 import { LuSettings2, LuZap, LuHeadphones, LuTrendingUp, LuShieldCheck, LuMapPin, LuArrowRight, LuCheck, LuHouse, LuChevronRight } from 'react-icons/lu';
 import { LiaLeafSolid } from 'react-icons/lia';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Soluții RParking – Automatizare pentru orice tip de parcare',
+  description:
+    'Soluții personalizate pentru centre comerciale, business centre, parcări rezidențiale, aeroporturi și instituții publice. Sistem complet de automatizare.',
+  keywords: [
+    'solutii parcare',
+    'automatizare parcare centre comerciale',
+    'sistem parcare business centre',
+    'parcare rezidentiala',
+    'parcare aeroport',
+    'parcare institutii publice',
+    'soluții parcare Moldova',
+    'RParking solutii',
+  ],
+  alternates: {
+    canonical: '/solutii',
+  },
+  openGraph: {
+    title: 'Soluții RParking – Automatizare pentru orice tip de parcare',
+    description:
+      'Soluții personalizate pentru orice tip de parcare: centre comerciale, business centre, rezidențiale, aeroporturi.',
+    url: `${SITE_URL}/solutii`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Soluții RParking',
+      },
+    ],
+  },
+};
 
 const domains = [
   {
@@ -71,7 +107,7 @@ export default function SolutiiPage() {
       {/* Navbar + Logo */}
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
@@ -216,7 +252,7 @@ export default function SolutiiPage() {
           </div>
           <Link
             data-reveal="fade-right"
-            href="#contact"
+            href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-green-800 font-semibold px-8 py-3 rounded-md transition-all duration-200 text-sm whitespace-nowrap"
           >
             Contactează-ne <LuArrowRight className="w-4 h-4" />

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,6 +10,40 @@ import {
   LuBanknote, LuSmartphone, LuTicket, LuReceipt,
   LuMonitor, LuSettings, LuWifi, LuZap,
 } from 'react-icons/lu';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'RAccess WC – Control acces și taxare toalete publice | RParking',
+  description:
+    'Sistem complet pentru grupuri sanitare publice: control acces, plată automată, turnicheți, rapoarte în timp real, integrare BackOffice.',
+  keywords: [
+    'control acces toalete',
+    'taxare toalete publice',
+    'sistem turnicheți',
+    'plată automată toalete',
+    'management toalete',
+    'RAccess WC',
+    'sistem sanitar public',
+  ],
+  alternates: {
+    canonical: '/products/raccess-wc',
+  },
+  openGraph: {
+    title: 'RAccess WC – Control acces și taxare toalete publice',
+    description:
+      'Soluție completă pentru grupuri sanitare publice: control acces, plată automată, rapoarte.',
+    url: `${SITE_URL}/products/raccess-wc`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'RAccess WC RParking',
+      },
+    ],
+  },
+};
 
 const heroFeatures = [
   'Acces controlat',
@@ -78,7 +113,7 @@ export default function RAccessWCPage() {
     <>
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
       </div>
@@ -396,7 +431,7 @@ export default function RAccessWCPage() {
                   <LuArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/#contact"
+                  href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200"
                 >
                   Contactează-ne

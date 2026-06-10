@@ -101,7 +101,7 @@ export default function Navbar() {
         {/* Right side */}
         <div className="flex-1 hidden lg:flex justify-end items-center gap-3">
           <Link
-            href="/#contact"
+            href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-500 text-white text-base font-bold px-5 py-2.5 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-105 active:scale-95 hover:shadow-md hover:shadow-green-600/30"
           >
             Solicită demo
@@ -184,7 +184,7 @@ export default function Navbar() {
             )
           )}
           <Link
-            href="/#contact"
+            href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
             className="mt-2 bg-green-600 text-white text-sm font-semibold px-5 py-3 rounded-md text-center"
             onClick={() => setIsOpen(false)}
           >

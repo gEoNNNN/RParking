@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,6 +12,41 @@ import {
   LuCamera, LuScanLine, LuKeyRound, LuRadioTower,
 } from 'react-icons/lu';
 import { TbBarrierBlock } from 'react-icons/tb';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Platforma RParking – Arhitectură și tehnologii',
+  description:
+    'Arhitectura platformei RParking: modulară, scalabilă, securizată. Integrări ANPR, NFC, QR, API REST, cloud, monitorizare 24/7.',
+  keywords: [
+    'platforma parcare',
+    'arhitectura sistem parcare',
+    'tehnologii parcare',
+    'integrare ANPR',
+    'API parcare',
+    'sistem cloud parcare',
+    'monitorizare parcare',
+    'RParking platforma',
+  ],
+  alternates: {
+    canonical: '/platforma-rparking',
+  },
+  openGraph: {
+    title: 'Platforma RParking – Arhitectură și tehnologii',
+    description:
+      'Arhitectura platformei RParking: modulară, scalabilă, securizată. Integrări ANPR, NFC, QR, API REST.',
+    url: `${SITE_URL}/platforma-rparking`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Platforma RParking',
+      },
+    ],
+  },
+};
 
 const heroBadges = ['Fiabilă', 'Securizată', 'Scalabilă', 'Ușor de integrat'];
 
@@ -61,7 +97,7 @@ export default function PlatformaRParkingPage() {
       {/* Navbar + Logo */}
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-20 z-50 h-20 flex items-center">
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
           <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
         </Link>
 
