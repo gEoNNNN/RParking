@@ -101,7 +101,7 @@ export default function RAccessWCPage() {
             <Image src="/img/wc/bg.png" alt="" fill className="object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Mobile fog */}
-          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-30% via-white/85 via-50% to-transparent pointer-events-none" />
+          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-40% via-white/85 via-65% to-white/50 pointer-events-none" />
 
           {/* Content */}
           <div className="relative lg:absolute lg:inset-0 z-10 flex flex-col justify-start pt-36 lg:pt-52 pb-12 px-6 lg:pl-16 min-h-[500px] lg:min-h-0">
@@ -272,10 +272,6 @@ export default function RAccessWCPage() {
                   <div className="p-6 flex flex-col flex-1">
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{c.title}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed flex-1">{c.desc}</p>
-                    <div className="mt-5 flex items-center gap-1.5 text-green-600 text-sm font-semibold">
-                      <span>Componentă esențială</span>
-                      <LuArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
                   </div>
                 </div>
               ))}

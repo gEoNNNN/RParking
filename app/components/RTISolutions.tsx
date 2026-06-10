@@ -19,7 +19,7 @@ const rtiProducts = [
     title: 'RChange',
     description: 'Automat self-service pentru schimb valutar și servicii automate.',
     image: '/img/exchange.png',
-    href: '#/products/rchange',
+    href: '/products/rchange',
   },
 ];
 

@@ -37,7 +37,7 @@ export default function MobileAppSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % mockupImages.length);
-    }, 2000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -50,8 +50,8 @@ export default function MobileAppSection() {
             <span className="text-green-600 font-semibold text-sm uppercase tracking-wide mb-2 block">
               Aplicație mobilă
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 whitespace-nowrap">
-              Parchează inteligent cu <span className="text-green-600">RParking App</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Parchează inteligent cu <span className="text-green-600 whitespace-nowrap">RParking App</span>
             </h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
               Descarcă aplicația și ai control total asupra parcărilor tale direct de pe telefon.
@@ -79,7 +79,7 @@ export default function MobileAppSection() {
               href="https://play.google.com/store/apps/details?id=com.rti.android.rparking"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-black hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-lg"
+              className="flex w-fit mx-auto lg:mx-0 items-center gap-3 bg-black hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-lg"
             >
               <LuDownload className="w-5 h-5" />
               <div className="flex flex-col items-start">

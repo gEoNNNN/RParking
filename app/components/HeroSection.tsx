@@ -107,16 +107,16 @@ export default function HeroSection() {
               href="#contact"
               className="inline-flex items-center border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"
             >
-              Solicită ofertă
+              Programare demo
             </a>
           </div>
 
           {/* Bottom badge strip */}
-          <div data-reveal data-reveal-delay="460" className="grid grid-cols-3 gap-4 w-fit">
+          <div data-reveal data-reveal-delay="460" className="grid grid-cols-3 gap-2 sm:gap-4 w-fit">
             {badges.map((b, i) => (
-              <div key={b.line1} className="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-white/80 transition-colors">
+              <div key={b.line1} className="flex items-center gap-1.5 sm:gap-2 px-1.5 sm:px-2 py-1.5 rounded-lg hover:bg-white/80 transition-colors">
                 {b.icon}
-                <span className="text-sm font-semibold text-gray-800 leading-tight">
+                <span className="text-[11px] sm:text-sm font-semibold text-gray-800 leading-tight">
                   {b.line1}<br />{b.line2}
                 </span>
               </div>

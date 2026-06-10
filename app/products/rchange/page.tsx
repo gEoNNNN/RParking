@@ -1,10 +1,9 @@
-import { Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import {
-  LuCheck, LuArrowRight, LuHouse,
+  LuCheck, LuArrowRight,
   LuClock, LuZap, LuShieldCheck, LuBanknote,
   LuGlobe, LuBuilding2, LuHotel, LuPlane,
   LuBus, LuCamera, LuMonitor, LuSettings,
@@ -24,31 +23,18 @@ const keyFeatures = [
 ];
 
 const steps = [
-  { title: 'Introduci bancnota', desc: 'Clientul introduce bancnota în aparat.', icon: <LuBanknote className="w-16 h-16 text-green-600" /> },
-  { title: 'Aparatul verifică', desc: 'Sistemul validează bancnota și calculează suma.', icon: <LuCheck className="w-16 h-16 text-green-600" /> },
-  { title: 'Primești moneda', desc: 'Aparatul eliberează automat monedele corespunzătoare.', icon: <LuWallet className="w-16 h-16 text-green-600" /> },
-  { title: 'Ridici monedele', desc: 'Tranzacția este finalizată în câteva secunde.', icon: <LuArrowRight className="w-16 h-16 text-green-600" /> },
+  { n: '01', title: 'Introduci bancnota', desc: 'Clientul introduce bancnota în fanta de validare.', image: '/img/exchange/pas3.png' },
+  { n: '02', title: 'Aparatul verifică', desc: 'Sistemul validează bancnota și calculează suma în monede.', image: '/img/exchange/pas2.png' },
+  { n: '03', title: 'Monedele sunt eliberate', desc: 'Dispenserul pregătește automat monedele necesare.', image: '/img/exchange/pas1.png' },
+  { n: '04', title: 'Ridici monedele', desc: 'Tranzacția este finalizată în doar câteva secunde.', image: '/img/exchange/pas4.png' },
 ];
 
-const components = [
-  {
-    n: 1,
-    title: 'Ecran tactil intuitiv',
-    desc: 'Interfață prietenoasă cu instrucțiuni clare pentru utilizatori.',
-    image: '/img/exchange/pas2.png'
-  },
-  {
-    n: 2,
-    title: 'Validator bancnote',
-    desc: 'Detectare avansată a autenticității bancnotelor.',
-    image: '/img/exchange/pas1.png'
-  },
-  {
-    n: 3,
-    title: 'Dispenser monede',
-    desc: 'Eliberare rapidă și precisă a monedelor.',
-    image: '/img/exchange/pas4.png'
-  },
+const componentFeatures = [
+  { title: 'Ecran tactil intuitiv', desc: 'Interfață prietenoasă cu instrucțiuni clare, pas cu pas.' },
+  { title: 'Validator de bancnote', desc: 'Detectare avansată a autenticității bancnotelor.' },
+  { title: 'Dispenser automat de monede', desc: 'Eliberare rapidă și precisă a monedelor.' },
+  { title: 'Acceptă bancnote și eliberează monede', desc: 'Schimb complet automatizat, fără personal.' },
+  { title: 'Design compact și modern', desc: 'Se integrează elegant în orice locație.' },
 ];
 
 const locations = [
@@ -99,7 +85,7 @@ export default function RChangePage() {
             <Image src="/img/exchange/bg.png" alt="" fill className="object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Mobile fog */}
-          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-30% via-white/85 via-50% to-transparent pointer-events-none" />
+          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-40% via-white/85 via-65% to-white/50 pointer-events-none" />
 
           {/* Content */}
           <div className="relative lg:absolute lg:inset-0 z-10 flex flex-col justify-start pt-36 lg:pt-52 pb-12 px-6 lg:pl-16 min-h-[500px] lg:min-h-0">
@@ -145,95 +131,81 @@ export default function RChangePage() {
         {/* ── Key Features Section ── */}
         <section className="py-20 bg-white">
           <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Left - Image */}
-              <div data-reveal="fade-right" className="relative rounded-2xl overflow-hidden shadow-2xl max-w-md mx-auto">
-                <Image
-                  src="/img/exchange/terminal.png"
-                  alt="RChange Terminal"
-                  width={400}
-                  height={500}
-                  className="object-cover w-full h-auto"
-                />
-              </div>
-
-              {/* Right - Content */}
-              <div data-reveal="fade-left">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                  Schimb valutar <span className="text-green-600">inteligent</span>
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  RChange este soluția ideală pentru locațiile cu trafic intens de turiști și călători. Oferă schimb valutar rapid, fără comisioane ascunse și disponibil non-stop.
-                </p>
-
-                <div className="grid sm:grid-cols-2 gap-6">
-                  {keyFeatures.map((f, i) => (
-                    <div key={i} className="flex gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
-                        {f.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">
-                          {f.title} <span className="text-green-600">{f.accent}</span>
-                        </h4>
-                        <p className="text-gray-500 text-sm mt-1">{f.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Components Section ── */}
-        <section className="py-24 bg-white">
-          <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
-            <div className="text-center mb-16">
-              <span className="text-green-600 font-semibold text-sm uppercase tracking-wide mb-3 block">Echipamente incluse</span>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Componentele <span className="text-green-600">RChange</span></h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">Sistem complet format din trei componente principale pentru o experiență fluidă</p>
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Schimb valutar <span className="text-green-600">inteligent</span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                RChange este soluția ideală pentru locațiile cu trafic intens de turiști și călători. Oferă schimb valutar rapid, fără comisioane ascunse și disponibil non-stop.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {components.map((c, i) => (
+            <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {keyFeatures.map((f, i) => (
                 <div
                   key={i}
                   data-reveal="fade-up"
                   data-reveal-delay={i * 100}
-                  className="group flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 bg-white border border-gray-100"
+                  className="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg hover:border-green-200 transition-all duration-300 text-center"
                 >
-                  {/* Image - white bg same as card, no padding, full image visible */}
-                  <div className="relative w-full bg-white" style={{ aspectRatio: '1/1' }}>
-                    <Image
-                      src={c.image}
-                      alt={c.title}
-                      fill
-                      className="object-contain group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4 w-9 h-9 rounded-xl bg-green-500 text-white flex items-center justify-center font-bold text-sm shadow-md">
-                      {c.n}
-                    </div>
+                  <div className="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-5">
+                    {f.icon}
                   </div>
-                  <div className="h-px bg-gray-100 mx-6" />
-
-                  {/* Content */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{c.title}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed flex-1">{c.desc}</p>
-                    <div className="mt-5 flex items-center gap-1.5 text-green-600 text-sm font-semibold">
-                      <span>Componentă esențială</span>
-                      <LuArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
+                  <h4 className="font-bold text-gray-900 text-lg mb-2">
+                    {f.title} <span className="text-green-600">{f.accent}</span>
+                  </h4>
+                  <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* ── Components Section ── */}
+        <section className="py-24 bg-gray-50 overflow-hidden">
+          <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left - Terminal showcase */}
+              <div data-reveal="fade-right" className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-green-100 to-green-50 rounded-[2rem] blur-2xl opacity-70" />
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-950">
+                  <Image
+                    src="/img/exchange/terminal.png"
+                    alt="Terminal RChange"
+                    width={1024}
+                    height={819}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Right - Feature list */}
+              <div data-reveal="fade-left">
+                <span className="text-green-600 font-semibold text-sm uppercase tracking-wide mb-3 block">Echipament</span>
+                <h2 className="text-4xl font-bold text-gray-900 mb-5">Componente <span className="text-green-600">principale</span></h2>
+                <p className="text-gray-500 leading-relaxed mb-8">
+                  Fiecare terminal RChange integrează componente de înaltă calitate pentru o experiență de schimb valutar rapidă și sigură.
+                </p>
+                <ul className="space-y-4">
+                  {componentFeatures.map((f) => (
+                    <li key={f.title} className="flex items-start gap-4">
+                      <span className="w-9 h-9 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center shrink-0">
+                        <LuCheck className="w-4 h-4 text-green-600" />
+                      </span>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 text-sm">{f.title}</h4>
+                        <p className="text-gray-500 text-sm mt-0.5">{f.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── Locations Section ── */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold text-gray-900 mb-3">Unde poate fi instalat</h2>
@@ -254,38 +226,51 @@ export default function RChangePage() {
         </section>
 
         {/* ── How it Works ── */}
-        <section className="py-20 bg-white">
+        <section className="py-24 bg-gray-50">
           <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
             <div className="text-center mb-14">
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">Cum funcționează?</h2>
-              <div className="w-12 h-0.5 bg-green-500 mx-auto" />
+              <span className="text-green-600 font-semibold text-sm uppercase tracking-wide mb-3 block">Proces simplu</span>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Cum funcționează?</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto">Patru pași simpli pentru un schimb valutar rapid și automat</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-start gap-y-10 gap-x-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, idx) => (
-                <Fragment key={step.title}>
-                  <div className="flex flex-col items-center text-center gap-3 lg:flex-1">
-                    <div className="w-32 h-32 rounded-full bg-green-50 border border-green-100 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-200/60 hover:border-green-400 cursor-pointer">
-                      {step.icon}
+                <div
+                  key={step.title}
+                  data-reveal="fade-up"
+                  data-reveal-delay={idx * 100}
+                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
+                >
+                  <div className="relative aspect-[4/5]">
+                    <Image
+                      src={step.image}
+                      alt={step.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    {/* Dark gradient for text legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
+                    {/* Number badge */}
+                    <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-green-500 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-green-900/40">
+                      {step.n}
                     </div>
-                    <p className="text-gray-900 font-bold text-sm leading-tight max-w-48">{step.title}</p>
-                    <p className="text-gray-500 text-xs leading-relaxed max-w-44">{step.desc}</p>
+                    {/* Text */}
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h3 className="text-white font-bold text-lg mb-1 leading-tight">{step.title}</h3>
+                      <p className="text-gray-300 text-sm leading-snug">{step.desc}</p>
+                    </div>
                   </div>
-                  {idx < steps.length - 1 && (
-                    <div className="hidden lg:flex items-center pt-12">
-                      <LuArrowRight className="w-6 h-6 text-green-500 shrink-0" />
-                    </div>
-                  )}
-                </Fragment>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* ── Specs Section ── */}
-        <section id="specs" className="py-20 bg-gray-50">
+        <section id="specs" className="py-20 bg-white">
           <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className="grid lg:grid-cols-2 gap-10 items-stretch">
               {/* Specs */}
               <div data-reveal="fade-left" className="flex flex-col">
                 <div className="mb-8">
@@ -329,12 +314,18 @@ export default function RChangePage() {
         </section>
 
         {/* ── CTA Section ── */}
-        <section className="py-20 bg-gray-900">
-          <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+        <section className="relative py-20 bg-gray-900 overflow-hidden">
+          {/* Coins decoration */}
+          <div className="absolute -left-10 -bottom-8 w-72 opacity-90 pointer-events-none select-none hidden md:block">
+            <Image src="/img/exchange/banuti.png" alt="" width={400} height={280} className="w-full h-auto drop-shadow-2xl" />
+          </div>
+          <div className="absolute right-0 top-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative max-w-screen-2xl mx-auto px-6 lg:px-10">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Simpliu. Rapid. Disponibil 24/7.
+              <div className="md:pl-64">
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                  Simplu. Rapid. <span className="text-green-400">Disponibil 24/7.</span>
                 </h2>
                 <p className="text-gray-400 leading-relaxed">
                   Oferă clienților tăi o experiență modernă de schimb valutar.
@@ -343,7 +334,7 @@ export default function RChangePage() {
               <div className="flex flex-wrap gap-4 lg:justify-end">
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-md transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-md transition-all duration-200 hover:scale-105 shadow-lg shadow-green-900/40"
                 >
                   Solicită ofertă
                   <LuArrowRight className="w-4 h-4" />

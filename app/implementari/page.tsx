@@ -168,9 +168,9 @@ export default function ImplementariPage() {
                 Am livrat un sistem complet de automatizare, format din echipamente inteligente și platforma BackOffice,
                 care asigură eficiență operațională și experiență excelentă pentru utilizatori.
               </p>
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+              <div className="flex flex-wrap justify-center gap-3 sm:grid sm:grid-cols-5">
                 {solutionProducts.map((p) => (
-                  <div key={p.label} className="flex flex-col items-center text-center gap-2">
+                  <div key={p.label} className="flex flex-col items-center text-center gap-2 w-[calc(33%-0.5rem)] sm:w-auto">
                     <div className="w-12 h-12 rounded-xl border border-green-100 bg-green-50/50 flex items-center justify-center">
                       {p.icon}
                     </div>
@@ -265,7 +265,7 @@ export default function ImplementariPage() {
             <div className="w-10 h-0.5 bg-green-500 mx-auto" />
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-x-10 gap-y-5 w-fit mx-auto">
             {technologies.map((t) => (
               <div key={t.label} className="flex items-center gap-2">
                 {t.icon}

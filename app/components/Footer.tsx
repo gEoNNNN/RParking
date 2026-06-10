@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
+import { LuArrowRight } from 'react-icons/lu';
 
 export default function Footer() {
   return (
@@ -21,8 +22,18 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-900 font-semibold text-sm mb-4">Produse</h4>
             <ul className="space-y-2.5">
-              {['Entry Point', 'Exit Point', 'Pay Point', 'BackOffice'].map((item) => (
-                <li key={item}><Link href="#" className="text-gray-500 text-sm hover:text-green-600 transition-colors">{item}</Link></li>
+              {[
+                { name: 'Entry Point', href: '/products/entry-point' },
+                { name: 'Exit Point', href: '/products/exit-point-cardpass' },
+                { name: 'Pay Point', href: '/products/pay-point' },
+                { name: 'BackOffice', href: '/products/backoffice' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
+                    {item.name}
+                    <LuArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -34,23 +45,49 @@ export default function Footer() {
                 { name: 'RAccess WC', href: '/products/raccess-wc' },
                 { name: 'RChange', href: '/products/rchange' },
               ].map((item) => (
-                <li key={item.name}><Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors">{item.name}</Link></li>
+                <li key={item.name}>
+                  <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
+                    {item.name}
+                    <LuArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
           <div>
             <h4 className="text-gray-900 font-semibold text-sm mb-4">Soluții</h4>
             <ul className="space-y-2.5">
-              {['Centre comerciale', 'Business centre', 'Rezidentiale', 'Municipale', 'Aeroporturi'].map((item) => (
-                <li key={item}><Link href="#" className="text-gray-500 text-sm hover:text-green-600 transition-colors">{item}</Link></li>
+              {[
+                { name: 'Centre comerciale', href: '/solutii' },
+                { name: 'Business centre', href: '/solutii' },
+                { name: 'Rezidentiale', href: '/solutii' },
+                { name: 'Municipale', href: '/solutii' },
+                { name: 'Aeroporturi', href: '/solutii' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
+                    {item.name}
+                    <LuArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
           <div>
             <h4 className="text-gray-900 font-semibold text-sm mb-4">Companie</h4>
             <ul className="space-y-2.5">
-              {['Despre noi', 'Implementari', 'Contact', 'Suport'].map((item) => (
-                <li key={item}><Link href="#" className="text-gray-500 text-sm hover:text-green-600 transition-colors">{item}</Link></li>
+              {[
+                { name: 'Despre noi', href: '/despre-noi' },
+                { name: 'Implementari', href: '/implementari' },
+                { name: 'Contact', href: '/#contact' },
+                { name: 'Suport', href: '/suport' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
+                    {item.name}
+                    <LuArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

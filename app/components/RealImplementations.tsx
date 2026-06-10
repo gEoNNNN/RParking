@@ -70,7 +70,7 @@ export default function RealImplementations() {
           </div>
 
           <a
-            href="#implementations"
+            href="/implementari"
             className="shrink-0 border border-green-600 text-green-700 hover:bg-green-600 hover:text-white font-medium text-sm px-6 py-2.5 rounded-md transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-green-600/30"
           >
             Vezi toate implementările

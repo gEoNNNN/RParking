@@ -170,7 +170,7 @@ export default function DespreNoiPage() {
             {/* Right: RTI building photo */}
             <div data-reveal="fade-right" className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/img/implementarea 3.jpg"
+                src="/img/exchange/rti.jpg"
                 alt="RTI Systems"
                 width={700}
                 height={500}
@@ -286,7 +286,7 @@ export default function DespreNoiPage() {
 
           <div data-reveal className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
             {gallery.map((src, idx) => (
-              <div key={idx} className="relative rounded-xl overflow-hidden aspect-square">
+              <div key={idx} className={`relative rounded-xl overflow-hidden aspect-square${idx === gallery.length - 1 && gallery.length % 2 !== 0 ? ' col-span-2 md:col-span-1 max-w-[50%] md:max-w-full mx-auto w-full' : ''}`}>
                 <Image src={src} alt="" fill className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             ))}
@@ -308,7 +308,7 @@ export default function DespreNoiPage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
             {values.map((v, idx) => (
-              <div key={v.title} data-reveal data-reveal-delay={String(idx * 70)} className="flex flex-col items-center text-center gap-3">
+              <div key={v.title} data-reveal data-reveal-delay={String(idx * 70)} className={`flex flex-col items-center text-center gap-3${idx === values.length - 1 && values.length % 2 !== 0 ? ' col-span-2 sm:col-span-1' : ''}`}>
                 <div className="w-14 h-14 rounded-2xl bg-green-50 border border-green-100 flex items-center justify-center hover:scale-110 hover:border-green-400 transition-all duration-300 cursor-default">
                   {v.icon}
                 </div>

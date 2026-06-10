@@ -116,7 +116,7 @@ export default function EntryPointPage() {
             <Image src="/img/produse/entry point.png" alt="" fill className="object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Mobile fog */}
-          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-30% via-white/85 via-50% to-transparent pointer-events-none" />
+          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-40% via-white/85 via-65% to-white/50 pointer-events-none" />
 
           {/* Content */}
           <div className="relative lg:absolute lg:inset-0 z-10 flex flex-col justify-start pt-36 lg:pt-52 pb-12 px-6 lg:pl-24 min-h-[500px] lg:min-h-0">
@@ -227,7 +227,7 @@ export default function EntryPointPage() {
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Left: technical diagram with labels */}
             <div data-reveal="fade-left" className="bg-white rounded-2xl p-4 flex items-center justify-center border border-gray-100">
-              <Image src="/img/produse/entry point.jpg" alt="Entry Point componente" width={600} height={800} className="h-[480px] w-auto object-contain" />
+              <Image src="/img/produse/entry point.jpg" alt="Entry Point componente" width={600} height={800} className="w-full lg:w-auto lg:h-[480px] max-h-[70vw] lg:max-h-none object-contain" />
             </div>
 
             {/* Right: component descriptions */}
