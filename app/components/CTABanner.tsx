@@ -1,4 +1,7 @@
+import { useTranslations } from 'next-intl';
+
 export default function CTABanner() {
+  const t = useTranslations('CTA');
   return (
     <section className="bg-green-800 py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -6,11 +9,10 @@ export default function CTABanner() {
           {/* Left text */}
           <div className="lg:max-w-xl">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-snug">
-              Ești gata să automatizezi parcarea?
+              {t('title')}
             </h2>
             <p className="text-green-200 text-lg leading-relaxed">
-              Solicită o demonstrație personalizată și află cum RParking
-              poate aduce valoare afacerii dumneavoastră.
+              {t('description')}
             </p>
           </div>
 
@@ -20,13 +22,13 @@ export default function CTABanner() {
               href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-12 py-5 rounded-md transition-colors text-lg"
             >
-              Solicită demo
+              {t('requestDemo')}
             </a>
             <a
               href="#contact"
               className="inline-flex items-center border-2 border-white/60 hover:border-white text-white font-bold px-12 py-5 rounded-md transition-colors text-lg"
             >
-              Contactați-ne
+              {t('contactUs')}
             </a>
           </div>
         </div>

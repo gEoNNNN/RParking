@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/navigation';
 
 const images = [
   '/img/implementarea 1.jpg',
@@ -13,6 +15,7 @@ const images = [
 ];
 
 export default function RealImplementations() {
+  const t = useTranslations('RealImplementations');
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   useEffect(() => {
@@ -26,7 +29,7 @@ export default function RealImplementations() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div data-reveal="fade" className="text-center mb-8">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Implementări reale</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-3">{t('title')}</h2>
           <div className="w-10 h-0.5 bg-green-500 mx-auto" />
         </div>
 
@@ -40,7 +43,7 @@ export default function RealImplementations() {
             >
               <Image
                 src={src}
-                alt={`Implementare ${idx + 1}`}
+                alt={`${t('imageAlt')} ${idx + 1}`}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 sizes="(max-width: 768px) 170px, 20vw"
@@ -61,20 +64,20 @@ export default function RealImplementations() {
             </div>
             <div>
               <p className="text-gray-900 font-semibold text-sm">
-                Peste 1 000 000 de treceri zilnice prin sistemele RParking
+                {t('statTitle')}
               </p>
               <p className="text-gray-500 text-xs mt-0.5">
-                în centre comerciale, business centre și parcări rezidențiale.
+                {t('statSubtitle')}
               </p>
             </div>
           </div>
 
-          <a
+          <Link
             href="/implementari"
             className="shrink-0 border border-green-600 text-green-700 hover:bg-green-600 hover:text-white font-medium text-sm px-6 py-2.5 rounded-md transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-green-600/30"
           >
-            Vezi toate implementările
-          </a>
+            {t('viewAll')}
+          </Link>
         </div>
       </div>
 
@@ -87,7 +90,7 @@ export default function RealImplementations() {
           <button
             className="absolute top-5 right-5 text-white/80 hover:text-white transition-colors z-10"
             onClick={() => setLightbox(null)}
-            aria-label="Închide"
+            aria-label={t('close')}
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

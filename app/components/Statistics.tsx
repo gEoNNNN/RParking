@@ -1,30 +1,32 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { LuTrendingUp, LuMapPin, LuCar, LuClock } from 'react-icons/lu';
 
 const metrics = [
   {
     value: '1 000 000+',
-    label: 'Treceri zilnice',
+    labelKey: 'dailyPasses',
     icon: <LuTrendingUp className="w-6 h-6 text-green-600" />,
   },
   {
     value: '200+',
-    label: 'Locații implementate',
+    labelKey: 'locations',
     icon: <LuMapPin className="w-6 h-6 text-green-600" />,
   },
   {
     value: '50 000+',
-    label: 'Locuri de parcare administrate',
+    labelKey: 'spots',
     icon: <LuCar className="w-6 h-6 text-green-600" />,
   },
   {
     value: '99,9%',
-    label: 'Disponibilitate sistem',
+    labelKey: 'uptime',
     icon: <LuClock className="w-6 h-6 text-green-600" />,
   },
 ];
 
 export default function Statistics() {
+  const t = useTranslations('Statistics');
   return (
     <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -36,7 +38,7 @@ export default function Statistics() {
                 <Image src="/img/leaf.png" alt="leaf" width={80} height={80} className="w-full h-full object-cover" />
               </div>
               <p className="text-gray-900 font-bold text-lg leading-snug">
-                Tehnologie inteligentă pentru viitor sustenabil
+                {t('tagline')}
               </p>
             </div>
 
@@ -52,7 +54,7 @@ export default function Statistics() {
                   </div>
                   <div>
                     <p className="text-gray-900 text-xl font-black leading-none">{m.value}</p>
-                    <p className="text-gray-500 text-xs mt-0.5 max-w-28 leading-tight">{m.label}</p>
+                    <p className="text-gray-500 text-xs mt-0.5 max-w-28 leading-tight">{t(m.labelKey)}</p>
                   </div>
                 </div>
               ))}

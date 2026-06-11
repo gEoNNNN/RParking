@@ -1,0 +1,960 @@
+{
+  "Nav": {
+    "home": "Home",
+    "platform": "RParking Platform",
+    "implementations": "Implementations",
+    "about": "About Us",
+    "products": "Products",
+    "solutions": "Solutions",
+    "contact": "Contact",
+    "requestDemo": "Request a demo",
+    "viewAllProducts": "View all products →"
+  },
+  "Hero": {
+    "subtitle": "The smart solution for modern parking",
+    "description": "Complete control of access, payments and monitoring in an integrated hardware and software platform developed and manufactured in the Republic of Moldova.",
+    "requestQuote": "Request a quote",
+    "scheduleDemo": "Schedule a demo",
+    "badge1": { "l1": "Developed in", "l2": "Moldova" },
+    "badge2": { "l1": "Own Hardware", "l2": "& Software" },
+    "badge3": { "l1": "Dedicated", "l2": "tech support" },
+    "badge4": { "l1": "Secure", "l2": "and reliable" },
+    "badge5": { "l1": "Easy", "l2": "integrations" },
+    "badge6": { "l1": "Fast", "l2": "installation" }
+  },
+  "BenefitsBar": {
+    "tagline1": "More efficient parking,",
+    "tagline2": "greener cities.",
+    "automation": "Automation",
+    "costs": "Operating costs",
+    "satisfaction": "User satisfaction",
+    "monitoring": "Control & monitoring"
+  },
+  "HowItWorks": {
+    "title": "How it works",
+    "step1": "Enter the parking",
+    "step2": "ANPR / QR / NFC identification",
+    "step3": "Time spent in parking",
+    "step4": "Payment at Pay Point",
+    "step5": "Exit the parking",
+    "step6": "Reports & analytics in BackOffice"
+  },
+  "ProductEcosystem": {
+    "titlePrefix": "The ",
+    "titleSuffix": " Ecosystem",
+    "entryDesc": "Entry terminal with ANPR, QR/NFC and barrier.",
+    "exitDesc": "Exit terminal with validation and access control.",
+    "payDesc": "Payment terminal with card, cash and change.",
+    "backofficeDesc": "Complete, detailed real-time administration.",
+    "details": "Details"
+  },
+  "RealImplementations": {
+    "title": "Real Implementations",
+    "imageAlt": "Implementation",
+    "statTitle": "Over 1,000,000 daily passes through RParking systems",
+    "statSubtitle": "in shopping malls, business centers and residential parking.",
+    "viewAll": "View all implementations",
+    "close": "Close"
+  },
+  "TargetAudience": {
+    "titlePrefix": "Who is ",
+    "titleSuffix": " for",
+    "mall": "Shopping malls",
+    "business": "Business centers",
+    "residential": "Residential complexes",
+    "airports": "Airports",
+    "hospitals": "Hospitals",
+    "hotels": "Hotels",
+    "municipal": "Municipal parking",
+    "institutions": "Public institutions"
+  },
+  "WhyRParking": {
+    "titlePrefix": "Why choose ",
+    "titleSuffix": "?",
+    "challengesHeader": "Your challenges",
+    "solutionsHeader": "The RParking solution",
+    "row1": { "challenge": "Queues at entry and exit", "solution": "Fully automated access" },
+    "row2": { "challenge": "Uncontrolled access", "solution": "ANPR, QR and NFC recognition" },
+    "row3": { "challenge": "Fraud and financial losses", "solution": "Real-time reports and monitoring" },
+    "row4": { "challenge": "Manual records and errors", "solution": "Total control and complete history" },
+    "row5": { "challenge": "High operating costs", "solution": "Lower costs and higher revenue" }
+  },
+  "Statistics": {
+    "tagline": "Smart technology for a sustainable future",
+    "dailyPasses": "Daily passes",
+    "locations": "Locations deployed",
+    "spots": "Parking spots managed",
+    "uptime": "System uptime"
+  },
+  "Products": {
+    "entryPoint": "Entry Point",
+    "entrySubtitle": "Automatic access",
+    "exitPoint": "Exit Point",
+    "exitSubtitle": "Controlled exit",
+    "payPoint": "Pay Point",
+    "paySubtitle": "Quick payments",
+    "backoffice": "BackOffice",
+    "backofficeSubtitle": "Total control"
+  },
+  "Benefits": {
+    "title": "The RParking Solution",
+    "subtitle": "reduces parking spot search time by up to",
+    "stat": "30%",
+    "description": "and increases revenue through automated access monitoring."
+  },
+  "CTA": {
+    "title": "Ready to automate your parking?",
+    "description": "Request a personalized demo and discover how RParking can bring value to your business.",
+    "requestDemo": "Request a demo",
+    "contactUs": "Contact us",
+    "requestQuote": "Request a quote",
+    "scheduleDemo": "Schedule a demo"
+  },
+  "Footer": {
+    "products": "Products",
+    "solutions": "RTI Systems Solutions",
+    "solutions2": "Solutions",
+    "company": "Company",
+    "contact": "Contact",
+    "description": "RParking is a product developed and manufactured by RTi in the Republic of Moldova.",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "mall": "Shopping malls",
+    "business": "Business centers",
+    "residential": "Residential",
+    "municipal": "Municipal",
+    "airports": "Airports",
+    "about": "About Us",
+    "implementations": "Implementations",
+    "contactLink": "Contact",
+    "support": "Support",
+    "location": "Chișinău, Republic of Moldova"
+  },
+  "ProductsPage": {
+    "title": "PRODUCTS",
+    "subtitle": "RParking Products",
+    "heroTitlePrefix": "Products by ",
+    "description": "Hardware and software solutions developed for the complete automation of modern parking facilities.",
+    "hardware": "Own Hardware",
+    "software": "Own Software",
+    "support": "Local Technical Support",
+    "ctaQuote": "Request a quote",
+    "ctaDetails": "Get a quote",
+    "sectionTitle": "Complete solutions for every parking stage",
+    "sectionSubtitle": "Integrated hardware and software for an efficient, secure and automated parking flow.",
+    "viewDetails": "View details",
+    "whyTitlePrefix": "Why choose ",
+    "whyTitleSuffix": "?",
+    "bottomTitle1": "Need a complete solution",
+    "bottomTitle2": "for your parking?",
+    "bottomDesc": "Our team is ready to provide you with the best solution tailored to your needs.",
+    "bottomDemo": "Request a demo",
+    "why": {
+      "complete": "Complete hardware & software solutions",
+      "integration": "Easy integration",
+      "support": "Local technical support",
+      "updates": "Continuous updates",
+      "reports": "Advanced real-time reports",
+      "security": "High security"
+    },
+    "items": {
+      "entry": {
+        "subtitle": "Entry station",
+        "desc": "Smart station for access control in modern parking facilities.",
+        "features": ["Access card issuing", "NFC reading", "QR Code reading", "Voice communication", "Barrier integration", "Centralized management"]
+      },
+      "exit": {
+        "subtitle": "Exit station",
+        "desc": "Exit station for validating cards, tickets and quick exit from the parking.",
+        "features": ["NFC card validation", "QR Code reading", "Ticket validation", "Payment verification", "Barrier access control", "Communication with BackOffice"]
+      },
+      "pay": {
+        "subtitle": "Payment terminal",
+        "desc": "Automatic payment terminal with cash and card support.",
+        "features": ["Card payments", "Cash payments", "Automatic change", "Fiscal receipt", "NFC / QR Code", "Reporting and reconciliation"]
+      },
+      "backoffice": {
+        "subtitle": "Software platform",
+        "desc": "Software platform for managing all locations.",
+        "features": ["Dashboard & reports", "Real-time monitoring", "Subscriptions & customers", "Transactions & revenue", "White List / Black List", "User management"]
+      }
+    }
+  },
+  "SolutiiPage": {
+    "heroTitle1": "Solutions for every type",
+    "heroTitle2": "of parking",
+    "heroDesc": "RParking offers complete and flexible solutions for any type of parking: from residential spaces to municipal parking lots or airports.",
+    "domainsTitle": "Application areas",
+    "domainsSubtitle": "Our solutions are tailored to the specific requirements of each field of activity.",
+    "domains": {
+      "residential": { "title": "Residential parking", "description": "Access control for residents and visitors, subscriptions, reserved spots.", "features": ["Subscription / QR access", "Reserved spots for residents", "Visitor tracking", "Reports and access history"] },
+      "mall": { "title": "Shopping malls", "description": "Efficient management of high visitor flow and increased revenue.", "features": ["Flexible pricing", "Fast payments, multiple methods", "Reduced waiting time", "Integration with existing systems"] },
+      "corporate": { "title": "Corporate parking", "description": "Parking solutions for employees and visitors, with high control and security.", "features": ["White/Black List", "Employee and visitor access", "Departmental reports", "Integration with HR and access control"] },
+      "airports": { "title": "Airports", "description": "High-performance systems for large vehicle flows and maximum security.", "features": ["High-precision ANPR recognition", "Multiple parking zones", "Real-time statistics and monitoring", "Integration with airport systems"] },
+      "hospitals": { "title": "Hospitals", "description": "Controlled access for staff, patients and visitors, with custom pricing.", "features": ["Card / QR access", "Differentiated rates", "Dedicated staff spots", "Reports and detailed records"] },
+      "hotels": { "title": "Hotels", "description": "Comfort for guests and total control over parking.", "features": ["Parking spot reservation", "Fast access for guests", "Integration with hotel system", "Pricing by length of stay"] }
+    },
+    "whyTitlePrefix": "Why choose ",
+    "whyTitleSuffix": "?",
+    "why": {
+      "custom": { "title": "Custom solutions", "description": "We adapt the system to the needs of each project." },
+      "tech": { "title": "Advanced technology", "description": "ANPR, QR, NFC and modern payment methods." },
+      "dedicated": { "title": "Dedicated support", "description": "Local team, fast support and efficient maintenance." },
+      "scalable": { "title": "Scalability", "description": "The system grows with your business needs." },
+      "reliable": { "title": "Reliability and security", "description": "Robust equipment and stable, secure software." },
+      "local": { "title": "Local product", "description": "Developed and manufactured in the Republic of Moldova." }
+    },
+    "greenTitle": "Green technology for smart parking",
+    "greenDesc": "Energy-efficient, environmentally friendly solutions built for the future.",
+    "ctaTitle": "Need a custom solution?",
+    "ctaDesc": "Let's discuss your project and find the best solution together.",
+    "ctaButton": "Contact us"
+  },
+  "ImplementariPage": {
+    "heroLabel": "REAL IMPLEMENTATION",
+    "heroTitlePrefix": "Real implementation of ",
+    "heroTitleSuffix": " in Chișinău",
+    "heroDesc": "Complete system for automating access, payments and monitoring for modern parking facilities.",
+    "ctaQuote": "Request a quote",
+    "ctaDemo": "Schedule a demo",
+    "badges": {
+      "badge1": "Complete automation",
+      "badge2": "Cash and card payments",
+      "badge3": "Real-time monitoring",
+      "badge4": "Centralized reporting"
+    },
+    "challengesTitle": "Client challenges",
+    "challenges": {
+      "c1": "Manual control of entry and exit",
+      "c2": "Lack of centralized reporting",
+      "c3": "Limited monitoring and difficulties verifying payments",
+      "c4": "Long processing time at entry and payment",
+      "c5": "Lack of an integrated and scalable solution"
+    },
+    "solutionTitle": "The RParking solution",
+    "solutionDesc": "We delivered a complete automation system made of smart equipment and the BackOffice platform, ensuring operational efficiency and an excellent user experience.",
+    "barriers": "Automatic barriers",
+    "galleryTitle": "The implementation in images",
+    "gallery": {
+      "g1": { "title": "Entry Point", "description": "Automatic ticket issuing and vehicle access control." },
+      "g2": { "title": "Automatic barriers", "description": "Fast and secure access with high-performance barriers." },
+      "g3": { "title": "Exit Point", "description": "Ticket validation and access control at parking exit." },
+      "g4": { "title": "Entry – exit flow", "description": "A smooth and secure experience for users." },
+      "g5": { "title": "Pay Point", "description": "Cash and card payments, automatic receipt, intuitive interface." },
+      "g6": { "title": "Access control", "description": "Modern equipment for fast and reliable verification." },
+      "g7": { "title": "Professional installation", "description": "Clean implementation, perfectly integrated into the parking infrastructure." }
+    },
+    "usedTitle": "Products used in this implementation",
+    "used": {
+      "u1": { "title": "RParking Entry Point", "description": "Automatic ticket issuing and validation and access control." },
+      "u2": { "title": "RParking Exit Point", "description": "Validation and access control at exit, integrated with the payment system." },
+      "u3": { "title": "RParking Pay Point", "description": "Cash and card payments, automatic receipt and reporting." },
+      "u4": { "title": "RParking BackOffice", "description": "Complete management, real-time monitoring and advanced reports." }
+    },
+    "benefitsTitle": "Benefits achieved",
+    "benefits": {
+      "b1": { "title": "Complete automation", "description": "Fully automated access, payments and reporting." },
+      "b2": { "title": "Fewer manual interventions", "description": "Efficient operations and lower operating costs." },
+      "b3": { "title": "Real-time monitoring", "description": "Live view of all accesses and transactions." },
+      "b4": { "title": "Centralized reporting", "description": "Financial reports and statistics available instantly." },
+      "b5": { "title": "Multiple payments", "description": "Support for cash, card and other payment methods." },
+      "b6": { "title": "Scalability", "description": "A solution ready for easy expansion." }
+    },
+    "techTitle": "Integrated technologies",
+    "bottomTitlePrefix": "Preparing the next implementations of ",
+    "bottomTitleSuffix": "",
+    "bottomDesc": "The RParking platform is ready for shopping malls, office buildings, residential parking, airports and public institutions.",
+    "bottomButton": "Request a demo"
+  },
+  "DespreNoiPage": {
+    "heroLabel": "ABOUT US",
+    "heroTitle1": "Building the future",
+    "heroTitle2": "of smart parking",
+    "heroDesc": "RParking develops and implements complete solutions for parking automation, combining proprietary hardware, advanced software and local support in a single platform.",
+    "badges": {
+      "badge1": "Developed in\nRepublic of Moldova",
+      "badge2": "Proprietary\nhardware",
+      "badge3": "Proprietary\nsoftware"
+    },
+    "whoLabel": "WHO WE ARE",
+    "aboutTitlePrefix": "About ",
+    "aboutP1": "RParking is the specialized division of RTI Systems for parking management and automation.",
+    "aboutP2": "We created a complete platform that controls vehicle access, processes payments and provides real-time monitoring through a centralized <b>BackOffice</b> system.",
+    "designedFor": "The solution is designed for:",
+    "points": {
+      "p1": "Shopping malls",
+      "p2": "Office buildings",
+      "p3": "Residential complexes",
+      "p4": "Airports",
+      "p5": "Public parking"
+    },
+    "location": "Chișinău, Republic of Moldova",
+    "developLabel": "WHAT WE DEVELOP",
+    "developTitle": "Complete solutions from scratch",
+    "hardwareTitle": "HARDWARE",
+    "hardware": {
+      "hw1": "Entry Point",
+      "hw2": "Exit Point",
+      "hw3": "Pay Point",
+      "hw4": "Automatic barriers",
+      "hw5": "Available spaces display"
+    },
+    "softwareTitle": "SOFTWARE",
+    "software": {
+      "sw1": "BackOffice",
+      "sw2": "Live monitoring",
+      "sw3": "Reports",
+      "sw4": "Access management",
+      "sw5": "Payment management"
+    },
+    "servicesTitle": "SERVICES",
+    "services": {
+      "sv1": "Consulting",
+      "sv2": "Installation",
+      "sv3": "Configuration",
+      "sv4": "Training",
+      "sv5": "Technical support"
+    },
+    "whyLabel": "WHY CLIENTS CHOOSE RPARKING",
+    "whyTitle": "Our advantages",
+    "why": {
+      "w1": { "title": "Complete solution", "desc": "Hardware and software in a single platform" },
+      "w2": { "title": "Proprietary development", "desc": "Full control over the product and updates." },
+      "w3": { "title": "Local support", "desc": "Rapid interventions and direct communication." },
+      "w4": { "title": "Scalability", "desc": "From small parking lots to complex projects." }
+    },
+    "seenLabel": "REAL IMPLEMENTATIONS",
+    "seenTitle": "Seen in action",
+    "seenCaption": "RParking system implemented and operated at a modern parking facility in Chișinău.",
+    "valuesLabel": "OUR VALUES",
+    "valuesTitle": "What defines us",
+    "values": {
+      "v1": { "title": "Innovation", "desc": "We constantly develop modern and efficient solutions." },
+      "v2": { "title": "Reliability", "desc": "Tested equipment and stable software." },
+      "v3": { "title": "Security", "desc": "We protect data and access at all times." },
+      "v4": { "title": "Performance", "desc": "Fast, accurate and optimized systems." },
+      "v5": { "title": "Partnership", "desc": "We build solid long-term relationships." }
+    },
+    "ctaTitle1": "Let's transform your parking",
+    "ctaTitle2": "into a smart system",
+    "ctaDemo": "Request a demo",
+    "ctaSchedule": "Schedule a demo"
+  },
+  "PlatformaRParkingPage": {
+    "heroLabel": "RPARKING PLATFORM",
+    "heroTitle": "Smart technology that <span>simplifies</span> parking.",
+    "heroDesc": "RParking combines smart equipment, advanced software and secure connectivity in a single scalable platform.",
+    "ctaQuote": "Request a quote",
+    "ctaDemo": "Schedule a demo",
+    "badges": {
+      "b1": "Reliable",
+      "b2": "Secure",
+      "b3": "Scalable",
+      "b4": "Easy to integrate"
+    },
+    "howTitle": "How the <span>RParking</span> platform works",
+    "steps": {
+      "s1": { "title": "Smart equipment", "description": "Entry Point, Exit Point, Pay Point and connected sensors." },
+      "s2": { "title": "Secure communication", "description": "Data is transmitted encrypted through secure networks." },
+      "s3": { "title": "RParking platform", "description": "All data is processed, stored and correlated in real time." },
+      "s4": { "title": "BackOffice & Monitoring", "description": "Full control, reports and instant alerts." },
+      "s5": { "title": "Smart decisions", "description": "Reports that enable more efficient and profitable operation." }
+    },
+    "whyTitle": "Why <span>RParking</span> technology?",
+    "why": {
+      "w1": { "title": "High performance", "description": "Fast processing of thousands of simultaneous transactions." },
+      "w2": { "title": "99.9% availability", "description": "High SLA and resilient cloud infrastructure." },
+      "w3": { "title": "Advanced security", "description": "End-to-end protection of data and accesses." },
+      "w4": { "title": "Easy integration", "description": "Modern APIs for quick integrations with third-party systems." },
+      "w5": { "title": "Access from anywhere", "description": "Web and mobile platform from any device." },
+      "w6": { "title": "Scalability", "description": "Easily adapts to any parking, from 1 to 1000+ locations." }
+    },
+    "techTitle": "Technology and key features",
+    "key": {
+      "k1": { "title": "Modern cloud", "description": "Next-generation cloud infrastructure for high speeds and high uptime." },
+      "k2": { "title": "Real-time data", "description": "Live monitoring of payments, accesses, occupancy and equipment." },
+      "k3": { "title": "AI & Analytics", "description": "Advanced analytics and predictions for revenue and traffic optimization." },
+      "k4": { "title": "Equipment management", "description": "Status, diagnostics, configuration and remote updates for all devices." },
+      "k5": { "title": "Advanced reports", "description": "Customized reports, exports and interactive dashboards." },
+      "k6": { "title": "Multi-tenant", "description": "Multi-location management and custom user roles." }
+    },
+    "integrationTitle": "Integration and open ecosystem",
+    "integrations": {
+      "i1": "ANPR Camera",
+      "i2": "Barriers",
+      "i3": "Validators",
+      "i4": "Access systems",
+      "i5": "IoT Devices"
+    },
+    "connectivityTitle": "Flexible connectivity",
+    "connectivity": {
+      "c1": "TCP/IP, HTTPS, MQTT",
+      "c2": "API RESTful",
+      "c3": "VPN, 4G / 5G / Wi-Fi",
+      "c4": "SNMP and advanced monitoring"
+    },
+    "bottomTitle": "Technology that <span>transforms</span> parking.",
+    "bottomDesc": "Choose the RParking platform and benefit from a complete, secure and future-ready solution."
+  },
+  "EntryPointPage": {
+    "heroTitle": "Entry Point",
+    "heroDesc": "Smart station for access control in modern parking facilities.",
+    "ctaQuote": "Request a quote",
+    "ctaDemo": "Schedule a demo",
+    "heroFeatures": {
+      "h1": "QR Code",
+      "h2": "Voice assistance",
+      "h3": "NFC / RFID",
+      "h4": "Barrier integration",
+      "h5": "Access card issuance",
+      "h6": "Centralized management"
+    },
+    "keyFeaturesTitle": "Key features",
+    "key": {
+      "k1": { "title": "QR Code", "accent": "Scanner", "desc": "Scans and processes QR codes quickly." },
+      "k2": { "title": "NFC / RFID", "accent": "Reader", "desc": "Reads NFC / RFID cards and tags." },
+      "k3": { "title": "Issuance", "accent": "access cards", "desc": "Issues access cards for users." },
+      "k4": { "title": "Voice", "accent": "assistance", "desc": "Clear audio guidance for users." },
+      "k5": { "title": "Integration", "accent": "barriers", "desc": "Automatic barrier opening." },
+      "k6": { "title": "Centralized", "accent": "management", "desc": "Real-time control and monitoring from BackOffice." }
+    },
+    "howTitle": "How it works?",
+    "steps": {
+      "s1": { "title": "Car arrives at Entry Point", "desc": "Vehicle approaches the entry terminal." },
+      "s2": { "title": "Scan QR Code / card", "desc": "User scans QR code or presents card." },
+      "s3": { "title": "Access card issued", "desc": "Station releases the access card." },
+      "s4": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." },
+      "s5": { "title": "Access permitted", "desc": "Vehicle enters, access is recorded." }
+    },
+    "hardwareTitle": "Hardware components",
+    "hardwareSubtitle": "Main components",
+    "hardware": {
+      "hw1": { "title": "7 inch Monitor", "desc": "Anti-vandal, IP65, durable touch display" },
+      "hw2": { "title": "NFC Reader", "desc": "Reads RFID/NFC cards for fast access" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans QR codes and 2D barcodes" },
+      "hw4": { "title": "Card Issuing Machine", "desc": "Automatic dispenser for temporary cards" },
+      "hw5": { "title": "Built-in Speaker", "desc": "Built-in speaker for voice assistance" },
+      "hw6": { "title": "Service Button", "desc": "Help button for remote support" }
+    },
+    "specsTitle": "Technical specifications",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp4": { "label": "Card Issuing", "value": "Automatic" },
+      "sp5": { "label": "Speaker", "value": "2W / 4Ω" },
+      "sp6": { "label": "LED Status", "value": "Yes" },
+      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
+      "sp9": { "label": "Temperature", "value": "-20°C ~ +60°C" },
+      "sp10": { "label": "Power", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "API Integration", "value": "Yes" }
+    },
+    "integrationTitle": "Full integration",
+    "integrations": {
+      "i1": "QR Code",
+      "i2": "NFC / RFID",
+      "i3": "Access cards",
+      "i4": "ANPR",
+      "i5": "Barriers",
+      "i6": "Pay Point",
+      "i7": "Exit Point",
+      "i8": "BackOffice"
+    },
+    "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
+    "ecosystem": {
+      "e1": { "title": "Pay Point", "desc": "Automatic payment with cash and card." },
+      "e2": { "title": "Exit Point", "desc": "Exit station with card or ticket." },
+      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+    },
+    "bottomTitle": "Want to automate <span>access</span> to your parking?",
+    "bottomDesc": "Our team is ready to offer the best solution adapted to your needs."
+  },
+  "ExitPointCardPassPage": {
+    "heroTitle": "Exit Point <span>CardPass</span>",
+    "heroDesc": "Smart station for card validation and quick exit from parking.",
+    "ctaQuote": "Request a quote",
+    "ctaDemo": "Schedule a demo",
+    "heroFeatures": {
+      "h1": "Card validation",
+      "h2": "Access control",
+      "h3": "NFC validation",
+      "h4": "BackOffice communication",
+      "h5": "QR Code scanning",
+      "h6": "Barrier opening"
+    },
+    "keyFeaturesTitle": "Key features",
+    "key": {
+      "k1": { "title": "Validation", "accent": "card", "desc": "Reads and validates access cards issued at entry." },
+      "k2": { "title": "NFC", "accent": "Reader", "desc": "Supports NFC tags and cards for fast access." },
+      "k3": { "title": "QR Code", "accent": "Scanner", "desc": "Scans QR codes for validation and exit." },
+      "k4": { "title": "Control", "accent": "access", "desc": "Real-time verification and exit authorization." },
+      "k5": { "title": "Communication", "accent": "BackOffice", "desc": "Secure data exchange with central platform." },
+      "k6": { "title": "Opening", "accent": "barrier", "desc": "Automatic barrier opening after validation." }
+    },
+    "howTitle": "How it works?",
+    "steps": {
+      "s1": { "title": "Car approaches Exit Point", "desc": "Vehicle approaches the exit terminal." },
+      "s2": { "title": "User presents access card", "desc": "Card, NFC tag or QR code is scanned." },
+      "s3": { "title": "System validates access", "desc": "Real-time verification with central platform." },
+      "s4": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." },
+      "s5": { "title": "Exit permitted", "desc": "Vehicle exits, exit is recorded." }
+    },
+    "hardwareTitle": "Hardware components",
+    "hardwareSubtitle": "Main components",
+    "hardware": {
+      "hw1": { "title": "7 inch Monitor", "desc": "Anti-vandal, IP65, durable touch display" },
+      "hw2": { "title": "NFC Reader", "desc": "Reads cards for validation and exit" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans QR codes for quick validation" },
+      "hw4": { "title": "Card Reader", "desc": "Magnetic reader for access cards" },
+      "hw5": { "title": "Built-in Speaker", "desc": "Speaker for audio confirmations and guidance" },
+      "hw6": { "title": "Service Button", "desc": "Help button for operational support" }
+    },
+    "specsTitle": "Technical specifications",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp4": { "label": "Card Reader", "value": "ISO 14443A/B" },
+      "sp5": { "label": "Speaker", "value": "2W / 8Ω" },
+      "sp6": { "label": "LED Status", "value": "Yes" },
+      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
+      "sp9": { "label": "Temperature", "value": "-30°C ~ +60°C" },
+      "sp10": { "label": "Power", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "API Integration", "value": "Yes" }
+    },
+    "integrationTitle": "Integration and compatibility",
+    "integrations": {
+      "i1": "Access cards",
+      "i2": "NFC / RFID",
+      "i3": "QR Code",
+      "i4": "ANPR",
+      "i5": "Barriers",
+      "i6": "Pay Point",
+      "i7": "BackOffice",
+      "i8": "Third-party systems"
+    },
+    "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Entry station that issues the access card." },
+      "e2": { "title": "Pay Point", "desc": "Automatic payment with cash and card." },
+      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+    },
+    "bottomTitle": "Want a <span>complete</span> solution for your parking?",
+    "bottomDesc": "Our team is ready to offer the best solution adapted to your needs."
+  },
+  "ExitPointTicketPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "products": "Products",
+      "current": "Exit Point Ticket"
+    },
+    "heroTitle": "Exit Point <span>Ticket</span>",
+    "heroDesc": "Smart station for ticket validation and quick exit from parking.",
+    "ctaQuote": "Request a quote",
+    "ctaDemo": "Schedule a demo",
+    "heroFeatures": {
+      "h1": "Ticket validation",
+      "h2": "Access control",
+      "h3": "Barcode scanning",
+      "h4": "BackOffice communication",
+      "h5": "QR Code scanning",
+      "h6": "Barrier opening"
+    },
+    "keyFeaturesTitle": "Key features",
+    "key": {
+      "k1": { "title": "Validation", "accent": "ticket", "desc": "Reads and validates tickets issued at entry." },
+      "k2": { "title": "Barcode", "accent": "Scanner", "desc": "Scans barcodes on the ticket." },
+      "k3": { "title": "QR Code", "accent": "Scanner", "desc": "Scans QR codes for validation and exit." },
+      "k4": { "title": "Control", "accent": "access", "desc": "Real-time verification and exit authorization." },
+      "k5": { "title": "Communication", "accent": "BackOffice", "desc": "Secure data exchange with central platform." },
+      "k6": { "title": "Opening", "accent": "barrier", "desc": "Automatic barrier opening after validation." }
+    },
+    "howTitle": "How it works?",
+    "steps": {
+      "s1": { "title": "Car approaches Exit Point", "desc": "Vehicle approaches the exit terminal." },
+      "s2": { "title": "User inserts or scans ticket", "desc": "Paper or digital ticket is scanned." },
+      "s3": { "title": "System validates access", "desc": "Real-time verification with central platform." },
+      "s4": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." },
+      "s5": { "title": "Exit permitted", "desc": "Vehicle exits, exit is recorded." }
+    },
+    "hardwareTitle": "Hardware components",
+    "hardware": {
+      "hw1": { "title": "7 inch Monitor", "desc": "Anti-vandal, IP65, durable touch display" },
+      "hw2": { "title": "Ticket Reader", "desc": "Reads and validates tickets" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans QR codes for quick validation" },
+      "hw4": { "title": "NFC Reader", "desc": "Reads cards for fast access" },
+      "hw5": { "title": "Built-in Speaker", "desc": "Speaker for audio confirmations and guidance" },
+      "hw6": { "title": "Service Button", "desc": "Help button for operational support" }
+    },
+    "specsTitle": "Technical specifications",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "Ticket Reader", "value": "Barcode / QR" },
+      "sp3": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp4": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp5": { "label": "Speaker", "value": "2W / 8Ω" },
+      "sp6": { "label": "LED Status", "value": "Yes" },
+      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
+      "sp9": { "label": "Temperature", "value": "-30°C ~ +60°C" },
+      "sp10": { "label": "Power", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "API Integration", "value": "Yes" }
+    },
+    "integrationTitle": "Integration and compatibility",
+    "integrations": {
+      "i1": "Tickets",
+      "i2": "Barcode",
+      "i3": "QR Code",
+      "i4": "ANPR",
+      "i5": "Barriers",
+      "i6": "Pay Point",
+      "i7": "BackOffice",
+      "i8": "Third-party systems"
+    },
+    "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Entry station that issues the parking ticket." },
+      "e2": { "title": "Pay Point", "desc": "Automatic payment with cash and card." },
+      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+    },
+    "bottomTitle": "Want a <span>complete</span> solution for your parking?",
+    "bottomDesc": "Our team is ready to offer the best solution adapted to your needs."
+  },
+  "PayPointPage": {
+    "heroTitle": "Pay Point",
+    "heroDesc": "Automatic payment terminal for modern parking facilities.",
+    "ctaQuote": "Request a quote",
+    "ctaDemo": "Schedule a demo",
+    "heroFeatures": {
+      "h1": "Card payment",
+      "h2": "QR Code",
+      "h3": "Cash payment",
+      "h4": "NFC / RFID",
+      "h5": "Automatic change",
+      "h6": "Fiscal receipt"
+    },
+    "keyFeaturesTitle": "Main features",
+    "key": {
+      "k1": { "title": "Payment", "accent": "card", "desc": "Accepts contactless and chip bank cards." },
+      "k2": { "title": "Payment", "accent": "cash", "desc": "Accepts banknotes and coins securely." },
+      "k3": { "title": "Change", "accent": "automatic", "desc": "Returns change quickly and securely." },
+      "k4": { "title": "Receipt", "accent": "fiscal", "desc": "Issues fiscal receipt according to legislation." },
+      "k5": { "title": "QR", "accent": "Code", "desc": "Scans and processes payment via QR Code." },
+      "k6": { "title": "NFC", "accent": "RFID", "desc": "Supports payments and validations via NFC / RFID." }
+    },
+    "howTitle": "How it works?",
+    "steps": {
+      "s1": { "title": "Driver selects payment option", "desc": "On the touch screen, intuitive and multilingual." },
+      "s2": { "title": "Chooses payment method (card or cash)", "desc": "Bank card, cash or contactless payment." },
+      "s3": { "title": "System validates payment", "desc": "Secure processing and real-time verification." },
+      "s4": { "title": "Receives fiscal receipt and change", "desc": "Fiscal receipt issued, change returned if applicable." },
+      "s5": { "title": "Exit permitted", "desc": "Access validated for parking exit." }
+    },
+    "hardwareTitle": "Hardware components",
+    "hardwareSubtitle": "Main components",
+    "hardware": {
+      "hw1": { "title": "19 inch Monitor", "desc": "Anti-vandal, IP65, color touch display" },
+      "hw2": { "title": "NFC Reader", "desc": "Reads cards for fast payments" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans codes for ticket verification" },
+      "hw4": { "title": "Bill Validator", "desc": "Banknote acceptor with authenticity verification" },
+      "hw5": { "title": "Coin Acceptor", "desc": "Coin acceptor with multi-currency recognition" },
+      "hw6": { "title": "Cash Dispensing", "desc": "Banknote change dispenser" },
+      "hw7": { "title": "Fiscal Printer", "desc": "Fiscal printer RTI 5000F/5000 INB/RAFS" },
+      "hw8": { "title": "Smart UPS", "desc": "Uninterruptible power supply" }
+    },
+    "specsTitle": "Technical specifications",
+    "specs": {
+      "sp1": { "label": "Display", "value": "21.5\" Touch IP65" },
+      "sp2": { "label": "Card payment", "value": "EMV Contactless" },
+      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp4": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp5": { "label": "Printer", "value": "Thermal 80mm" },
+      "sp6": { "label": "Banknotes", "value": "Accept & validate" },
+      "sp7": { "label": "Coins", "value": "Accept & dispense" },
+      "sp8": { "label": "Automatic change", "value": "Yes" },
+      "sp9": { "label": "Communication", "value": "Ethernet / 4G" },
+      "sp10": { "label": "Power", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "API Integration", "value": "Yes" }
+    },
+    "integrationTitle": "Integration and compatibility",
+    "integrationDesc": "Pay Point is fully integrated into the <span>RParking</span> ecosystem and can be configured for any type of tariff and parking policy.",
+    "integrations": {
+      "i1": "Entry Point",
+      "i2": "Exit Point",
+      "i3": "BackOffice",
+      "i4": "Barriers",
+      "i5": "ANPR Camera",
+      "i6": "Mobile App",
+      "i7": "Bank cards",
+      "i8": "Third-party systems"
+    },
+    "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Entry station that issues the access card." },
+      "e2": { "title": "Exit Point", "desc": "Exit station with card or ticket validation." },
+      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+    },
+    "bottomTitle": "Want a <span>fast</span> and secure payment experience in your parking?",
+    "bottomDesc": "Our team helps you configure the best payment solution for your needs."
+  },
+  "BackofficePage": {
+    "heroTitle": "BackOffice",
+    "heroDesc": "Centralized platform for intelligent administration and monitoring of parking facilities.",
+    "ctaQuote": "Request a quote",
+    "ctaDemo": "Schedule a demo",
+    "heroFeatures": {
+      "h1": "Real-time monitoring",
+      "h2": "Events and alerts",
+      "h3": "Advanced reports and statistics",
+      "h4": "Full integration with equipment",
+      "h5": "User and tariff management",
+      "h6": "Secure access and audit trail"
+    },
+    "keyFeaturesTitle": "Main features",
+    "key": {
+      "k1": { "title": "Dashboard", "accent": "real-time", "desc": "Instantly view parking performance and key indicators." },
+      "k2": { "title": "Reports", "accent": "and statistics", "desc": "Customized reports for revenue, transactions and occupancy." },
+      "k3": { "title": "Management", "accent": "users", "desc": "Flexible roles and permissions for your team." },
+      "k4": { "title": "Tariffs", "accent": "and rules", "desc": "Configure tariffs, promotions and access rules." },
+      "k5": { "title": "Alerts", "accent": "and notifications", "desc": "Receive notifications for important system events." },
+      "k6": { "title": "Security", "accent": "advanced", "desc": "Secure access, complete logs and audit trail." }
+    },
+    "howTitle": "How it works?",
+    "steps": {
+      "s1": { "title": "Data is automatically collected from equipment", "desc": "Entry, Exit, Pay Point send data continuously." },
+      "s2": { "title": "Information is transmitted securely to BackOffice", "desc": "Encrypted and protected connection." },
+      "s3": { "title": "Data is processed and centralized in reports", "desc": "Automatic aggregation and structuring by categories." },
+      "s4": { "title": "Get relevant statistics and alerts in real-time", "desc": "Smart notifications for any event." },
+      "s5": { "title": "Make better decisions and optimize performance", "desc": "Clear data for efficient administration." }
+    },
+    "modulesTitle": "Modules and capabilities",
+    "modules": {
+      "m1": { "title": "Live monitoring", "desc": "Equipment status, transactions and alerts in real-time." },
+      "m2": { "title": "Advanced reports", "desc": "Customized financial, operational and occupancy reports." },
+      "m3": { "title": "Financial management", "desc": "Revenue, payments, refunds and automatic reconciliations." },
+      "m4": { "title": "Access management", "desc": "Users, roles, permissions and access policies." },
+      "m5": { "title": "System configuration", "desc": "Tariffs, zones, rules, operating hours and integrations." }
+    },
+    "integrationTitle": "Full integration",
+    "integrationDesc": "BackOffice natively integrates with all equipment and modules in the <span>RParking</span> ecosystem.",
+    "integrations": {
+      "i1": "Entry Point",
+      "i2": "Exit Point",
+      "i3": "Pay Point",
+      "i4": "Barriers",
+      "i5": "ANPR Camera",
+      "i6": "Validators",
+      "i7": "IoT devices",
+      "i8": "Third-party systems"
+    },
+    "securityTitle": "Security and reliability",
+    "security": {
+      "sec1": "End-to-end encrypted connection",
+      "sec2": "Automatic backup and cloud replication",
+      "sec3": "High availability 24/7",
+      "sec4": "Complete audit and traceability"
+    },
+    "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Entry station that issues the access card." },
+      "e2": { "title": "Exit Point", "desc": "Exit station with card or ticket validation." },
+      "e3": { "title": "Pay Point", "desc": "Automatic payment with cash and card." }
+    },
+    "bottomTitle": "Transform data into <span>smart decisions</span>.",
+    "bottomDesc": "Discover how BackOffice helps you increase efficiency and revenue of your parking facilities."
+  },
+  "RAccessWCPage": {
+    "heroTitle": "RAccess WC",
+    "heroDesc": "Access control and payment for public restrooms. Complete solution with automatic payment, turnstiles and real-time reports.",
+    "ctaQuote": "Request a quote",
+    "ctaDetails": "View technical details",
+    "heroFeatures": {
+      "h1": "Controlled access",
+      "h2": "Automatic payment",
+      "h3": "Real-time reports",
+      "h4": "Reliable solution"
+    },
+    "featuresTitle": "Intelligent <span>management</span> of public restrooms",
+    "featuresDesc": "RAccess WC is the ideal solution for high-traffic public spaces: parks, train stations, bus stations, shopping malls, beaches, markets, gas stations, stadiums, events and more.",
+    "key": {
+      "k1": { "title": "Access control", "accent": "efficient", "desc": "Robust and reliable turnstiles for access only after tariff payment." },
+      "k2": { "title": "Payment", "accent": "automatic", "desc": "Accepts coins, banknotes and cashless payments (bank card, smartwatch, phone)." },
+      "k3": { "title": "Reports", "accent": "and statistics", "desc": "Real-time monitoring of revenue, access and equipment status." },
+      "k4": { "title": "Solution", "accent": "reliable", "desc": "Equipment designed for intensive and continuous 24/7 use." }
+    },
+    "componentsSubtitle": "Included equipment",
+    "componentsTitle": "RAccess WC <span>components</span>",
+    "componentsDesc": "Complete system of three main components working together for a seamless experience",
+    "components": {
+      "c1": { "title": "Access turnstile", "desc": "Stainless steel tripod turnstile, durable and resistant to intensive use." },
+      "c2": { "title": "Payment machine", "desc": "Accepts coins, banknotes and cashless payments." },
+      "c3": { "title": "Administration software", "desc": "Web dashboard for monitoring, reports and remote configuration." }
+    },
+    "locationsTitle": "Where it can be implemented",
+    "locations": {
+      "l1": "Parks and recreation areas",
+      "l2": "Train and bus stations",
+      "l3": "Shopping malls",
+      "l4": "Beaches and tourist areas",
+      "l5": "Stadiums and event halls",
+      "l6": "Gas stations and fueling points",
+      "l7": "Markets and fairs"
+    },
+    "howTitle": "How it works?",
+    "steps": {
+      "s1": { "title": "User approaches the turnstile", "desc": "System detects presence and displays instructions." },
+      "s2": { "title": "Selects and makes payment", "desc": "Payment with coins, banknotes or card/contactless." },
+      "s3": { "title": "Turnstile opens automatically", "desc": "Access permitted after payment validation." },
+      "s4": { "title": "Entry registered in system", "desc": "Data transmitted in real-time to BackOffice." }
+    },
+    "specsTitle": "Technical specifications",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "Coin acceptance", "value": "Multi-coin" },
+      "sp3": { "label": "Banknote acceptance", "value": "Multi-currency" },
+      "sp4": { "label": "Cashless payments", "value": "Card/contactless" },
+      "sp5": { "label": "Turnstile", "value": "Stainless tripod" },
+      "sp6": { "label": "Access speed", "value": "30-40 pers/min" },
+      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Management", "value": "BackOffice Cloud" }
+    },
+    "integrationTitle": "Full integration",
+    "integrationDesc": "RAccess WC integrates perfectly with the entire RParking ecosystem and can be administered centrally from BackOffice.",
+    "integrationTags": {
+      "t1": "BackOffice",
+      "t2": "Cloud",
+      "t3": "API",
+      "t4": "Reports"
+    },
+    "ctaTitle": "Transform public restroom management into a modern and efficient experience.",
+    "ctaDesc": "Increase revenue, reduce costs and provide users with comfort and safety.",
+    "ctaQuoteCustom": "Request a personalized quote",
+    "ctaContact": "Contact us"
+  },
+  "RChangePage": {
+    "heroTitle": "RChange",
+    "heroDesc": "Automatic currency exchange available 24/7. Self-service solution for fast, simple and secure currency exchange.",
+    "ctaQuote": "Request a quote",
+    "ctaDetails": "View technical details",
+    "heroFeatures": {
+      "h1": "Available 24/7",
+      "h2": "Fast and simple exchange",
+      "h3": "No hidden fees"
+    },
+    "featuresTitle": "Intelligent <span>currency exchange</span>",
+    "featuresDesc": "RChange is the ideal solution for locations with high tourist and passenger traffic. Offers fast currency exchange without hidden fees, available 24/7.",
+    "key": {
+      "k1": { "title": "Available", "accent": "24/7", "desc": "Works 24/7 without human supervision." },
+      "k2": { "title": "Fast exchange", "accent": "and simple", "desc": "Instant validation and automatic coin dispensing." },
+      "k3": { "title": "No fees", "accent": "hidden", "desc": "Full transparency in pricing." }
+    },
+    "componentsSubtitle": "Equipment",
+    "componentsTitle": "Main <span>components</span>",
+    "componentsDesc": "Each RChange terminal integrates high-quality components for a fast and secure currency exchange experience.",
+    "componentFeatures": {
+      "c1": { "title": "Intuitive touch screen", "desc": "Friendly interface with clear step-by-step instructions." },
+      "c2": { "title": "Banknote validator", "desc": "Advanced banknote authenticity detection." },
+      "c3": { "title": "Automatic coin dispenser", "desc": "Fast and precise coin dispensing." },
+      "c4": { "title": "Accepts banknotes and dispenses coins", "desc": "Fully automated exchange without personnel." },
+      "c5": { "title": "Compact and modern design", "desc": "Elegantly integrates into any location." }
+    },
+    "locationsTitle": "Where it can be installed",
+    "locations": {
+      "l1": "Airports",
+      "l2": "Shopping malls",
+      "l3": "Hotels",
+      "l4": "Train stations",
+      "l5": "Bus stations",
+      "l6": "Tourist areas"
+    },
+    "stepsSubtitle": "Simple process",
+    "howTitle": "How it works?",
+    "stepsDesc": "Four simple steps for fast and automatic currency exchange",
+    "steps": {
+      "s1": { "title": "Insert banknote", "desc": "Customer inserts banknote into validation slot." },
+      "s2": { "title": "Machine verifies", "desc": "System validates banknote and calculates coin amount." },
+      "s3": { "title": "Coins are dispensed", "desc": "Dispenser automatically prepares required coins." },
+      "s4": { "title": "Collect coins", "desc": "Transaction completed in just a few seconds." }
+    },
+    "specsTitle": "Technical specifications",
+    "specs": {
+      "sp1": { "label": "Display", "value": "10\" Touch" },
+      "sp2": { "label": "Validator", "value": "Multi-currency" },
+      "sp3": { "label": "Dispenser", "value": "8 coin types" },
+      "sp4": { "label": "Capacity", "value": "2000+ coins" },
+      "sp5": { "label": "Speed", "value": "< 10 seconds" },
+      "sp6": { "label": "Communication", "value": "Ethernet / 4G" },
+      "sp7": { "label": "Management", "value": "Cloud BackOffice" },
+      "sp8": { "label": "Payments", "value": "Cash & Card" }
+    },
+    "integrationTitle": "Full integration",
+    "integrationDesc": "RChange integrates perfectly with the BackOffice platform for real-time monitoring of transactions, coin stock and detailed reports.",
+    "integrationTags": {
+      "t1": "BackOffice",
+      "t2": "Cloud",
+      "t3": "Reports",
+      "t4": "Monitoring"
+    },
+    "ctaTitle": "Simple. Fast. <span>Available 24/7.</span>",
+    "ctaDesc": "Offer your customers a modern currency exchange experience.",
+    "ctaDemo": "Schedule a demo"
+  },
+  "Backoffice": {
+    "title": "BackOffice",
+    "subtitle": "Complete Administration Panel",
+    "description": "Complete and detailed real-time management of your parking facilities. Monitor, control and optimize operations from a single place.",
+    "features": {
+      "realtime": "Real-time Monitoring",
+      "analytics": "Statistics and Reports",
+      "revenue": "Revenue Management",
+      "security": "Advanced Security"
+    },
+    "ctaTitle": "Turn data into smart decisions.",
+    "ctaSubtitle": "Discover how BackOffice helps you increase the efficiency and revenue of your parking facilities."
+  },
+  "Solutions": {
+    "title": "SOLUTIONS",
+    "subtitle": "Complete Parking Solutions",
+    "description": "RParking develops and implements complete parking automation solutions, combining proprietary hardware, advanced software and local support into a single platform."
+  },
+  "About": {
+    "title": "ABOUT US",
+    "subtitle": "RTi Systems",
+    "description": "We are a technology company from the Republic of Moldova, specialized in developing intelligent solutions for parking automation and access control.",
+    "heroText": "RParking develops and implements complete parking automation solutions, combining proprietary hardware, advanced software and local support into a single platform.",
+    "badge1": "Developed in the Republic of Moldova",
+    "badge2": "Own Hardware",
+    "badge3": "Own Software"
+  },
+  "MobileApp": {
+    "label": "Mobile App",
+    "titleA": "Park smart with",
+    "title": "Park Smart with the RParking App",
+    "description": "Download the app and get total control over your parking right from your phone.",
+    "feature1": "Find parking quickly and easily on an interactive map",
+    "feature2": "Quick entry and exit via QR code",
+    "feature3": "Subscribe and save time and money",
+    "feature4": "Complete parking information and transparent rates",
+    "download": "Get it on",
+    "googlePlay": "Google Play"
+  },
+  "RtiSolutions": {
+    "title": "Other Solutions by RTI Systems",
+    "titleA": "Other solutions developed by",
+    "subtitle": "A diversified portfolio of intelligent solutions for automation and access control.",
+    "rparking": "Complete parking automation.",
+    "racess": "Access control and payment for public restrooms.",
+    "rchange": "Self-service machine for currency exchange and automated services.",
+    "details": "Details"
+  },
+  "LanguageSwitcher": {
+    "label": "Change language"
+  }
+}

@@ -1,39 +1,41 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/navigation';
 import { LuArrowRight } from 'react-icons/lu';
 
 const rtiProducts = [
   {
     title: 'RParking',
-    description: 'Automatizare completă a parcărilor.',
+    descKey: 'rparking',
     image: '/img/rparkingcarnobg.png',
     href: '/products',
   },
   {
     title: 'RAccess WC',
-    description: 'Control acces și taxare pentru grupuri sanitare publice.',
+    descKey: 'racess',
     image: '/img/wc.png',
     href: '/products/raccess-wc',
   },
   {
     title: 'RChange',
-    description: 'Automat self-service pentru schimb valutar și servicii automate.',
+    descKey: 'rchange',
     image: '/img/exchange.png',
     href: '/products/rchange',
   },
 ];
 
 export default function RTISolutions() {
+  const t = useTranslations('RtiSolutions');
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Alte soluții dezvoltate de <span className="text-green-600">RTI Systems</span>
+            {t('titleA')} <span className="text-green-600">RTI Systems</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Portofoliu diversificat de soluții inteligente pentru automatizare și control acces.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -64,10 +66,10 @@ export default function RTISolutions() {
                   {product.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {product.description}
+                  {t(product.descKey)}
                 </p>
                 <span className="inline-flex items-center gap-2 text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
-                  Detalii <LuArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  {t('details')} <LuArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
             </Link>

@@ -1,0 +1,960 @@
+{
+  "Nav": {
+    "home": "Acasă",
+    "platform": "Platforma RParking",
+    "implementations": "Implementări",
+    "about": "Despre noi",
+    "products": "Produse",
+    "solutions": "Soluții",
+    "contact": "Contact",
+    "requestDemo": "Solicită demo",
+    "viewAllProducts": "Vezi toate produsele →"
+  },
+  "Hero": {
+    "subtitle": "Soluția inteligentă pentru parcări moderne",
+    "description": "Control complet al accesului, plăților și monitorizării într-o platformă integrată de hardware și software dezvoltată și produsă în Republica Moldova.",
+    "requestQuote": "Solicită ofertă",
+    "scheduleDemo": "Programare demo",
+    "badge1": { "l1": "Dezvoltat în", "l2": "Moldova" },
+    "badge2": { "l1": "Hardware &", "l2": "Software propriu" },
+    "badge3": { "l1": "Support tehnic", "l2": "dedicat" },
+    "badge4": { "l1": "Securizat", "l2": "și fiabil" },
+    "badge5": { "l1": "Integrări", "l2": "ușoare" },
+    "badge6": { "l1": "Instalare", "l2": "rapidă" }
+  },
+  "BenefitsBar": {
+    "tagline1": "Parcări mai eficiente,",
+    "tagline2": "orașe mai verzi.",
+    "automation": "Automatizare",
+    "costs": "Costuri operaționale",
+    "satisfaction": "Satisfacția utilizatorilor",
+    "monitoring": "Control și monitorizare"
+  },
+  "HowItWorks": {
+    "title": "Cum funcționează",
+    "step1": "Intrare în parcare",
+    "step2": "ANPR / QR / NFC Identificare",
+    "step3": "Timp petrecut în parcare",
+    "step4": "Plată la Pay Point",
+    "step5": "Ieșire din parcare",
+    "step6": "Raport și analiză în BackOffice"
+  },
+  "ProductEcosystem": {
+    "titlePrefix": "Ecosistemul ",
+    "titleSuffix": "",
+    "entryDesc": "Terminal de intrare cu ANPR, QR/NFC și barieră.",
+    "exitDesc": "Terminal de ieșire cu validare și control acces.",
+    "payDesc": "Terminal de plată cu card, numerar și rest.",
+    "backofficeDesc": "Administrare completă și detaliată în timp real.",
+    "details": "Detalii"
+  },
+  "RealImplementations": {
+    "title": "Implementări reale",
+    "imageAlt": "Implementare",
+    "statTitle": "Peste 1 000 000 de treceri zilnice prin sistemele RParking",
+    "statSubtitle": "în centre comerciale, business centre și parcări rezidențiale.",
+    "viewAll": "Vezi toate implementările",
+    "close": "Închide"
+  },
+  "TargetAudience": {
+    "titlePrefix": "Pentru cine este ",
+    "titleSuffix": "",
+    "mall": "Centre comerciale",
+    "business": "Business centre",
+    "residential": "Complexe rezidențiale",
+    "airports": "Aeroporturi",
+    "hospitals": "Spitale",
+    "hotels": "Hoteluri",
+    "municipal": "Parcări municipale",
+    "institutions": "Instituții publice"
+  },
+  "WhyRParking": {
+    "titlePrefix": "De ce să alegi ",
+    "titleSuffix": "?",
+    "challengesHeader": "Provocările tale",
+    "solutionsHeader": "Soluția RParking",
+    "row1": { "challenge": "Cozi la intrare și ieșire", "solution": "Automatizare completă a accesului" },
+    "row2": { "challenge": "Acces necontrolat", "solution": "Recunoaștere ANPR, QR și NFC" },
+    "row3": { "challenge": "Fraudă și pierderi financiare", "solution": "Rapoarte și monitorizare în timp real" },
+    "row4": { "challenge": "Evidență manuală și erori", "solution": "Control total și istoric complet" },
+    "row5": { "challenge": "Costuri operaționale ridicate", "solution": "Reducerea costurilor și creșterea veniturilor" }
+  },
+  "Statistics": {
+    "tagline": "Tehnologie inteligentă pentru viitor sustenabil",
+    "dailyPasses": "Treceri zilnice",
+    "locations": "Locații implementate",
+    "spots": "Locuri de parcare administrate",
+    "uptime": "Disponibilitate sistem"
+  },
+  "Products": {
+    "entryPoint": "Entry Point",
+    "entrySubtitle": "Acces automat",
+    "exitPoint": "Exit Point",
+    "exitSubtitle": "Ieșire controlată",
+    "payPoint": "Pay Point",
+    "paySubtitle": "Plăți rapide",
+    "backoffice": "BackOffice",
+    "backofficeSubtitle": "Control total"
+  },
+  "Benefits": {
+    "title": "Soluția RParking",
+    "subtitle": "reduce timpul de căutare a locurilor de parcare cu până la",
+    "stat": "30%",
+    "description": "și crește veniturile prin monitorizarea automată a accesului."
+  },
+  "CTA": {
+    "title": "Ești gata să automatizezi parcarea?",
+    "description": "Solicită o demonstrație personalizată și află cum RParking poate aduce valoare afacerii dumneavoastră.",
+    "requestDemo": "Solicită demo",
+    "contactUs": "Contactați-ne",
+    "requestQuote": "Solicită ofertă",
+    "scheduleDemo": "Programare demonstrație"
+  },
+  "Footer": {
+    "products": "Produse",
+    "solutions": "Soluțiile RTI Systems",
+    "solutions2": "Soluții",
+    "company": "Companie",
+    "contact": "Contact",
+    "description": "RParking este un produs dezvoltat și produs de RTi în Republica Moldova.",
+    "copyright": "Toate drepturile rezervate.",
+    "privacy": "Politica de confidențialitate",
+    "terms": "Termeni și condiții",
+    "mall": "Centre comerciale",
+    "business": "Business centre",
+    "residential": "Rezidențiale",
+    "municipal": "Municipale",
+    "airports": "Aeroporturi",
+    "about": "Despre noi",
+    "implementations": "Implementări",
+    "contactLink": "Contact",
+    "support": "Suport",
+    "location": "Chișinău, Republica Moldova"
+  },
+  "ProductsPage": {
+    "title": "PRODUSE",
+    "subtitle": "Produsele RParking",
+    "heroTitlePrefix": "Produsele ",
+    "description": "Soluții hardware și software dezvoltate pentru automatizarea completă a parcărilor moderne.",
+    "hardware": "Hardware propriu",
+    "software": "Software propriu",
+    "support": "Suport tehnic local",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDetails": "Cere ofertă",
+    "sectionTitle": "Soluții complete pentru fiecare etapă a parcării",
+    "sectionSubtitle": "Echipamente și software integrate pentru un flux de parcare eficient, sigur și automatizat.",
+    "viewDetails": "Vezi detalii",
+    "whyTitlePrefix": "De ce să alegi ",
+    "whyTitleSuffix": "?",
+    "bottomTitle1": "Doriți o soluție completă",
+    "bottomTitle2": "pentru parcarea dvs.?",
+    "bottomDesc": "Echipa noastră vă stă la dispoziție pentru a vă oferi cea mai bună soluție adaptată nevoilor dvs.",
+    "bottomDemo": "Solicită demonstrație",
+    "why": {
+      "complete": "Soluții complete hardware & software",
+      "integration": "Integrare ușoară",
+      "support": "Suport tehnic local",
+      "updates": "Actualizări continue",
+      "reports": "Rapoarte avansate în timp real",
+      "security": "Securitate ridicată"
+    },
+    "items": {
+      "entry": {
+        "subtitle": "Stație de intrare",
+        "desc": "Stație inteligentă pentru controlul accesului în parcări moderne.",
+        "features": ["Emitere card acces", "Citire NFC", "Citire QR Code", "Comunicare vocală", "Integrare barieră", "Management centralizat"]
+      },
+      "exit": {
+        "subtitle": "Stație de ieșire",
+        "desc": "Stație de ieșire pentru validarea cardurilor, tichetelor și ieșirea rapidă din parcare.",
+        "features": ["Validare card NFC", "Citire QR Code", "Validare tichet", "Verificare plată", "Control acces barieră", "Comunicare cu BackOffice"]
+      },
+      "pay": {
+        "subtitle": "Terminal de plată",
+        "desc": "Terminal de plată automat cu suport numerar și card.",
+        "features": ["Plăți cu card", "Plăți numerar", "Rest automat", "Bon fiscal", "NFC / QR Code", "Raportări și reconciliere"]
+      },
+      "backoffice": {
+        "subtitle": "Platformă software",
+        "desc": "Platformă software pentru administrarea tuturor locațiilor.",
+        "features": ["Dashboard & rapoarte", "Monitorizare în timp real", "Abonamente & clienți", "Tranzacții & încasări", "White List / Black List", "Management utilizatori"]
+      }
+    }
+  },
+  "SolutiiPage": {
+    "heroTitle1": "Soluții pentru fiecare tip",
+    "heroTitle2": "de parcare",
+    "heroDesc": "RParking oferă soluții complete și flexibile pentru orice tip de parcare: de la spații rezidențiale până la parcări municipale sau aeroporturi.",
+    "domainsTitle": "Domenii de aplicare",
+    "domainsSubtitle": "Soluțiile noastre sunt adaptate cerințelor specifice fiecărui domeniu de activitate.",
+    "domains": {
+      "residential": { "title": "Parcări rezidențiale", "description": "Control acces pentru locatari și vizitatori, abonamente, locuri rezervate.", "features": ["Acces pe bază de abonament / QR", "Locuri rezervate pentru locatari", "Evidență vizitatori", "Rapoarte și istoric acces"] },
+      "mall": { "title": "Centre comerciale", "description": "Gestionare eficientă a fluxului mare de vizitatori și creșterea veniturilor.", "features": ["Tarifare flexibilă", "Plăți rapide și multiple metode", "Reducerea timpului de așteptare", "Integrare cu sistemele existente"] },
+      "corporate": { "title": "Parcări corporate", "description": "Soluții de parcare pentru angajați și vizitatori, cu control și securitate ridicată.", "features": ["White/Black List", "Acces angajați și vizitatori", "Rapoarte departamentale", "Integrare cu HR și control acces"] },
+      "airports": { "title": "Aeroporturi", "description": "Sisteme performante pentru fluxuri mari de vehicule și securitate maximă.", "features": ["Recunoaștere ANPR de înaltă precizie", "Zone de parcare multiple", "Statistici și monitorizare în timp real", "Integrare cu sistemele aeroportuare"] },
+      "hospitals": { "title": "Spitale", "description": "Acces controlat pentru personal, pacienți și vizitatori, cu tarifare personalizată.", "features": ["Acces pe bază de card / QR", "Tarife diferențiate", "Locuri dedicate personalului", "Rapoarte și evidență detaliată"] },
+      "hotels": { "title": "Hoteluri", "description": "Confort pentru oaspeți și control total asupra parcării.", "features": ["Rezervare loc de parcare", "Acces rapid pentru oaspeți", "Integrare cu sistemul hotelului", "Tarifare pe durată ședere"] }
+    },
+    "whyTitlePrefix": "De ce să alegi ",
+    "whyTitleSuffix": "?",
+    "why": {
+      "custom": { "title": "Soluții personalizate", "description": "Adaptăm sistemul la nevoile fiecărui proiect." },
+      "tech": { "title": "Tehnologie avansată", "description": "ANPR, QR, NFC și metode moderne de plată." },
+      "dedicated": { "title": "Suport dedicat", "description": "Echipă locală, suport rapid și mentenanță eficientă." },
+      "scalable": { "title": "Scalabilitate", "description": "Sistemul crește odată cu nevoile afacerii tale." },
+      "reliable": { "title": "Fiabilitate și securitate", "description": "Echipamente robuste și software stabil și sigur." },
+      "local": { "title": "Produs autohton", "description": "Dezvoltat și produs în Republica Moldova." }
+    },
+    "greenTitle": "Tehnologie verde pentru parcări inteligente",
+    "greenDesc": "Soluții eficiente energetic, prietenoase cu mediul și construite pentru viitor.",
+    "ctaTitle": "Aveți nevoie de o soluție personalizată?",
+    "ctaDesc": "Discutăm despre proiectul dumneavoastră și găsim împreună cea mai bună soluție.",
+    "ctaButton": "Contactează-ne"
+  },
+  "ImplementariPage": {
+    "heroLabel": "IMPLEMENTARE REALĂ",
+    "heroTitlePrefix": "Implementare reală ",
+    "heroTitleSuffix": " în Chișinău",
+    "heroDesc": "Sistem complet de automatizare a accesului, plăților și monitorizării pentru parcări moderne.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDemo": "Programare demo",
+    "badges": {
+      "badge1": "Automatizare completă",
+      "badge2": "Plăți cash și card",
+      "badge3": "Monitorizare în timp real",
+      "badge4": "Raportare centralizată"
+    },
+    "challengesTitle": "Provocările clientului",
+    "challenges": {
+      "c1": "Control manual al accesului și ieșirii",
+      "c2": "Lipsa raportării centralizate",
+      "c3": "Monitorizare limitată și dificultăți în verificarea plăților",
+      "c4": "Timp mare de procesare la intrare și la plată",
+      "c5": "Lipsa unei soluții integrate și scalabile"
+    },
+    "solutionTitle": "Soluția RParking",
+    "solutionDesc": "Am livrat un sistem complet de automatizare, format din echipamente inteligente și platforma BackOffice, care asigură eficiență operațională și experiență excelentă pentru utilizatori.",
+    "barriers": "Bariere automate",
+    "galleryTitle": "Implementarea în imagini",
+    "gallery": {
+      "g1": { "title": "Entry Point", "description": "Intrare automată a tichetelor și control acces vehicule." },
+      "g2": { "title": "Bariere automate", "description": "Acces rapid și sigur, cu bariere de înaltă performanță." },
+      "g3": { "title": "Exit Point", "description": "Validare tichet și control acces la ieșirea din parcare." },
+      "g4": { "title": "Flux intrare – ieșire", "description": "Experiență fluidă și sigură pentru utilizatori." },
+      "g5": { "title": "Pay Point", "description": "Plăți cash și card, chitanță automată, interfață intuitivă." },
+      "g6": { "title": "Control acces", "description": "Echipamente moderne pentru verificare rapidă și sigură." },
+      "g7": { "title": "Instalare profesională", "description": "Implementare curată, integrată perfect în infrastructura parcării." }
+    },
+    "usedTitle": "Produse utilizate în această implementare",
+    "used": {
+      "u1": { "title": "RParking Entry Point", "description": "Emitere și validare automată a tichetelor și control acces." },
+      "u2": { "title": "RParking Exit Point", "description": "Validare și control acces la ieșire, integrat cu sistemul de plată." },
+      "u3": { "title": "RParking Pay Point", "description": "Plăți cash și card, chitanță automată și raportare." },
+      "u4": { "title": "RParking BackOffice", "description": "Administrare completă, monitorizare în timp real și rapoarte avansate." }
+    },
+    "benefitsTitle": "Beneficii obținute",
+    "benefits": {
+      "b1": { "title": "Automatizare completă", "description": "Acces, plăți și raportare automatizate integral." },
+      "b2": { "title": "Reducerea intervențiilor manuale", "description": "Operațiuni eficiente și costuri operaționale mai mici." },
+      "b3": { "title": "Monitorizare în timp real", "description": "Vizualizare live a tuturor acceselor și tranzacțiilor." },
+      "b4": { "title": "Raportare centralizată", "description": "Rapoarte financiare și statistici disponibile instant." },
+      "b5": { "title": "Plăți multiple", "description": "Suport pentru plăți cash, card și alte metode." },
+      "b6": { "title": "Scalabilitate", "description": "Soluție pregătită pentru extindere ușoară." }
+    },
+    "techTitle": "Tehnologii integrate",
+    "bottomTitlePrefix": "Pregătim următoarele implementări ",
+    "bottomTitleSuffix": "",
+    "bottomDesc": "Platforma RParking este pregătită pentru centre comerciale, clădiri de birouri, parcări rezidențiale, aeroporturi și instituții publice.",
+    "bottomButton": "Solicită demonstrație"
+  },
+  "DespreNoiPage": {
+    "heroLabel": "DESPRE NOI",
+    "heroTitle1": "Construim viitorul",
+    "heroTitle2": "parcărilor inteligente",
+    "heroDesc": "RParking dezvoltă și implementează soluții complete pentru automatizarea parcărilor, combinând hardware propriu, software avansat și suport local într-o platformă unică.",
+    "badges": {
+      "badge1": "Dezvoltați în\nRepublica Moldova",
+      "badge2": "Hardware\npropriu",
+      "badge3": "Software\npropriu"
+    },
+    "whoLabel": "CINE SUNTEM",
+    "aboutTitlePrefix": "Despre ",
+    "aboutP1": "RParking este divizia specializată în managementul și automatizarea parcărilor din cadrul RTI Systems.",
+    "aboutP2": "Am creat o platformă completă care controlează accesul vehiculelor, procesează plățile și oferă monitorizare în timp real printr-un sistem centralizat <b>BackOffice</b>.",
+    "designedFor": "Soluția este proiectată pentru:",
+    "points": {
+      "p1": "Centre comerciale",
+      "p2": "Clădiri de birouri",
+      "p3": "Complexe rezidențiale",
+      "p4": "Aeroporturi",
+      "p5": "Parcări publice"
+    },
+    "location": "Chișinău, Republica Moldova",
+    "developLabel": "CE DEZVOLTĂM",
+    "developTitle": "Soluții complete de la zero",
+    "hardwareTitle": "HARDWARE",
+    "hardware": {
+      "hw1": "Entry Point",
+      "hw2": "Exit Point",
+      "hw3": "Pay Point",
+      "hw4": "Bariere automate",
+      "hw5": "Display locuri disponibile"
+    },
+    "softwareTitle": "SOFTWARE",
+    "software": {
+      "sw1": "BackOffice",
+      "sw2": "Monitorizare live",
+      "sw3": "Rapoarte",
+      "sw4": "Management acces",
+      "sw5": "Management plăți"
+    },
+    "servicesTitle": "SERVICII",
+    "services": {
+      "sv1": "Consultanță",
+      "sv2": "Instalare",
+      "sv3": "Configurare",
+      "sv4": "Training",
+      "sv5": "Suport tehnic"
+    },
+    "whyLabel": "DE CE CLIENȚII ALEG RPARKING",
+    "whyTitle": "Avantajele noastre",
+    "why": {
+      "w1": { "title": "Soluție completă", "desc": "Hardware și software într-o singură platformă" },
+      "w2": { "title": "Dezvoltare proprie", "desc": "Control total asupra produsului și actualizărilor." },
+      "w3": { "title": "Suport local", "desc": "Intervenții rapide și comunicare directă." },
+      "w4": { "title": "Scalabilitate", "desc": "De la parcări mici până la proiecte complexe." }
+    },
+    "seenLabel": "IMPLEMENTĂRI REALE",
+    "seenTitle": "Văzut în acțiune",
+    "seenCaption": "Sistem RParking implementat și operat într-o parcare modernă din Chișinău.",
+    "valuesLabel": "VALORILE NOASTRE",
+    "valuesTitle": "Ce ne definește",
+    "values": {
+      "v1": { "title": "Inovație", "desc": "Dezvoltăm constant soluții moderne și eficiente." },
+      "v2": { "title": "Fiabilitate", "desc": "Echipamente și software stabile și testate." },
+      "v3": { "title": "Securitate", "desc": "Protejăm datele și accesul în orice moment." },
+      "v4": { "title": "Performanță", "desc": "Sisteme rapide, precise și optimizate." },
+      "v5": { "title": "Parteneriat", "desc": "Construim relații solide pe termen lung." }
+    },
+    "ctaTitle1": "Hai să transformăm parcarea ta",
+    "ctaTitle2": "într-un sistem inteligent",
+    "ctaDemo": "Solicită demonstrație",
+    "ctaSchedule": "Programează demonstrație"
+  },
+  "PlatformaRParkingPage": {
+    "heroLabel": "PLATFORMA RPARKING",
+    "heroTitle": "Tehnologie inteligentă care <span>simplifică</span> parcările.",
+    "heroDesc": "RParking combină echipamente inteligente, software avansat și conectivitate securizată într-o platformă unitară și scalabilă.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDemo": "Programare demo",
+    "badges": {
+      "b1": "Fiabilă",
+      "b2": "Securizată",
+      "b3": "Scalabilă",
+      "b4": "Ușor de integrat"
+    },
+    "howTitle": "Cum funcționează platforma <span>RParking</span>",
+    "steps": {
+      "s1": { "title": "Echipamente inteligente", "description": "Entry Point, Exit Point, Pay Point și senzori conectați." },
+      "s2": { "title": "Comunicare securizată", "description": "Datele sunt transmise criptat prin rețele sigure." },
+      "s3": { "title": "Platforma RParking", "description": "Toate datele sunt procesate, stocate și corelate în timp real." },
+      "s4": { "title": "BackOffice & Monitorizare", "description": "Control complet, rapoarte și alerte instant." },
+      "s5": { "title": "Decizii inteligente", "description": "Rapoarte care permit o operare mai eficientă și profitabilă." }
+    },
+    "whyTitle": "De ce tehnologia <span>RParking</span>?",
+    "why": {
+      "w1": { "title": "Performanță ridicată", "description": "Procesare rapidă a mii de tranzacții simultan." },
+      "w2": { "title": "Disponibilitate 99.9%", "description": "SLA ridicat și infrastructură rezilientă în cloud." },
+      "w3": { "title": "Securitate avansată", "description": "Protecție end-to-end a datelor și acceselor." },
+      "w4": { "title": "Integrare ușoară", "description": "API-uri moderne pentru integrări rapide cu sisteme terțe." },
+      "w5": { "title": "Acces de oriunde", "description": "Platformă web și mobilă, din orice dispozitiv." },
+      "w6": { "title": "Scalabilitate", "description": "Se adaptează ușor oricărei parcări, de la 1 la 1000+ locații." }
+    },
+    "techTitle": "Tehnologie și funcționalități cheie",
+    "key": {
+      "k1": { "title": "Cloud modern", "description": "Infrastructură cloud de ultimă generație pentru viteze mari și uptime ridicat." },
+      "k2": { "title": "Date în timp real", "description": "Monitorizare live a plăților, acceselor, ocupării și echipamentelor." },
+      "k3": { "title": "AI & Analytics", "description": "Analize avansate și predicții pentru optimizarea veniturilor și a fluxului de trafic." },
+      "k4": { "title": "Management echipamente", "description": "Stare, diagnoze, configurare și update remote pentru toate dispozitivele." },
+      "k5": { "title": "Rapoarte avansate", "description": "Rapoarte personalizate, exporturi și dashboard-uri interactive." },
+      "k6": { "title": "Multi-tenant", "description": "Gestionare multi-locație și roluri personalizate pentru utilizatori." }
+    },
+    "integrationTitle": "Integrare și ecosistem deschis",
+    "integrations": {
+      "i1": "ANPR Camera",
+      "i2": "Bariere",
+      "i3": "Validatoare",
+      "i4": "Sisteme de acces",
+      "i5": "IoT Devices"
+    },
+    "connectivityTitle": "Conectivitate flexibilă",
+    "connectivity": {
+      "c1": "TCP/IP, HTTPS, MQTT",
+      "c2": "API RESTful",
+      "c3": "VPN, 4G / 5G / Wi-Fi",
+      "c4": "SNMP și monitorizare avansată"
+    },
+    "bottomTitle": "Tehnologie care <span>transformă</span> parcările.",
+    "bottomDesc": "Alege platforma RParking și beneficiază de o soluție completă, securizată și pregătită pentru viitor."
+  },
+  "EntryPointPage": {
+    "heroTitle": "Entry Point",
+    "heroDesc": "Stație inteligentă pentru controlul accesului în parcări moderne.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDemo": "Programare demonstrație",
+    "heroFeatures": {
+      "h1": "QR Code",
+      "h2": "Asistență vocală",
+      "h3": "NFC / RFID",
+      "h4": "Integrare cu bariere",
+      "h5": "Emitere card acces",
+      "h6": "Management centralizat"
+    },
+    "keyFeaturesTitle": "Funcționalități cheie",
+    "key": {
+      "k1": { "title": "QR Code", "accent": "Scanner", "desc": "Scanează rapid și procesează codurile QR." },
+      "k2": { "title": "NFC / RFID", "accent": "Reader", "desc": "Citește carduri și tag-uri NFC / RFID." },
+      "k3": { "title": "Emitere", "accent": "card acces", "desc": "Emite carduri de acces pentru utilizatori." },
+      "k4": { "title": "Asistență", "accent": "vocală", "desc": "Ghidaj audio clar pentru utilizatori." },
+      "k5": { "title": "Integrare", "accent": "bariere", "desc": "Deschidere automată a barierei." },
+      "k6": { "title": "Management", "accent": "centralizat", "desc": "Control și monitorizare în timp real din BackOffice." }
+    },
+    "howTitle": "Cum funcționează?",
+    "steps": {
+      "s1": { "title": "Mașina ajunge la Entry Point", "desc": "Vehiculul se apropie de terminalul de intrare." },
+      "s2": { "title": "Scanare QR Code / card", "desc": "Utilizatorul scanează codul QR sau apropie cardul." },
+      "s3": { "title": "Emitere card de acces", "desc": "Stația eliberează cardul de acces." },
+      "s4": { "title": "Bariera se deschide automat", "desc": "Bariera se ridică automat după validare." },
+      "s5": { "title": "Acces permis în parcare", "desc": "Vehiculul intră, accesul fiind înregistrat." }
+    },
+    "hardwareTitle": "Componente hardware",
+    "hardwareSubtitle": "Componente principale",
+    "hardware": {
+      "hw1": { "title": "Monitor 7 inch", "desc": "Antivandalism, IP65, afișaj tactil rezistent" },
+      "hw2": { "title": "NFC Reader", "desc": "Citire carduri RFID/NFC pentru acces rapid" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scanare coduri QR și coduri de bare 2D" },
+      "hw4": { "title": "Card Issuing Machine", "desc": "Dispenser automat pentru carduri temporare" },
+      "hw5": { "title": "Built-in Speaker", "desc": "Difuzor integrat pentru asistență vocală" },
+      "hw6": { "title": "Service Button", "desc": "Buton de ajutor pentru asistență la distanță" }
+    },
+    "specsTitle": "Specificații tehnice",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp4": { "label": "Card Issuing", "value": "Automat" },
+      "sp5": { "label": "Speaker", "value": "2W / 4Ω" },
+      "sp6": { "label": "LED Status", "value": "Da" },
+      "sp7": { "label": "Comunicație", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
+      "sp9": { "label": "Temperatură", "value": "-20°C ~ +60°C" },
+      "sp10": { "label": "Alimentare", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "Integrare API", "value": "Da" }
+    },
+    "integrationTitle": "Integrare completă",
+    "integrations": {
+      "i1": "QR Code",
+      "i2": "NFC / RFID",
+      "i3": "Carduri acces",
+      "i4": "ANPR",
+      "i5": "Bariere",
+      "i6": "Pay Point",
+      "i7": "Exit Point",
+      "i8": "BackOffice"
+    },
+    "ecosystemTitle": "Compatibil cu ecosistemul <span>RParking</span>",
+    "ecosystem": {
+      "e1": { "title": "Pay Point", "desc": "Plată automată cu numerar și card." },
+      "e2": { "title": "Exit Point", "desc": "Stație de ieșire cu card sau tichet." },
+      "e3": { "title": "BackOffice", "desc": "Administrare și raportare în timp real." }
+    },
+    "bottomTitle": "Doriți să automatizați <span>accesul</span> în parcarea dvs.?",
+    "bottomDesc": "Echipa noastră vă stă la dispoziție pentru a vă oferi cea mai bună soluție adaptată nevoilor dvs."
+  },
+  "ExitPointCardPassPage": {
+    "heroTitle": "Exit Point <span>CardPass</span>",
+    "heroDesc": "Stație inteligentă pentru validarea cardurilor și ieșirea rapidă din parcare.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDemo": "Programare demonstrație",
+    "heroFeatures": {
+      "h1": "Validare card",
+      "h2": "Control acces",
+      "h3": "Validare NFC",
+      "h4": "Comunicare cu BackOffice",
+      "h5": "Citire QR Code",
+      "h6": "Deschidere barieră"
+    },
+    "keyFeaturesTitle": "Funcționalități cheie",
+    "key": {
+      "k1": { "title": "Validare", "accent": "card", "desc": "Citește și validează cardurile de acces emise la intrare." },
+      "k2": { "title": "NFC", "accent": "Reader", "desc": "Suportă tag-uri și carduri NFC pentru acces rapid." },
+      "k3": { "title": "QR Code", "accent": "Scanner", "desc": "Scanează codurile QR pentru validare și ieșire." },
+      "k4": { "title": "Control", "accent": "acces", "desc": "Verificare în timp real și autorizare ieșire." },
+      "k5": { "title": "Comunicare", "accent": "BackOffice", "desc": "Schimb de date securizat cu platforma centrală." },
+      "k6": { "title": "Deschidere", "accent": "barieră", "desc": "Deschidere automată a barierei după validare." }
+    },
+    "howTitle": "Cum funcționează?",
+    "steps": {
+      "s1": { "title": "Mașina se prezintă la Exit Point", "desc": "Vehiculul se apropie de terminalul de ieșire." },
+      "s2": { "title": "Utilizatorul prezintă cardul de acces", "desc": "Cardul, tag-ul NFC sau codul QR este scanat." },
+      "s3": { "title": "Sistemul validează accesul", "desc": "Verificare în timp real cu platforma centrală." },
+      "s4": { "title": "Bariera se deschide automat", "desc": "Bariera se ridică automat după validare." },
+      "s5": { "title": "Ieșirea din parcare este permisă", "desc": "Vehiculul iese, ieșirea fiind înregistrată." }
+    },
+    "hardwareTitle": "Componente hardware",
+    "hardwareSubtitle": "Componente principale",
+    "hardware": {
+      "hw1": { "title": "Monitor 7 inch", "desc": "Antivandalism, IP65, afișaj tactil rezistent" },
+      "hw2": { "title": "NFC Reader", "desc": "Citire carduri pentru validare și ieșire" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scanare coduri QR pentru validare rapidă" },
+      "hw4": { "title": "Card Reader", "desc": "Cititor magnetic pentru carduri de acces" },
+      "hw5": { "title": "Built-in Speaker", "desc": "Difuzor pentru confirmări audio și ghidare" },
+      "hw6": { "title": "Service Button", "desc": "Buton de ajutor pentru asistență operațională" }
+    },
+    "specsTitle": "Specificații tehnice",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp4": { "label": "Card Reader", "value": "ISO 14443A/B" },
+      "sp5": { "label": "Speaker", "value": "2W / 8Ω" },
+      "sp6": { "label": "LED Status", "value": "Da" },
+      "sp7": { "label": "Comunicație", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
+      "sp9": { "label": "Temperatură", "value": "-30°C ~ +60°C" },
+      "sp10": { "label": "Alimentare", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "Integrare API", "value": "Da" }
+    },
+    "integrationTitle": "Integrare și compatibilitate",
+    "integrations": {
+      "i1": "Carduri acces",
+      "i2": "NFC / RFID",
+      "i3": "QR Code",
+      "i4": "ANPR",
+      "i5": "Bariere",
+      "i6": "Pay Point",
+      "i7": "BackOffice",
+      "i8": "Sisteme terțe"
+    },
+    "ecosystemTitle": "Compatibil cu ecosistemul <span>RParking</span>",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Stație de intrare care emite cardul de acces." },
+      "e2": { "title": "Pay Point", "desc": "Plată automată cu numerar și card." },
+      "e3": { "title": "BackOffice", "desc": "Administrare și raportare în timp real." }
+    },
+    "bottomTitle": "Doriți o soluție <span>completă</span> pentru parcarea dvs.?",
+    "bottomDesc": "Echipa noastră vă stă la dispoziție pentru a vă oferi cea mai bună soluție adaptată nevoilor dvs."
+  },
+  "ExitPointTicketPage": {
+    "breadcrumb": {
+      "home": "Acasă",
+      "products": "Produse",
+      "current": "Exit Point Ticket"
+    },
+    "heroTitle": "Exit Point <span>Ticket</span>",
+    "heroDesc": "Stație inteligentă pentru validarea tichetelor și ieșirea rapidă din parcare.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDemo": "Programare demonstrație",
+    "heroFeatures": {
+      "h1": "Validare tichet",
+      "h2": "Control acces",
+      "h3": "Citire cod de bare",
+      "h4": "Comunicare cu BackOffice",
+      "h5": "Citire QR Code",
+      "h6": "Deschidere barieră"
+    },
+    "keyFeaturesTitle": "Funcționalități cheie",
+    "key": {
+      "k1": { "title": "Validare", "accent": "tichet", "desc": "Citește și validează tichetele emise la intrare." },
+      "k2": { "title": "Cod de bare", "accent": "Scanner", "desc": "Scanează codurile de bare de pe tichet." },
+      "k3": { "title": "QR Code", "accent": "Scanner", "desc": "Scanează codurile QR pentru validare și ieșire." },
+      "k4": { "title": "Control", "accent": "acces", "desc": "Verificare în timp real și autorizare ieșire." },
+      "k5": { "title": "Comunicare", "accent": "BackOffice", "desc": "Schimb de date securizat cu platforma centrală." },
+      "k6": { "title": "Deschidere", "accent": "barieră", "desc": "Deschidere automată a barierei după validare." }
+    },
+    "howTitle": "Cum funcționează?",
+    "steps": {
+      "s1": { "title": "Mașina se prezintă la Exit Point", "desc": "Vehiculul se apropie de terminalul de ieșire." },
+      "s2": { "title": "Utilizatorul introduce sau scanează tichetul", "desc": "Tichetul de hârtie sau digital este scanat." },
+      "s3": { "title": "Sistemul validează accesul", "desc": "Verificare în timp real cu platforma centrală." },
+      "s4": { "title": "Bariera se deschide automat", "desc": "Bariera se ridică automat după validare." },
+      "s5": { "title": "Ieșirea din parcare este permisă", "desc": "Vehiculul iese, ieșirea fiind înregistrată." }
+    },
+    "hardwareTitle": "Componente hardware",
+    "hardware": {
+      "hw1": { "title": "Monitor 7 inch", "desc": "Antivandalism, IP65, afișaj tactil rezistent" },
+      "hw2": { "title": "Ticket Reader", "desc": "Citire și validare tichete" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scanare coduri QR pentru validare rapidă" },
+      "hw4": { "title": "NFC Reader", "desc": "Citire carduri pentru acces rapid" },
+      "hw5": { "title": "Built-in Speaker", "desc": "Difuzor pentru confirmări audio și ghidare" },
+      "hw6": { "title": "Service Button", "desc": "Buton de ajutor pentru asistență operațională" }
+    },
+    "specsTitle": "Specificații tehnice",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "Ticket Reader", "value": "Cod de bare / QR" },
+      "sp3": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp4": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp5": { "label": "Speaker", "value": "2W / 8Ω" },
+      "sp6": { "label": "LED Status", "value": "Da" },
+      "sp7": { "label": "Comunicație", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
+      "sp9": { "label": "Temperatură", "value": "-30°C ~ +60°C" },
+      "sp10": { "label": "Alimentare", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "Integrare API", "value": "Da" }
+    },
+    "integrationTitle": "Integrare și compatibilitate",
+    "integrations": {
+      "i1": "Tichete",
+      "i2": "Cod de bare",
+      "i3": "QR Code",
+      "i4": "ANPR",
+      "i5": "Bariere",
+      "i6": "Pay Point",
+      "i7": "BackOffice",
+      "i8": "Sisteme terțe"
+    },
+    "ecosystemTitle": "Compatibil cu ecosistemul <span>RParking</span>",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Stație de intrare care emite tichetul de parcare." },
+      "e2": { "title": "Pay Point", "desc": "Plată automată cu numerar și card." },
+      "e3": { "title": "BackOffice", "desc": "Administrare și raportare în timp real." }
+    },
+    "bottomTitle": "Doriți o soluție <span>completă</span> pentru parcarea dvs.?",
+    "bottomDesc": "Echipa noastră vă stă la dispoziție pentru a vă oferi cea mai bună soluție adaptată nevoilor dvs."
+  },
+  "PayPointPage": {
+    "heroTitle": "Pay Point",
+    "heroDesc": "Terminal automat de plată pentru parcări moderne.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDemo": "Programare demonstrație",
+    "heroFeatures": {
+      "h1": "Plată cu card",
+      "h2": "QR Code",
+      "h3": "Plată numerar",
+      "h4": "NFC / RFID",
+      "h5": "Rest automat",
+      "h6": "Bon fiscal"
+    },
+    "keyFeaturesTitle": "Funcționalități principale",
+    "key": {
+      "k1": { "title": "Plată", "accent": "cu card", "desc": "Acceptă carduri bancare contactless și cu CIP." },
+      "k2": { "title": "Plată", "accent": "numerar", "desc": "Acceptă bancnote și monede în siguranță." },
+      "k3": { "title": "Rest", "accent": "automat", "desc": "Returnează restul rapid și în siguranță." },
+      "k4": { "title": "Bon", "accent": "fiscal", "desc": "Emite bon fiscal conform legislației în vigoare." },
+      "k5": { "title": "QR", "accent": "Code", "desc": "Scanează și procesează plata prin QR Code." },
+      "k6": { "title": "NFC", "accent": "RFID", "desc": "Suportă plăți și validări prin NFC / RFID." }
+    },
+    "howTitle": "Cum funcționează?",
+    "steps": {
+      "s1": { "title": "Șoferul selectează opțiunea de plată", "desc": "Pe ecranul tactil, intuitiv și multilingv." },
+      "s2": { "title": "Alege metoda de plată (card sau numerar)", "desc": "Card bancar, numerar sau plată contactless." },
+      "s3": { "title": "Sistemul validează plata", "desc": "Procesare securizată și verificare în timp real." },
+      "s4": { "title": "Primește bon fiscal și restul", "desc": "Bon fiscal emis și rest returnat dacă este cazul." },
+      "s5": { "title": "Ieșirea din parcare este permisă", "desc": "Acces validat pentru ieșirea din parcare." }
+    },
+    "hardwareTitle": "Componente hardware",
+    "hardwareSubtitle": "Componente principale",
+    "hardware": {
+      "hw1": { "title": "Monitor 19 inch", "desc": "Antivandalism, IP65, afișaj tactil color" },
+      "hw2": { "title": "NFC Reader", "desc": "Citire carduri pentru plăți rapide" },
+      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scanare coduri pentru verificare bilete" },
+      "hw4": { "title": "Bill Validator", "desc": "Acceptor bancnote cu verificare autenticitate" },
+      "hw5": { "title": "Coin Acceptor", "desc": "Acceptor monede cu recunoaștere multi-valută" },
+      "hw6": { "title": "Cash Dispensing", "desc": "Automat de rest bancnote" },
+      "hw7": { "title": "Fiscal Printer", "desc": "Imprimantă fiscală RTI 5000F/5000 INB/RAFS" },
+      "hw8": { "title": "Smart UPS", "desc": "Sursă de alimentare neîntreruptibilă" }
+    },
+    "specsTitle": "Specificații tehnice",
+    "specs": {
+      "sp1": { "label": "Display", "value": "21.5\" Touch IP65" },
+      "sp2": { "label": "Plată card", "value": "EMV Contactless" },
+      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
+      "sp4": { "label": "QR Scanner", "value": "1D / 2D" },
+      "sp5": { "label": "Imprimantă", "value": "Termică 80mm" },
+      "sp6": { "label": "Bancnote", "value": "Acceptare & validare" },
+      "sp7": { "label": "Monede", "value": "Acceptare & returnare" },
+      "sp8": { "label": "Rest automat", "value": "Da" },
+      "sp9": { "label": "Comunicație", "value": "Ethernet / 4G" },
+      "sp10": { "label": "Alimentare", "value": "220V AC" },
+      "sp11": { "label": "Material", "value": "Metal IP54" },
+      "sp12": { "label": "Integrare API", "value": "Da" }
+    },
+    "integrationTitle": "Integrare și compatibilitate",
+    "integrationDesc": "Pay Point este complet integrat în ecosistemul <span>RParking</span> și poate fi configurat pentru orice tip de tarifare și politică de parcare.",
+    "integrations": {
+      "i1": "Entry Point",
+      "i2": "Exit Point",
+      "i3": "BackOffice",
+      "i4": "Bariere",
+      "i5": "ANPR Camera",
+      "i6": "Mobile App",
+      "i7": "Carduri bancare",
+      "i8": "Sisteme terțe"
+    },
+    "ecosystemTitle": "Compatibil cu ecosistemul <span>RParking</span>",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Stație de intrare care emite cardul de acces." },
+      "e2": { "title": "Exit Point", "desc": "Stație de ieșire cu validare card sau tichet." },
+      "e3": { "title": "BackOffice", "desc": "Administrare și raportare în timp real." }
+    },
+    "bottomTitle": "Vrei o experiență de plată <span>rapidă</span> și sigură în parcarea ta?",
+    "bottomDesc": "Echipa noastră te ajută să configurezi cea mai bună soluție de plată pentru nevoile tale."
+  },
+  "BackofficePage": {
+    "heroTitle": "BackOffice",
+    "heroDesc": "Platforma centralizată pentru administrarea și monitorizarea inteligentă a parcărilor.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDemo": "Programare demonstrație",
+    "heroFeatures": {
+      "h1": "Monitorizare în timp real",
+      "h2": "Evenimente și alerte",
+      "h3": "Rapoarte și statistici avansate",
+      "h4": "Integrare completă cu echipamente",
+      "h5": "Management utilizatori și tarife",
+      "h6": "Acces securizat și audit trail"
+    },
+    "keyFeaturesTitle": "Funcționalități principale",
+    "key": {
+      "k1": { "title": "Dashboard", "accent": "în timp real", "desc": "Vizualizează instant performanța parcărilor și indicatorii cheie." },
+      "k2": { "title": "Rapoarte", "accent": "și statistici", "desc": "Rapoarte personalizate pentru încasări, tranzacții și ocupare." },
+      "k3": { "title": "Management", "accent": "utilizatori", "desc": "Roluri și permisiuni flexibile pentru echipa ta." },
+      "k4": { "title": "Tarife", "accent": "și reguli", "desc": "Configurează tarife, promoții și reguli de acces." },
+      "k5": { "title": "Alerte", "accent": "și notificări", "desc": "Primești notificări pentru evenimente importante în sistem." },
+      "k6": { "title": "Securitate", "accent": "avansată", "desc": "Acces securizat, loguri complete și audit trail." }
+    },
+    "howTitle": "Cum funcționează?",
+    "steps": {
+      "s1": { "title": "Datele sunt colectate automat de la echipamente", "desc": "Entry, Exit, Pay Point trimit date continuu." },
+      "s2": { "title": "Informațiile sunt transmise securizat în BackOffice", "desc": "Conexiune criptată și protejată." },
+      "s3": { "title": "Datele sunt procesate și centralizate în rapoarte", "desc": "Agregare automată și structurare pe categorii." },
+      "s4": { "title": "Obții statistici și alerte relevante în timp real", "desc": "Notificări inteligente pentru orice eveniment." },
+      "s5": { "title": "Iei decizii mai bune și optimizezi performanța", "desc": "Date clare pentru o administrare eficientă." }
+    },
+    "modulesTitle": "Module și capabilități",
+    "modules": {
+      "m1": { "title": "Monitorizare live", "desc": "Stare echipamente, tranzacții și alerte în timp real." },
+      "m2": { "title": "Rapoarte avansate", "desc": "Rapoarte financiare, operaționale și de ocupare personalizate." },
+      "m3": { "title": "Management financiar", "desc": "Încasări, plăți, rambursări și reconcilieri automate." },
+      "m4": { "title": "Management acces", "desc": "Utilizatori, roluri, permisiuni și politici de acces." },
+      "m5": { "title": "Configurare sistem", "desc": "Tarife, zone, reguli, ore de funcționare și integrări." }
+    },
+    "integrationTitle": "Integrare completă",
+    "integrationDesc": "BackOffice se integrează nativ cu toate echipamentele și modulele din ecosistemul <span>RParking</span>.",
+    "integrations": {
+      "i1": "Entry Point",
+      "i2": "Exit Point",
+      "i3": "Pay Point",
+      "i4": "Bariere",
+      "i5": "ANPR Camera",
+      "i6": "Validatoare",
+      "i7": "Dispozitive IoT",
+      "i8": "Sisteme terțe"
+    },
+    "securityTitle": "Securitate și fiabilitate",
+    "security": {
+      "sec1": "Conexiune criptată end-to-end",
+      "sec2": "Backup automat și replicare în cloud",
+      "sec3": "Disponibilitate ridicată 24/7",
+      "sec4": "Audit și trasabilitate completă"
+    },
+    "ecosystemTitle": "Compatibil cu ecosistemul <span>RParking</span>",
+    "ecosystem": {
+      "e1": { "title": "Entry Point", "desc": "Stație de intrare care emite cardul de acces." },
+      "e2": { "title": "Exit Point", "desc": "Stație de ieșire cu validare card sau tichet." },
+      "e3": { "title": "Pay Point", "desc": "Plată automată cu numerar și card." }
+    },
+    "bottomTitle": "Transformă datele în <span>decizii inteligente</span>.",
+    "bottomDesc": "Descoperă cum BackOffice te ajută să crești eficiența și veniturile parcărilor tale."
+  },
+  "RAccessWCPage": {
+    "heroTitle": "RAccess WC",
+    "heroDesc": "Control acces și taxare pentru grupuri sanitare publice. Soluție completă cu plată automată, turnicheți și rapoarte în timp real.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDetails": "Vezi detalii tehnice",
+    "heroFeatures": {
+      "h1": "Acces controlat",
+      "h2": "Plată automată",
+      "h3": "Rapoarte în timp real",
+      "h4": "Soluție fiabilă"
+    },
+    "featuresTitle": "Gestionare <span>inteligentă</span> a grupurilor sanitare publice",
+    "featuresDesc": "RAccess WC este soluția ideală pentru spațiile publice cu trafic intens: parcuri, gări, autogări, centre comerciale, plaje, piețe, benzinării, stadioane, evenimente și multe altele.",
+    "key": {
+      "k1": { "title": "Control acces", "accent": "eficient", "desc": "Turnicheți robuști și fiabili pentru acces doar după plata tarifului." },
+      "k2": { "title": "Plată", "accent": "automată", "desc": "Acceptă monede, bancnote și plăți cashless (card bancar, smartwatch, telefon)." },
+      "k3": { "title": "Rapoarte", "accent": "și statistici", "desc": "Monitorizare în timp real a încasărilor, acceselor și stării echipamentelor." },
+      "k4": { "title": "Soluție", "accent": "fiabilă", "desc": "Echipamentele concepute pentru utilizare intensă și continuă 24/7." }
+    },
+    "componentsSubtitle": "Echipamente incluse",
+    "componentsTitle": "Componentele <span>RAccess WC</span>",
+    "componentsDesc": "Sistem complet format din trei componente principale care lucrează împreună pentru o experiență fluidă",
+    "components": {
+      "c1": { "title": "Turnichet acces", "desc": "Turnichet tripod din inox, durabil și rezistent la utilizare intensă." },
+      "c2": { "title": "Automat de plată", "desc": "Acceptă monede, bancnote și plăți cashless." },
+      "c3": { "title": "Software de administrare", "desc": "Dashboard web pentru monitorizare, rapoarte și configurare de la distanță." }
+    },
+    "locationsTitle": "Unde se poate implementa",
+    "locations": {
+      "l1": "Parcuri și zone de agrement",
+      "l2": "Gări și autogări",
+      "l3": "Centre comerciale",
+      "l4": "Plaje și zone turistice",
+      "l5": "Stadioane și săli de evenimente",
+      "l6": "Benzinării și stații de alimentare",
+      "l7": "Piețe și târguri"
+    },
+    "howTitle": "Cum funcționează?",
+    "steps": {
+      "s1": { "title": "Utilizatorul se apropie de turnichet", "desc": "Sistemul detectează prezența și afișează instrucțiuni." },
+      "s2": { "title": "Selectează și efectuează plata", "desc": "Plată cu monede, bancnote sau card/contactless." },
+      "s3": { "title": "Turnichetul se deschide automat", "desc": "Acces permis după validarea plății." },
+      "s4": { "title": "Intrare înregistrată în sistem", "desc": "Datele sunt transmise în timp real către BackOffice." }
+    },
+    "specsTitle": "Specificații tehnice",
+    "specs": {
+      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
+      "sp2": { "label": "Acceptare monede", "value": "Multi-monedă" },
+      "sp3": { "label": "Acceptare bancnote", "value": "Multi-valută" },
+      "sp4": { "label": "Plăți cashless", "value": "Card/contactless" },
+      "sp5": { "label": "Turnichet", "value": "Tripod inox" },
+      "sp6": { "label": "Viteză acces", "value": "30-40 pers/min" },
+      "sp7": { "label": "Comunicație", "value": "Ethernet / 4G" },
+      "sp8": { "label": "Management", "value": "BackOffice Cloud" }
+    },
+    "integrationTitle": "Integrare completă",
+    "integrationDesc": "RAccess WC se integrează perfect cu întreg ecosistemul RParking și poate fi administrat centralizat din BackOffice.",
+    "integrationTags": {
+      "t1": "BackOffice",
+      "t2": "Cloud",
+      "t3": "API",
+      "t4": "Rapoarte"
+    },
+    "ctaTitle": "Transformă gestionarea grupurilor sanitare într-o experiență modernă și eficientă.",
+    "ctaDesc": "Crește veniturile, reduce costurile și oferă utilizatorilor confort și siguranță.",
+    "ctaQuoteCustom": "Solicită ofertă personalizată",
+    "ctaContact": "Contactează-ne"
+  },
+  "RChangePage": {
+    "heroTitle": "RChange",
+    "heroDesc": "Schimb valutar automat disponibil 24/7. Soluție self-service pentru schimb valutar rapid, simplu și sigur.",
+    "ctaQuote": "Solicită ofertă",
+    "ctaDetails": "Vezi detalii tehnice",
+    "heroFeatures": {
+      "h1": "Disponibil non-stop",
+      "h2": "Schimb rapid și simplu",
+      "h3": "Fără comisioane ascunse"
+    },
+    "featuresTitle": "Schimb valutar <span>inteligent</span>",
+    "featuresDesc": "RChange este soluția ideală pentru locațiile cu trafic intens de turiști și călători. Oferă schimb valutar rapid, fără comisioane ascunse și disponibil non-stop.",
+    "key": {
+      "k1": { "title": "Disponibil", "accent": "non-stop", "desc": "Funcționează 24/7 fără supraveghere umană." },
+      "k2": { "title": "Schimb rapid", "accent": "și simplu", "desc": "Validare instantă și eliberare automată de monede." },
+      "k3": { "title": "Fără comisioane", "accent": "ascunse", "desc": "Transparență totală în taxare." }
+    },
+    "componentsSubtitle": "Echipament",
+    "componentsTitle": "Componente <span>principale</span>",
+    "componentsDesc": "Fiecare terminal RChange integrează componente de înaltă calitate pentru o experiență de schimb valutar rapidă și sigură.",
+    "componentFeatures": {
+      "c1": { "title": "Ecran tactil intuitiv", "desc": "Interfață prietenoasă cu instrucțiuni clare, pas cu pas." },
+      "c2": { "title": "Validator de bancnote", "desc": "Detectare avansată a autenticității bancnotelor." },
+      "c3": { "title": "Dispenser automat de monede", "desc": "Eliberare rapidă și precisă a monedelor." },
+      "c4": { "title": "Acceptă bancnote și eliberează monede", "desc": "Schimb complet automatizat, fără personal." },
+      "c5": { "title": "Design compact și modern", "desc": "Se integrează elegant în orice locație." }
+    },
+    "locationsTitle": "Unde poate fi instalat",
+    "locations": {
+      "l1": "Aeroporturi",
+      "l2": "Centre comerciale",
+      "l3": "Hoteluri",
+      "l4": "Gări",
+      "l5": "Autogări",
+      "l6": "Zone turistice"
+    },
+    "stepsSubtitle": "Proces simplu",
+    "howTitle": "Cum funcționează?",
+    "stepsDesc": "Patru pași simpli pentru un schimb valutar rapid și automat",
+    "steps": {
+      "s1": { "title": "Introduci bancnota", "desc": "Clientul introduce bancnota în fanta de validare." },
+      "s2": { "title": "Aparatul verifică", "desc": "Sistemul validează bancnota și calculează suma în monede." },
+      "s3": { "title": "Monedele sunt eliberate", "desc": "Dispenserul pregătește automat monedele necesare." },
+      "s4": { "title": "Ridici monedele", "desc": "Tranzacția este finalizată în doar câteva secunde." }
+    },
+    "specsTitle": "Specificații tehnice",
+    "specs": {
+      "sp1": { "label": "Display", "value": "10\" Touch" },
+      "sp2": { "label": "Validator", "value": "Multi-valută" },
+      "sp3": { "label": "Dispenser", "value": "8 tipuri monede" },
+      "sp4": { "label": "Capacitate", "value": "2000+ monede" },
+      "sp5": { "label": "Viteză", "value": "< 10 secunde" },
+      "sp6": { "label": "Comunicație", "value": "Ethernet / 4G" },
+      "sp7": { "label": "Management", "value": "Cloud BackOffice" },
+      "sp8": { "label": "Plăți", "value": "Cash & Card" }
+    },
+    "integrationTitle": "Integrare completă",
+    "integrationDesc": "RChange se integrează perfect cu platforma BackOffice pentru monitorizare în timp real a tranzacțiilor, stocului de monede și rapoarte detaliate.",
+    "integrationTags": {
+      "t1": "BackOffice",
+      "t2": "Cloud",
+      "t3": "Rapoarte",
+      "t4": "Monitorizare"
+    },
+    "ctaTitle": "Simplu. Rapid. <span>Disponibil 24/7.</span>",
+    "ctaDesc": "Oferă clienților tăi o experiență modernă de schimb valutar.",
+    "ctaDemo": "Programează demonstrație"
+  },
+  "Backoffice": {
+    "title": "BackOffice",
+    "subtitle": "Panou de administrare complet",
+    "description": "Administrare completă și detaliată în timp real a parcărilor tale. Monitorizează, controlează și optimizează operațiunile dintr-un singur loc.",
+    "features": {
+      "realtime": "Monitorizare în timp real",
+      "analytics": "Statistici și rapoarte",
+      "revenue": "Management venituri",
+      "security": "Securitate avansată"
+    },
+    "ctaTitle": "Transformă datele în decizii inteligente.",
+    "ctaSubtitle": "Descoperă cum BackOffice te ajută să crești eficiența și veniturile parcărilor tale."
+  },
+  "Solutions": {
+    "title": "SOLUȚII",
+    "subtitle": "Soluții complete pentru parcări",
+    "description": "RParking dezvoltă și implementează soluții complete pentru automatizarea parcărilor, combinând hardware propriu, software avansat și suport local într-o platformă unică."
+  },
+  "About": {
+    "title": "DESPRE NOI",
+    "subtitle": "RTi Systems",
+    "description": "Suntem o companie tehnologică din Republica Moldova, specializată în dezvoltarea de soluții inteligente pentru automatizarea parcărilor și controlul accesului.",
+    "heroText": "RParking dezvoltă și implementează soluții complete pentru automatizarea parcărilor, combinând hardware propriu, software avansat și suport local într-o platformă unică.",
+    "badge1": "Dezvoltați în Republica Moldova",
+    "badge2": "Hardware propriu",
+    "badge3": "Software propriu"
+  },
+  "MobileApp": {
+    "label": "Aplicație mobilă",
+    "titleA": "Parchează inteligent cu",
+    "title": "Parchează inteligent cu RParking App",
+    "description": "Descarcă aplicația și ai control total asupra parcărilor tale direct de pe telefon.",
+    "feature1": "Găsește parcare rapid și ușor pe o hartă interactivă",
+    "feature2": "Intrare și ieșire rapidă prin QR code",
+    "feature3": "Abonează-te și economisește timp și bani",
+    "feature4": "Informații complete despre parcare și tarife transparente",
+    "download": "Descarcă de pe",
+    "googlePlay": "Google Play"
+  },
+  "RtiSolutions": {
+    "title": "Alte soluții dezvoltate de RTI Systems",
+    "titleA": "Alte soluții dezvoltate de",
+    "subtitle": "Portofoliu diversificat de soluții inteligente pentru automatizare și control acces.",
+    "rparking": "Automatizare completă a parcărilor.",
+    "racess": "Control acces și taxare pentru grupuri sanitare publice.",
+    "rchange": "Automat self-service pentru schimb valutar și servicii automate.",
+    "details": "Detalii"
+  },
+  "LanguageSwitcher": {
+    "label": "Schimbă limba"
+  }
+}

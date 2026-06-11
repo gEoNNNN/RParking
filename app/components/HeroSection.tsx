@@ -1,31 +1,34 @@
 'use client';
 
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/navigation';
 import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
 
 export default function HeroSection() {
+  const t = useTranslations('Hero');
+  const tp = useTranslations('Products');
   const featureCards = [
     {
       title: 'Entry Point',
-      subtitle: 'Acces automat',
+      subtitle: tp('entrySubtitle'),
       icon: <LuLogIn className="w-8 h-8 text-white" />,
       href: '/products/entry-point',
     },
     {
       title: 'Exit Point',
-      subtitle: 'Ieșire controlată',
+      subtitle: tp('exitSubtitle'),
       icon: <LuLogOut className="w-8 h-8 text-white" />,
       href: '/products/exit-point-cardpass',
     },
     {
       title: 'Pay Point',
-      subtitle: 'Plăți rapide',
+      subtitle: tp('paySubtitle'),
       icon: <LuCreditCard className="w-8 h-8 text-white" />,
       href: '/products/pay-point',
     },
     {
       title: 'BackOffice',
-      subtitle: 'Control total',
+      subtitle: tp('backofficeSubtitle'),
       icon: <LuLayoutDashboard className="w-8 h-8 text-white" />,
       href: '/products/backoffice',
     },
@@ -33,33 +36,33 @@ export default function HeroSection() {
 
   const badges = [
     {
-      line1: 'Dezvoltat în',
-      line2: 'Moldova',
+      line1: t('badge1.l1'),
+      line2: t('badge1.l2'),
       icon: <LuPlane className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: 'Hardware &',
-      line2: 'Software propriu',
+      line1: t('badge2.l1'),
+      line2: t('badge2.l2'),
       icon: <LuSettings2 className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: 'Support tehnic',
-      line2: 'dedicat',
+      line1: t('badge3.l1'),
+      line2: t('badge3.l2'),
       icon: <LuUsers className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: 'Securizat',
-      line2: 'și fiabil',
+      line1: t('badge4.l1'),
+      line2: t('badge4.l2'),
       icon: <LuShieldCheck className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: 'Integrări',
-      line2: 'ușoare',
+      line1: t('badge5.l1'),
+      line2: t('badge5.l2'),
       icon: <LuClock className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
-      line1: 'Instalare',
-      line2: 'rapidă',
+      line1: t('badge6.l1'),
+      line2: t('badge6.l2'),
       icon: <LuZap className="w-7 h-7 text-green-600 shrink-0" />,
     },
   ];
@@ -86,12 +89,12 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <h2 data-reveal data-reveal-delay="120" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug mb-5">
-            Soluția inteligentă pentru parcări moderne
+            {t('subtitle')}
           </h2>
 
           {/* Description */}
           <p data-reveal data-reveal-delay="220" className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-12 max-w-lg font-medium">
-            Control complet al accesului, plăților și monitorizării într-o platformă integrată de hardware și software dezvoltată și produsă în Republica Moldova.
+            {t('description')}
           </p>
 
           {/* CTA buttons */}
@@ -100,21 +103,21 @@ export default function HeroSection() {
               href="#contact"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
             >
-              Solicită ofertă
+              {t('requestQuote')}
               <LuArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#contact"
               className="inline-flex items-center border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"
             >
-              Programare demo
+              {t('scheduleDemo')}
             </a>
           </div>
 
           {/* Bottom badge strip */}
           <div data-reveal data-reveal-delay="460" className="grid grid-cols-3 gap-2 sm:gap-4 w-fit">
             {badges.map((b, i) => (
-              <div key={b.line1} className="flex items-center gap-1.5 sm:gap-2 px-1.5 sm:px-2 py-1.5 rounded-lg hover:bg-white/80 transition-colors">
+              <div key={i} className="flex items-center gap-1.5 sm:gap-2 px-1.5 sm:px-2 py-1.5 rounded-lg hover:bg-white/80 transition-colors">
                 {b.icon}
                 <span className="text-[11px] sm:text-sm font-semibold text-gray-800 leading-tight">
                   {b.line1}<br />{b.line2}

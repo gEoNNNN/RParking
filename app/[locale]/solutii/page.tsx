@@ -1,0 +1,232 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '../../../i18n/navigation';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import { PiBuildingApartment } from 'react-icons/pi';
+import { CiShop } from 'react-icons/ci';
+import { IoBusinessOutline } from 'react-icons/io5';
+import { SlPlane } from 'react-icons/sl';
+import { FaRegHospital } from 'react-icons/fa';
+import { BiHotel } from 'react-icons/bi';
+import { LuSettings2, LuZap, LuHeadphones, LuTrendingUp, LuShieldCheck, LuMapPin, LuArrowRight, LuCheck, LuHouse, LuChevronRight } from 'react-icons/lu';
+import { LiaLeafSolid } from 'react-icons/lia';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Soluții RParking – Automatizare pentru orice tip de parcare',
+  description:
+    'Soluții personalizate pentru centre comerciale, business centre, parcări rezidențiale, aeroporturi și instituții publice. Sistem complet de automatizare.',
+  keywords: [
+    'solutii parcare',
+    'automatizare parcare centre comerciale',
+    'sistem parcare business centre',
+    'parcare rezidentiala',
+    'parcare aeroport',
+    'parcare institutii publice',
+    'soluții parcare Moldova',
+    'RParking solutii',
+  ],
+  alternates: {
+    canonical: '/solutii',
+  },
+  openGraph: {
+    title: 'Soluții RParking – Automatizare pentru orice tip de parcare',
+    description:
+      'Soluții personalizate pentru orice tip de parcare: centre comerciale, business centre, rezidențiale, aeroporturi.',
+    url: `${SITE_URL}/solutii`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Soluții RParking',
+      },
+    ],
+  },
+};
+
+const domains = [
+  { key: 'residential', image: '/img/parcari%20rezidentiale.png', icon: <PiBuildingApartment className="text-white" style={{ fontSize: '1.4rem' }} /> },
+  { key: 'mall', image: '/img/centrul%20comercial.png', icon: <CiShop className="text-white" style={{ fontSize: '1.4rem' }} /> },
+  { key: 'corporate', image: '/img/parcari%20corporate.png', icon: <IoBusinessOutline className="text-white" style={{ fontSize: '1.4rem' }} /> },
+  { key: 'airports', image: '/img/aeropturi.png', icon: <SlPlane className="text-white" style={{ fontSize: '1.4rem' }} /> },
+  { key: 'hospitals', image: '/img/spitale.png', icon: <FaRegHospital className="text-white" style={{ fontSize: '1.4rem' }} /> },
+  { key: 'hotels', image: '/img/hoteluri.png', icon: <BiHotel className="text-white" style={{ fontSize: '1.4rem' }} /> },
+];
+
+const whyFeatures = [
+  { key: 'custom', icon: <LuSettings2 className="w-5 h-5 text-green-600" /> },
+  { key: 'tech', icon: <LuZap className="w-5 h-5 text-green-600" /> },
+  { key: 'dedicated', icon: <LuHeadphones className="w-5 h-5 text-green-600" /> },
+  { key: 'scalable', icon: <LuTrendingUp className="w-5 h-5 text-green-600" /> },
+  { key: 'reliable', icon: <LuShieldCheck className="w-5 h-5 text-green-600" /> },
+  { key: 'local', icon: <LuMapPin className="w-5 h-5 text-green-600" /> },
+];
+
+export default async function SolutiiPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('SolutiiPage');
+  return (
+    <main>
+      {/* Navbar + Logo */}
+      <div className="relative">
+        <Navbar />
+        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
+          <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
+        </Link>
+
+        {/* ── Hero ── */}
+        <section className="relative w-full min-h-[75vh] flex items-center overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0">
+            <Image src="/img/home.png" alt="" fill className="object-cover object-center" quality={95} priority />
+          </div>
+          {/* White fog - mobile full, desktop 75% */}
+          <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 to-white/70 pointer-events-none" />
+          <div className="hidden lg:block absolute inset-0 bg-linear-to-r from-white via-white/90 to-transparent pointer-events-none" style={{ width: '75%' }} />
+
+          <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-40">
+            <div className="max-w-4xl">
+              <h1 data-reveal className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+                {t('heroTitle1')}<br />{t('heroTitle2')}
+              </h1>
+              <div data-reveal data-reveal-delay="150" className="w-12 h-1 bg-green-500 mb-6 rounded-full" />
+              <p data-reveal data-reveal-delay="280" className="text-gray-600 text-xl leading-relaxed max-w-lg">
+                {t('heroDesc')}
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── Domenii de aplicare ── */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div data-reveal="fade" className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">{t('domainsTitle')}</h2>
+            <div className="w-10 h-0.5 bg-green-500 mx-auto mb-4" />
+            <p className="text-gray-500 text-base max-w-xl mx-auto">
+              {t('domainsSubtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {domains.map((d, idx) => (
+              <div key={d.key} data-reveal data-reveal-delay={String(idx * 100)} className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-white">
+                {/* Image with icon badge */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image src={d.image} alt={t(`domains.${d.key}.title`)} fill quality={95} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute bottom-3 left-3 w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center shadow-md">
+                    {d.icon}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h3 className="text-gray-900 font-bold text-lg mb-2">{t(`domains.${d.key}.title`)}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{t(`domains.${d.key}.description`)}</p>
+                  <ul className="space-y-1.5 mb-5">
+                    {(t.raw(`domains.${d.key}.features`) as string[]).map((f) => (
+                      <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
+                        <LuCheck className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── De ce să alegi RParking ── */}
+      <section className="py-16" style={{ backgroundColor: '#f0f4ea' }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: features */}
+            <div data-reveal="fade-left">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                {t('whyTitlePrefix')}<span className="text-green-600">R</span>Parking{t('whyTitleSuffix')}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {whyFeatures.map((f, idx) => (
+                  <div key={f.key} data-reveal data-reveal-delay={String(100 + idx * 80)} className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                      {f.icon}
+                    </div>
+                    <div>
+                      <p className="text-gray-900 font-semibold text-sm mb-0.5">{t(`why.${f.key}.title`)}</p>
+                      <p className="text-gray-500 text-xs leading-relaxed">{t(`why.${f.key}.description`)}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: video */}
+            <div data-reveal="fade-right" className="relative rounded-2xl overflow-hidden shadow-lg aspect-video w-full">
+              <video
+                src="/img/video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* Green bottom card - desktop only */}
+              <div className="hidden lg:block absolute bottom-0 left-0 right-0 bg-green-800/90 backdrop-blur-sm px-5 py-4">
+                <div className="flex items-start gap-3">
+                  <LiaLeafSolid className="w-8 h-8 text-green-300 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-white font-bold text-sm">{t('greenTitle')}</p>
+                    <p className="text-green-200 text-xs mt-0.5 leading-snug">
+                      {t('greenDesc')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Green card below video - mobile only */}
+            <div className="lg:hidden mt-4 bg-green-800 rounded-xl px-5 py-4">
+              <div className="flex items-start gap-3">
+                <LiaLeafSolid className="w-8 h-8 text-green-300 shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-white font-bold text-sm">{t('greenTitle')}</p>
+                  <p className="text-green-200 text-xs mt-0.5 leading-snug">
+                    {t('greenDesc')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="bg-green-800 py-12">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div data-reveal="fade-left">
+            <h2 className="text-2xl font-bold text-white mb-1">{t('ctaTitle')}</h2>
+            <p className="text-green-200 text-sm">
+              {t('ctaDesc')}
+            </p>
+          </div>
+          <a
+            data-reveal="fade-right"
+            href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-green-800 font-semibold px-8 py-3 rounded-md transition-all duration-200 text-sm whitespace-nowrap"
+          >
+            {t('ctaButton')} <LuArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}

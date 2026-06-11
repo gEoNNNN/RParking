@@ -1,33 +1,35 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/navigation';
 
 const products = [
   {
     title: 'Entry Point',
-    description: 'Terminal de intrare cu ANPR, QR/NFC și barieră.',
+    descKey: 'entryDesc',
     link: '/products/entry-point',
-    image: '/img/produs1.png',
+    image: '/img/produs1 - Copy.png',
     isPhoto: true,
   },
   {
     title: 'Exit Point',
-    description: 'Terminal de ieșire cu validare și control acces.',
+    descKey: 'exitDesc',
     link: '/products/exit-point-cardpass',
-    image: '/img/produs2.png',
+    image: '/img/produs2 - Copy.png',
     isPhoto: true,
   },
   {
     title: 'Pay Point',
-    description: 'Terminal de plată cu card, numerar și rest.',
+    descKey: 'payDesc',
     link: '/products/pay-point',
-    image: '/img/produs3.png',
+    image: '/img/produs3 - Copy.png',
     isPhoto: true,
   },
   {
     title: 'BackOffice',
-    description: 'Administrare completă si detaliata în timp real.',
+    descKey: 'backofficeDesc',
     link: '/products/backoffice',
-    image: null,
-    isPhoto: false,
+    image: '/img/produs4.jpg',
+    isPhoto: true,
   },
 ];
 
@@ -82,14 +84,16 @@ function BackOfficeIllustration() {
 }
 
 export default function ProductEcosystem() {
+  const t = useTranslations('ProductEcosystem');
   return (
     <section id="products" className="py-16 bg-white">
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div data-reveal="fade" className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 mb-3">
-            Ecosistemul{' '}
-            <span className="text-green-600">R</span>Parking
+            {t('titlePrefix')}
+            <br />
+            <span className="text-green-600">R</span>Parking{t('titleSuffix')}
           </h2>
           <div className="w-10 h-0.5 bg-green-500 mx-auto" />
         </div>
@@ -129,16 +133,16 @@ export default function ProductEcosystem() {
 
               <div className="p-5">
                 <h3 className="text-gray-900 font-extrabold text-xl mb-1.5">{product.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">{product.description}</p>
-                <a
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">{t(product.descKey)}</p>
+                <Link
                   href={product.link}
                   className="inline-flex items-center gap-1 text-green-600 text-sm font-semibold hover:text-green-700 transition-colors"
                 >
-                  Detalii
+                  {t('details')}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

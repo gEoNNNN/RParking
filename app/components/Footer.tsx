@@ -1,11 +1,13 @@
 ﻿'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/navigation';
 import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 import { LuArrowRight } from 'react-icons/lu';
 
 export default function Footer() {
+  const t = useTranslations('Footer');
   return (
     <footer id="contact" className="bg-white border-t border-gray-200 pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-6">
@@ -16,11 +18,11 @@ export default function Footer() {
               <Image src="/img/logo.png" alt="RTi Parking" width={300} height={120} className="object-contain" style={{ transform: 'translateX(-8px)' }} />
             </div>
             <p className="text-gray-500 text-xs leading-relaxed max-w-50">
-              RParking este un produs dezvoltat și produs de RTi în Republica Moldova.
+              {t('description')}
             </p>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">Produse</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('products')}</h4>
             <ul className="space-y-2.5">
               {[
                 { name: 'Entry Point', href: '/products/entry-point' },
@@ -38,7 +40,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">Soluțiile RTI Systems</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('solutions')}</h4>
             <ul className="space-y-2.5">
               {[
                 { name: 'RParking', href: '/products' },
@@ -55,14 +57,14 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">Soluții</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('solutions2')}</h4>
             <ul className="space-y-2.5">
               {[
-                { name: 'Centre comerciale', href: '/solutii' },
-                { name: 'Business centre', href: '/solutii' },
-                { name: 'Rezidentiale', href: '/solutii' },
-                { name: 'Municipale', href: '/solutii' },
-                { name: 'Aeroporturi', href: '/solutii' },
+                { name: t('mall'), href: '/solutii' },
+                { name: t('business'), href: '/solutii' },
+                { name: t('residential'), href: '/solutii' },
+                { name: t('municipal'), href: '/solutii' },
+                { name: t('airports'), href: '/solutii' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
@@ -74,13 +76,13 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">Companie</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('company')}</h4>
             <ul className="space-y-2.5">
               {[
-                { name: 'Despre noi', href: '/despre-noi' },
-                { name: 'Implementari', href: '/implementari' },
-                { name: 'Contact', href: '/#contact' },
-                { name: 'Suport', href: '/suport' },
+                { name: t('about'), href: '/despre-noi' },
+                { name: t('implementations'), href: '/implementari' },
+                { name: t('contactLink'), href: '/#contact' },
+                { name: t('support'), href: '/suport' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
@@ -92,36 +94,36 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">Contact</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('contact')}</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-500 text-sm">+373 069116121</li>
               <li className="flex items-center gap-3">
-                <Link
+                <a
                   href="https://wa.me/37369116121"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-green-600 hover:text-green-700 text-sm font-medium transition-colors"
                 >
                   <FaWhatsapp className="w-4 h-4" /> WhatsApp
-                </Link>
-                <Link
+                </a>
+                <a
                   href="https://t.me/+37369116121"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-blue-500 hover:text-blue-600 text-sm font-medium transition-colors"
                 >
                   <FaTelegramPlane className="w-4 h-4" /> Telegram
-                </Link>
+                </a>
               </li>
-              <li className="flex items-center gap-2 text-gray-500 text-sm">Chisinau, Republica Moldova</li>
+              <li className="flex items-center gap-2 text-gray-500 text-sm">{t('location')}</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-100 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-gray-400 text-xs">© 2026 RTi. Toate drepturile rezervate.</p>
+          <p className="text-gray-400 text-xs">© 2026 RTi. {t('copyright')}</p>
           <div className="flex gap-5">
-            <Link href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">Politica de confidențialitate</Link>
-            <Link href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">Termeni și condiții</Link>
+            <a href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('privacy')}</a>
+            <a href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('terms')}</a>
           </div>
         </div>
       </div>
