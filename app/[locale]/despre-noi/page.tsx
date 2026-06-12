@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '../../../i18n/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import RealImplementations from '../../components/RealImplementations';
 import {
   LuArrowRight, LuCheck, LuChevronRight, LuHouse,
   LuMapPin, LuCode, LuMonitor, LuHeadphones, LuPuzzle,
@@ -94,14 +95,6 @@ const values = [
   { key: 'v5', icon: <LuHandshake className="w-7 h-7 text-green-600" /> },
 ];
 
-const gallery = [
-  '/img/implementarea 1.jpg',
-  '/img/implementarea 2.jpg',
-  '/img/implementarea 3.jpg',
-  '/img/implementarea 4.jpg',
-  '/img/implementarea 5.jpg',
-];
-
 export default async function DespreNoiPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -118,7 +111,7 @@ export default async function DespreNoiPage({ params }: { params: Promise<{ loca
         {/* ── Hero ── */}
         <section className="relative w-full min-h-[80vh] flex items-center overflow-hidden bg-white">
           <div className="absolute inset-0">
-            <Image src="/img/mainbg.png" alt="" fill className="object-cover object-center" quality={95} priority />
+            <Image src="/img/homepage.bg.png" alt="" fill className="object-cover object-center" quality={95} priority />
           </div>
           {/* Mobile fog - full width with high opacity */}
           <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/98 via-30% via-white/95 via-50% via-white/90 via-70% to-white/70 pointer-events-none" />
@@ -291,26 +284,7 @@ export default async function DespreNoiPage({ params }: { params: Promise<{ loca
       </section>
 
       {/* ── Implementări reale ── */}
-      <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div data-reveal="fade" className="text-center mb-10">
-            <p className="text-green-600 font-bold tracking-wide text-sm mb-2">{t('seenLabel')}</p>
-            <h2 className="text-3xl font-black text-gray-900">{t('seenTitle')}</h2>
-            <div className="w-12 h-0.5 bg-green-500 mx-auto mt-4" />
-          </div>
-
-          <div data-reveal className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
-            {gallery.map((src, idx) => (
-              <div key={idx} className={`relative rounded-xl overflow-hidden aspect-square${idx === gallery.length - 1 && gallery.length % 2 !== 0 ? ' col-span-2 md:col-span-1 max-w-[50%] md:max-w-full mx-auto w-full' : ''}`}>
-                <Image src={src} alt="" fill className="object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-            ))}
-          </div>
-          <p data-reveal className="text-center text-gray-500 text-sm">
-            {t('seenCaption')}
-          </p>
-        </div>
-      </section>
+      <RealImplementations />
 
       {/* ── Valorile noastre ── */}
       <section className="py-16 bg-white">
@@ -338,19 +312,19 @@ export default async function DespreNoiPage({ params }: { params: Promise<{ loca
       {/* ── Bottom CTA ── */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/img/mainbg.png" alt="" fill className="object-cover object-center" quality={90} />
+          <Image src="/img/homepage.bg.png" alt="" fill className="object-cover object-center" quality={90} />
         </div>
         <div className="absolute inset-0 bg-gray-950/70 pointer-events-none" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div data-reveal="fade-left">
-              <h2 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4">
-                {t('ctaTitle1')}<br />
-                <span className="text-green-400">{t('ctaTitle2')}</span>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight mb-4">
+                <span className="block lg:whitespace-nowrap">{t('ctaTitle1')}</span>
+                <span className="block lg:whitespace-nowrap text-green-400">{t('ctaTitle2')}</span>
               </h2>
             </div>
-            <div data-reveal="fade-right" className="flex flex-col gap-4">
+            <div data-reveal="fade-right" className="flex flex-col gap-4 lg:ml-auto lg:max-w-md">
               <a
                 href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95"

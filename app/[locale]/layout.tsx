@@ -6,6 +6,7 @@ import { setRequestLocale } from "next-intl/server";
 import { routing } from "../../i18n/routing";
 import "../globals.css";
 import ScrollAnimations from "../components/ScrollAnimations";
+import Chatbot from "../components/Chatbot";
 import { SITE_URL, SITE_NAME, COMPANY_NAME, SITE_PHONE, DEFAULT_OG_IMAGE } from "../lib/seo";
 
 const manrope = Manrope({
@@ -145,6 +146,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <ScrollAnimations />
           {children}
+          <Chatbot />
         </NextIntlClientProvider>
       </body>
     </html>

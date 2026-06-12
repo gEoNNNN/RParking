@@ -104,11 +104,11 @@
   },
   "CTA": {
     "title": "Ready to automate your parking?",
-    "description": "Request a personalized demo and discover how RParking can bring value to your business.",
-    "requestDemo": "Request a demo",
+    "description": "Contact us and discover how RParking can bring value to your business.",
+    "requestDemo": "Request a quote",
     "contactUs": "Contact us",
     "requestQuote": "Request a quote",
-    "scheduleDemo": "Schedule a demo"
+    "scheduleDemo": "Send message"
   },
   "Footer": {
     "products": "Products",
@@ -217,7 +217,7 @@
     "heroTitleSuffix": " in Chișinău",
     "heroDesc": "Complete system for automating access, payments and monitoring for modern parking facilities.",
     "ctaQuote": "Request a quote",
-    "ctaDemo": "Schedule a demo",
+    "ctaDemo": "Contact us",
     "badges": {
       "badge1": "Complete automation",
       "badge2": "Cash and card payments",
@@ -338,15 +338,15 @@
     },
     "ctaTitle1": "Let's transform your parking",
     "ctaTitle2": "into a smart system",
-    "ctaDemo": "Request a demo",
-    "ctaSchedule": "Schedule a demo"
+    "ctaDemo": "Contact us",
+    "ctaSchedule": "Send message"
   },
   "PlatformaRParkingPage": {
     "heroLabel": "RPARKING PLATFORM",
     "heroTitle": "Smart technology that <span>simplifies</span> parking.",
     "heroDesc": "RParking combines smart equipment, advanced software and secure connectivity in a single scalable platform.",
     "ctaQuote": "Request a quote",
-    "ctaDemo": "Schedule a demo",
+    "ctaDemo": "Contact us",
     "badges": {
       "b1": "Reliable",
       "b2": "Secure",
@@ -401,7 +401,7 @@
     "heroTitle": "Entry Point",
     "heroDesc": "Smart station for access control in modern parking facilities.",
     "ctaQuote": "Request a quote",
-    "ctaDemo": "Schedule a demo",
+    "ctaDemo": "Contact us",
     "heroFeatures": {
       "h1": "QR Code",
       "h2": "Voice assistance",
@@ -476,7 +476,7 @@
     "heroTitle": "Exit Point <span>CardPass</span>",
     "heroDesc": "Smart station for card validation and quick exit from parking.",
     "ctaQuote": "Request a quote",
-    "ctaDemo": "Schedule a demo",
+    "ctaDemo": "Contact us",
     "heroFeatures": {
       "h1": "Card validation",
       "h2": "Access control",
@@ -556,7 +556,7 @@
     "heroTitle": "Exit Point <span>Ticket</span>",
     "heroDesc": "Smart station for ticket validation and quick exit from parking.",
     "ctaQuote": "Request a quote",
-    "ctaDemo": "Schedule a demo",
+    "ctaDemo": "Contact us",
     "heroFeatures": {
       "h1": "Ticket validation",
       "h2": "Access control",
@@ -630,7 +630,7 @@
     "heroTitle": "Pay Point",
     "heroDesc": "Automatic payment terminal for modern parking facilities.",
     "ctaQuote": "Request a quote",
-    "ctaDemo": "Schedule a demo",
+    "ctaDemo": "Contact us",
     "heroFeatures": {
       "h1": "Card payment",
       "h2": "QR Code",
@@ -708,7 +708,7 @@
     "heroTitle": "BackOffice",
     "heroDesc": "Centralized platform for intelligent administration and monitoring of parking facilities.",
     "ctaQuote": "Request a quote",
-    "ctaDemo": "Schedule a demo",
+    "ctaDemo": "Contact us",
     "heroFeatures": {
       "h1": "Real-time monitoring",
       "h2": "Events and alerts",
@@ -918,6 +918,17 @@
     },
     "ctaTitle": "Turn data into smart decisions.",
     "ctaSubtitle": "Discover how BackOffice helps you increase the efficiency and revenue of your parking facilities."
+  },
+  "Chatbot": {
+    "title": "RParking Assistant",
+    "subtitle": "We help you quickly",
+    "welcomeMessage": "Hello! I'm the RParking virtual assistant. I can help you find the right solution for your business, solve a technical problem, or connect you with an RParking consultant. How can I help you today?",
+    "autoResponse": "Thank you for your message! A consultant will contact you soon. For immediate response, please contact us on WhatsApp.",
+    "placeholder": "Write here...",
+    "send": "Send",
+    "openChat": "Open chat",
+    "close": "Close",
+    "whatsapp": "Chat with a manager on WhatsApp"
   },
   "Solutions": {
     "title": "SOLUTIONS",

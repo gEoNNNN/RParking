@@ -28,7 +28,7 @@ const products = [
     title: 'BackOffice',
     descKey: 'backofficeDesc',
     link: '/products/backoffice',
-    image: '/img/produs4.jpg',
+    image: '/img/produs 4.png',
     isPhoto: true,
   },
 ];

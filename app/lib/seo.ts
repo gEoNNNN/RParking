@@ -4,4 +4,4 @@ export const SITE_NAME = 'RParking';
 export const COMPANY_NAME = 'RTi Systems';
 export const SITE_PHONE = '+373 69 116 121';
 
-export const DEFAULT_OG_IMAGE = '/img/mainbg.png';
+export const DEFAULT_OG_IMAGE = '/img/homepage.bg.png';

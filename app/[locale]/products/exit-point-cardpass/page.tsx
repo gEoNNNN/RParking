@@ -134,7 +134,7 @@ export default async function ExitPointCardPassPage({ params }: { params: Promis
         <section className="relative w-full overflow-hidden bg-white">
           {/* Desktop: Image full width from left */}
           <div className="hidden lg:block overflow-hidden" style={{ maxHeight: '85vh' }}>
-            <Image src="/img/produse/entry point.png" alt="" width={1627} height={967} className="w-full h-auto block object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
+            <Image src="/img/produse/entrybg.png" alt="" width={1627} height={967} className="w-full h-auto block object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Desktop fog - compact over text area */}
           <div className="hidden lg:block absolute inset-0 pointer-events-none" 
@@ -145,7 +145,7 @@ export default async function ExitPointCardPassPage({ params }: { params: Promis
 
           {/* Mobile image */}
           <div className="lg:hidden absolute inset-0 overflow-hidden" style={{ maxHeight: '85vh' }}>
-            <Image src="/img/produse/entry point.png" alt="" fill className="object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
+            <Image src="/img/produse/entrybg.png" alt="" fill className="object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Mobile fog */}
           <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 via-40% via-white/85 via-65% to-white/50 pointer-events-none" />
@@ -371,7 +371,7 @@ export default async function ExitPointCardPassPage({ params }: { params: Promis
       {/* ── Bottom CTA (dark) ── */}
       <section className="relative py-20 bg-gray-950 overflow-hidden">
         <div className="absolute inset-y-0 right-0 w-1/2 hidden lg:block">
-          <Image src="/img/produse/entry point.png" alt="" fill className="object-cover opacity-40" />
+          <Image src="/img/produse/entrybg.png" alt="" fill className="object-cover opacity-40" />
           <div className="absolute inset-0 bg-linear-to-r from-gray-950 via-gray-950/70 to-transparent" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">

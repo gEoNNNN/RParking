@@ -71,7 +71,7 @@ export default function HeroSection() {
       {/* Background image — starts below navbar, not full-screen height */}
       <div
         className="absolute inset-x-0 bottom-0 top-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/img/mainbg.png')" }}
+        style={{ backgroundImage: "url('/img/homepage.bg.png')" }}
       />
       {/* White overlay for mobile only */}
       <div className="absolute inset-0 bg-white/85 lg:hidden pointer-events-none" />

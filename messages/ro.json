@@ -7,14 +7,14 @@
     "products": "Produse",
     "solutions": "Soluții",
     "contact": "Contact",
-    "requestDemo": "Solicită demo",
+    "requestDemo": "Contactează-ne",
     "viewAllProducts": "Vezi toate produsele →"
   },
   "Hero": {
     "subtitle": "Soluția inteligentă pentru parcări moderne",
     "description": "Control complet al accesului, plăților și monitorizării într-o platformă integrată de hardware și software dezvoltată și produsă în Republica Moldova.",
     "requestQuote": "Solicită ofertă",
-    "scheduleDemo": "Programare demo",
+    "scheduleDemo": "Trimite mesaj",
     "badge1": { "l1": "Dezvoltat în", "l2": "Moldova" },
     "badge2": { "l1": "Hardware &", "l2": "Software propriu" },
     "badge3": { "l1": "Support tehnic", "l2": "dedicat" },
@@ -104,11 +104,11 @@
   },
   "CTA": {
     "title": "Ești gata să automatizezi parcarea?",
-    "description": "Solicită o demonstrație personalizată și află cum RParking poate aduce valoare afacerii dumneavoastră.",
-    "requestDemo": "Solicită demo",
-    "contactUs": "Contactați-ne",
+    "description": "Contactează-ne și află cum RParking poate aduce valoare afacerii dumneavoastră.",
+    "requestDemo": "Solicită ofertă",
+    "contactUs": "Contactează-ne",
     "requestQuote": "Solicită ofertă",
-    "scheduleDemo": "Programare demonstrație"
+    "scheduleDemo": "Trimite mesaj"
   },
   "Footer": {
     "products": "Produse",
@@ -149,7 +149,7 @@
     "bottomTitle1": "Doriți o soluție completă",
     "bottomTitle2": "pentru parcarea dvs.?",
     "bottomDesc": "Echipa noastră vă stă la dispoziție pentru a vă oferi cea mai bună soluție adaptată nevoilor dvs.",
-    "bottomDemo": "Solicită demonstrație",
+    "bottomDemo": "Contactează-ne",
     "why": {
       "complete": "Soluții complete hardware & software",
       "integration": "Integrare ușoară",
@@ -217,7 +217,7 @@
     "heroTitleSuffix": " în Chișinău",
     "heroDesc": "Sistem complet de automatizare a accesului, plăților și monitorizării pentru parcări moderne.",
     "ctaQuote": "Solicită ofertă",
-    "ctaDemo": "Programare demo",
+    "ctaDemo": "Contactează-ne",
     "badges": {
       "badge1": "Automatizare completă",
       "badge2": "Plăți cash și card",
@@ -265,7 +265,7 @@
     "bottomTitlePrefix": "Pregătim următoarele implementări ",
     "bottomTitleSuffix": "",
     "bottomDesc": "Platforma RParking este pregătită pentru centre comerciale, clădiri de birouri, parcări rezidențiale, aeroporturi și instituții publice.",
-    "bottomButton": "Solicită demonstrație"
+    "bottomButton": "Contactează-ne"
   },
   "DespreNoiPage": {
     "heroLabel": "DESPRE NOI",
@@ -338,15 +338,15 @@
     },
     "ctaTitle1": "Hai să transformăm parcarea ta",
     "ctaTitle2": "într-un sistem inteligent",
-    "ctaDemo": "Solicită demonstrație",
-    "ctaSchedule": "Programează demonstrație"
+    "ctaDemo": "Contactează-ne",
+    "ctaSchedule": "Trimite mesaj"
   },
   "PlatformaRParkingPage": {
     "heroLabel": "PLATFORMA RPARKING",
     "heroTitle": "Tehnologie inteligentă care <span>simplifică</span> parcările.",
     "heroDesc": "RParking combină echipamente inteligente, software avansat și conectivitate securizată într-o platformă unitară și scalabilă.",
     "ctaQuote": "Solicită ofertă",
-    "ctaDemo": "Programare demo",
+    "ctaDemo": "Contactează-ne",
     "badges": {
       "b1": "Fiabilă",
       "b2": "Securizată",
@@ -401,7 +401,7 @@
     "heroTitle": "Entry Point",
     "heroDesc": "Stație inteligentă pentru controlul accesului în parcări moderne.",
     "ctaQuote": "Solicită ofertă",
-    "ctaDemo": "Programare demonstrație",
+    "ctaDemo": "Contactează-ne",
     "heroFeatures": {
       "h1": "QR Code",
       "h2": "Asistență vocală",
@@ -476,7 +476,7 @@
     "heroTitle": "Exit Point <span>CardPass</span>",
     "heroDesc": "Stație inteligentă pentru validarea cardurilor și ieșirea rapidă din parcare.",
     "ctaQuote": "Solicită ofertă",
-    "ctaDemo": "Programare demonstrație",
+    "ctaDemo": "Contactează-ne",
     "heroFeatures": {
       "h1": "Validare card",
       "h2": "Control acces",
@@ -556,7 +556,7 @@
     "heroTitle": "Exit Point <span>Ticket</span>",
     "heroDesc": "Stație inteligentă pentru validarea tichetelor și ieșirea rapidă din parcare.",
     "ctaQuote": "Solicită ofertă",
-    "ctaDemo": "Programare demonstrație",
+    "ctaDemo": "Contactează-ne",
     "heroFeatures": {
       "h1": "Validare tichet",
       "h2": "Control acces",
@@ -630,7 +630,7 @@
     "heroTitle": "Pay Point",
     "heroDesc": "Terminal automat de plată pentru parcări moderne.",
     "ctaQuote": "Solicită ofertă",
-    "ctaDemo": "Programare demonstrație",
+    "ctaDemo": "Contactează-ne",
     "heroFeatures": {
       "h1": "Plată cu card",
       "h2": "QR Code",
@@ -708,7 +708,7 @@
     "heroTitle": "BackOffice",
     "heroDesc": "Platforma centralizată pentru administrarea și monitorizarea inteligentă a parcărilor.",
     "ctaQuote": "Solicită ofertă",
-    "ctaDemo": "Programare demonstrație",
+    "ctaDemo": "Contactează-ne",
     "heroFeatures": {
       "h1": "Monitorizare în timp real",
       "h2": "Evenimente și alerte",
@@ -918,6 +918,17 @@
     },
     "ctaTitle": "Transformă datele în decizii inteligente.",
     "ctaSubtitle": "Descoperă cum BackOffice te ajută să crești eficiența și veniturile parcărilor tale."
+  },
+  "Chatbot": {
+    "title": "Asistent RParking",
+    "subtitle": "Te ajutăm rapid",
+    "welcomeMessage": "Bună! Sunt asistentul virtual RParking. Vă pot ajuta să găsiți soluția potrivită pentru afacerea dvs., să rezolvați o problemă tehnică sau să vă conectez cu un consultant RParking. Cu ce vă pot ajuta astăzi?",
+    "autoResponse": "Mulțumim pentru mesaj! Un consultant vă va contacta în curând. Pentru răspuns imediat, vă rugăm să ne contactați pe WhatsApp.",
+    "placeholder": "Scrie aici...",
+    "send": "Trimite",
+    "openChat": "Deschide chat",
+    "close": "Închide",
+    "whatsapp": "Discută cu un manager pe WhatsApp"
   },
   "Solutions": {
     "title": "SOLUȚII",
