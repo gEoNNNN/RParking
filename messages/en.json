@@ -414,7 +414,7 @@
     "key": {
       "k1": { "title": "QR Code", "accent": "Scanner", "desc": "Scans and processes QR codes quickly." },
       "k2": { "title": "NFC / RFID", "accent": "Reader", "desc": "Reads NFC / RFID cards and tags." },
-      "k3": { "title": "Issuance", "accent": "access cards", "desc": "Issues access cards for users." },
+      "k3": { "title": "Card", "accent": "Issuance", "desc": "Automatically issues access cards upon arrival." },
       "k4": { "title": "Voice", "accent": "assistance", "desc": "Clear audio guidance for users." },
       "k5": { "title": "Integration", "accent": "barriers", "desc": "Automatic barrier opening." },
       "k6": { "title": "Centralized", "accent": "management", "desc": "Real-time control and monitoring from BackOffice." }
@@ -422,10 +422,10 @@
     "howTitle": "How it works?",
     "steps": {
       "s1": { "title": "Car arrives at Entry Point", "desc": "Vehicle approaches the entry terminal." },
-      "s2": { "title": "Scan QR Code / card", "desc": "User scans QR code or presents card." },
+      "s2": { "title": "Scan plate number", "desc": "The system automatically reads the vehicle license plate." },
       "s3": { "title": "Access card issued", "desc": "Station releases the access card." },
-      "s4": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." },
-      "s5": { "title": "Access permitted", "desc": "Vehicle enters, access is recorded." }
+      "s4": { "title": "Access permitted", "desc": "Vehicle enters, access is recorded." },
+      "s5": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." }
     },
     "hardwareTitle": "Hardware components",
     "hardwareSubtitle": "Main components",
@@ -840,7 +840,7 @@
   },
   "RChangePage": {
     "heroTitle": "RChange",
-    "heroDesc": "Automatic currency exchange available 24/7. Self-service solution for fast, simple and secure currency exchange.",
+    "heroDesc": "Banknote to coin exchange terminals.",
     "ctaQuote": "Request a quote",
     "ctaDetails": "View technical details",
     "heroFeatures": {
@@ -875,7 +875,7 @@
       "l6": "Tourist areas"
     },
     "stepsSubtitle": "Simple process",
-    "howTitle": "How it works?",
+    "howTitle": "Currency exchange",
     "stepsDesc": "Four simple steps for fast and automatic currency exchange",
     "steps": {
       "s1": { "title": "Insert banknote", "desc": "Customer inserts banknote into validation slot." },
@@ -886,13 +886,12 @@
     "specsTitle": "Technical specifications",
     "specs": {
       "sp1": { "label": "Display", "value": "10\" Touch" },
-      "sp2": { "label": "Validator", "value": "Multi-currency" },
+      "sp2": { "label": "Validator", "value": "Multi nominal" },
       "sp3": { "label": "Dispenser", "value": "8 coin types" },
       "sp4": { "label": "Capacity", "value": "2000+ coins" },
       "sp5": { "label": "Speed", "value": "< 10 seconds" },
       "sp6": { "label": "Communication", "value": "Ethernet / 4G" },
-      "sp7": { "label": "Management", "value": "Cloud BackOffice" },
-      "sp8": { "label": "Payments", "value": "Cash & Card" }
+      "sp7": { "label": "Management", "value": "Cloud BackOffice" }
     },
     "integrationTitle": "Full integration",
     "integrationDesc": "RChange integrates perfectly with the BackOffice platform for real-time monitoring of transactions, coin stock and detailed reports.",

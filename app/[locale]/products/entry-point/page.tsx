@@ -64,8 +64,8 @@ const steps = [
   { key: 's1', icon: <LuCar className="w-16 h-16 text-green-600" /> },
   { key: 's2', icon: <LuQrCode className="w-16 h-16 text-green-600" /> },
   { key: 's3', icon: <LuCreditCard className="w-16 h-16 text-green-600" /> },
-  { key: 's4', icon: <TbBarrierBlock className="w-16 h-16 text-green-600" /> },
-  { key: 's5', icon: <FaParking className="w-14 h-14 text-green-600" /> },
+  { key: 's4', icon: <FaParking className="w-14 h-14 text-green-600" /> },
+  { key: 's5', icon: <TbBarrierBlock className="w-16 h-16 text-green-600" /> },
 ];
 
 const hardware = [
@@ -177,13 +177,7 @@ export default async function EntryPointPage({ params }: { params: Promise<{ loc
                   href="/#contact"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
                 >
-                  {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/70 hover:bg-white hover:scale-105 active:scale-95"
-                >
-                  {t('ctaDemo')}
+                  {t('ctaDemo')} <LuArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -384,12 +378,6 @@ export default async function EntryPointPage({ params }: { params: Promise<{ loc
               {t('bottomDesc')}
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href="/#contact"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95 whitespace-nowrap"
-              >
-                {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-              </Link>
               <Link
                 href="/#contact"
                 className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-8 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/5 hover:bg-white/10 hover:scale-105 active:scale-95 whitespace-nowrap"

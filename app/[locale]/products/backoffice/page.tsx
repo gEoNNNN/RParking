@@ -142,15 +142,9 @@ export default async function BackOfficePage({ params }: { params: Promise<{ loc
               <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:shadow-lg hover:shadow-green-600/50 hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
                 >
-                  {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 border border-gray-300 hover:border-gray-500 text-gray-800 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm hover:bg-gray-50 hover:scale-105 active:scale-95"
-                >
-                  {t('ctaDemo')}
+                  {t('ctaDemo')} <LuArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -507,14 +501,6 @@ export default async function BackOfficePage({ params }: { params: Promise<{ loc
             </div>
             {/* Right - Buttons */}
             <div data-reveal="fade-left" className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
-              <Link
-                href="/#contact"
-                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 text-base shadow-lg shadow-green-600/30 hover:scale-105 active:scale-95 whitespace-nowrap"
-              >
-                <LuFileText className="w-5 h-5" />
-                {t('ctaQuote')}
-                <LuArrowRight className="w-5 h-5" />
-              </Link>
               <Link
                 href="/#contact"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/40 hover:border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 text-base whitespace-nowrap"

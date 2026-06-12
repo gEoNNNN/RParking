@@ -53,9 +53,9 @@ export default function BenefitsBar() {
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center">
           <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-10 w-full">
             {/* Left tagline */}
-            <div className="flex items-center gap-3 lg:w-72 shrink-0">
-              <LiaLeafSolid className="w-12 h-12 lg:w-16 lg:h-16 text-green-400 shrink-0" />
-              <p className="text-white text-lg lg:text-2xl font-bold leading-snug">
+            <div className="flex items-center gap-3 lg:w-80 shrink-0">
+              <LiaLeafSolid className="w-12 h-12 lg:w-14 lg:h-14 text-green-400 shrink-0" />
+              <p className="text-white text-lg lg:text-xl font-bold leading-snug">
                 {t('tagline1')}<br />{t('tagline2')}
               </p>
             </div>

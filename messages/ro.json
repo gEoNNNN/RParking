@@ -422,10 +422,10 @@
     "howTitle": "Cum funcționează?",
     "steps": {
       "s1": { "title": "Mașina ajunge la Entry Point", "desc": "Vehiculul se apropie de terminalul de intrare." },
-      "s2": { "title": "Scanare QR Code / card", "desc": "Utilizatorul scanează codul QR sau apropie cardul." },
+      "s2": { "title": "Scanare număr de înmatriculare", "desc": "Sistemul citește automat numărul de înmatriculare al vehiculului." },
       "s3": { "title": "Emitere card de acces", "desc": "Stația eliberează cardul de acces." },
-      "s4": { "title": "Bariera se deschide automat", "desc": "Bariera se ridică automat după validare." },
-      "s5": { "title": "Acces permis în parcare", "desc": "Vehiculul intră, accesul fiind înregistrat." }
+      "s4": { "title": "Acces permis în parcare", "desc": "Vehiculul intră, accesul fiind înregistrat." },
+      "s5": { "title": "Bariera se deschide automat", "desc": "Bariera se ridică automat după validare." }
     },
     "hardwareTitle": "Componente hardware",
     "hardwareSubtitle": "Componente principale",
@@ -840,7 +840,7 @@
   },
   "RChangePage": {
     "heroTitle": "RChange",
-    "heroDesc": "Schimb valutar automat disponibil 24/7. Soluție self-service pentru schimb valutar rapid, simplu și sigur.",
+    "heroDesc": "Terminale de schimb al bancnotelor în monede.",
     "ctaQuote": "Solicită ofertă",
     "ctaDetails": "Vezi detalii tehnice",
     "heroFeatures": {
@@ -875,7 +875,7 @@
       "l6": "Zone turistice"
     },
     "stepsSubtitle": "Proces simplu",
-    "howTitle": "Cum funcționează?",
+    "howTitle": "Schimb valutar",
     "stepsDesc": "Patru pași simpli pentru un schimb valutar rapid și automat",
     "steps": {
       "s1": { "title": "Introduci bancnota", "desc": "Clientul introduce bancnota în fanta de validare." },
@@ -886,13 +886,12 @@
     "specsTitle": "Specificații tehnice",
     "specs": {
       "sp1": { "label": "Display", "value": "10\" Touch" },
-      "sp2": { "label": "Validator", "value": "Multi-valută" },
+      "sp2": { "label": "Validator", "value": "Multi nominal" },
       "sp3": { "label": "Dispenser", "value": "8 tipuri monede" },
       "sp4": { "label": "Capacitate", "value": "2000+ monede" },
       "sp5": { "label": "Viteză", "value": "< 10 secunde" },
       "sp6": { "label": "Comunicație", "value": "Ethernet / 4G" },
-      "sp7": { "label": "Management", "value": "Cloud BackOffice" },
-      "sp8": { "label": "Plăți", "value": "Cash & Card" }
+      "sp7": { "label": "Management", "value": "Cloud BackOffice" }
     },
     "integrationTitle": "Integrare completă",
     "integrationDesc": "RChange se integrează perfect cu platforma BackOffice pentru monitorizare în timp real a tranzacțiilor, stocului de monede și rapoarte detaliate.",

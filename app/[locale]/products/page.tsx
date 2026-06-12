@@ -53,7 +53,7 @@ const products = [
   { key: 'entry', title: 'Entry Point', href: '/products/entry-point', image: '/img/produs1 - Copy.png', icon: <LuLogIn className="w-6 h-6 text-green-600" /> },
   { key: 'exit', title: 'Exit Point', href: '/products/exit-point-cardpass', image: '/img/produs2 - Copy.png', icon: <LuLogOut className="w-6 h-6 text-green-600" /> },
   { key: 'pay', title: 'Pay Point', href: '/products/pay-point', image: '/img/produs3 - Copy.png', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
-  { key: 'backoffice', title: 'BackOffice', href: '/products/backoffice', image: null, icon: <LuLayoutDashboard className="w-6 h-6 text-green-600" /> },
+  { key: 'backoffice', title: 'BackOffice', href: '/products/backoffice', image: '/img/back.jpg', icon: <LuLayoutDashboard className="w-6 h-6 text-green-600" /> },
 ];
 
 const whyUs = [
@@ -113,11 +113,11 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
         <section className="relative w-full overflow-hidden bg-white min-h-[60vh] lg:min-h-0">
           {/* Mobile Background Image */}
           <div className="lg:hidden absolute inset-0">
-            <Image src="/img/produse/produse.png" alt="" fill className="object-cover object-center opacity-20" quality={95} priority />
+            <Image src="/img/produsebg.png" alt="" fill className="object-cover object-center opacity-20" quality={95} priority />
           </div>
           {/* Image full width from left - Desktop */}
           <div className="hidden lg:block overflow-hidden" style={{ maxHeight: '85vh' }}>
-            <Image src="/img/produse/produse.png" alt="" width={1693} height={929} className="w-full h-auto block object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
+            <Image src="/img/produsebg.png" alt="" width={1693} height={929} className="w-full h-auto block object-cover" style={{ objectPosition: 'center top' }} quality={95} priority />
           </div>
           {/* Desktop fog - compact over text area */}
           <div className="hidden lg:block absolute inset-0 pointer-events-none" 
@@ -155,13 +155,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
                   href="/#contact"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
                 >
-                  {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/70 hover:bg-white hover:scale-105 active:scale-95"
-                >
-                  {t('ctaDetails')}
+                  {t('ctaDetails')} <LuArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -269,7 +263,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
       {/* ── Bottom CTA ── */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/img/produse/produse.png" alt="" fill className="object-cover object-center" quality={90} />
+          <Image src="/img/produsebg.png" alt="" fill className="object-cover object-center" quality={90} />
         </div>
         <div className="absolute inset-0 bg-gray-950/75 pointer-events-none" />
 
@@ -285,13 +279,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
               href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95"
             >
-              {t('bottomDemo')} <LuArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-md transition-all duration-200 text-sm bg-white/10 hover:bg-white/20 hover:scale-105 active:scale-95"
-            >
-              {t('ctaDetails')}
+              {t('ctaDetails')} <LuArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>

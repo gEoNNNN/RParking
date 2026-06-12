@@ -331,12 +331,6 @@ export default async function DespreNoiPage({ params }: { params: Promise<{ loca
               >
                 {t('ctaDemo')} <LuArrowRight className="w-4 h-4" />
               </a>
-              <a
-                href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-md transition-all duration-200 text-sm bg-white/10 hover:bg-white/20 hover:scale-105 active:scale-95"
-              >
-                {t('ctaSchedule')}
-              </a>
             </div>
           </div>
         </div>

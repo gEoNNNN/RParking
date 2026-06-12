@@ -87,7 +87,6 @@ const specs = [
   { key: 'sp5', icon: <LuZap className="w-4 h-4 text-gray-400" /> },
   { key: 'sp6', icon: <LuWifi className="w-4 h-4 text-gray-400" /> },
   { key: 'sp7', icon: <LuSettings className="w-4 h-4 text-gray-400" /> },
-  { key: 'sp8', icon: <LuSmartphone className="w-4 h-4 text-gray-400" /> },
 ];
 
 export default async function RChangePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -146,15 +145,8 @@ export default async function RChangePage({ params }: { params: Promise<{ locale
               {/* CTAs */}
               <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
                 <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
-                >
-                  {t('ctaQuote')}
-                  <LuArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
                   href="#specs"
-                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
                 >
                   {t('ctaDetails')}
                   <LuArrowRight className="w-4 h-4" />
@@ -368,13 +360,6 @@ export default async function RChangePage({ params }: { params: Promise<{ locale
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-md transition-all duration-200 hover:scale-105 shadow-lg shadow-green-900/40"
-                >
-                  {t('ctaQuote')}
-                  <LuArrowRight className="w-4 h-4" />
-                </Link>
                 <Link
                   href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200"

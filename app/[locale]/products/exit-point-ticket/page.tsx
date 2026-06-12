@@ -137,15 +137,9 @@ export default async function ExitPointTicketPage({ params }: { params: Promise<
                 <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
                   <Link
                     href="/#contact"
-                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:shadow-lg hover:shadow-green-600/50 hover:scale-105 active:scale-95"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
                   >
-                    {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/#contact"
-                    className="inline-flex items-center gap-2 border border-gray-300 hover:border-green-500 text-gray-700 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm hover:bg-green-50 hover:scale-105 active:scale-95"
-                  >
-                    {t('ctaDemo')}
+                    {t('ctaDemo')} <LuArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -370,12 +364,6 @@ export default async function ExitPointTicketPage({ params }: { params: Promise<
               {t('bottomDesc')}
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href="/#contact"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95 whitespace-nowrap"
-              >
-                {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-              </Link>
               <Link
                 href="/#contact"
                 className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-8 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/5 hover:bg-white/10 hover:scale-105 active:scale-95 whitespace-nowrap"

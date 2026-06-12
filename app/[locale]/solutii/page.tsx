@@ -83,7 +83,7 @@ export default async function SolutiiPage({ params }: { params: Promise<{ locale
         <section className="relative w-full min-h-[75vh] flex items-center overflow-hidden">
           {/* Background */}
           <div className="absolute inset-0">
-            <Image src="/img/home.png" alt="" fill className="object-cover object-center" quality={95} priority />
+            <Image src="/img/solutiibg.png" alt="" fill className="object-cover object-center" quality={95} priority />
           </div>
           {/* White fog - mobile full, desktop 75% */}
           <div className="lg:hidden absolute inset-0 bg-linear-to-r from-white via-white/95 to-white/70 pointer-events-none" />

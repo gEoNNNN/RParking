@@ -129,12 +129,6 @@ export default async function PlatformaRParkingPage({ params }: { params: Promis
                 >
                   {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
                 </Link>
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/70 hover:bg-white hover:scale-105 active:scale-95"
-                >
-                  {t('ctaDemo')}
-                </Link>
               </div>
 
               {/* Hero badges */}
@@ -293,12 +287,6 @@ export default async function PlatformaRParkingPage({ params }: { params: Promis
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:scale-105 active:scale-95 whitespace-nowrap"
             >
               {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/#contact"
-              className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-8 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/5 hover:bg-white/10 hover:scale-105 active:scale-95 whitespace-nowrap"
-            >
-              {t('ctaDemo')}
             </Link>
           </div>
         </div>
