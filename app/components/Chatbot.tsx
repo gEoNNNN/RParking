@@ -2,13 +2,24 @@
 import { useState, useRef, useEffect } from 'react';
 import { LuSend, LuX, LuMessageCircle } from 'react-icons/lu';
 import { FaWhatsapp } from 'react-icons/fa';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+
+const API_BASE = 'https://rparking-chatbot.onrender.com/api';
+
+const nowTime = () => {
+  const now = new Date();
+  return `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+};
 
 export default function Chatbot() {
   const t = useTranslations('Chatbot');
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState<Array<{ text: string; isBot: boolean; time: string }>>([]);
+  const [conversationId, setConversationId] = useState<string | null>(null);
+  const [isTyping, setIsTyping] = useState(false);
+  const [started, setStarted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -17,41 +28,61 @@ export default function Chatbot() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isTyping]);
 
+  // Start the conversation with the backend when the chat is opened for the first time
   useEffect(() => {
-    if (isOpen && messages.length === 0) {
-      const now = new Date();
-      const time = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
-      setMessages([
-        {
-          text: t('welcomeMessage'),
-          isBot: true,
-          time: time,
-        },
-      ]);
-    }
-  }, [isOpen, messages.length, t]);
+    if (!isOpen || started) return;
+    setStarted(true);
 
-  const handleSend = () => {
-    if (!message.trim()) return;
+    const startChat = async () => {
+      setIsTyping(true);
+      try {
+        const res = await fetch(`${API_BASE}/chat`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lang: locale }),
+        });
+        const data = await res.json();
+        if (data.conversation_id) setConversationId(data.conversation_id);
+        setMessages([{ text: data.reply ?? t('welcomeMessage'), isBot: true, time: nowTime() }]);
+      } catch {
+        setMessages([{ text: t('welcomeMessage'), isBot: true, time: nowTime() }]);
+      } finally {
+        setIsTyping(false);
+      }
+    };
 
-    const now = new Date();
-    const time = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+    startChat();
+  }, [isOpen, started, t, locale]);
 
-    setMessages([...messages, { text: message, isBot: false, time }]);
+  const handleSend = async () => {
+    const text = message.trim();
+    if (!text || isTyping) return;
+
+    setMessages((prev) => [...prev, { text, isBot: false, time: nowTime() }]);
     setMessage('');
+    setIsTyping(true);
 
-    setTimeout(() => {
-      setMessages((prev) => [
-        ...prev,
-        {
-          text: t('autoResponse'),
-          isBot: true,
-          time: `${now.getHours().toString().padStart(2, '0')}:${(now.getMinutes() + 1).toString().padStart(2, '0')}`,
-        },
-      ]);
-    }, 1000);
+    try {
+      const res = await fetch(`${API_BASE}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ conversation_id: conversationId, message: text }),
+      });
+      const data = await res.json();
+
+      if (data.error) {
+        setMessages((prev) => [...prev, { text: t('errorMessage'), isBot: true, time: nowTime() }]);
+      } else {
+        if (data.conversation_id) setConversationId(data.conversation_id);
+        setMessages((prev) => [...prev, { text: data.reply, isBot: true, time: nowTime() }]);
+      }
+    } catch {
+      setMessages((prev) => [...prev, { text: t('errorMessage'), isBot: true, time: nowTime() }]);
+    } finally {
+      setIsTyping(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -114,6 +145,20 @@ export default function Chatbot() {
                 </div>
               </div>
             ))}
+            {isTyping && (
+              <div className="flex justify-start animate-fadeIn">
+                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-2 shrink-0">
+                  R
+                </div>
+                <div className="bg-white rounded-2xl px-4 py-3 shadow-sm">
+                  <div className="flex gap-1 items-center h-5">
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-typing" style={{ animationDelay: '0ms' }} />
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-typing" style={{ animationDelay: '150ms' }} />
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-typing" style={{ animationDelay: '300ms' }} />
+                  </div>
+                </div>
+              </div>
+            )}
             <div ref={messagesEndRef} />
           </div>
 
@@ -125,12 +170,13 @@ export default function Chatbot() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
+                disabled={isTyping}
                 placeholder={t('placeholder')}
-                className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+                className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm disabled:bg-gray-50"
               />
               <button
                 onClick={handleSend}
-                disabled={!message.trim()}
+                disabled={!message.trim() || isTyping}
                 className="w-11 h-11 sm:w-12 sm:h-12 bg-green-600 hover:bg-green-500 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 shadow-md shrink-0"
                 aria-label={t('send')}
               >
@@ -187,6 +233,21 @@ export default function Chatbot() {
           50% {
             transform: translateY(-8px);
           }
+        }
+
+        @keyframes typing {
+          0%, 60%, 100% {
+            transform: translateY(0);
+            opacity: 0.4;
+          }
+          30% {
+            transform: translateY(-6px);
+            opacity: 1;
+          }
+        }
+
+        .animate-typing {
+          animation: typing 1.2s ease-in-out infinite;
         }
 
         .animate-scaleIn {

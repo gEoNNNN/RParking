@@ -928,7 +928,8 @@
     "send": "Trimite",
     "openChat": "Deschide chat",
     "close": "Închide",
-    "whatsapp": "Discută cu un manager pe WhatsApp"
+    "whatsapp": "Discută cu un manager pe WhatsApp",
+    "errorMessage": "Ne pare rău, a apărut o eroare. Vă rugăm să încercați din nou sau să ne contactați pe WhatsApp."
   },
   "Solutions": {
     "title": "SOLUȚII",

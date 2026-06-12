@@ -928,7 +928,8 @@
     "send": "Send",
     "openChat": "Open chat",
     "close": "Close",
-    "whatsapp": "Chat with a manager on WhatsApp"
+    "whatsapp": "Chat with a manager on WhatsApp",
+    "errorMessage": "Sorry, an error occurred. Please try again or contact us on WhatsApp."
   },
   "Solutions": {
     "title": "SOLUTIONS",
