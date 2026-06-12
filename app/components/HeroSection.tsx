@@ -75,6 +75,13 @@ export default function HeroSection() {
       />
       {/* White overlay for mobile only */}
       <div className="absolute inset-0 bg-white/85 lg:hidden pointer-events-none" />
+      {/* Desktop fog over text area - copied from product pages */}
+      <div
+        className="hidden lg:block absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 60% 110% at 5% 45%, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 20%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.6) 60%, transparent 80%)'
+        }}
+      />
       {/* White fog behind badges - desktop oval shape */}
       <div className="hidden lg:block absolute bottom-[-5%] left-[-10%] w-[70%] h-[60%] bg-radial-gradient from-white/95 via-white/80 to-transparent pointer-events-none rounded-full blur-3xl" style={{ background: 'radial-gradient(ellipse 80% 60% at 30% 70%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 70%)' }} />
 
@@ -105,12 +112,6 @@ export default function HeroSection() {
             >
               {t('requestQuote')}
               <LuArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"
-            >
-              {t('scheduleDemo')}
             </a>
           </div>
 
