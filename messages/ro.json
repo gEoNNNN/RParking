@@ -162,7 +162,7 @@
       "entry": {
         "subtitle": "Stație de intrare",
         "desc": "Stație inteligentă pentru controlul accesului în parcări moderne.",
-        "features": ["Emitere card acces", "Citire NFC", "Citire QR Code", "Comunicare vocală", "Integrare barieră", "Management centralizat"]
+        "features": ["Emitere card de acces", "Citire NFC", "Citire QR Code", "Comunicare vocală", "Integrare barieră", "Management centralizat"]
       },
       "exit": {
         "subtitle": "Stație de ieșire",
@@ -407,7 +407,7 @@
       "h2": "Asistență vocală",
       "h3": "NFC / RFID",
       "h4": "Integrare cu bariere",
-      "h5": "Emitere card acces",
+      "h5": "Emitere card de acces",
       "h6": "Management centralizat"
     },
     "keyFeaturesTitle": "Funcționalități cheie",
@@ -848,8 +848,8 @@
       "h2": "Schimb rapid și simplu",
       "h3": "Fără comisioane ascunse"
     },
-    "featuresTitle": "Schimb valutar <span>inteligent</span>",
-    "featuresDesc": "RChange este soluția ideală pentru locațiile cu trafic intens de turiști și călători. Oferă schimb valutar rapid, fără comisioane ascunse și disponibil non-stop.",
+    "featuresTitle": "Schimb bancnote <span>pe monede sau jetoane</span>",
+    "featuresDesc": "RChange este soluția ideală pentru locațiile cu trafic intens. Oferă schimb bancnote pe monede sau jetoane rapid, fără comisioane ascunse și disponibil non-stop.",
     "key": {
       "k1": { "title": "Disponibil", "accent": "non-stop", "desc": "Funcționează 24/7 fără supraveghere umană." },
       "k2": { "title": "Schimb rapid", "accent": "și simplu", "desc": "Validare instantă și eliberare automată de monede." },
@@ -857,7 +857,7 @@
     },
     "componentsSubtitle": "Echipament",
     "componentsTitle": "Componente <span>principale</span>",
-    "componentsDesc": "Fiecare terminal RChange integrează componente de înaltă calitate pentru o experiență de schimb valutar rapidă și sigură.",
+    "componentsDesc": "Fiecare terminal RChange integrează componente de înaltă calitate pentru un schimb de bancnote pe monede sau jetoane rapid și sigur.",
     "componentFeatures": {
       "c1": { "title": "Ecran tactil intuitiv", "desc": "Interfață prietenoasă cu instrucțiuni clare, pas cu pas." },
       "c2": { "title": "Validator de bancnote", "desc": "Detectare avansată a autenticității bancnotelor." },
@@ -875,8 +875,8 @@
       "l6": "Zone turistice"
     },
     "stepsSubtitle": "Proces simplu",
-    "howTitle": "Schimb valutar",
-    "stepsDesc": "Patru pași simpli pentru un schimb valutar rapid și automat",
+    "howTitle": "Schimb bancnote pe monede sau jetoane",
+    "stepsDesc": "Patru pași simpli pentru un schimb rapid și automat",
     "steps": {
       "s1": { "title": "Introduci bancnota", "desc": "Clientul introduce bancnota în fanta de validare." },
       "s2": { "title": "Aparatul verifică", "desc": "Sistemul validează bancnota și calculează suma în monede." },
@@ -902,7 +902,7 @@
       "t4": "Monitorizare"
     },
     "ctaTitle": "Simplu. Rapid. <span>Disponibil 24/7.</span>",
-    "ctaDesc": "Oferă clienților tăi o experiență modernă de schimb valutar.",
+    "ctaDesc": "Oferă clienților tăi o experiență modernă de schimb bancnote pe monede sau jetoane.",
     "ctaDemo": "Programează demonstrație"
   },
   "Backoffice": {
@@ -962,7 +962,7 @@
     "subtitle": "Portofoliu diversificat de soluții inteligente pentru automatizare și control acces.",
     "rparking": "Automatizare completă a parcărilor.",
     "racess": "Control acces și taxare pentru grupuri sanitare publice.",
-    "rchange": "Automat self-service pentru schimb valutar și servicii automate.",
+    "rchange": "Terminale de schimb al bancnotelor în monede.",
     "details": "Detalii"
   },
   "LanguageSwitcher": {

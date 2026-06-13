@@ -848,8 +848,8 @@
       "h2": "Fast and simple exchange",
       "h3": "No hidden fees"
     },
-    "featuresTitle": "Intelligent <span>currency exchange</span>",
-    "featuresDesc": "RChange is the ideal solution for locations with high tourist and passenger traffic. Offers fast currency exchange without hidden fees, available 24/7.",
+    "featuresTitle": "Banknote to <span>coin or token exchange</span>",
+    "featuresDesc": "RChange is the ideal solution for high-traffic locations. Offers fast banknote to coin or token exchange without hidden fees, available 24/7.",
     "key": {
       "k1": { "title": "Available", "accent": "24/7", "desc": "Works 24/7 without human supervision." },
       "k2": { "title": "Fast exchange", "accent": "and simple", "desc": "Instant validation and automatic coin dispensing." },
@@ -857,7 +857,7 @@
     },
     "componentsSubtitle": "Equipment",
     "componentsTitle": "Main <span>components</span>",
-    "componentsDesc": "Each RChange terminal integrates high-quality components for a fast and secure currency exchange experience.",
+    "componentsDesc": "Each RChange terminal integrates high-quality components for a fast and secure banknote to coin exchange experience.",
     "componentFeatures": {
       "c1": { "title": "Intuitive touch screen", "desc": "Friendly interface with clear step-by-step instructions." },
       "c2": { "title": "Banknote validator", "desc": "Advanced banknote authenticity detection." },
@@ -875,8 +875,8 @@
       "l6": "Tourist areas"
     },
     "stepsSubtitle": "Simple process",
-    "howTitle": "Currency exchange",
-    "stepsDesc": "Four simple steps for fast and automatic currency exchange",
+    "howTitle": "Banknote to coin or token exchange",
+    "stepsDesc": "Four simple steps for fast and automatic banknote exchange",
     "steps": {
       "s1": { "title": "Insert banknote", "desc": "Customer inserts banknote into validation slot." },
       "s2": { "title": "Machine verifies", "desc": "System validates banknote and calculates coin amount." },
@@ -902,7 +902,7 @@
       "t4": "Monitoring"
     },
     "ctaTitle": "Simple. Fast. <span>Available 24/7.</span>",
-    "ctaDesc": "Offer your customers a modern currency exchange experience.",
+    "ctaDesc": "Offer your customers a modern banknote to coin or token exchange experience.",
     "ctaDemo": "Schedule a demo"
   },
   "Backoffice": {
@@ -962,7 +962,7 @@
     "subtitle": "A diversified portfolio of intelligent solutions for automation and access control.",
     "rparking": "Complete parking automation.",
     "racess": "Access control and payment for public restrooms.",
-    "rchange": "Self-service machine for currency exchange and automated services.",
+    "rchange": "Banknote to coin exchange terminals.",
     "details": "Details"
   },
   "LanguageSwitcher": {

@@ -143,7 +143,7 @@ export default async function RAccessWCPage({ params }: { params: Promise<{ loca
               </div>
 
               {/* CTAs */}
-              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
+              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4 lg:ml-28">
                 <Link
                   href="#specs"
                   className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/60 hover:bg-white hover:scale-105 active:scale-95"

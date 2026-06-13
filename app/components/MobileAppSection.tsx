@@ -28,7 +28,7 @@ const mockupImages = [
   '/img/mockup1.png',
   '/img/mockup2.png',
   '/img/mockup3.png',
-  '/img/mockup4.png',
+  '/img/mockup5.png',
 ];
 
 export default function MobileAppSection() {
@@ -59,18 +59,15 @@ export default function MobileAppSection() {
             </p>
 
             {/* Features */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-5 mb-8">
               {features.map((feature, idx) => (
                 <div
                   key={idx}
                   data-reveal
                   data-reveal-delay={String(idx * 100)}
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-0"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
-                    {feature.icon}
-                  </div>
-                  <p className="text-gray-700 font-medium pt-2.5">{t(feature.key)}</p>
+                  <p className="text-gray-700 font-medium text-base leading-relaxed">{t(feature.key)}</p>
                 </div>
               ))}
             </div>

@@ -21,7 +21,7 @@ const products = [
     title: 'Pay Point',
     descKey: 'payDesc',
     link: '/products/pay-point',
-    image: '/img/produs3 - Copy.png',
+    image: '/img/paypoint.png',
     isPhoto: true,
   },
   {

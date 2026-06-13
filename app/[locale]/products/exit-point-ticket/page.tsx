@@ -79,8 +79,8 @@ const integrations = [
 
 const ecosystem = [
   { key: 'e1', href: '/products/entry-point', image: '/img/produs1 - Copy.png', icon: null },
-  { key: 'e2', href: '/products/pay-point', image: '/img/produs3 - Copy.png', icon: null },
-  { key: 'e3', href: '/products/backoffice', image: null, icon: <LuLayoutDashboard className="w-10 h-10 text-green-600" /> },
+  { key: 'e2', href: '/products/pay-point', image: '/img/paypoint.png', icon: null },
+  { key: 'e3', href: '/products/backoffice', image: '/img/back.jpg', icon: null },
 ];
 
 export default async function ExitPointTicketPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -134,7 +134,7 @@ export default async function ExitPointTicketPage({ params }: { params: Promise<
                 </div>
 
                 {/* CTA buttons */}
-                <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
+                <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4 lg:ml-28">
                   <Link
                     href="/#contact"
                     className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
@@ -169,19 +169,16 @@ export default async function ExitPointTicketPage({ params }: { params: Promise<
             <div className="w-12 h-0.5 bg-green-500" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {keyFeatures.map((f, idx) => (
               <div
                 key={f.key}
                 data-reveal
                 data-reveal-delay={String((idx % 6) * 80)}
-                className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-5"
+                className="border-l-4 border-green-500 pl-5 py-4 rounded-r-xl bg-gray-50/60 hover:bg-green-50/40 transition-colors duration-200"
               >
-                <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-4">
-                  {f.icon}
-                </div>
                 <h3 className="text-gray-900 font-bold text-base leading-tight mb-1.5">
-                  {t(`key.${f.key}.title`)} <span className="block text-green-600">{t(`key.${f.key}.accent`)}</span>
+                  {t(`key.${f.key}.title`)} <span className="text-green-600">{t(`key.${f.key}.accent`)}</span>
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{t(`key.${f.key}.desc`)}</p>
               </div>
@@ -264,10 +261,10 @@ export default async function ExitPointTicketPage({ params }: { params: Promise<
         </div>
       </section>
 
-      {/* ── Specificații tehnice + Integrare ── */}
+      {/* ── Specificații tehnice ── */}
       <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid lg:grid-cols-1 gap-10">
             <div data-reveal="fade-left">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-3">{t('specsTitle')}</h2>
@@ -281,23 +278,6 @@ export default async function ExitPointTicketPage({ params }: { params: Promise<
                       {t(`specs.${s.key}.label`)}
                     </span>
                     <span className="text-gray-900 font-semibold text-sm text-right">{t(`specs.${s.key}.value`)}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div data-reveal="fade-right">
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">{t('integrationTitle')}</h2>
-                <div className="w-12 h-0.5 bg-green-500" />
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10">
-                {integrations.map((i) => (
-                  <div key={i.key} className="flex flex-col items-center text-center gap-2">
-                    <div className="w-16 h-16 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-green-300">
-                      {i.icon}
-                    </div>
-                    <span className="text-gray-700 text-xs font-semibold leading-tight">{t(`integrations.${i.key}`)}</span>
                   </div>
                 ))}
               </div>

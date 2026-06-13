@@ -122,7 +122,7 @@ export default async function PlatformaRParkingPage({ params }: { params: Promis
               </p>
 
               {/* CTA buttons */}
-              <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-10">
+              <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-10 lg:ml-28">
                 <Link
                   href="/#contact"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/30 hover:shadow-lg hover:shadow-green-600/50 hover:scale-105 active:scale-95"
@@ -177,7 +177,7 @@ export default async function PlatformaRParkingPage({ params }: { params: Promis
       </section>
 
       {/* ── De ce tehnologia ── */}
-      <section className="py-16" style={{ backgroundColor: '#f7f9f4' }}>
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div data-reveal="fade" className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-3">
@@ -186,13 +186,17 @@ export default async function PlatformaRParkingPage({ params }: { params: Promis
             <div className="w-12 h-0.5 bg-green-500" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {whyFeatures.map((f, idx) => (
-              <div key={f.key} data-reveal data-reveal-delay={String((idx % 3) * 100)} className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-6">
-                <div className="w-14 h-14 rounded-xl bg-green-50 flex items-center justify-center mb-4">
-                  {f.icon}
-                </div>
-                <h3 className="text-gray-900 font-bold text-base mb-1.5">{t(`why.${f.key}.title`)}</h3>
+              <div
+                key={f.key}
+                data-reveal
+                data-reveal-delay={String((idx % 6) * 80)}
+                className="border-l-4 border-green-500 pl-5 py-4 rounded-r-xl bg-gray-50/60 hover:bg-green-50/40 transition-colors duration-200"
+              >
+                <h3 className="text-gray-900 font-bold text-base leading-tight mb-1.5">
+                  {t(`why.${f.key}.title`)}
+                </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{t(`why.${f.key}.description`)}</p>
               </div>
             ))}

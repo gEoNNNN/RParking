@@ -2,7 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
-import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuPlane, LuSettings2, LuUsers, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
+import { LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard, LuArrowRight, LuSettings2, LuShieldCheck, LuClock, LuZap } from 'react-icons/lu';
+import { IoSettingsOutline } from 'react-icons/io5';
+import { BiSupport } from 'react-icons/bi';
 
 export default function HeroSection() {
   const t = useTranslations('Hero');
@@ -38,7 +40,7 @@ export default function HeroSection() {
     {
       line1: t('badge1.l1'),
       line2: t('badge1.l2'),
-      icon: <LuPlane className="w-7 h-7 text-green-600 shrink-0" />,
+      icon: <IoSettingsOutline className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
       line1: t('badge2.l1'),
@@ -48,7 +50,7 @@ export default function HeroSection() {
     {
       line1: t('badge3.l1'),
       line2: t('badge3.l2'),
-      icon: <LuUsers className="w-7 h-7 text-green-600 shrink-0" />,
+      icon: <BiSupport className="w-7 h-7 text-green-600 shrink-0" />,
     },
     {
       line1: t('badge4.l1'),
@@ -105,7 +107,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTA buttons */}
-          <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-12 md:mb-20">
+          <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-12 md:mb-20 lg:ml-28">
             <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"

@@ -76,7 +76,7 @@ const usedProducts = [
   { image: '/img/implementari/RParking%20entry%20point.png', key: 'u1' },
   { image: '/img/implementari/rparking%20exit%20point.png', key: 'u2' },
   { image: '/img/implementari/rparking%20pay%20point.png', key: 'u3' },
-  { image: '/img/implementari/RParking%20back%20office.png', key: 'u4' },
+  { image: '/img/back.jpg', key: 'u4' },
 ];
 
 const benefits = [
@@ -133,18 +133,12 @@ export default async function ImplementariPage({ params }: { params: Promise<{ l
               </p>
 
               {/* CTA buttons */}
-              <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-10">
+              <div data-reveal data-reveal-delay="340" className="flex flex-wrap items-center gap-4 mb-10 lg:ml-28">
                 <Link
                   href="/#contact"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
                 >
                   {t('ctaQuote')} <LuArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 border border-gray-400 hover:border-green-600 text-gray-800 hover:text-green-600 font-semibold px-7 py-3.5 rounded-md transition-all duration-200 text-sm bg-white/70 hover:bg-white hover:scale-105 active:scale-95"
-                >
-                  {t('ctaDemo')}
                 </Link>
               </div>
 

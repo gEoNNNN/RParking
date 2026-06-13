@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const products = [
   { key: 'entry', title: 'Entry Point', href: '/products/entry-point', image: '/img/produs1 - Copy.png', icon: <LuLogIn className="w-6 h-6 text-green-600" /> },
   { key: 'exit', title: 'Exit Point', href: '/products/exit-point-cardpass', image: '/img/produs2 - Copy.png', icon: <LuLogOut className="w-6 h-6 text-green-600" /> },
-  { key: 'pay', title: 'Pay Point', href: '/products/pay-point', image: '/img/produs3 - Copy.png', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
+  { key: 'pay', title: 'Pay Point', href: '/products/pay-point', image: '/img/paypoint.png', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
   { key: 'backoffice', title: 'BackOffice', href: '/products/backoffice', image: '/img/back.jpg', icon: <LuLayoutDashboard className="w-6 h-6 text-green-600" /> },
 ];
 
@@ -150,7 +150,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
                 ))}
               </div>
 
-              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
+              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4 lg:ml-28">
                 <Link
                   href="/#contact"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"

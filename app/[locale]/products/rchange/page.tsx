@@ -143,7 +143,7 @@ export default async function RChangePage({ params }: { params: Promise<{ locale
               </div>
 
               {/* CTAs */}
-              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4">
+              <div data-reveal data-reveal-delay="430" className="flex flex-wrap items-center gap-4 lg:ml-28">
                 <Link
                   href="#specs"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-3.5 rounded-md transition-all duration-200 text-sm shadow-md shadow-green-600/25 hover:shadow-lg hover:shadow-green-600/40 hover:scale-105 active:scale-95"
