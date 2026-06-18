@@ -243,7 +243,11 @@
       "g4": { "title": "Flux intrare – ieșire", "description": "Experiență fluidă și sigură pentru utilizatori." },
       "g5": { "title": "Pay Point", "description": "Plăți cash și card, chitanță automată, interfață intuitivă." },
       "g6": { "title": "Control acces", "description": "Echipamente moderne pentru verificare rapidă și sigură." },
-      "g7": { "title": "Instalare profesională", "description": "Implementare curată, integrată perfect în infrastructura parcării." }
+      "g7": { "title": "Instalare profesională", "description": "Implementare curată, integrată perfect în infrastructura parcării." },
+      "g8": { "title": "Parcare în funcțiune", "description": "Sistem RParking activ, cu flux complet automatizat de intrare și ieșire." },
+      "g9": { "title": "Terminal de acces", "description": "Echipament de control acces instalat și operațional în parcare." },
+      "g10": { "title": "Infrastructură parcare", "description": "Vedere de ansamblu asupra infrastructurii parcării automatizate." },
+      "g11": { "title": "Implementare completă", "description": "Proiect finalizat cu echipamente RParking integrate în mediul real." }
     },
     "usedTitle": "Produse utilizate în această implementare",
     "used": {

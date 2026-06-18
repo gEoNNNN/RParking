@@ -70,6 +70,10 @@ const gallery = [
   { image: '/img/implementari/pay%20point.png', key: 'g5', span: true },
   { image: '/img/implementari/control%20acces.png', key: 'g6', span: false },
   { image: '/img/implementari/instalare%20profesionala.png', key: 'g7', span: false },
+  { image: '/img/implementarea%2013.jpg', key: 'g8', span: false },
+  { image: '/img/implementarea%2014.jpg', key: 'g9', span: false },
+  { image: '/img/implementarea%2016.jpg', key: 'g10', span: false },
+  { image: '/img/implementarea%2017.jpg', key: 'g11', span: false },
 ];
 
 const usedProducts = [

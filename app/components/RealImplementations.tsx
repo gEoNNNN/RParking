@@ -1,28 +1,72 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
-const images = [
-  '/img/implementarea 1.jpg',
-  '/img/implementarea 2.jpg',
-  '/img/implementarea 3.jpg',
-  '/img/implementarea 4.jpg',
-  '/img/implementarea 5.jpg',
-  '/img/implementarea 6.jpg',
-  '/img/implementarea 7.jpg',
-];
+const IMGS = Array.from({ length: 17 }, (_, i) => `/img/implementarea ${i + 1}.jpg`);
+const VISIBLE = 4;
+const CLONES = VISIBLE;
+// Extended array: CLONES at start (tail of IMGS) + all IMGS + CLONES at end (head of IMGS)
+const extended = [...IMGS.slice(-CLONES), ...IMGS, ...IMGS.slice(0, CLONES)];
+const TOTAL = extended.length; // 25
 
 export default function RealImplementations() {
   const t = useTranslations('RealImplementations');
   const [lightbox, setLightbox] = useState<string | null>(null);
+  // trackIdx into extended[], starts at CLONES so first real image is visible
+  const [trackIdx, setTrackIdx] = useState(CLONES);
+  const [animated, setAnimated] = useState(true);
+  const pausedRef = useRef(false);
 
+  // Keyboard close lightbox
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setLightbox(null); };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, []);
+
+  // Seamless infinite snap-back
+  useEffect(() => {
+    if (trackIdx >= CLONES + IMGS.length) {
+      const timer = setTimeout(() => {
+        setAnimated(false);
+        setTrackIdx(trackIdx - IMGS.length);
+      }, 600);
+      return () => clearTimeout(timer);
+    }
+    if (trackIdx < CLONES) {
+      const timer = setTimeout(() => {
+        setAnimated(false);
+        setTrackIdx(IMGS.length + trackIdx);
+      }, 600);
+      return () => clearTimeout(timer);
+    }
+  }, [trackIdx]);
+
+  // Re-enable animation after instant snap
+  useEffect(() => {
+    if (!animated) {
+      let id1: number;
+      let id2: number;
+      id1 = requestAnimationFrame(() => {
+        id2 = requestAnimationFrame(() => setAnimated(true));
+      });
+      return () => { cancelAnimationFrame(id1); cancelAnimationFrame(id2); };
+    }
+  }, [animated]);
+
+  // Auto-advance
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (!pausedRef.current) setTrackIdx(c => c + 1);
+    }, 3500);
+    return () => clearInterval(id);
+  }, []);
+
+  // translateX % is relative to the track's own width
+  const translatePct = trackIdx * (100 / TOTAL);
 
   return (
     <section id="implementations" className="py-16 bg-white">
@@ -33,24 +77,59 @@ export default function RealImplementations() {
           <div className="w-10 h-0.5 bg-green-500 mx-auto" />
         </div>
 
-        {/* Image row */}
-        <div className="flex gap-2 mb-6 overflow-x-auto">
-          {images.map((src, idx) => (
-            <div
-              key={idx}
-              className="relative h-48 min-w-42 flex-1 rounded-lg overflow-hidden shrink-0 group cursor-pointer"
-              onClick={() => setLightbox(src)}
-            >
-              <Image
-                src={src}
-                alt={`${t('imageAlt')} ${idx + 1}`}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 768px) 170px, 20vw"
-              />
-              <div className="absolute inset-0 bg-green-800/0 group-hover:bg-green-800/20 transition-colors duration-300" />
-            </div>
-          ))}
+        {/* Carousel */}
+        <div
+          className="relative mb-6 overflow-hidden"
+          onMouseEnter={() => { pausedRef.current = true; }}
+          onMouseLeave={() => { pausedRef.current = false; }}
+        >
+          {/* Track */}
+          <div
+            className="flex h-48"
+            style={{
+              width: `${(TOTAL / VISIBLE) * 100}%`,
+              transform: `translateX(-${translatePct}%)`,
+              transition: animated ? 'transform 0.55s ease-in-out' : 'none',
+            }}
+          >
+            {extended.map((src, idx) => (
+              <div
+                key={idx}
+                className="relative h-full px-1 cursor-pointer group shrink-0"
+                style={{ width: `${100 / TOTAL}%` }}
+                onClick={() => setLightbox(src)}
+              >
+                <div className="relative w-full h-full rounded-lg overflow-hidden">
+                  <Image
+                    src={src}
+                    alt={`${t('imageAlt')} ${((idx - CLONES + IMGS.length * 2) % IMGS.length) + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="25vw"
+                  />
+                  <div className="absolute inset-0 bg-green-800/0 group-hover:bg-green-800/20 transition-colors duration-300" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Prev arrow */}
+          <button
+            onClick={() => setTrackIdx(c => c - 1)}
+            className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md z-10 transition-all hover:scale-110"
+            aria-label="Previous"
+          >
+            <FiChevronLeft className="w-5 h-5 text-gray-700" />
+          </button>
+
+          {/* Next arrow */}
+          <button
+            onClick={() => setTrackIdx(c => c + 1)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md z-10 transition-all hover:scale-110"
+            aria-label="Next"
+          >
+            <FiChevronRight className="w-5 h-5 text-gray-700" />
+          </button>
         </div>
 
         {/* Bottom strip */}

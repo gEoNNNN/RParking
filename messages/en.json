@@ -243,7 +243,11 @@
       "g4": { "title": "Entry – exit flow", "description": "A smooth and secure experience for users." },
       "g5": { "title": "Pay Point", "description": "Cash and card payments, automatic receipt, intuitive interface." },
       "g6": { "title": "Access control", "description": "Modern equipment for fast and reliable verification." },
-      "g7": { "title": "Professional installation", "description": "Clean implementation, perfectly integrated into the parking infrastructure." }
+      "g7": { "title": "Professional installation", "description": "Clean implementation, perfectly integrated into the parking infrastructure." },
+      "g8": { "title": "Parking in operation", "description": "Active RParking system with a fully automated entry and exit flow." },
+      "g9": { "title": "Access terminal", "description": "Access control equipment installed and operational in the parking facility." },
+      "g10": { "title": "Parking infrastructure", "description": "Overview of the automated parking infrastructure." },
+      "g11": { "title": "Complete implementation", "description": "Finished project with RParking equipment integrated into the real environment." }
     },
     "usedTitle": "Products used in this implementation",
     "used": {
