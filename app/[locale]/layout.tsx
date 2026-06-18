@@ -43,14 +43,29 @@ export const metadata: Metadata = {
     "parcare inteligentă",
     "management parcare",
     "bariere automate parcare",
+    "bariera parcare automata",
     "control acces parcare",
     "terminal plată parcare",
+    "echipament parcare",
+    "echipamente parcare automatizata",
+    "statie intrare parcare",
+    "statie iesire parcare",
+    "tichete parcare automat",
     "sistem parcare Moldova",
     "parcare Chișinău",
     "echipamente parcare",
     "software parcare",
+    "automatizare parcare",
+    "Entry Point parcare",
+    "Exit Point parcare",
+    "Pay Point parcare",
+    "BackOffice parcare",
+    "ANPR parcare",
+    "parcare QR code",
+    "parcare NFC",
     "RParking",
     "RTi Systems",
+    "RTi Systems Moldova",
   ],
   authors: [{ name: COMPANY_NAME, url: SITE_URL }],
   creator: COMPANY_NAME,
@@ -93,31 +108,104 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/img/logo.png", sizes: "any", type: "image/png" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/img/logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/img/logo.png", sizes: "512x512", type: "image/png" },
+    ],
     apple: [{ url: "/img/logo.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: "/favicon.ico" }],
   },
+  manifest: "/manifest.webmanifest",
 };
 
-const organizationSchema = {
+const siteSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: COMPANY_NAME,
-  alternateName: SITE_NAME,
-  url: SITE_URL,
-  logo: `${SITE_URL}/img/logo.png`,
-  description:
-    "Producător de sisteme inteligente de parcare: hardware și software dezvoltate în Republica Moldova.",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "MD",
-    addressLocality: "Chișinău",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: SITE_PHONE,
-    contactType: "sales",
-    availableLanguage: ["Romanian", "Russian", "English"],
-  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: COMPANY_NAME,
+      alternateName: [SITE_NAME, "RTi", "RParking Moldova"],
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/img/logo.png`,
+        width: 210,
+        height: 80,
+      },
+      image: `${SITE_URL}/img/homepage.bg.png`,
+      description:
+        "Producător de sisteme inteligente de parcare: echipamente hardware și software dezvoltate în Republica Moldova. Entry Point, Exit Point, Pay Point, bariere automate, BackOffice.",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "MD",
+        addressLocality: "Chișinău",
+        addressRegion: "Chișinău",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: SITE_PHONE,
+        contactType: "sales",
+        availableLanguage: ["Romanian", "Russian", "English"],
+      },
+      sameAs: [
+        `${SITE_URL}`,
+      ],
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
+      name: COMPANY_NAME,
+      alternateName: SITE_NAME,
+      url: SITE_URL,
+      telephone: SITE_PHONE,
+      image: `${SITE_URL}/img/logo.png`,
+      priceRange: "$$",
+      description:
+        "Sisteme automate de parcare pentru centre comerciale, business centre și parcări rezidențiale. Control acces, bariere automate, plăți cash și card.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Chișinău",
+        addressLocality: "Chișinău",
+        addressRegion: "Chișinău",
+        addressCountry: "MD",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 47.0105,
+        longitude: 28.8638,
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Moldova",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      description:
+        "Sistem complet de automatizare a parcărilor. Echipamente: Entry Point, Exit Point, Pay Point, bariere automate, BackOffice.",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE_URL}/ro/products?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+      inLanguage: ["ro", "ru", "en"],
+    },
+  ],
 };
 
 export default async function LocaleLayout({
@@ -141,7 +229,7 @@ export default async function LocaleLayout({
       <body className={`min-h-screen ${inter.className}`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...organizationSchema, inLanguage: OG_LOCALES[locale] ?? "ro_RO" }) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
         <NextIntlClientProvider>
           <ScrollAnimations />

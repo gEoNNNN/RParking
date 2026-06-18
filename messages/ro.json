@@ -178,6 +178,16 @@
         "subtitle": "Platformă software",
         "desc": "Platformă software pentru administrarea tuturor locațiilor.",
         "features": ["Dashboard & rapoarte", "Monitorizare în timp real", "Abonamente & clienți", "Tranzacții & încasări", "White List / Black List", "Management utilizatori"]
+      },
+      "raccess-wc": {
+        "subtitle": "Control acces toalete",
+        "desc": "Sistem automat de control acces și taxare pentru grupuri sanitare publice.",
+        "features": ["Plată automată acces", "Turnicheți integrați", "Monitorizare în timp real", "Rapoarte & statistici", "Integrare BackOffice", "Interfață intuitivă"]
+      },
+      "rchange": {
+        "subtitle": "Schimb valutar automat",
+        "desc": "Aparat self-service pentru schimb valutar disponibil non-stop.",
+        "features": ["Acceptă bancnote", "Eliberează monede", "Ecran tactil", "Disponibil 24/7", "Integrare BackOffice", "Rapoarte tranzacții"]
       }
     }
   },

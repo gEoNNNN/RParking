@@ -18,15 +18,22 @@ import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../../lib/seo';
 export const metadata: Metadata = {
   title: 'Exit Point CardPass – Stație de ieșire cu card | RParking',
   description:
-    'Stație de ieșire cu validare carduri: verificare tichete, calcul tarife, integrare plăți, control automat acces.',
+    'Stație inteligentă de ieșire din parcare cu validare carduri și tichete: verificare automată, calcul tarife, integrare bariere.',
   keywords: [
+    'statie iesire parcare',
+    'terminal iesire parcare',
+    'echipament iesire parcare',
     'stație ieșire parcare',
     'validare carduri parcare',
+    'validare tichet parcare',
     'validator carduri',
     'calcul tarife parcare',
-    'control acces ieșire',
+    'control acces ieșire parcare',
+    'bariera iesire parcare',
     'RParking Exit Point',
     'sistem ieșire card',
+    'echipament parcare',
+    'sistem parcare Moldova',
   ],
   alternates: {
     canonical: '/products/exit-point-cardpass',

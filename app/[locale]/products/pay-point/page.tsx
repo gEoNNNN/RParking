@@ -21,14 +21,19 @@ export const metadata: Metadata = {
   description:
     'Terminal de plată pentru parcări: acceptă numerar și card, eliberează chitanțe, interfață intuitivă, integrare BackOffice.',
   keywords: [
+    'terminal plata parcare',
+    'aparat plata parcare',
     'terminal plată parcare',
     'plata numerar parcare',
     'plata card parcare',
-    'validator bancnote',
-    'validator carduri',
-    'chitanță automată',
-    'RParking Pay Point',
+    'validator bancnote parcare',
+    'validator carduri parcare',
+    'chitanță automată parcare',
+    'casier automat parcare',
     'self-service parcare',
+    'RParking Pay Point',
+    'echipament parcare',
+    'sistem parcare Moldova',
   ],
   alternates: {
     canonical: '/products/pay-point',

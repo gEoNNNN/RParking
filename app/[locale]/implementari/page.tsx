@@ -18,12 +18,17 @@ export const metadata: Metadata = {
     'Vezi proiectele reale implementate cu sistemul RParking: centre comerciale, business centre, parcări rezidențiale. Peste 1.000.000 de treceri zilnice.',
   keywords: [
     'implementari parcare',
+    'implementare sistem parcare',
     'proiecte parcare Moldova',
     'sistem parcare Chișinău',
     'parcare automatizata reala',
-    'exemplu parcare',
+    'proiect parcare centru comercial',
+    'proiect parcare business',
+    'exemplu parcare automatizata',
     'case study parcare',
+    'echipament parcare instalat',
     'RParking implementări',
+    'parcari automatizate Moldova',
   ],
   alternates: {
     canonical: '/implementari',

@@ -1,7 +1,9 @@
+import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '../../../../i18n/navigation';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../../lib/seo';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import {
@@ -13,6 +15,35 @@ import {
 } from 'react-icons/lu';
 import { TbBarrierBlock } from 'react-icons/tb';
 import { FaParking } from 'react-icons/fa';
+
+export const metadata: Metadata = {
+  title: 'Exit Point Ticket – Stație de ieșire cu tichet | RParking',
+  description:
+    'Stație inteligentă de ieșire cu validare tichete: scanare QR, calcul automat tarife, integrare bariere automate, display touch.',
+  keywords: [
+    'statie iesire tichet parcare',
+    'terminal iesire parcare',
+    'validare tichet parcare',
+    'scanare QR parcare',
+    'bariera iesire parcare',
+    'calcul tarif parcare',
+    'control acces iesire parcare',
+    'RParking Exit Point',
+    'echipament parcare',
+    'sistem parcare Moldova',
+  ],
+  alternates: {
+    canonical: '/products/exit-point-ticket',
+  },
+  openGraph: {
+    title: 'Exit Point Ticket – Stație de ieșire cu tichet | RParking',
+    description:
+      'Stație de ieșire cu validare tichete: scanare QR, calcul tarife, integrare bariere. Soluție RParking Moldova.',
+    url: `${SITE_URL}/products/exit-point-ticket`,
+    siteName: SITE_NAME,
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'Exit Point Ticket RParking' }],
+  },
+};
 
 const heroFeatureKeys = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 

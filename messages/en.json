@@ -178,6 +178,16 @@
         "subtitle": "Software platform",
         "desc": "Software platform for managing all locations.",
         "features": ["Dashboard & reports", "Real-time monitoring", "Subscriptions & customers", "Transactions & revenue", "White List / Black List", "User management"]
+      },
+      "raccess-wc": {
+        "subtitle": "Restroom access control",
+        "desc": "Automated access control and fee collection system for public restrooms.",
+        "features": ["Automated access payment", "Integrated turnstiles", "Real-time monitoring", "Reports & statistics", "BackOffice integration", "Intuitive interface"]
+      },
+      "rchange": {
+        "subtitle": "Automated currency exchange",
+        "desc": "Self-service currency exchange machine available around the clock.",
+        "features": ["Accepts banknotes", "Dispenses coins", "Touch screen", "Available 24/7", "BackOffice integration", "Transaction reports"]
       }
     }
   },
