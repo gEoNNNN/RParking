@@ -16,25 +16,30 @@ import { TbBarrierBlock } from 'react-icons/tb';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Despre noi – RTi Systems | Producător RParking Moldova',
+  title: 'Despre noi – RTi Systems | Producător Sisteme Parcare în Moldova',
   description:
-    'RTi Systems dezvoltă și produce sisteme inteligente de parcare în Republica Moldova. Hardware și software propriu, echipă experimentată, suport tehnic complet.',
+    'RTi Systems SRL – producător moldovean de sisteme inteligente de parcare. Hardware și software propriu, dezvoltat în Chișinău. Echipă tehnică specializată, instalare și suport complet în Republica Moldova.',
   keywords: [
     'RTi Systems',
-    'producator parcare Moldova',
+    'RTi Systems SRL',
+    'producator sisteme parcare Moldova',
+    'producator echipamente parcare Chișinău',
     'despre RParking',
-    'companie parcare',
+    'companie parcare Moldova',
     'echipament parcare Moldova',
-    'software parcare autohton',
+    'software parcare autohton Moldova',
     'RTi Systems Chișinău',
+    'firma parcare Moldova',
+    'sistem parcare made in Moldova',
+    'parcare automatizata Moldova producator',
   ],
   alternates: {
     canonical: '/despre-noi',
   },
   openGraph: {
-    title: 'Despre noi – RTi Systems | Producător RParking Moldova',
+    title: 'Despre noi – RTi Systems | Producător Sisteme Parcare în Moldova',
     description:
-      'RTi Systems dezvoltă și produce sisteme inteligente de parcare în Republica Moldova.',
+      'RTi Systems SRL din Chișinău dezvoltă și produce sisteme inteligente de parcare în Republica Moldova. Hardware, software și suport tehnic propriu.',
     url: `${SITE_URL}/despre-noi`,
     siteName: SITE_NAME,
     images: [

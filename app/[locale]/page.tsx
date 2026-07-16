@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { setRequestLocale } from 'next-intl/server';
+import { GLOBAL_KEYWORDS } from '../lib/seo';
 import { Link } from '../../i18n/navigation';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
@@ -16,10 +18,11 @@ import Footer from '../components/Footer';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../lib/seo';
 
 export const metadata: Metadata = {
-  title: 'RParking – Sistem inteligent de parcare automatizată | Moldova',
+  title: 'RParking – Sisteme de Parcare Automatizată în Moldova | Chișinău',
   description:
-    'Sistem complet de automatizare a parcărilor dezvoltat în Republica Moldova: control acces, bariere automate, plăți cash și card, monitorizare în timp real. Hardware și software propriu RTi.',
+    'Producător și instalator de sisteme inteligente de parcare în Republica Moldova. Bariere automate, control acces ANPR, terminale plată card/cash, software BackOffice. Proiecte în Chișinău și în toată Moldova.',
   keywords: [
+    ...GLOBAL_KEYWORDS,
     'sistem parcare',
     'parcare automatizată',
     'parcare inteligentă',
@@ -35,9 +38,7 @@ export const metadata: Metadata = {
     'tichete parcare automat',
     'intrare automata parcare',
     'iesire automata parcare',
-    'sistem parcare Moldova',
     'parcare Chișinău',
-    'echipamente parcare',
     'software parcare',
     'automatizare parcare',
     'Entry Point parcare',
@@ -47,17 +48,17 @@ export const metadata: Metadata = {
     'ANPR parcare',
     'parcare QR code',
     'parcare NFC',
-    'RParking',
-    'RTi Systems',
     'RTi Systems Moldova',
+    'sistem parcare centru comercial Chișinău',
+    'sistem parcare rezidential Moldova',
   ],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'RParking – Sistem inteligent de parcare automatizată',
+    title: 'RParking – Sisteme de Parcare Automatizată în Moldova',
     description:
-      'Soluție completă pentru parcări moderne: control acces, plăți automate, monitorizare în timp real. Dezvoltat și produs în Republica Moldova.',
+      'Producător moldovean de sisteme inteligente de parcare. Bariere automate, control acces, plăți card/cash, ANPR. Instalări în centre comerciale și complexe rezidențiale.',
     url: SITE_URL,
     siteName: SITE_NAME,
     images: [
@@ -71,7 +72,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main>
       <div className="relative">
