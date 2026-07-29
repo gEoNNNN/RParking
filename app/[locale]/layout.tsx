@@ -117,12 +117,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/img/logo.png", sizes: "192x192", type: "image/png" },
-      { url: "/img/logo.png", sizes: "512x512", type: "image/png" },
+      { url: "/img/tablogo.png", sizes: "any", type: "image/png" },
+      { url: "/img/tablogo.png", sizes: "192x192", type: "image/png" },
+      { url: "/img/tablogo.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/img/logo.png", sizes: "180x180", type: "image/png" }],
-    shortcut: [{ url: "/favicon.ico" }],
+    apple: [{ url: "/img/tablogo.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: "/img/tablogo.png", type: "image/png" }],
   },
   manifest: "/manifest.webmanifest",
 };

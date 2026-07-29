@@ -4,7 +4,7 @@ import { LuSend, LuX, LuMessageCircle } from 'react-icons/lu';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useTranslations, useLocale } from 'next-intl';
 
-const API_BASE = 'https://rparking-chatbot.onrender.com/api';
+const API_BASE = 'https://api.rparking.md/api';
 
 const nowTime = () => {
   const now = new Date();

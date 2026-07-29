@@ -62,8 +62,8 @@ const products = [
   { key: 'exit', title: 'Exit Point', href: '/products/exit-point-cardpass', image: '/img/produs2 - Copy.png', icon: <LuLogOut className="w-6 h-6 text-green-600" /> },
   { key: 'pay', title: 'Pay Point', href: '/products/pay-point', image: '/img/paypoint.png', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
   { key: 'backoffice', title: 'BackOffice', href: '/products/backoffice', image: '/img/back.jpg', icon: <LuLayoutDashboard className="w-6 h-6 text-green-600" /> },
-  { key: 'raccess-wc', title: 'RAccess WC', href: '/products/raccess-wc', image: '/img/raccess-wc.png', icon: <LuShieldCheck className="w-6 h-6 text-green-600" /> },
-  { key: 'rchange', title: 'RChange', href: '/products/rchange', image: '/img/rchange.png', icon: <LuZap className="w-6 h-6 text-green-600" /> },
+  { key: 'raccess-wc', title: 'RAccess WC', href: '/products/raccess-wc', image: '/img/wc.png', icon: <LuShieldCheck className="w-6 h-6 text-green-600" /> },
+  { key: 'rchange', title: 'RChange', href: '/products/rchange', image: '/img/exchange.png', icon: <LuZap className="w-6 h-6 text-green-600" /> },
 ];
 
 const whyUs = [
