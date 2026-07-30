@@ -122,7 +122,7 @@ export default async function SolutiiPage({ params }: { params: Promise<{ locale
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {domains.map((d, idx) => (
-              <div key={d.key} data-reveal data-reveal-delay={String(idx * 100)} className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-white">
+              <div key={d.key} id={d.key} data-reveal data-reveal-delay={String(idx * 100)} className="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-white scroll-mt-24">
                 {/* Image with icon badge */}
                 <div className="relative h-48 overflow-hidden">
                   <Image src={d.image} alt={t(`domains.${d.key}.title`)} fill quality={95} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />

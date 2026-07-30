@@ -22,7 +22,9 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('products')}</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">
+              <Link href="/products" className="hover:text-green-600 transition-colors">{t('products')}</Link>
+            </h4>
             <ul className="space-y-2.5">
               {[
                 { name: 'Entry Point', href: '/products/entry-point' },
@@ -40,7 +42,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('solutions')}</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">
+              <Link href="/products" className="hover:text-green-600 transition-colors">{t('solutions')}</Link>
+            </h4>
             <ul className="space-y-2.5">
               {[
                 { name: 'RParking', href: '/products' },
@@ -57,14 +61,16 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('solutions2')}</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">
+              <Link href="/solutii" className="hover:text-green-600 transition-colors">{t('solutions2')}</Link>
+            </h4>
             <ul className="space-y-2.5">
               {[
-                { name: t('mall'), href: '/solutii' },
-                { name: t('business'), href: '/solutii' },
-                { name: t('residential'), href: '/solutii' },
-                { name: t('municipal'), href: '/solutii' },
-                { name: t('airports'), href: '/solutii' },
+                { name: t('mall'), href: '/solutii#mall' },
+                { name: t('business'), href: '/solutii#corporate' },
+                { name: t('residential'), href: '/solutii#residential' },
+                { name: t('municipal'), href: '/solutii#hospitals' },
+                { name: t('airports'), href: '/solutii#airports' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
@@ -76,13 +82,15 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('company')}</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">
+              <Link href="/despre-noi" className="hover:text-green-600 transition-colors">{t('company')}</Link>
+            </h4>
             <ul className="space-y-2.5">
               {[
                 { name: t('about'), href: '/despre-noi' },
                 { name: t('implementations'), href: '/implementari' },
                 { name: t('contactLink'), href: '/#contact' },
-                { name: t('support'), href: '/suport' },
+                { name: t('support'), href: '/#contact' },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-gray-500 text-sm hover:text-green-600 transition-colors inline-flex items-center gap-1.5 group">
@@ -94,7 +102,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-gray-900 font-semibold text-sm mb-4">{t('contact')}</h4>
+            <h4 className="text-gray-900 font-semibold text-sm mb-4">
+              <Link href="/#contact" className="hover:text-green-600 transition-colors">{t('contact')}</Link>
+            </h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-500 text-sm">+373 069116121</li>
               <li className="flex items-center gap-3">
