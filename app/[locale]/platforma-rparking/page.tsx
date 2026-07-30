@@ -111,9 +111,6 @@ export default async function PlatformaRParkingPage({ params }: { params: Promis
 
           <div className="relative z-10 w-full px-6 lg:px-10 py-28 pt-36">
             <div className="max-w-2xl">
-              <p data-reveal data-reveal-delay="80" className="text-green-600 font-bold tracking-wide text-sm mb-4">
-                {t('heroLabel')}
-              </p>
               <h1 data-reveal data-reveal-delay="150" className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-5">
                 {t.rich('heroTitle', { span: (chunks) => <span className="text-green-600">{chunks}</span> })}
               </h1>
