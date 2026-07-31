@@ -4,7 +4,7 @@ module.exports = {
       name: 'rparking',
       script: 'node_modules/.bin/next',
       args: 'start',
-      cwd: '/var/www/rparking',
+      cwd: '/var/www/rparking-front',
       instances: 1,
       autorestart: true,
       watch: false,
