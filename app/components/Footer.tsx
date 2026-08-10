@@ -89,6 +89,8 @@ export default function Footer() {
               {[
                 { name: t('about'), href: '/despre-noi' },
                 { name: t('implementations'), href: '/implementari' },
+                { name: t('shop'), href: '/magazin' },
+                { name: t('partners'), href: '/parteneri' },
                 { name: t('contactLink'), href: '/#contact' },
                 { name: t('support'), href: '/#contact' },
               ].map((item) => (

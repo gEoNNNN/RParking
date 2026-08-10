@@ -15,6 +15,8 @@ const routes = [
   { path: '/products/raccess-wc', priority: 0.8, changeFrequency: 'monthly' as const },
   { path: '/products/rchange', priority: 0.8, changeFrequency: 'monthly' as const },
   { path: '/solutii', priority: 0.9, changeFrequency: 'monthly' as const },
+  { path: '/magazin', priority: 0.9, changeFrequency: 'weekly' as const },
+  { path: '/parteneri', priority: 0.8, changeFrequency: 'monthly' as const },
   { path: '/implementari', priority: 0.9, changeFrequency: 'weekly' as const },
   { path: '/despre-noi', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: '/platforma-rparking', priority: 0.7, changeFrequency: 'monthly' as const },

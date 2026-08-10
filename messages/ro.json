@@ -7,6 +7,8 @@
     "products": "Produse",
     "solutions": "Soluții",
     "contact": "Contact",
+    "shop": "Magazin",
+    "partners": "Parteneri",
     "requestDemo": "Contactează-ne",
     "viewAllProducts": "Vezi toate produsele →"
   },
@@ -129,6 +131,8 @@
     "implementations": "Implementări",
     "contactLink": "Contact",
     "support": "Suport",
+    "shop": "Magazin",
+    "partners": "Parteneri",
     "location": "Chișinău, Republica Moldova"
   },
   "ProductsPage": {
@@ -981,5 +985,138 @@
   },
   "LanguageSwitcher": {
     "label": "Schimbă limba"
+  },
+  "ShopPage": {
+    "heroTitle": "Magazin",
+    "heroSubtitle": "Echipamente și soluții inteligente pentru parcări moderne.",
+    "trust": {
+      "certified": "Echipamente certificate",
+      "warranty": "Garanție 24 luni",
+      "support": "Suport tehnic dedicat",
+      "delivery": "Livrare rapidă",
+      "custom": "Soluții personalizate"
+    },
+    "categoriesTitle": "Categorii",
+    "categories": {
+      "all": "Toate produsele",
+      "entry": "Entry Point",
+      "exit": "Exit Point",
+      "pay": "Pay Point",
+      "backoffice": "BackOffice",
+      "wc": "RAccess WC",
+      "rchange": "RChange",
+      "accessories": "Accesorii"
+    },
+    "filtersTitle": "Filtre",
+    "filterType": "Tip produs",
+    "filterUsage": "Utilizare",
+    "filterAll": "Toate",
+    "typeHardware": "Hardware",
+    "typeSoftware": "Software",
+    "usageParking": "Parcări",
+    "usageAccess": "Control acces",
+    "usagePayment": "Plăți",
+    "stockTitle": "Stoc",
+    "inStock": "În stoc",
+    "onOrder": "La comandă",
+    "applyFilters": "Aplică filtre",
+    "resetFilters": "Resetează filtrele",
+    "productsFound": "Toate produsele ({count})",
+    "sortLabel": "Sortare:",
+    "sortPopular": "Cele mai populare",
+    "sortPriceAsc": "Preț crescător",
+    "sortPriceDesc": "Preț descrescător",
+    "vatNote": "fără TVA",
+    "viewDetails": "Vezi detalii",
+    "loadMore": "Încarcă mai multe produse",
+    "noResults": "Niciun produs nu corespunde filtrelor selectate.",
+    "benefits": {
+      "delivery": { "title": "Livrare rapidă", "desc": "Livrăm în toată țara în 1-3 zile lucrătoare." },
+      "warranty": { "title": "Garanție extinsă", "desc": "Toate produsele beneficiază de garanție 24 luni." },
+      "support": { "title": "Suport tehnic", "desc": "Echipa noastră este disponibilă pentru suport." },
+      "custom": { "title": "Soluții personalizate", "desc": "Oferim soluții adaptate nevoilor afacerii tale." }
+    },
+    "ctaTitle": "Nu ai găsit produsul potrivit?",
+    "ctaDesc": "Contactează-ne pentru o ofertă personalizată.",
+    "ctaButton": "Solicită ofertă personalizată",
+    "products": {
+      "entry": { "name": "RParking Entry Point", "desc": "Terminal de intrare cu citire tichete, cameră LPR și control barieră." },
+      "exit": { "name": "RParking Exit Point", "desc": "Terminal de ieșire cu citire tichete, plată și eliberare barieră." },
+      "pay": { "name": "RParking Pay Point", "desc": "Stație de plată automată cu acceptare numerar și card." },
+      "backoffice": { "name": "RParking BackOffice", "desc": "Software de administrare și monitorizare în timp real." },
+      "wc": { "name": "RAccess WC", "desc": "Sistem de control acces la WC cu plată cash și card." },
+      "rchange": { "name": "RChange", "desc": "Schimbător de bancnote în monede, rapid și sigur." },
+      "barrier": { "name": "Barieră automată", "desc": "Barieră automată de înaltă performanță pentru control acces." },
+      "detector": { "name": "Detector buclă inductivă", "desc": "Detector vehicule pentru sistemele de control acces." }
+    }
+  },
+  "PartnersPage": {
+    "heroTitle1": "Deveniți partener",
+    "heroTitle2": "RParking",
+    "heroSubtitle": "Împreună construim parcări mai inteligente.",
+    "heroDesc": "Alăturați-vă rețelei noastre de parteneri și oferiți clienților dumneavoastră soluții moderne, fiabile și profitabile.",
+    "heroCta": "Completează formularul",
+    "benefits": {
+      "revenue": { "title": "Creșteți veniturile", "desc": "Soluții cu cerere constantă și marjă atractivă." },
+      "reliable": { "title": "Produse fiabile", "desc": "Echipamente de calitate și tehnologie avansată." },
+      "support": { "title": "Suport dedicat", "desc": "Asistență tehnică și comercială pe tot parcursul colaborării." },
+      "training": { "title": "Training și certificare", "desc": "Instruire completă pentru echipa dumneavoastră." },
+      "marketing": { "title": "Marketing & vânzări", "desc": "Materiale de promovare și suport în dezvoltarea afacerii." }
+    },
+    "typesTitle": "Tipuri de parteneriat",
+    "learnMore": "Află mai multe",
+    "types": {
+      "installer": { "title": "Partener Instalator", "desc": "Companii specializate în instalarea sistemelor de parcare.", "f1": "Comisioane atractive", "f2": "Suport tehnic dedicat", "f3": "Training de instalare" },
+      "distributor": { "title": "Partener Distribuitor", "desc": "Companii care revând soluțiile RParking în zona lor.", "f1": "Prețuri preferențiale", "f2": "Suport vânzări și marketing", "f3": "Acces la materiale comerciale" },
+      "integrator": { "title": "Partener Integrator", "desc": "Integratori de sisteme și soluții software/hardware.", "f1": "Integrare API & SDK", "f2": "Suport tehnic avansat", "f3": "Proiecte personalizate" },
+      "international": { "title": "Partener Internațional", "desc": "Companii din alte țări interesate să promoveze RParking.", "f1": "Condiții speciale de colaborare", "f2": "Suport local și global", "f3": "Dezvoltare pe termen lung" }
+    },
+    "programTitle": "Programul de parteneriat RParking",
+    "programDesc": "Oferim partenerilor noștri toate resursele necesare pentru succes:",
+    "program": {
+      "margins": "Marje comerciale competitive",
+      "support": "Suport tehnic dedicat",
+      "training": "Training pentru echipe tehnice și comerciale",
+      "updates": "Acces la noutăți și actualizări",
+      "marketing": "Materiale de marketing și vânzări",
+      "leads": "Proiecte și lead-uri comune"
+    },
+    "formTitle": "Devino partener",
+    "formDesc": "Completați formularul și vă vom contacta în cel mai scurt timp.",
+    "form": {
+      "company": "Nume companie *",
+      "companyPh": "Numele companiei",
+      "contact": "Persoană de contact *",
+      "contactPh": "Numele și prenumele",
+      "phone": "Telefon *",
+      "email": "Email *",
+      "emailPh": "exemplu@companie.md",
+      "type": "Tip parteneriat dorit *",
+      "typePh": "Selectați tipul de parteneriat",
+      "location": "Țară / Oraș *",
+      "locationPh": "Chișinău, Moldova",
+      "about": "Descrierea companiei și experiența relevantă",
+      "aboutPh": "Scrieți câteva informații despre compania dumneavoastră...",
+      "submit": "Trimite solicitarea",
+      "privacy": "Datele dumneavoastră sunt în siguranță. Nu le vom distribui terților.",
+      "waIntro": "Solicitare parteneriat RParking",
+      "waCompany": "Companie",
+      "waContact": "Contact",
+      "waPhone": "Telefon",
+      "waEmail": "Email",
+      "waType": "Tip parteneriat",
+      "waLocation": "Țară/Oraș",
+      "waAbout": "Despre companie"
+    },
+    "stepsTitle": "Cum devii partener?",
+    "steps": {
+      "s1": { "title": "Completează formularul", "desc": "Ne transmiți informații despre compania ta." },
+      "s2": { "title": "Discuție inițială", "desc": "Echipa noastră te contactează pentru a înțelege nevoile tale." },
+      "s3": { "title": "Propunere de colaborare", "desc": "Îți oferim condiții de parteneriat potrivite pentru tine." },
+      "s4": { "title": "Semnarea acordului", "desc": "Stabilim înțelegerea și începem colaborarea." },
+      "s5": { "title": "Creștem împreună", "desc": "Beneficiezi de suport și resurse pentru dezvoltarea afacerii." }
+    },
+    "partnersTitle": "Partenerii noștri",
+    "viewAll": "Vezi toate implementările"
   }
 }

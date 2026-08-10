@@ -7,6 +7,8 @@
     "products": "Products",
     "solutions": "Solutions",
     "contact": "Contact",
+    "shop": "Shop",
+    "partners": "Partners",
     "requestDemo": "Request a demo",
     "viewAllProducts": "View all products →"
   },
@@ -129,6 +131,8 @@
     "implementations": "Implementations",
     "contactLink": "Contact",
     "support": "Support",
+    "shop": "Shop",
+    "partners": "Partners",
     "location": "Chișinău, Republic of Moldova"
   },
   "ProductsPage": {
@@ -981,5 +985,138 @@
   },
   "LanguageSwitcher": {
     "label": "Change language"
+  },
+  "ShopPage": {
+    "heroTitle": "Shop",
+    "heroSubtitle": "Smart equipment and solutions for modern parking facilities.",
+    "trust": {
+      "certified": "Certified equipment",
+      "warranty": "24-month warranty",
+      "support": "Dedicated technical support",
+      "delivery": "Fast delivery",
+      "custom": "Custom solutions"
+    },
+    "categoriesTitle": "Categories",
+    "categories": {
+      "all": "All products",
+      "entry": "Entry Point",
+      "exit": "Exit Point",
+      "pay": "Pay Point",
+      "backoffice": "BackOffice",
+      "wc": "RAccess WC",
+      "rchange": "RChange",
+      "accessories": "Accessories"
+    },
+    "filtersTitle": "Filters",
+    "filterType": "Product type",
+    "filterUsage": "Usage",
+    "filterAll": "All",
+    "typeHardware": "Hardware",
+    "typeSoftware": "Software",
+    "usageParking": "Parking",
+    "usageAccess": "Access control",
+    "usagePayment": "Payments",
+    "stockTitle": "Availability",
+    "inStock": "In stock",
+    "onOrder": "On order",
+    "applyFilters": "Apply filters",
+    "resetFilters": "Reset filters",
+    "productsFound": "All products ({count})",
+    "sortLabel": "Sort by:",
+    "sortPopular": "Most popular",
+    "sortPriceAsc": "Price ascending",
+    "sortPriceDesc": "Price descending",
+    "vatNote": "excl. VAT",
+    "viewDetails": "View details",
+    "loadMore": "Load more products",
+    "noResults": "No products match the selected filters.",
+    "benefits": {
+      "delivery": { "title": "Fast delivery", "desc": "We deliver nationwide within 1-3 business days." },
+      "warranty": { "title": "Extended warranty", "desc": "All products come with a 24-month warranty." },
+      "support": { "title": "Technical support", "desc": "Our team is always available to help." },
+      "custom": { "title": "Custom solutions", "desc": "We offer solutions tailored to your business needs." }
+    },
+    "ctaTitle": "Haven't found the right product?",
+    "ctaDesc": "Contact us for a personalized offer.",
+    "ctaButton": "Request a personalized offer",
+    "products": {
+      "entry": { "name": "RParking Entry Point", "desc": "Entry terminal with ticket reading, LPR camera and barrier control." },
+      "exit": { "name": "RParking Exit Point", "desc": "Exit terminal with ticket reading, payment and barrier release." },
+      "pay": { "name": "RParking Pay Point", "desc": "Automatic payment station accepting cash and card." },
+      "backoffice": { "name": "RParking BackOffice", "desc": "Administration and real-time monitoring software." },
+      "wc": { "name": "RAccess WC", "desc": "WC access control system with cash and card payment." },
+      "rchange": { "name": "RChange", "desc": "Banknote-to-coin changer, fast and secure." },
+      "barrier": { "name": "Automatic barrier", "desc": "High-performance automatic barrier for access control." },
+      "detector": { "name": "Inductive loop detector", "desc": "Vehicle detector for access control systems." }
+    }
+  },
+  "PartnersPage": {
+    "heroTitle1": "Become a",
+    "heroTitle2": "RParking partner",
+    "heroSubtitle": "Together we build smarter parking.",
+    "heroDesc": "Join our partner network and offer your customers modern, reliable and profitable solutions.",
+    "heroCta": "Fill in the form",
+    "benefits": {
+      "revenue": { "title": "Grow your revenue", "desc": "Solutions with constant demand and attractive margins." },
+      "reliable": { "title": "Reliable products", "desc": "Quality equipment and advanced technology." },
+      "support": { "title": "Dedicated support", "desc": "Technical and commercial assistance throughout the partnership." },
+      "training": { "title": "Training & certification", "desc": "Complete training for your team." },
+      "marketing": { "title": "Marketing & sales", "desc": "Promotional materials and business development support." }
+    },
+    "typesTitle": "Partnership types",
+    "learnMore": "Learn more",
+    "types": {
+      "installer": { "title": "Installer Partner", "desc": "Companies specialized in installing parking systems.", "f1": "Attractive commissions", "f2": "Dedicated technical support", "f3": "Installation training" },
+      "distributor": { "title": "Distributor Partner", "desc": "Companies reselling RParking solutions in their area.", "f1": "Preferential pricing", "f2": "Sales and marketing support", "f3": "Access to commercial materials" },
+      "integrator": { "title": "Integrator Partner", "desc": "System integrators and software/hardware solution providers.", "f1": "API & SDK integration", "f2": "Advanced technical support", "f3": "Custom projects" },
+      "international": { "title": "International Partner", "desc": "Companies from other countries interested in promoting RParking.", "f1": "Special cooperation terms", "f2": "Local and global support", "f3": "Long-term development" }
+    },
+    "programTitle": "The RParking partnership program",
+    "programDesc": "We provide our partners with all the resources needed for success:",
+    "program": {
+      "margins": "Competitive commercial margins",
+      "support": "Dedicated technical support",
+      "training": "Training for technical and sales teams",
+      "updates": "Access to news and updates",
+      "marketing": "Marketing and sales materials",
+      "leads": "Joint projects and leads"
+    },
+    "formTitle": "Become a partner",
+    "formDesc": "Fill in the form and we will contact you as soon as possible.",
+    "form": {
+      "company": "Company name *",
+      "companyPh": "Company name",
+      "contact": "Contact person *",
+      "contactPh": "First and last name",
+      "phone": "Phone *",
+      "email": "Email *",
+      "emailPh": "example@company.md",
+      "type": "Desired partnership type *",
+      "typePh": "Select partnership type",
+      "location": "Country / City *",
+      "locationPh": "Chișinău, Moldova",
+      "about": "Company description and relevant experience",
+      "aboutPh": "Tell us a few things about your company...",
+      "submit": "Send request",
+      "privacy": "Your data is safe. We will not share it with third parties.",
+      "waIntro": "RParking partnership request",
+      "waCompany": "Company",
+      "waContact": "Contact",
+      "waPhone": "Phone",
+      "waEmail": "Email",
+      "waType": "Partnership type",
+      "waLocation": "Country/City",
+      "waAbout": "About the company"
+    },
+    "stepsTitle": "How to become a partner?",
+    "steps": {
+      "s1": { "title": "Fill in the form", "desc": "Send us information about your company." },
+      "s2": { "title": "Initial discussion", "desc": "Our team contacts you to understand your needs." },
+      "s3": { "title": "Cooperation proposal", "desc": "We offer you partnership terms that suit you." },
+      "s4": { "title": "Signing the agreement", "desc": "We agree on terms and start working together." },
+      "s5": { "title": "Growing together", "desc": "You benefit from support and resources to grow your business." }
+    },
+    "partnersTitle": "Our partners",
+    "viewAll": "View all implementations"
   }
 }
