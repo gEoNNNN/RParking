@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
 import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
-import { LuArrowRight } from 'react-icons/lu';
+import { LuArrowRight, LuShieldCheck } from 'react-icons/lu';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -20,6 +20,13 @@ export default function Footer() {
             <p className="text-gray-500 text-xs leading-relaxed max-w-50">
               {t('description')}
             </p>
+            <Link
+              href="/despre-noi#certificat"
+              className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 hover:text-green-600 transition-colors"
+            >
+              <LuShieldCheck className="w-3.5 h-3.5 text-green-600 shrink-0" />
+              <span>{t('trademarkNotice')}</span>
+            </Link>
           </div>
           <div>
             <h4 className="text-gray-900 font-semibold text-sm mb-4">
@@ -134,7 +141,7 @@ export default function Footer() {
         <div className="border-t border-gray-100 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-400 text-xs">© 2026 RTi. {t('copyright')}</p>
           <div className="flex gap-5">
-            <a href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('privacy')}</a>
+            <Link href="/politica-de-confidentialitate" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('privacy')}</Link>
             <a href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('terms')}</a>
           </div>
         </div>

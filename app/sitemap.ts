@@ -20,6 +20,7 @@ const routes = [
   { path: '/implementari', priority: 0.9, changeFrequency: 'weekly' as const },
   { path: '/despre-noi', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: '/platforma-rparking', priority: 0.7, changeFrequency: 'monthly' as const },
+  { path: '/politica-de-confidentialitate', priority: 0.5, changeFrequency: 'monthly' as const },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

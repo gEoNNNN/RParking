@@ -5,6 +5,7 @@ import { Link } from '../../../i18n/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import RealImplementations from '../../components/RealImplementations';
+import TrademarkCertificate from '../../components/TrademarkCertificate';
 import {
   LuArrowRight, LuCheck, LuChevronRight, LuHouse,
   LuMapPin, LuCode, LuMonitor, LuHeadphones, LuPuzzle,
@@ -310,6 +311,9 @@ export default async function DespreNoiPage({ params }: { params: Promise<{ loca
           </div>
         </div>
       </section>
+
+      {/* ── Marcă Înregistrată & Certificare Oficială AGEPI ── */}
+      <TrademarkCertificate />
 
       {/* ── Bottom CTA ── */}
       <section className="relative py-20 overflow-hidden">

@@ -133,7 +133,8 @@
     "support": "Suport",
     "shop": "Magazin",
     "partners": "Parteneri",
-    "location": "Chișinău, Republica Moldova"
+    "location": "Chișinău, Republica Moldova",
+    "trademarkNotice": "Marcă înregistrată AGEPI Nr. 42952"
   },
   "ProductsPage": {
     "title": "PRODUSE",
@@ -357,7 +358,29 @@
     "ctaTitle1": "Hai să transformăm parcarea ta",
     "ctaTitle2": "într-un sistem inteligent",
     "ctaDemo": "Contactează-ne",
-    "ctaSchedule": "Trimite mesaj"
+    "ctaSchedule": "Trimite mesaj",
+    "trademark": {
+      "badge": "PROPRIETATE INTELECTUALĂ & CERTIFICARE",
+      "title": "Marcă Comercială Înregistrată Oficial",
+      "subtitle": "RParking este o marcă înregistrată oficial în Republica Moldova, protejată prin lege conform deciziei Agenției de Stat pentru Proprietatea Intelectuală (AGEPI).",
+      "certNumber": "Nr. 42952",
+      "authorityLabel": "Autoritate emitentă",
+      "authorityValue": "AGEPI – Agenția de Stat pentru Proprietatea Intelectuală a Republicii Moldova",
+      "lawLabel": "Temei legal",
+      "lawValue": "Legea nr. 38/2008 privind protecția mărcilor",
+      "ownerLabel": "Titular marcă",
+      "ownerValue": "S.R.L. \"Plasma RTI\" (IDNO: 1003600107651)",
+      "registerLabel": "Înregistrare",
+      "registerValue": "Înscris în Registrul Național al Mărcilor",
+      "clickToZoom": "Click pentru a mări certificatul",
+      "viewOriginal": "Vezi certificatul original",
+      "openNewTab": "Deschide documentul",
+      "close": "Închide",
+      "feature1Title": "Garanție de Originalitate",
+      "feature1Desc": "Tehnologia și denumirea RParking sunt 100% originale și protejate legal împotriva contrafacerii.",
+      "feature2Title": "Securitate Juridică pentru Parteneri",
+      "feature2Desc": "Colaborați direct cu titularul oficial al tehnologiei și al drepturilor exclusive de proprietate intelectuală."
+    }
   },
   "PlatformaRParkingPage": {
     "heroLabel": "PLATFORMA RPARKING",
