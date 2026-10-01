@@ -310,6 +310,17 @@ export default async function PoliticaConfidentialitatePage({
                       </div>
                     )}
 
+                    {/* Cookie policy cross-link */}
+                    {section.id === 'cookie-uri' && (
+                      <Link
+                        href="/politica-cookies"
+                        className="inline-flex items-center gap-1.5 mt-2 px-3.5 py-2 rounded-lg bg-green-50 border border-green-200 text-green-700 text-xs font-semibold hover:bg-green-100 transition-colors"
+                      >
+                        <LuFileText className="w-3.5 h-3.5" />
+                        {data.cookiePolicyLinkLabel}
+                      </Link>
+                    )}
+
                     {/* Footer Note */}
                     {section.footerNote && (
                       <p className="mt-4 p-3.5 rounded-lg bg-gray-50 text-xs sm:text-sm text-gray-500 italic border-l-2 border-green-500">

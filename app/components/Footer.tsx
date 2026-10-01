@@ -142,6 +142,7 @@ export default function Footer() {
           <p className="text-gray-400 text-xs">© 2026 RTi. {t('copyright')}</p>
           <div className="flex gap-5">
             <Link href="/politica-de-confidentialitate" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('privacy')}</Link>
+            <Link href="/politica-cookies" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('cookies')}</Link>
             <a href="#" className="text-gray-400 text-xs hover:text-green-600 transition-colors">{t('terms')}</a>
           </div>
         </div>

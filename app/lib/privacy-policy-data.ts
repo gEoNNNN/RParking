@@ -21,6 +21,7 @@ export interface PrivacyPolicyContent {
   lastUpdatedLabel: string;
   lastUpdatedDate: string;
   tocTitle: string;
+  cookiePolicyLinkLabel: string;
   sections: PrivacySection[];
   operatorInfo: {
     name: string;
@@ -49,6 +50,7 @@ export const privacyData: Record<'ro' | 'ru' | 'en', PrivacyPolicyContent> = {
     lastUpdatedLabel: 'Data ultimei revizuiri',
     lastUpdatedDate: '22.08.2026',
     tocTitle: 'Cuprins politică',
+    cookiePolicyLinkLabel: 'Vezi Politica Cookie-uri',
     operatorInfo: {
       name: 'S.R.L. "Plasma RTI"',
       idno: '1003600107651',
@@ -286,6 +288,7 @@ export const privacyData: Record<'ro' | 'ru' | 'en', PrivacyPolicyContent> = {
     lastUpdatedLabel: 'Last updated',
     lastUpdatedDate: '22.08.2026',
     tocTitle: 'Table of Contents',
+    cookiePolicyLinkLabel: 'View Cookie Policy',
     operatorInfo: {
       name: 'S.R.L. "Plasma RTI"',
       idno: '1003600107651',
@@ -521,6 +524,7 @@ export const privacyData: Record<'ro' | 'ru' | 'en', PrivacyPolicyContent> = {
     lastUpdatedLabel: 'Дата последнего обновления',
     lastUpdatedDate: '22.08.2026',
     tocTitle: 'Содержание политики',
+    cookiePolicyLinkLabel: 'Смотреть Политику cookie',
     operatorInfo: {
       name: 'S.R.L. "Plasma RTI"',
       idno: '1003600107651',
