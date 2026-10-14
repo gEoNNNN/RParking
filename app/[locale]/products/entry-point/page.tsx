@@ -133,9 +133,6 @@ export default async function EntryPointPage({ params }: { params: Promise<{ loc
       {/* Navbar + Logo */}
       <div className="relative">
         <Navbar />
-        <Link href="/" className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center">
-          <Image src="/img/logo.png" alt="RTi Parking Logo" width={210} height={80} priority className="object-contain" />
-        </Link>
 
         {/* ── Hero ── */}
         <section className="relative w-full overflow-hidden bg-white">

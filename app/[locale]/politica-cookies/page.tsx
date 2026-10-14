@@ -79,19 +79,6 @@ export default async function PoliticaCookiesPage({
         {/* Top bar + Navbar */}
         <div className="relative bg-white border-b border-gray-100">
           <Navbar />
-          <Link
-            href="/"
-            className="absolute top-0 left-1/2 -translate-x-[38%] lg:left-20 lg:translate-x-0 z-50 h-20 flex items-center"
-          >
-            <Image
-              src="/img/logo.png"
-              alt="RTi Parking Logo"
-              width={210}
-              height={80}
-              priority
-              className="object-contain"
-            />
-          </Link>
         </div>
 
         {/* Header Hero */}

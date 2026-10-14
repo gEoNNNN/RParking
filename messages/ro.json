@@ -1142,5 +1142,37 @@
     },
     "partnersTitle": "Partenerii noștri",
     "viewAll": "Vezi toate implementările"
+  },
+  "CookieBanner": {
+    "badge": "Confidențialitate, Cookie-uri & Termeni",
+    "title": "Acceptarea Termenilor, Condițiilor și Politicii de Confidențialitate",
+    "description": "Utilizăm cookie-uri și tehnologii similare pentru funcționarea site-ului, memorarea preferințelor, analiză și marketing, în conformitate cu Legea nr. 195/2024. Continuând navigarea sau apăsând „Acceptă toate”, confirmați că ați citit și acceptați <terms>Termenii și Condițiile</terms>, <privacy>Politica de Confidențialitate</privacy> și <cookies>Politica Cookie-uri</cookies>.",
+    "acceptAll": "Acceptă toate",
+    "necessaryOnly": "Doar necesare",
+    "customize": "Personalizează",
+    "hideCustomize": "Ascunde opțiunile",
+    "savePreferences": "Salvează preferințele",
+    "privacyLink": "Politica de Confidențialitate",
+    "cookieLink": "Politica Cookie-uri",
+    "termsLink": "Termeni și Condiții",
+    "alwaysActive": "Mereu activ",
+    "categories": {
+      "necessary": {
+        "title": "Necesare",
+        "desc": "Securitate, autentificare, sesiune și funcții esențiale ale site-ului (inclusiv NEXT_LOCALE)."
+      },
+      "preferences": {
+        "title": "Preferințe",
+        "desc": "Funcții opționale, memorarea opțiunilor interfeței și conținut extern."
+      },
+      "analytics": {
+        "title": "Analiză",
+        "desc": "Statistici anonime și măsurarea utilizării pentru îmbunătățirea platformei."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Măsurarea campaniilor, oferte relevante și comunicare personalizată."
+      }
+    }
   }
 }

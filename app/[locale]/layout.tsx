@@ -7,6 +7,7 @@ import { routing } from "../../i18n/routing";
 import "../globals.css";
 import ScrollAnimations from "../components/ScrollAnimations";
 import Chatbot from "../components/Chatbot";
+import CookieConsentBanner from "../components/CookieConsentBanner";
 import { SITE_URL, SITE_NAME, COMPANY_NAME, SITE_PHONE, SITE_EMAIL, COMPANY_ADDRESS, DEFAULT_OG_IMAGE, GLOBAL_KEYWORDS } from "../lib/seo";
 
 const manrope = Manrope({
@@ -284,6 +285,7 @@ export default async function LocaleLayout({
           <ScrollAnimations />
           {children}
           <Chatbot />
+          <CookieConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1142,5 +1142,37 @@
     },
     "partnersTitle": "Our partners",
     "viewAll": "View all implementations"
+  },
+  "CookieBanner": {
+    "badge": "Privacy, Cookies & Terms",
+    "title": "Acceptance of Terms, Conditions and Privacy Policy",
+    "description": "We use cookies and similar technologies for website functionality, remembering preferences, analytics, and marketing, in compliance with Law no. 195/2024. By continuing to browse or clicking “Accept All”, you confirm that you have read and accept our <terms>Terms and Conditions</terms>, <privacy>Privacy Policy</privacy>, and <cookies>Cookie Policy</cookies>.",
+    "acceptAll": "Accept All",
+    "necessaryOnly": "Necessary Only",
+    "customize": "Customize",
+    "hideCustomize": "Hide Options",
+    "savePreferences": "Save Preferences",
+    "privacyLink": "Privacy Policy",
+    "cookieLink": "Cookie Policy",
+    "termsLink": "Terms and Conditions",
+    "alwaysActive": "Always active",
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "desc": "Security, authentication, session, and essential website functions (including NEXT_LOCALE)."
+      },
+      "preferences": {
+        "title": "Preferences",
+        "desc": "Optional features, remembering interface settings, and external content."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "desc": "Anonymous statistics and usage measurement to improve the platform."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Campaign measurement, relevant offers, and personalized communication."
+      }
+    }
   }
 }

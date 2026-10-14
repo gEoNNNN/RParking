@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '../../i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -42,25 +43,34 @@ export default function Navbar() {
 
   return (
     <nav className="w-full absolute top-0 left-0 right-0 z-50 bg-white shadow-sm overflow-visible">
-      <div className="max-w-7xl mx-auto px-6 flex items-center h-20">
-        {/* Left spacer */}
-        <div className="flex-1 hidden lg:block" />
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 xl:px-8 flex items-center justify-between h-20 gap-3 2xl:gap-6">
+        {/* Logo inside flex flow so it never overlaps links */}
+        <Link href="/" className="shrink-0 flex items-center h-full py-2">
+          <Image
+            src="/img/logo.png"
+            alt="RTi Parking Logo"
+            width={210}
+            height={80}
+            priority
+            className="w-36 sm:w-40 xl:w-44 2xl:w-48 h-auto object-contain"
+          />
+        </Link>
 
         {/* Desktop nav links — center */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden xl:flex items-center justify-center gap-0.5 2xl:gap-1 min-w-0">
           {navLinks.map((link) =>
             link.children ? (
               <div key={link.key} className="relative group/dropdown">
                 <Link
                   href={link.href}
-                  className={`relative flex items-center gap-1 px-3 py-2 text-base font-semibold whitespace-nowrap transition-colors ${
+                  className={`relative flex items-center gap-1 px-2 2xl:px-3 py-2 text-[13.5px] 2xl:text-[15px] font-semibold whitespace-nowrap transition-colors ${
                     pathname.startsWith('/products') ? 'text-green-600' : 'text-gray-800 hover:text-green-600'
                   }`}
                 >
                   {t(link.key)}
-                  <LuChevronDown className="w-4 h-4 transition-transform duration-300 group-hover/dropdown:rotate-180" />
+                  <LuChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover/dropdown:rotate-180" />
                   <span
-                    className={`absolute bottom-0 left-3 right-3 h-0.5 bg-green-500 transition-transform duration-300 origin-left ${
+                    className={`absolute bottom-0 left-2 right-2 2xl:left-3 2xl:right-3 h-0.5 bg-green-500 transition-transform duration-300 origin-left ${
                       pathname.startsWith('/products') ? 'scale-x-100' : 'scale-x-0 group-hover/dropdown:scale-x-100'
                     }`}
                   />
@@ -86,14 +96,14 @@ export default function Navbar() {
               <Link
                 key={link.key}
                 href={link.href}
-                className={`relative group flex items-center gap-0.5 px-3 py-2 text-base font-semibold whitespace-nowrap transition-colors ${
+                className={`relative group flex items-center gap-0.5 px-2 2xl:px-3 py-2 text-[13.5px] 2xl:text-[15px] font-semibold whitespace-nowrap transition-colors ${
                   isActive(link.href) ? 'text-green-600' : 'text-gray-800 hover:text-green-600'
                 }`}
               >
                 {t(link.key)}
                 {/* Sliding underline */}
                 <span
-                  className={`absolute bottom-0 left-3 right-3 h-0.5 bg-green-500 transition-transform duration-300 origin-left ${
+                  className={`absolute bottom-0 left-2 right-2 2xl:left-3 2xl:right-3 h-0.5 bg-green-500 transition-transform duration-300 origin-left ${
                     isActive(link.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}
                 />
@@ -103,18 +113,20 @@ export default function Navbar() {
         </div>
 
         {/* Right side */}
-        <div className="flex-1 hidden lg:flex justify-end items-center gap-2">
+        <div className="hidden xl:flex shrink-0 justify-end items-center gap-2 2xl:gap-3">
           <LanguageSwitcher />
           <a
-            href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
-            className="bg-green-600 hover:bg-green-500 text-white text-base font-bold px-5 py-2.5 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-105 active:scale-95 hover:shadow-md hover:shadow-green-600/30"
+            href="https://wa.me/37369116121"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-600 hover:bg-green-500 text-white text-xs 2xl:text-sm font-bold px-3.5 2xl:px-5 py-2 2xl:py-2.5 rounded-md transition-all duration-200 whitespace-nowrap hover:scale-105 active:scale-95 hover:shadow-md hover:shadow-green-600/30"
           >
             {t('requestDemo')}
           </a>
         </div>
 
-        {/* Mobile right side */}
-        <div className="lg:hidden ml-auto flex items-center gap-1">
+        {/* Mobile / Tablet right side */}
+        <div className="xl:hidden ml-auto flex items-center gap-2">
           <button
             className="text-gray-700 p-2"
             onClick={() => setIsOpen(!isOpen)}
@@ -126,13 +138,13 @@ export default function Navbar() {
       </div>
 
       {/* Fog/mist gradient that fades from white into the hero image below */}
-      {!pathname.startsWith('/solutii') && !pathname.startsWith('/platforma-rparking') && !pathname.startsWith('/products') && !pathname.startsWith('/magazin') && !pathname.startsWith('/parteneri') && (
+      {!pathname.startsWith('/solutii') && !pathname.startsWith('/platforma-rparking') && !pathname.startsWith('/products') && !pathname.startsWith('/magazin') && !pathname.startsWith('/parteneri') && !pathname.startsWith('/politica') && !pathname.startsWith('/privacy') && (
         <div className="absolute top-full left-0 right-0 h-14 bg-linear-to-b from-white via-white/65 to-transparent pointer-events-none" />
       )}
 
-      {/* Mobile menu */}
+      {/* Mobile / Tablet menu */}
       {isOpen && (
-        <div className="lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm px-6 py-4 flex flex-col gap-3">
+        <div className="xl:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm px-6 py-4 flex flex-col gap-3">
           <div className="flex items-center justify-between py-2 border-b border-gray-50">
             <span className="text-sm font-medium text-gray-700">Language</span>
             <LanguageSwitcher />
@@ -195,7 +207,9 @@ export default function Navbar() {
             )
           )}
           <a
-            href="https://wa.me/37369116121" target="_blank" rel="noopener noreferrer"
+            href="https://wa.me/37369116121"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-2 bg-green-600 text-white text-sm font-semibold px-5 py-3 rounded-md text-center"
             onClick={() => setIsOpen(false)}
           >
