@@ -61,13 +61,13 @@ Cum funcționează:
 2. Când dați click pe un text sau o imagine de pe site, stratul caută în hartă elementul cu același conținut și deschide un mic editor lângă poziția click-ului:
    - **text** – textarea cu valoarea curentă, cu arătarea fișierului și a căii sursă (ex: `Carduri catalog > items.0.title`);
    - **imagine** – previzualizare + căutător de imagini existente (/uploads + /img), adresa editabilă și buton „Încarcă” (upload direct din editor);
-3. La salvare (`PATCH /api/admin/edit`) se aplică exact același flux ca în panou: validare → backup → scriere → revalidare → pagina se reîmprospătează („Salvat.”), fără rebuild.
+3. La salvare (`PATCH /api/admin/edit`) se aplică exact același flux ca în panou: validare → backup → scriere → revalidare → pagina se **reîncarcă automat** (toast „Salvat.") și modul de editare **rămâne activ** după reîncărcare (`sessionStorage`), fără rebuild și fără să pierzi modul.
 4. Elementele cu același text în mai multe locuri (ex: „Entry Point” apare și în cardurile de acasă și în catalog) afișează un selector de sursă — alegi din ce fișier faci modificarea.
 
 Detalii:
 
 - Textele din `messages` sunt per-limbă; opțiunea „aplica acelasi text si in celelalte limbi” din editor copiază aceeași valoare în RO/EN/RU (oprită implicit, ca să nu suprascrii accidental traducerile). Textele/imaginile din colecții (carduri, produse, galerie) sunt comune tuturor limbilor — salvarea lor se aplică automat peste tot.
-- ESC închide editorul; „Gata” dezactivează modul. Navigarea normală pe site rămâne liberă în timpul editării (doar click-urile pe elemente cu potrivire sunt interceptate).
+- ESC închide editorul; „Gata” dezactivează modul. Navigarea normală pe site rămâne liberă în timpul editării (doar click-urile pe elemente cu potrivire sunt interceptate). Verificarea sesiunii are mai multe încercări (retry) ca butonul să nu dispară dacă serverul abia pornește.
 - Nu se pot edita aici numerele și structurile (prețuri, adăugare/ștergere carduri) — asta rămâne în panoul `/admin` (protecție anti-greșeli). Rutele noi sunt `/api/admin/edit-map` (citire) și `/api/admin/edit` (PATCH pe o singură valoare), ambele protejate de sesiunea de admin.
 - Implementare: `SiteEditLayer` (`app/components/SiteEditLayer.tsx`), montat în `app/[locale]/layout.tsx`; stilurile proprii (prefixate `rp-edit-*`) nu afectează restul site-ului, iar HTML-ul trimis vizitatorilor nu conține niciun element al editorului (apare doar după hidratare + verificarea sesiunii). Pe paginile `/admin` stratul se ascunde complet.
 

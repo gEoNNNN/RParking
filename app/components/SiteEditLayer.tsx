@@ -7,7 +7,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { LuPencil, LuX, LuUpload } from 'react-icons/lu';
 
@@ -39,6 +39,8 @@ const FILE_LABELS: Record<string, string> = {
 };
 
 const FORBIDDEN = ['__proto__', 'constructor', 'prototype'];
+// Edit mode survives a full page reload (every save triggers one, see below).
+const EDIT_ON_KEY = 'rp_edit_on';
 const norm = (s: string) => s.replace(/\s+/g, ' ').trim().toLowerCase();
 const decodeSafe = (s: string) => {
   try {
@@ -111,7 +113,6 @@ function placePopup(r: DOMRect, vw: number, vh: number): Anchor {
 export default function SiteEditLayer() {
   const locale = useLocale() as string;
   const pathname = usePathname() || '';
-  const router = useRouter();
 
   // Hide inside the admin panel itself.
   const stripped = pathname.replace(/^\/(ro|en|ru)(?=\/|$)/, '');
@@ -141,18 +142,24 @@ export default function SiteEditLayer() {
     toastTimer.current = setTimeout(() => setToast(null), 2600);
   }, []);
 
-  // ─── session check ────────────────────────────────────────────────────
+  // ─── session check (with a few retries: the server may still be booting) ─
   useEffect(() => {
     let dead = false;
-    (async () => {
+    let attempts = 0;
+    const check = async () => {
+      attempts += 1;
       try {
         const r = await fetch('/api/admin/session', { cache: 'no-store' });
         const d = (await r.json()) as { authenticated?: boolean };
-        if (!dead) setAuthed(Boolean(d.authenticated));
+        if (dead) return;
+        setAuthed(Boolean(d.authenticated));
+        if (!d.authenticated && attempts < 3) window.setTimeout(check, 1500);
       } catch {
-        if (!dead) setAuthed(false);
+        if (!dead && attempts < 3) window.setTimeout(check, 1500);
+        else if (!dead) setAuthed(false);
       }
-    })();
+    };
+    check();
     return () => {
       dead = true;
     };
@@ -169,6 +176,11 @@ export default function SiteEditLayer() {
   const enterEditMode = useCallback(async () => {
     setEditing(true);
     editingRef.current = true;
+    try {
+      sessionStorage.setItem(EDIT_ON_KEY, '1');
+    } catch {
+      /* private mode: fine, mode just will not resume after reload */
+    }
     setEditor(null);
     try {
       const r = await fetch(`/api/admin/edit-map?locale=${locale}`, { cache: 'no-store' });
@@ -207,11 +219,28 @@ export default function SiteEditLayer() {
     editingRef.current = false;
     setEditor(null);
     idxRef.current = null;
+    try {
+      sessionStorage.removeItem(EDIT_ON_KEY);
+    } catch {
+      /* noop */
+    }
     if (hlRef.current) {
       hlRef.current.classList.remove('rp-edit-hl');
       hlRef.current = null;
     }
   }, []);
+
+  // Auto-resume edit mode after a full reload (see save(): every save reloads).
+  useEffect(() => {
+    if (!authed || isAdminPath || editingRef.current) return;
+    let on = null;
+    try {
+      on = sessionStorage.getItem(EDIT_ON_KEY);
+    } catch {
+      on = null;
+    }
+    if (on === '1') void enterEditMode();
+  }, [authed, isAdminPath, enterEditMode]);
 
   // ─── matching ─────────────────────────────────────────────────────────
   const findMatches = useCallback(
@@ -397,12 +426,16 @@ export default function SiteEditLayer() {
       }
 
       setEditor(null);
-      showToast('Salvat.');
-      router.refresh();
+      // Feedback first: server-side revalidation has already run (revalidatePath
+      // fires in writeMessages/writeCollection), so a full reload serves the
+      // fresh content deterministically. router.refresh() proved unreliable
+      // here (Next replays the client router cache without hitting the server).
+      showToast('Salvat. Actualizez pagina...');
+      setTimeout(() => window.location.reload(), 300);
     } finally {
       setBusy(false);
     }
-  }, [editor, busy, applyAll, showToast, router]);
+  }, [editor, busy, applyAll, showToast]);
 
   // ─── image upload in the image editor ────────────────────────────────
   const upload = useCallback(
