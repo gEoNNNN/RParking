@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "key": "residential", "image": "/img/parcari%20rezidentiale.png", "icon": "PiBuildingApartment" },
+    { "key": "mall", "image": "/img/centrul%20comercial.png", "icon": "CiShop" },
+    { "key": "corporate", "image": "/img/parcari%20corporate.png", "icon": "IoBusinessOutline" },
+    { "key": "airports", "image": "/img/aeropturi.png", "icon": "SlPlane" },
+    { "key": "hospitals", "image": "/img/spitale.png", "icon": "FaRegHospital" },
+    { "key": "hotels", "image": "/img/hoteluri.png", "icon": "BiHotel" }
+  ]
+}

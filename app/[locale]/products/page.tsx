@@ -4,10 +4,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '../../../i18n/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { Icon } from '../../lib/icon-registry';
+import { readCollection } from '../../lib/content';
 import {
-  LuArrowRight, LuCheck,
-  LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard,
-  LuShieldCheck, LuSettings2, LuZap, LuPuzzle,
+  LuArrowRight, LuCheck, LuSettings2, LuPuzzle, LuShieldCheck, LuZap, LuLayoutDashboard,
 } from 'react-icons/lu';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seo';
 
@@ -57,15 +57,6 @@ export const metadata: Metadata = {
   },
 };
 
-const products = [
-  { key: 'entry', title: 'Entry Point', href: '/products/entry-point', image: '/img/produs1 - Copy.png', icon: <LuLogIn className="w-6 h-6 text-green-600" /> },
-  { key: 'exit', title: 'Exit Point', href: '/products/exit-point-cardpass', image: '/img/produs2 - Copy.png', icon: <LuLogOut className="w-6 h-6 text-green-600" /> },
-  { key: 'pay', title: 'Pay Point', href: '/products/pay-point', image: '/img/paypoint.png', icon: <LuCreditCard className="w-6 h-6 text-green-600" /> },
-  { key: 'backoffice', title: 'BackOffice', href: '/products/backoffice', image: '/img/back.jpg', icon: <LuLayoutDashboard className="w-6 h-6 text-green-600" /> },
-  { key: 'raccess-wc', title: 'RAccess WC', href: '/products/raccess-wc', image: '/img/wc.png', icon: <LuShieldCheck className="w-6 h-6 text-green-600" /> },
-  { key: 'rchange', title: 'RChange', href: '/products/rchange', image: '/img/exchange.png', icon: <LuZap className="w-6 h-6 text-green-600" /> },
-];
-
 const whyUs = [
   { key: 'complete', icon: <LuShieldCheck className="w-6 h-6 text-green-600" /> },
   { key: 'integration', icon: <LuPuzzle className="w-6 h-6 text-green-600" /> },
@@ -110,6 +101,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('ProductsPage');
+  const products = readCollection('catalog-cards').items;
   return (
     <main>
       {/* Navbar + Logo */}
@@ -185,7 +177,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {products.map((p, idx) => (
               <div
-                key={p.title}
+                key={`${p.key}-${idx}`}
                 data-reveal
                 data-reveal-delay={String(idx * 80)}
                 className="group flex flex-col border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl overflow-hidden transition-all duration-300 bg-white"
@@ -209,7 +201,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
                 <div className="flex flex-col flex-1 p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
-                      {p.icon}
+                      <Icon name={p.icon} className="w-6 h-6 text-green-600" />
                     </div>
                     <span className="text-xs text-gray-400 font-semibold uppercase tracking-wide">{t(`items.${p.key}.subtitle`)}</span>
                   </div>

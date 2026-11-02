@@ -17,12 +17,30 @@
     "description": "Complete control of access, payments and monitoring in an integrated hardware and software platform developed and manufactured in the Republic of Moldova.",
     "requestQuote": "Request a quote",
     "scheduleDemo": "Schedule a demo",
-    "badge1": { "l1": "Developed in", "l2": "Moldova" },
-    "badge2": { "l1": "Own Hardware", "l2": "& Software" },
-    "badge3": { "l1": "Dedicated", "l2": "tech support" },
-    "badge4": { "l1": "Secure", "l2": "and reliable" },
-    "badge5": { "l1": "Easy", "l2": "integrations" },
-    "badge6": { "l1": "Fast", "l2": "installation" }
+    "badge1": {
+      "l1": "Developed in",
+      "l2": "Moldova"
+    },
+    "badge2": {
+      "l1": "Own Hardware",
+      "l2": "& Software"
+    },
+    "badge3": {
+      "l1": "Dedicated",
+      "l2": "tech support"
+    },
+    "badge4": {
+      "l1": "Secure",
+      "l2": "and reliable"
+    },
+    "badge5": {
+      "l1": "Easy",
+      "l2": "integrations"
+    },
+    "badge6": {
+      "l1": "Fast",
+      "l2": "installation"
+    }
   },
   "BenefitsBar": {
     "tagline1": "More efficient parking,",
@@ -75,11 +93,26 @@
     "titleSuffix": "?",
     "challengesHeader": "Your challenges",
     "solutionsHeader": "The RParking solution",
-    "row1": { "challenge": "Queues at entry and exit", "solution": "Fully automated access" },
-    "row2": { "challenge": "Uncontrolled access", "solution": "ANPR, QR and NFC recognition" },
-    "row3": { "challenge": "Fraud and financial losses", "solution": "Real-time reports and monitoring" },
-    "row4": { "challenge": "Manual records and errors", "solution": "Total control and complete history" },
-    "row5": { "challenge": "High operating costs", "solution": "Lower costs and higher revenue" }
+    "row1": {
+      "challenge": "Queues at entry and exit",
+      "solution": "Fully automated access"
+    },
+    "row2": {
+      "challenge": "Uncontrolled access",
+      "solution": "ANPR, QR and NFC recognition"
+    },
+    "row3": {
+      "challenge": "Fraud and financial losses",
+      "solution": "Real-time reports and monitoring"
+    },
+    "row4": {
+      "challenge": "Manual records and errors",
+      "solution": "Total control and complete history"
+    },
+    "row5": {
+      "challenge": "High operating costs",
+      "solution": "Lower costs and higher revenue"
+    }
   },
   "Statistics": {
     "tagline": "Smart technology for a sustainable future",
@@ -168,32 +201,74 @@
       "entry": {
         "subtitle": "Entry station",
         "desc": "Smart station for access control in modern parking facilities.",
-        "features": ["Access card issuing", "NFC reading", "QR Code reading", "Voice communication", "Barrier integration", "Centralized management"]
+        "features": [
+          "Access card issuing",
+          "NFC reading",
+          "QR Code reading",
+          "Voice communication",
+          "Barrier integration",
+          "Centralized management"
+        ]
       },
       "exit": {
         "subtitle": "Exit station",
         "desc": "Exit station for validating cards, tickets and quick exit from the parking.",
-        "features": ["NFC card validation", "QR Code reading", "Ticket validation", "Payment verification", "Barrier access control", "Communication with BackOffice"]
+        "features": [
+          "NFC card validation",
+          "QR Code reading",
+          "Ticket validation",
+          "Payment verification",
+          "Barrier access control",
+          "Communication with BackOffice"
+        ]
       },
       "pay": {
         "subtitle": "Payment terminal",
         "desc": "Automatic payment terminal with cash and card support.",
-        "features": ["Card payments", "Cash payments", "Automatic change", "Fiscal receipt", "NFC / QR Code", "Reporting and reconciliation"]
+        "features": [
+          "Card payments",
+          "Cash payments",
+          "Automatic change",
+          "Fiscal receipt",
+          "NFC / QR Code",
+          "Reporting and reconciliation"
+        ]
       },
       "backoffice": {
         "subtitle": "Software platform",
         "desc": "Software platform for managing all locations.",
-        "features": ["Dashboard & reports", "Real-time monitoring", "Subscriptions & customers", "Transactions & revenue", "White List / Black List", "User management"]
+        "features": [
+          "Dashboard & reports",
+          "Real-time monitoring",
+          "Subscriptions & customers",
+          "Transactions & revenue",
+          "White List / Black List",
+          "User management"
+        ]
       },
       "raccess-wc": {
         "subtitle": "Restroom access control",
         "desc": "Automated access control and fee collection system for public restrooms.",
-        "features": ["Automated access payment", "Integrated turnstiles", "Real-time monitoring", "Reports & statistics", "BackOffice integration", "Intuitive interface"]
+        "features": [
+          "Automated access payment",
+          "Integrated turnstiles",
+          "Real-time monitoring",
+          "Reports & statistics",
+          "BackOffice integration",
+          "Intuitive interface"
+        ]
       },
       "rchange": {
         "subtitle": "Automated currency exchange",
         "desc": "Self-service currency exchange machine available around the clock.",
-        "features": ["Accepts banknotes", "Dispenses coins", "Touch screen", "Available 24/7", "BackOffice integration", "Transaction reports"]
+        "features": [
+          "Accepts banknotes",
+          "Dispenses coins",
+          "Touch screen",
+          "Available 24/7",
+          "BackOffice integration",
+          "Transaction reports"
+        ]
       }
     }
   },
@@ -204,22 +279,94 @@
     "domainsTitle": "Application areas",
     "domainsSubtitle": "Our solutions are tailored to the specific requirements of each field of activity.",
     "domains": {
-      "residential": { "title": "Residential parking", "description": "Access control for residents and visitors, subscriptions, reserved spots.", "features": ["Subscription / QR access", "Reserved spots for residents", "Visitor tracking", "Reports and access history"] },
-      "mall": { "title": "Shopping malls", "description": "Efficient management of high visitor flow and increased revenue.", "features": ["Flexible pricing", "Fast payments, multiple methods", "Reduced waiting time", "Integration with existing systems"] },
-      "corporate": { "title": "Corporate parking", "description": "Parking solutions for employees and visitors, with high control and security.", "features": ["White/Black List", "Employee and visitor access", "Departmental reports", "Integration with HR and access control"] },
-      "airports": { "title": "Airports", "description": "High-performance systems for large vehicle flows and maximum security.", "features": ["High-precision ANPR recognition", "Multiple parking zones", "Real-time statistics and monitoring", "Integration with airport systems"] },
-      "hospitals": { "title": "Hospitals", "description": "Controlled access for staff, patients and visitors, with custom pricing.", "features": ["Card / QR access", "Differentiated rates", "Dedicated staff spots", "Reports and detailed records"] },
-      "hotels": { "title": "Hotels", "description": "Comfort for guests and total control over parking.", "features": ["Parking spot reservation", "Fast access for guests", "Integration with hotel system", "Pricing by length of stay"] }
+      "residential": {
+        "title": "Residential parking",
+        "description": "Access control for residents and visitors, subscriptions, reserved spots.",
+        "features": [
+          "Subscription / QR access",
+          "Reserved spots for residents",
+          "Visitor tracking",
+          "Reports and access history"
+        ]
+      },
+      "mall": {
+        "title": "Shopping malls",
+        "description": "Efficient management of high visitor flow and increased revenue.",
+        "features": [
+          "Flexible pricing",
+          "Fast payments, multiple methods",
+          "Reduced waiting time",
+          "Integration with existing systems"
+        ]
+      },
+      "corporate": {
+        "title": "Corporate parking",
+        "description": "Parking solutions for employees and visitors, with high control and security.",
+        "features": [
+          "White/Black List",
+          "Employee and visitor access",
+          "Departmental reports",
+          "Integration with HR and access control"
+        ]
+      },
+      "airports": {
+        "title": "Airports",
+        "description": "High-performance systems for large vehicle flows and maximum security.",
+        "features": [
+          "High-precision ANPR recognition",
+          "Multiple parking zones",
+          "Real-time statistics and monitoring",
+          "Integration with airport systems"
+        ]
+      },
+      "hospitals": {
+        "title": "Hospitals",
+        "description": "Controlled access for staff, patients and visitors, with custom pricing.",
+        "features": [
+          "Card / QR access",
+          "Differentiated rates",
+          "Dedicated staff spots",
+          "Reports and detailed records"
+        ]
+      },
+      "hotels": {
+        "title": "Hotels",
+        "description": "Comfort for guests and total control over parking.",
+        "features": [
+          "Parking spot reservation",
+          "Fast access for guests",
+          "Integration with hotel system",
+          "Pricing by length of stay"
+        ]
+      }
     },
     "whyTitlePrefix": "Why choose ",
     "whyTitleSuffix": "?",
     "why": {
-      "custom": { "title": "Custom solutions", "description": "We adapt the system to the needs of each project." },
-      "tech": { "title": "Advanced technology", "description": "ANPR, QR, NFC and modern payment methods." },
-      "dedicated": { "title": "Dedicated support", "description": "Local team, fast support and efficient maintenance." },
-      "scalable": { "title": "Scalability", "description": "The system grows with your business needs." },
-      "reliable": { "title": "Reliability and security", "description": "Robust equipment and stable, secure software." },
-      "local": { "title": "Local product", "description": "Developed and manufactured in the Republic of Moldova." }
+      "custom": {
+        "title": "Custom solutions",
+        "description": "We adapt the system to the needs of each project."
+      },
+      "tech": {
+        "title": "Advanced technology",
+        "description": "ANPR, QR, NFC and modern payment methods."
+      },
+      "dedicated": {
+        "title": "Dedicated support",
+        "description": "Local team, fast support and efficient maintenance."
+      },
+      "scalable": {
+        "title": "Scalability",
+        "description": "The system grows with your business needs."
+      },
+      "reliable": {
+        "title": "Reliability and security",
+        "description": "Robust equipment and stable, secure software."
+      },
+      "local": {
+        "title": "Local product",
+        "description": "Developed and manufactured in the Republic of Moldova."
+      }
     },
     "greenTitle": "Green technology for smart parking",
     "greenDesc": "Energy-efficient, environmentally friendly solutions built for the future.",
@@ -253,33 +400,96 @@
     "barriers": "Automatic barriers",
     "galleryTitle": "The implementation in images",
     "gallery": {
-      "g1": { "title": "Entry Point", "description": "Automatic ticket issuing and vehicle access control." },
-      "g2": { "title": "Automatic barriers", "description": "Fast and secure access with high-performance barriers." },
-      "g3": { "title": "Exit Point", "description": "Ticket validation and access control at parking exit." },
-      "g4": { "title": "Entry – exit flow", "description": "A smooth and secure experience for users." },
-      "g5": { "title": "Pay Point", "description": "Cash and card payments, automatic receipt, intuitive interface." },
-      "g6": { "title": "Access control", "description": "Modern equipment for fast and reliable verification." },
-      "g7": { "title": "Professional installation", "description": "Clean implementation, perfectly integrated into the parking infrastructure." },
-      "g8": { "title": "Parking in operation", "description": "Active RParking system with a fully automated entry and exit flow." },
-      "g9": { "title": "Access terminal", "description": "Access control equipment installed and operational in the parking facility." },
-      "g10": { "title": "Parking infrastructure", "description": "Overview of the automated parking infrastructure." },
-      "g11": { "title": "Complete implementation", "description": "Finished project with RParking equipment integrated into the real environment." }
+      "g1": {
+        "title": "Entry Point",
+        "description": "Automatic ticket issuing and vehicle access control."
+      },
+      "g2": {
+        "title": "Automatic barriers",
+        "description": "Fast and secure access with high-performance barriers."
+      },
+      "g3": {
+        "title": "Exit Point",
+        "description": "Ticket validation and access control at parking exit."
+      },
+      "g4": {
+        "title": "Entry – exit flow",
+        "description": "A smooth and secure experience for users."
+      },
+      "g5": {
+        "title": "Pay Point",
+        "description": "Cash and card payments, automatic receipt, intuitive interface."
+      },
+      "g6": {
+        "title": "Access control",
+        "description": "Modern equipment for fast and reliable verification."
+      },
+      "g7": {
+        "title": "Professional installation",
+        "description": "Clean implementation, perfectly integrated into the parking infrastructure."
+      },
+      "g8": {
+        "title": "Parking in operation",
+        "description": "Active RParking system with a fully automated entry and exit flow."
+      },
+      "g9": {
+        "title": "Access terminal",
+        "description": "Access control equipment installed and operational in the parking facility."
+      },
+      "g10": {
+        "title": "Parking infrastructure",
+        "description": "Overview of the automated parking infrastructure."
+      },
+      "g11": {
+        "title": "Complete implementation",
+        "description": "Finished project with RParking equipment integrated into the real environment."
+      }
     },
     "usedTitle": "Products used in this implementation",
     "used": {
-      "u1": { "title": "RParking Entry Point", "description": "Automatic ticket issuing and validation and access control." },
-      "u2": { "title": "RParking Exit Point", "description": "Validation and access control at exit, integrated with the payment system." },
-      "u3": { "title": "RParking Pay Point", "description": "Cash and card payments, automatic receipt and reporting." },
-      "u4": { "title": "RParking BackOffice", "description": "Complete management, real-time monitoring and advanced reports." }
+      "u1": {
+        "title": "RParking Entry Point",
+        "description": "Automatic ticket issuing and validation and access control."
+      },
+      "u2": {
+        "title": "RParking Exit Point",
+        "description": "Validation and access control at exit, integrated with the payment system."
+      },
+      "u3": {
+        "title": "RParking Pay Point",
+        "description": "Cash and card payments, automatic receipt and reporting."
+      },
+      "u4": {
+        "title": "RParking BackOffice",
+        "description": "Complete management, real-time monitoring and advanced reports."
+      }
     },
     "benefitsTitle": "Benefits achieved",
     "benefits": {
-      "b1": { "title": "Complete automation", "description": "Fully automated access, payments and reporting." },
-      "b2": { "title": "Fewer manual interventions", "description": "Efficient operations and lower operating costs." },
-      "b3": { "title": "Real-time monitoring", "description": "Live view of all accesses and transactions." },
-      "b4": { "title": "Centralized reporting", "description": "Financial reports and statistics available instantly." },
-      "b5": { "title": "Multiple payments", "description": "Support for cash, card and other payment methods." },
-      "b6": { "title": "Scalability", "description": "A solution ready for easy expansion." }
+      "b1": {
+        "title": "Complete automation",
+        "description": "Fully automated access, payments and reporting."
+      },
+      "b2": {
+        "title": "Fewer manual interventions",
+        "description": "Efficient operations and lower operating costs."
+      },
+      "b3": {
+        "title": "Real-time monitoring",
+        "description": "Live view of all accesses and transactions."
+      },
+      "b4": {
+        "title": "Centralized reporting",
+        "description": "Financial reports and statistics available instantly."
+      },
+      "b5": {
+        "title": "Multiple payments",
+        "description": "Support for cash, card and other payment methods."
+      },
+      "b6": {
+        "title": "Scalability",
+        "description": "A solution ready for easy expansion."
+      }
     },
     "techTitle": "Integrated technologies",
     "bottomTitlePrefix": "Preparing the next implementations of ",
@@ -339,10 +549,22 @@
     "whyLabel": "WHY CLIENTS CHOOSE RPARKING",
     "whyTitle": "Our advantages",
     "why": {
-      "w1": { "title": "Complete solution", "desc": "Hardware and software in a single platform" },
-      "w2": { "title": "Proprietary development", "desc": "Full control over the product and updates." },
-      "w3": { "title": "Local support", "desc": "Rapid interventions and direct communication." },
-      "w4": { "title": "Scalability", "desc": "From small parking lots to complex projects." }
+      "w1": {
+        "title": "Complete solution",
+        "desc": "Hardware and software in a single platform"
+      },
+      "w2": {
+        "title": "Proprietary development",
+        "desc": "Full control over the product and updates."
+      },
+      "w3": {
+        "title": "Local support",
+        "desc": "Rapid interventions and direct communication."
+      },
+      "w4": {
+        "title": "Scalability",
+        "desc": "From small parking lots to complex projects."
+      }
     },
     "seenLabel": "REAL IMPLEMENTATIONS",
     "seenTitle": "Seen in action",
@@ -350,11 +572,26 @@
     "valuesLabel": "OUR VALUES",
     "valuesTitle": "What defines us",
     "values": {
-      "v1": { "title": "Innovation", "desc": "We constantly develop modern and efficient solutions." },
-      "v2": { "title": "Reliability", "desc": "Tested equipment and stable software." },
-      "v3": { "title": "Security", "desc": "We protect data and access at all times." },
-      "v4": { "title": "Performance", "desc": "Fast, accurate and optimized systems." },
-      "v5": { "title": "Partnership", "desc": "We build solid long-term relationships." }
+      "v1": {
+        "title": "Innovation",
+        "desc": "We constantly develop modern and efficient solutions."
+      },
+      "v2": {
+        "title": "Reliability",
+        "desc": "Tested equipment and stable software."
+      },
+      "v3": {
+        "title": "Security",
+        "desc": "We protect data and access at all times."
+      },
+      "v4": {
+        "title": "Performance",
+        "desc": "Fast, accurate and optimized systems."
+      },
+      "v5": {
+        "title": "Partnership",
+        "desc": "We build solid long-term relationships."
+      }
     },
     "ctaTitle1": "Let's transform your parking",
     "ctaTitle2": "into a smart system",
@@ -397,29 +634,80 @@
     },
     "howTitle": "How the <span>RParking</span> platform works",
     "steps": {
-      "s1": { "title": "Smart equipment", "description": "Entry Point, Exit Point, Pay Point and connected sensors." },
-      "s2": { "title": "Secure communication", "description": "Data is transmitted encrypted through secure networks." },
-      "s3": { "title": "RParking platform", "description": "All data is processed, stored and correlated in real time." },
-      "s4": { "title": "BackOffice & Monitoring", "description": "Full control, reports and instant alerts." },
-      "s5": { "title": "Smart decisions", "description": "Reports that enable more efficient and profitable operation." }
+      "s1": {
+        "title": "Smart equipment",
+        "description": "Entry Point, Exit Point, Pay Point and connected sensors."
+      },
+      "s2": {
+        "title": "Secure communication",
+        "description": "Data is transmitted encrypted through secure networks."
+      },
+      "s3": {
+        "title": "RParking platform",
+        "description": "All data is processed, stored and correlated in real time."
+      },
+      "s4": {
+        "title": "BackOffice & Monitoring",
+        "description": "Full control, reports and instant alerts."
+      },
+      "s5": {
+        "title": "Smart decisions",
+        "description": "Reports that enable more efficient and profitable operation."
+      }
     },
     "whyTitle": "Why <span>RParking</span> technology?",
     "why": {
-      "w1": { "title": "High performance", "description": "Fast processing of thousands of simultaneous transactions." },
-      "w2": { "title": "99.9% availability", "description": "High SLA and resilient cloud infrastructure." },
-      "w3": { "title": "Advanced security", "description": "End-to-end protection of data and accesses." },
-      "w4": { "title": "Easy integration", "description": "Modern APIs for quick integrations with third-party systems." },
-      "w5": { "title": "Access from anywhere", "description": "Web and mobile platform from any device." },
-      "w6": { "title": "Scalability", "description": "Easily adapts to any parking, from 1 to 1000+ locations." }
+      "w1": {
+        "title": "High performance",
+        "description": "Fast processing of thousands of simultaneous transactions."
+      },
+      "w2": {
+        "title": "99.9% availability",
+        "description": "High SLA and resilient cloud infrastructure."
+      },
+      "w3": {
+        "title": "Advanced security",
+        "description": "End-to-end protection of data and accesses."
+      },
+      "w4": {
+        "title": "Easy integration",
+        "description": "Modern APIs for quick integrations with third-party systems."
+      },
+      "w5": {
+        "title": "Access from anywhere",
+        "description": "Web and mobile platform from any device."
+      },
+      "w6": {
+        "title": "Scalability",
+        "description": "Easily adapts to any parking, from 1 to 1000+ locations."
+      }
     },
     "techTitle": "Technology and key features",
     "key": {
-      "k1": { "title": "Modern cloud", "description": "Next-generation cloud infrastructure for high speeds and high uptime." },
-      "k2": { "title": "Real-time data", "description": "Live monitoring of payments, accesses, occupancy and equipment." },
-      "k3": { "title": "AI & Analytics", "description": "Advanced analytics and predictions for revenue and traffic optimization." },
-      "k4": { "title": "Equipment management", "description": "Status, diagnostics, configuration and remote updates for all devices." },
-      "k5": { "title": "Advanced reports", "description": "Customized reports, exports and interactive dashboards." },
-      "k6": { "title": "Multi-tenant", "description": "Multi-location management and custom user roles." }
+      "k1": {
+        "title": "Modern cloud",
+        "description": "Next-generation cloud infrastructure for high speeds and high uptime."
+      },
+      "k2": {
+        "title": "Real-time data",
+        "description": "Live monitoring of payments, accesses, occupancy and equipment."
+      },
+      "k3": {
+        "title": "AI & Analytics",
+        "description": "Advanced analytics and predictions for revenue and traffic optimization."
+      },
+      "k4": {
+        "title": "Equipment management",
+        "description": "Status, diagnostics, configuration and remote updates for all devices."
+      },
+      "k5": {
+        "title": "Advanced reports",
+        "description": "Customized reports, exports and interactive dashboards."
+      },
+      "k6": {
+        "title": "Multi-tenant",
+        "description": "Multi-location management and custom user roles."
+      }
     },
     "integrationTitle": "Integration and open ecosystem",
     "integrations": {
@@ -454,45 +742,138 @@
     },
     "keyFeaturesTitle": "Key features",
     "key": {
-      "k1": { "title": "QR Code", "accent": "Scanner", "desc": "Scans and processes QR codes quickly." },
-      "k2": { "title": "NFC / RFID", "accent": "Reader", "desc": "Reads NFC / RFID cards and tags." },
-      "k3": { "title": "Card", "accent": "Issuance", "desc": "Automatically issues access cards upon arrival." },
-      "k4": { "title": "Voice", "accent": "assistance", "desc": "Clear audio guidance for users." },
-      "k5": { "title": "Integration", "accent": "barriers", "desc": "Automatic barrier opening." },
-      "k6": { "title": "Centralized", "accent": "management", "desc": "Real-time control and monitoring from BackOffice." }
+      "k1": {
+        "title": "QR Code",
+        "accent": "Scanner",
+        "desc": "Scans and processes QR codes quickly."
+      },
+      "k2": {
+        "title": "NFC / RFID",
+        "accent": "Reader",
+        "desc": "Reads NFC / RFID cards and tags."
+      },
+      "k3": {
+        "title": "Card",
+        "accent": "Issuance",
+        "desc": "Automatically issues access cards upon arrival."
+      },
+      "k4": {
+        "title": "Voice",
+        "accent": "assistance",
+        "desc": "Clear audio guidance for users."
+      },
+      "k5": {
+        "title": "Integration",
+        "accent": "barriers",
+        "desc": "Automatic barrier opening."
+      },
+      "k6": {
+        "title": "Centralized",
+        "accent": "management",
+        "desc": "Real-time control and monitoring from BackOffice."
+      }
     },
     "howTitle": "How it works?",
     "steps": {
-      "s1": { "title": "Car arrives at Entry Point", "desc": "Vehicle approaches the entry terminal." },
-      "s2": { "title": "Scan plate number", "desc": "The system automatically reads the vehicle license plate." },
-      "s3": { "title": "Access card issued", "desc": "Station releases the access card." },
-      "s4": { "title": "Access permitted", "desc": "Vehicle enters, access is recorded." },
-      "s5": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." }
+      "s1": {
+        "title": "Car arrives at Entry Point",
+        "desc": "Vehicle approaches the entry terminal."
+      },
+      "s2": {
+        "title": "Scan plate number",
+        "desc": "The system automatically reads the vehicle license plate."
+      },
+      "s3": {
+        "title": "Access card issued",
+        "desc": "Station releases the access card."
+      },
+      "s4": {
+        "title": "Access permitted",
+        "desc": "Vehicle enters, access is recorded."
+      },
+      "s5": {
+        "title": "Barrier opens automatically",
+        "desc": "Barrier lifts automatically after validation."
+      }
     },
     "hardwareTitle": "Hardware components",
     "hardwareSubtitle": "Main components",
     "hardware": {
-      "hw1": { "title": "7 inch Monitor", "desc": "Anti-vandal, IP65, durable touch display" },
-      "hw2": { "title": "NFC Reader", "desc": "Reads RFID/NFC cards for fast access" },
-      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans QR codes and 2D barcodes" },
-      "hw4": { "title": "Card Issuing Machine", "desc": "Automatic dispenser for temporary cards" },
-      "hw5": { "title": "Built-in Speaker", "desc": "Built-in speaker for voice assistance" },
-      "hw6": { "title": "Service Button", "desc": "Help button for remote support" }
+      "hw1": {
+        "title": "7 inch Monitor",
+        "desc": "Anti-vandal, IP65, durable touch display"
+      },
+      "hw2": {
+        "title": "NFC Reader",
+        "desc": "Reads RFID/NFC cards for fast access"
+      },
+      "hw3": {
+        "title": "2D / QR Code Scanner",
+        "desc": "Scans QR codes and 2D barcodes"
+      },
+      "hw4": {
+        "title": "Card Issuing Machine",
+        "desc": "Automatic dispenser for temporary cards"
+      },
+      "hw5": {
+        "title": "Built-in Speaker",
+        "desc": "Built-in speaker for voice assistance"
+      },
+      "hw6": {
+        "title": "Service Button",
+        "desc": "Help button for remote support"
+      }
     },
     "specsTitle": "Technical specifications",
     "specs": {
-      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
-      "sp2": { "label": "QR Scanner", "value": "1D / 2D" },
-      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
-      "sp4": { "label": "Card Issuing", "value": "Automatic" },
-      "sp5": { "label": "Speaker", "value": "2W / 4Ω" },
-      "sp6": { "label": "LED Status", "value": "Yes" },
-      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
-      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
-      "sp9": { "label": "Temperature", "value": "-20°C ~ +60°C" },
-      "sp10": { "label": "Power", "value": "220V AC" },
-      "sp11": { "label": "Material", "value": "Metal IP54" },
-      "sp12": { "label": "API Integration", "value": "Yes" }
+      "sp1": {
+        "label": "Display",
+        "value": "7\" Touch IP65"
+      },
+      "sp2": {
+        "label": "QR Scanner",
+        "value": "1D / 2D"
+      },
+      "sp3": {
+        "label": "NFC / RFID",
+        "value": "13.56 MHz"
+      },
+      "sp4": {
+        "label": "Card Issuing",
+        "value": "Automatic"
+      },
+      "sp5": {
+        "label": "Speaker",
+        "value": "2W / 4Ω"
+      },
+      "sp6": {
+        "label": "LED Status",
+        "value": "Yes"
+      },
+      "sp7": {
+        "label": "Communication",
+        "value": "Ethernet / 4G"
+      },
+      "sp8": {
+        "label": "Protocol",
+        "value": "TCP/IP, HTTPS"
+      },
+      "sp9": {
+        "label": "Temperature",
+        "value": "-20°C ~ +60°C"
+      },
+      "sp10": {
+        "label": "Power",
+        "value": "220V AC"
+      },
+      "sp11": {
+        "label": "Material",
+        "value": "Metal IP54"
+      },
+      "sp12": {
+        "label": "API Integration",
+        "value": "Yes"
+      }
     },
     "integrationTitle": "Full integration",
     "integrations": {
@@ -507,9 +888,18 @@
     },
     "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
     "ecosystem": {
-      "e1": { "title": "Pay Point", "desc": "Automatic payment with cash and card." },
-      "e2": { "title": "Exit Point", "desc": "Exit station with card or ticket." },
-      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+      "e1": {
+        "title": "Pay Point",
+        "desc": "Automatic payment with cash and card."
+      },
+      "e2": {
+        "title": "Exit Point",
+        "desc": "Exit station with card or ticket."
+      },
+      "e3": {
+        "title": "BackOffice",
+        "desc": "Real-time administration and reporting."
+      }
     },
     "bottomTitle": "Want to automate <span>access</span> to your parking?",
     "bottomDesc": "Our team is ready to offer the best solution adapted to your needs."
@@ -529,45 +919,138 @@
     },
     "keyFeaturesTitle": "Key features",
     "key": {
-      "k1": { "title": "Validation", "accent": "card", "desc": "Reads and validates access cards issued at entry." },
-      "k2": { "title": "NFC", "accent": "Reader", "desc": "Supports NFC tags and cards for fast access." },
-      "k3": { "title": "QR Code", "accent": "Scanner", "desc": "Scans QR codes for validation and exit." },
-      "k4": { "title": "Control", "accent": "access", "desc": "Real-time verification and exit authorization." },
-      "k5": { "title": "Communication", "accent": "BackOffice", "desc": "Secure data exchange with central platform." },
-      "k6": { "title": "Opening", "accent": "barrier", "desc": "Automatic barrier opening after validation." }
+      "k1": {
+        "title": "Validation",
+        "accent": "card",
+        "desc": "Reads and validates access cards issued at entry."
+      },
+      "k2": {
+        "title": "NFC",
+        "accent": "Reader",
+        "desc": "Supports NFC tags and cards for fast access."
+      },
+      "k3": {
+        "title": "QR Code",
+        "accent": "Scanner",
+        "desc": "Scans QR codes for validation and exit."
+      },
+      "k4": {
+        "title": "Control",
+        "accent": "access",
+        "desc": "Real-time verification and exit authorization."
+      },
+      "k5": {
+        "title": "Communication",
+        "accent": "BackOffice",
+        "desc": "Secure data exchange with central platform."
+      },
+      "k6": {
+        "title": "Opening",
+        "accent": "barrier",
+        "desc": "Automatic barrier opening after validation."
+      }
     },
     "howTitle": "How it works?",
     "steps": {
-      "s1": { "title": "Car approaches Exit Point", "desc": "Vehicle approaches the exit terminal." },
-      "s2": { "title": "User presents access card", "desc": "Card, NFC tag or QR code is scanned." },
-      "s3": { "title": "System validates access", "desc": "Real-time verification with central platform." },
-      "s4": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." },
-      "s5": { "title": "Exit permitted", "desc": "Vehicle exits, exit is recorded." }
+      "s1": {
+        "title": "Car approaches Exit Point",
+        "desc": "Vehicle approaches the exit terminal."
+      },
+      "s2": {
+        "title": "User presents access card",
+        "desc": "Card, NFC tag or QR code is scanned."
+      },
+      "s3": {
+        "title": "System validates access",
+        "desc": "Real-time verification with central platform."
+      },
+      "s4": {
+        "title": "Barrier opens automatically",
+        "desc": "Barrier lifts automatically after validation."
+      },
+      "s5": {
+        "title": "Exit permitted",
+        "desc": "Vehicle exits, exit is recorded."
+      }
     },
     "hardwareTitle": "Hardware components",
     "hardwareSubtitle": "Main components",
     "hardware": {
-      "hw1": { "title": "7 inch Monitor", "desc": "Anti-vandal, IP65, durable touch display" },
-      "hw2": { "title": "NFC Reader", "desc": "Reads cards for validation and exit" },
-      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans QR codes for quick validation" },
-      "hw4": { "title": "Card Reader", "desc": "Magnetic reader for access cards" },
-      "hw5": { "title": "Built-in Speaker", "desc": "Speaker for audio confirmations and guidance" },
-      "hw6": { "title": "Service Button", "desc": "Help button for operational support" }
+      "hw1": {
+        "title": "7 inch Monitor",
+        "desc": "Anti-vandal, IP65, durable touch display"
+      },
+      "hw2": {
+        "title": "NFC Reader",
+        "desc": "Reads cards for validation and exit"
+      },
+      "hw3": {
+        "title": "2D / QR Code Scanner",
+        "desc": "Scans QR codes for quick validation"
+      },
+      "hw4": {
+        "title": "Card Reader",
+        "desc": "Magnetic reader for access cards"
+      },
+      "hw5": {
+        "title": "Built-in Speaker",
+        "desc": "Speaker for audio confirmations and guidance"
+      },
+      "hw6": {
+        "title": "Service Button",
+        "desc": "Help button for operational support"
+      }
     },
     "specsTitle": "Technical specifications",
     "specs": {
-      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
-      "sp2": { "label": "QR Scanner", "value": "1D / 2D" },
-      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
-      "sp4": { "label": "Card Reader", "value": "ISO 14443A/B" },
-      "sp5": { "label": "Speaker", "value": "2W / 8Ω" },
-      "sp6": { "label": "LED Status", "value": "Yes" },
-      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
-      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
-      "sp9": { "label": "Temperature", "value": "-30°C ~ +60°C" },
-      "sp10": { "label": "Power", "value": "220V AC" },
-      "sp11": { "label": "Material", "value": "Metal IP54" },
-      "sp12": { "label": "API Integration", "value": "Yes" }
+      "sp1": {
+        "label": "Display",
+        "value": "7\" Touch IP65"
+      },
+      "sp2": {
+        "label": "QR Scanner",
+        "value": "1D / 2D"
+      },
+      "sp3": {
+        "label": "NFC / RFID",
+        "value": "13.56 MHz"
+      },
+      "sp4": {
+        "label": "Card Reader",
+        "value": "ISO 14443A/B"
+      },
+      "sp5": {
+        "label": "Speaker",
+        "value": "2W / 8Ω"
+      },
+      "sp6": {
+        "label": "LED Status",
+        "value": "Yes"
+      },
+      "sp7": {
+        "label": "Communication",
+        "value": "Ethernet / 4G"
+      },
+      "sp8": {
+        "label": "Protocol",
+        "value": "TCP/IP, HTTPS"
+      },
+      "sp9": {
+        "label": "Temperature",
+        "value": "-30°C ~ +60°C"
+      },
+      "sp10": {
+        "label": "Power",
+        "value": "220V AC"
+      },
+      "sp11": {
+        "label": "Material",
+        "value": "Metal IP54"
+      },
+      "sp12": {
+        "label": "API Integration",
+        "value": "Yes"
+      }
     },
     "integrationTitle": "Integration and compatibility",
     "integrations": {
@@ -582,9 +1065,18 @@
     },
     "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
     "ecosystem": {
-      "e1": { "title": "Entry Point", "desc": "Entry station that issues the access card." },
-      "e2": { "title": "Pay Point", "desc": "Automatic payment with cash and card." },
-      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+      "e1": {
+        "title": "Entry Point",
+        "desc": "Entry station that issues the access card."
+      },
+      "e2": {
+        "title": "Pay Point",
+        "desc": "Automatic payment with cash and card."
+      },
+      "e3": {
+        "title": "BackOffice",
+        "desc": "Real-time administration and reporting."
+      }
     },
     "bottomTitle": "Want a <span>complete</span> solution for your parking?",
     "bottomDesc": "Our team is ready to offer the best solution adapted to your needs."
@@ -609,44 +1101,137 @@
     },
     "keyFeaturesTitle": "Key features",
     "key": {
-      "k1": { "title": "Validation", "accent": "ticket", "desc": "Reads and validates tickets issued at entry." },
-      "k2": { "title": "Barcode", "accent": "Scanner", "desc": "Scans barcodes on the ticket." },
-      "k3": { "title": "QR Code", "accent": "Scanner", "desc": "Scans QR codes for validation and exit." },
-      "k4": { "title": "Control", "accent": "access", "desc": "Real-time verification and exit authorization." },
-      "k5": { "title": "Communication", "accent": "BackOffice", "desc": "Secure data exchange with central platform." },
-      "k6": { "title": "Opening", "accent": "barrier", "desc": "Automatic barrier opening after validation." }
+      "k1": {
+        "title": "Validation",
+        "accent": "ticket",
+        "desc": "Reads and validates tickets issued at entry."
+      },
+      "k2": {
+        "title": "Barcode",
+        "accent": "Scanner",
+        "desc": "Scans barcodes on the ticket."
+      },
+      "k3": {
+        "title": "QR Code",
+        "accent": "Scanner",
+        "desc": "Scans QR codes for validation and exit."
+      },
+      "k4": {
+        "title": "Control",
+        "accent": "access",
+        "desc": "Real-time verification and exit authorization."
+      },
+      "k5": {
+        "title": "Communication",
+        "accent": "BackOffice",
+        "desc": "Secure data exchange with central platform."
+      },
+      "k6": {
+        "title": "Opening",
+        "accent": "barrier",
+        "desc": "Automatic barrier opening after validation."
+      }
     },
     "howTitle": "How it works?",
     "steps": {
-      "s1": { "title": "Car approaches Exit Point", "desc": "Vehicle approaches the exit terminal." },
-      "s2": { "title": "User inserts or scans ticket", "desc": "Paper or digital ticket is scanned." },
-      "s3": { "title": "System validates access", "desc": "Real-time verification with central platform." },
-      "s4": { "title": "Barrier opens automatically", "desc": "Barrier lifts automatically after validation." },
-      "s5": { "title": "Exit permitted", "desc": "Vehicle exits, exit is recorded." }
+      "s1": {
+        "title": "Car approaches Exit Point",
+        "desc": "Vehicle approaches the exit terminal."
+      },
+      "s2": {
+        "title": "User inserts or scans ticket",
+        "desc": "Paper or digital ticket is scanned."
+      },
+      "s3": {
+        "title": "System validates access",
+        "desc": "Real-time verification with central platform."
+      },
+      "s4": {
+        "title": "Barrier opens automatically",
+        "desc": "Barrier lifts automatically after validation."
+      },
+      "s5": {
+        "title": "Exit permitted",
+        "desc": "Vehicle exits, exit is recorded."
+      }
     },
     "hardwareTitle": "Hardware components",
     "hardware": {
-      "hw1": { "title": "7 inch Monitor", "desc": "Anti-vandal, IP65, durable touch display" },
-      "hw2": { "title": "Ticket Reader", "desc": "Reads and validates tickets" },
-      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans QR codes for quick validation" },
-      "hw4": { "title": "NFC Reader", "desc": "Reads cards for fast access" },
-      "hw5": { "title": "Built-in Speaker", "desc": "Speaker for audio confirmations and guidance" },
-      "hw6": { "title": "Service Button", "desc": "Help button for operational support" }
+      "hw1": {
+        "title": "7 inch Monitor",
+        "desc": "Anti-vandal, IP65, durable touch display"
+      },
+      "hw2": {
+        "title": "Ticket Reader",
+        "desc": "Reads and validates tickets"
+      },
+      "hw3": {
+        "title": "2D / QR Code Scanner",
+        "desc": "Scans QR codes for quick validation"
+      },
+      "hw4": {
+        "title": "NFC Reader",
+        "desc": "Reads cards for fast access"
+      },
+      "hw5": {
+        "title": "Built-in Speaker",
+        "desc": "Speaker for audio confirmations and guidance"
+      },
+      "hw6": {
+        "title": "Service Button",
+        "desc": "Help button for operational support"
+      }
     },
     "specsTitle": "Technical specifications",
     "specs": {
-      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
-      "sp2": { "label": "Ticket Reader", "value": "Barcode / QR" },
-      "sp3": { "label": "QR Scanner", "value": "1D / 2D" },
-      "sp4": { "label": "NFC / RFID", "value": "13.56 MHz" },
-      "sp5": { "label": "Speaker", "value": "2W / 8Ω" },
-      "sp6": { "label": "LED Status", "value": "Yes" },
-      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
-      "sp8": { "label": "Protocol", "value": "TCP/IP, HTTPS" },
-      "sp9": { "label": "Temperature", "value": "-30°C ~ +60°C" },
-      "sp10": { "label": "Power", "value": "220V AC" },
-      "sp11": { "label": "Material", "value": "Metal IP54" },
-      "sp12": { "label": "API Integration", "value": "Yes" }
+      "sp1": {
+        "label": "Display",
+        "value": "7\" Touch IP65"
+      },
+      "sp2": {
+        "label": "Ticket Reader",
+        "value": "Barcode / QR"
+      },
+      "sp3": {
+        "label": "QR Scanner",
+        "value": "1D / 2D"
+      },
+      "sp4": {
+        "label": "NFC / RFID",
+        "value": "13.56 MHz"
+      },
+      "sp5": {
+        "label": "Speaker",
+        "value": "2W / 8Ω"
+      },
+      "sp6": {
+        "label": "LED Status",
+        "value": "Yes"
+      },
+      "sp7": {
+        "label": "Communication",
+        "value": "Ethernet / 4G"
+      },
+      "sp8": {
+        "label": "Protocol",
+        "value": "TCP/IP, HTTPS"
+      },
+      "sp9": {
+        "label": "Temperature",
+        "value": "-30°C ~ +60°C"
+      },
+      "sp10": {
+        "label": "Power",
+        "value": "220V AC"
+      },
+      "sp11": {
+        "label": "Material",
+        "value": "Metal IP54"
+      },
+      "sp12": {
+        "label": "API Integration",
+        "value": "Yes"
+      }
     },
     "integrationTitle": "Integration and compatibility",
     "integrations": {
@@ -661,9 +1246,18 @@
     },
     "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
     "ecosystem": {
-      "e1": { "title": "Entry Point", "desc": "Entry station that issues the parking ticket." },
-      "e2": { "title": "Pay Point", "desc": "Automatic payment with cash and card." },
-      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+      "e1": {
+        "title": "Entry Point",
+        "desc": "Entry station that issues the parking ticket."
+      },
+      "e2": {
+        "title": "Pay Point",
+        "desc": "Automatic payment with cash and card."
+      },
+      "e3": {
+        "title": "BackOffice",
+        "desc": "Real-time administration and reporting."
+      }
     },
     "bottomTitle": "Want a <span>complete</span> solution for your parking?",
     "bottomDesc": "Our team is ready to offer the best solution adapted to your needs."
@@ -683,47 +1277,146 @@
     },
     "keyFeaturesTitle": "Main features",
     "key": {
-      "k1": { "title": "Payment", "accent": "card", "desc": "Accepts contactless and chip bank cards." },
-      "k2": { "title": "Payment", "accent": "cash", "desc": "Accepts banknotes and coins securely." },
-      "k3": { "title": "Change", "accent": "automatic", "desc": "Returns change quickly and securely." },
-      "k4": { "title": "Receipt", "accent": "fiscal", "desc": "Issues fiscal receipt according to legislation." },
-      "k5": { "title": "QR", "accent": "Code", "desc": "Scans and processes payment via QR Code." },
-      "k6": { "title": "NFC", "accent": "RFID", "desc": "Supports payments and validations via NFC / RFID." }
+      "k1": {
+        "title": "Payment",
+        "accent": "card",
+        "desc": "Accepts contactless and chip bank cards."
+      },
+      "k2": {
+        "title": "Payment",
+        "accent": "cash",
+        "desc": "Accepts banknotes and coins securely."
+      },
+      "k3": {
+        "title": "Change",
+        "accent": "automatic",
+        "desc": "Returns change quickly and securely."
+      },
+      "k4": {
+        "title": "Receipt",
+        "accent": "fiscal",
+        "desc": "Issues fiscal receipt according to legislation."
+      },
+      "k5": {
+        "title": "QR",
+        "accent": "Code",
+        "desc": "Scans and processes payment via QR Code."
+      },
+      "k6": {
+        "title": "NFC",
+        "accent": "RFID",
+        "desc": "Supports payments and validations via NFC / RFID."
+      }
     },
     "howTitle": "How it works?",
     "steps": {
-      "s1": { "title": "Driver selects payment option", "desc": "On the touch screen, intuitive and multilingual." },
-      "s2": { "title": "Chooses payment method (card or cash)", "desc": "Bank card, cash or contactless payment." },
-      "s3": { "title": "System validates payment", "desc": "Secure processing and real-time verification." },
-      "s4": { "title": "Receives fiscal receipt and change", "desc": "Fiscal receipt issued, change returned if applicable." },
-      "s5": { "title": "Exit permitted", "desc": "Access validated for parking exit." }
+      "s1": {
+        "title": "Driver selects payment option",
+        "desc": "On the touch screen, intuitive and multilingual."
+      },
+      "s2": {
+        "title": "Chooses payment method (card or cash)",
+        "desc": "Bank card, cash or contactless payment."
+      },
+      "s3": {
+        "title": "System validates payment",
+        "desc": "Secure processing and real-time verification."
+      },
+      "s4": {
+        "title": "Receives fiscal receipt and change",
+        "desc": "Fiscal receipt issued, change returned if applicable."
+      },
+      "s5": {
+        "title": "Exit permitted",
+        "desc": "Access validated for parking exit."
+      }
     },
     "hardwareTitle": "Hardware components",
     "hardwareSubtitle": "Main components",
     "hardware": {
-      "hw1": { "title": "19 inch Monitor", "desc": "Anti-vandal, IP65, color touch display" },
-      "hw2": { "title": "NFC Reader", "desc": "Reads cards for fast payments" },
-      "hw3": { "title": "2D / QR Code Scanner", "desc": "Scans codes for ticket verification" },
-      "hw4": { "title": "Bill Validator", "desc": "Banknote acceptor with authenticity verification" },
-      "hw5": { "title": "Coin Acceptor", "desc": "Coin acceptor with multi-currency recognition" },
-      "hw6": { "title": "Cash Dispensing", "desc": "Banknote change dispenser" },
-      "hw7": { "title": "Fiscal Printer", "desc": "Fiscal printer RTI 5000F/5000 INB/RAFS" },
-      "hw8": { "title": "Smart UPS", "desc": "Uninterruptible power supply" }
+      "hw1": {
+        "title": "19 inch Monitor",
+        "desc": "Anti-vandal, IP65, color touch display"
+      },
+      "hw2": {
+        "title": "NFC Reader",
+        "desc": "Reads cards for fast payments"
+      },
+      "hw3": {
+        "title": "2D / QR Code Scanner",
+        "desc": "Scans codes for ticket verification"
+      },
+      "hw4": {
+        "title": "Bill Validator",
+        "desc": "Banknote acceptor with authenticity verification"
+      },
+      "hw5": {
+        "title": "Coin Acceptor",
+        "desc": "Coin acceptor with multi-currency recognition"
+      },
+      "hw6": {
+        "title": "Cash Dispensing",
+        "desc": "Banknote change dispenser"
+      },
+      "hw7": {
+        "title": "Fiscal Printer",
+        "desc": "Fiscal printer RTI 5000F/5000 INB/RAFS"
+      },
+      "hw8": {
+        "title": "Smart UPS",
+        "desc": "Uninterruptible power supply"
+      }
     },
     "specsTitle": "Technical specifications",
     "specs": {
-      "sp1": { "label": "Display", "value": "21.5\" Touch IP65" },
-      "sp2": { "label": "Card payment", "value": "EMV Contactless" },
-      "sp3": { "label": "NFC / RFID", "value": "13.56 MHz" },
-      "sp4": { "label": "QR Scanner", "value": "1D / 2D" },
-      "sp5": { "label": "Printer", "value": "Thermal 80mm" },
-      "sp6": { "label": "Banknotes", "value": "Accept & validate" },
-      "sp7": { "label": "Coins", "value": "Accept & dispense" },
-      "sp8": { "label": "Automatic change", "value": "Yes" },
-      "sp9": { "label": "Communication", "value": "Ethernet / 4G" },
-      "sp10": { "label": "Power", "value": "220V AC" },
-      "sp11": { "label": "Material", "value": "Metal IP54" },
-      "sp12": { "label": "API Integration", "value": "Yes" }
+      "sp1": {
+        "label": "Display",
+        "value": "21.5\" Touch IP65"
+      },
+      "sp2": {
+        "label": "Card payment",
+        "value": "EMV Contactless"
+      },
+      "sp3": {
+        "label": "NFC / RFID",
+        "value": "13.56 MHz"
+      },
+      "sp4": {
+        "label": "QR Scanner",
+        "value": "1D / 2D"
+      },
+      "sp5": {
+        "label": "Printer",
+        "value": "Thermal 80mm"
+      },
+      "sp6": {
+        "label": "Banknotes",
+        "value": "Accept & validate"
+      },
+      "sp7": {
+        "label": "Coins",
+        "value": "Accept & dispense"
+      },
+      "sp8": {
+        "label": "Automatic change",
+        "value": "Yes"
+      },
+      "sp9": {
+        "label": "Communication",
+        "value": "Ethernet / 4G"
+      },
+      "sp10": {
+        "label": "Power",
+        "value": "220V AC"
+      },
+      "sp11": {
+        "label": "Material",
+        "value": "Metal IP54"
+      },
+      "sp12": {
+        "label": "API Integration",
+        "value": "Yes"
+      }
     },
     "integrationTitle": "Integration and compatibility",
     "integrationDesc": "Pay Point is fully integrated into the <span>RParking</span> ecosystem and can be configured for any type of tariff and parking policy.",
@@ -739,9 +1432,18 @@
     },
     "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
     "ecosystem": {
-      "e1": { "title": "Entry Point", "desc": "Entry station that issues the access card." },
-      "e2": { "title": "Exit Point", "desc": "Exit station with card or ticket validation." },
-      "e3": { "title": "BackOffice", "desc": "Real-time administration and reporting." }
+      "e1": {
+        "title": "Entry Point",
+        "desc": "Entry station that issues the access card."
+      },
+      "e2": {
+        "title": "Exit Point",
+        "desc": "Exit station with card or ticket validation."
+      },
+      "e3": {
+        "title": "BackOffice",
+        "desc": "Real-time administration and reporting."
+      }
     },
     "bottomTitle": "Want a <span>fast</span> and secure payment experience in your parking?",
     "bottomDesc": "Our team helps you configure the best payment solution for your needs."
@@ -761,28 +1463,82 @@
     },
     "keyFeaturesTitle": "Main features",
     "key": {
-      "k1": { "title": "Dashboard", "accent": "real-time", "desc": "Instantly view parking performance and key indicators." },
-      "k2": { "title": "Reports", "accent": "and statistics", "desc": "Customized reports for revenue, transactions and occupancy." },
-      "k3": { "title": "Management", "accent": "users", "desc": "Flexible roles and permissions for your team." },
-      "k4": { "title": "Tariffs", "accent": "and rules", "desc": "Configure tariffs, promotions and access rules." },
-      "k5": { "title": "Alerts", "accent": "and notifications", "desc": "Receive notifications for important system events." },
-      "k6": { "title": "Security", "accent": "advanced", "desc": "Secure access, complete logs and audit trail." }
+      "k1": {
+        "title": "Dashboard",
+        "accent": "real-time",
+        "desc": "Instantly view parking performance and key indicators."
+      },
+      "k2": {
+        "title": "Reports",
+        "accent": "and statistics",
+        "desc": "Customized reports for revenue, transactions and occupancy."
+      },
+      "k3": {
+        "title": "Management",
+        "accent": "users",
+        "desc": "Flexible roles and permissions for your team."
+      },
+      "k4": {
+        "title": "Tariffs",
+        "accent": "and rules",
+        "desc": "Configure tariffs, promotions and access rules."
+      },
+      "k5": {
+        "title": "Alerts",
+        "accent": "and notifications",
+        "desc": "Receive notifications for important system events."
+      },
+      "k6": {
+        "title": "Security",
+        "accent": "advanced",
+        "desc": "Secure access, complete logs and audit trail."
+      }
     },
     "howTitle": "How it works?",
     "steps": {
-      "s1": { "title": "Data is automatically collected from equipment", "desc": "Entry, Exit, Pay Point send data continuously." },
-      "s2": { "title": "Information is transmitted securely to BackOffice", "desc": "Encrypted and protected connection." },
-      "s3": { "title": "Data is processed and centralized in reports", "desc": "Automatic aggregation and structuring by categories." },
-      "s4": { "title": "Get relevant statistics and alerts in real-time", "desc": "Smart notifications for any event." },
-      "s5": { "title": "Make better decisions and optimize performance", "desc": "Clear data for efficient administration." }
+      "s1": {
+        "title": "Data is automatically collected from equipment",
+        "desc": "Entry, Exit, Pay Point send data continuously."
+      },
+      "s2": {
+        "title": "Information is transmitted securely to BackOffice",
+        "desc": "Encrypted and protected connection."
+      },
+      "s3": {
+        "title": "Data is processed and centralized in reports",
+        "desc": "Automatic aggregation and structuring by categories."
+      },
+      "s4": {
+        "title": "Get relevant statistics and alerts in real-time",
+        "desc": "Smart notifications for any event."
+      },
+      "s5": {
+        "title": "Make better decisions and optimize performance",
+        "desc": "Clear data for efficient administration."
+      }
     },
     "modulesTitle": "Modules and capabilities",
     "modules": {
-      "m1": { "title": "Live monitoring", "desc": "Equipment status, transactions and alerts in real-time." },
-      "m2": { "title": "Advanced reports", "desc": "Customized financial, operational and occupancy reports." },
-      "m3": { "title": "Financial management", "desc": "Revenue, payments, refunds and automatic reconciliations." },
-      "m4": { "title": "Access management", "desc": "Users, roles, permissions and access policies." },
-      "m5": { "title": "System configuration", "desc": "Tariffs, zones, rules, operating hours and integrations." }
+      "m1": {
+        "title": "Live monitoring",
+        "desc": "Equipment status, transactions and alerts in real-time."
+      },
+      "m2": {
+        "title": "Advanced reports",
+        "desc": "Customized financial, operational and occupancy reports."
+      },
+      "m3": {
+        "title": "Financial management",
+        "desc": "Revenue, payments, refunds and automatic reconciliations."
+      },
+      "m4": {
+        "title": "Access management",
+        "desc": "Users, roles, permissions and access policies."
+      },
+      "m5": {
+        "title": "System configuration",
+        "desc": "Tariffs, zones, rules, operating hours and integrations."
+      }
     },
     "integrationTitle": "Full integration",
     "integrationDesc": "BackOffice natively integrates with all equipment and modules in the <span>RParking</span> ecosystem.",
@@ -805,9 +1561,18 @@
     },
     "ecosystemTitle": "Compatible with <span>RParking</span> ecosystem",
     "ecosystem": {
-      "e1": { "title": "Entry Point", "desc": "Entry station that issues the access card." },
-      "e2": { "title": "Exit Point", "desc": "Exit station with card or ticket validation." },
-      "e3": { "title": "Pay Point", "desc": "Automatic payment with cash and card." }
+      "e1": {
+        "title": "Entry Point",
+        "desc": "Entry station that issues the access card."
+      },
+      "e2": {
+        "title": "Exit Point",
+        "desc": "Exit station with card or ticket validation."
+      },
+      "e3": {
+        "title": "Pay Point",
+        "desc": "Automatic payment with cash and card."
+      }
     },
     "bottomTitle": "Transform data into <span>smart decisions</span>.",
     "bottomDesc": "Discover how BackOffice helps you increase efficiency and revenue of your parking facilities."
@@ -826,18 +1591,43 @@
     "featuresTitle": "Intelligent <span>management</span> of public restrooms",
     "featuresDesc": "RAccess WC is the ideal solution for high-traffic public spaces: parks, train stations, bus stations, shopping malls, beaches, markets, gas stations, stadiums, events and more.",
     "key": {
-      "k1": { "title": "Access control", "accent": "efficient", "desc": "Robust and reliable turnstiles for access only after tariff payment." },
-      "k2": { "title": "Payment", "accent": "automatic", "desc": "Accepts coins, banknotes and cashless payments (bank card, smartwatch, phone)." },
-      "k3": { "title": "Reports", "accent": "and statistics", "desc": "Real-time monitoring of revenue, access and equipment status." },
-      "k4": { "title": "Solution", "accent": "reliable", "desc": "Equipment designed for intensive and continuous 24/7 use." }
+      "k1": {
+        "title": "Access control",
+        "accent": "efficient",
+        "desc": "Robust and reliable turnstiles for access only after tariff payment."
+      },
+      "k2": {
+        "title": "Payment",
+        "accent": "automatic",
+        "desc": "Accepts coins, banknotes and cashless payments (bank card, smartwatch, phone)."
+      },
+      "k3": {
+        "title": "Reports",
+        "accent": "and statistics",
+        "desc": "Real-time monitoring of revenue, access and equipment status."
+      },
+      "k4": {
+        "title": "Solution",
+        "accent": "reliable",
+        "desc": "Equipment designed for intensive and continuous 24/7 use."
+      }
     },
     "componentsSubtitle": "Included equipment",
     "componentsTitle": "RAccess WC <span>components</span>",
     "componentsDesc": "Complete system of three main components working together for a seamless experience",
     "components": {
-      "c1": { "title": "Access turnstile", "desc": "Stainless steel tripod turnstile, durable and resistant to intensive use." },
-      "c2": { "title": "Payment machine", "desc": "Accepts coins, banknotes and cashless payments." },
-      "c3": { "title": "Administration software", "desc": "Web dashboard for monitoring, reports and remote configuration." }
+      "c1": {
+        "title": "Access turnstile",
+        "desc": "Stainless steel tripod turnstile, durable and resistant to intensive use."
+      },
+      "c2": {
+        "title": "Payment machine",
+        "desc": "Accepts coins, banknotes and cashless payments."
+      },
+      "c3": {
+        "title": "Administration software",
+        "desc": "Web dashboard for monitoring, reports and remote configuration."
+      }
     },
     "locationsTitle": "Where it can be implemented",
     "locations": {
@@ -851,21 +1641,57 @@
     },
     "howTitle": "How it works?",
     "steps": {
-      "s1": { "title": "User approaches the turnstile", "desc": "System detects presence and displays instructions." },
-      "s2": { "title": "Selects and makes payment", "desc": "Payment with coins, banknotes or card/contactless." },
-      "s3": { "title": "Turnstile opens automatically", "desc": "Access permitted after payment validation." },
-      "s4": { "title": "Entry registered in system", "desc": "Data transmitted in real-time to BackOffice." }
+      "s1": {
+        "title": "User approaches the turnstile",
+        "desc": "System detects presence and displays instructions."
+      },
+      "s2": {
+        "title": "Selects and makes payment",
+        "desc": "Payment with coins, banknotes or card/contactless."
+      },
+      "s3": {
+        "title": "Turnstile opens automatically",
+        "desc": "Access permitted after payment validation."
+      },
+      "s4": {
+        "title": "Entry registered in system",
+        "desc": "Data transmitted in real-time to BackOffice."
+      }
     },
     "specsTitle": "Technical specifications",
     "specs": {
-      "sp1": { "label": "Display", "value": "7\" Touch IP65" },
-      "sp2": { "label": "Coin acceptance", "value": "Multi-coin" },
-      "sp3": { "label": "Banknote acceptance", "value": "Multi-currency" },
-      "sp4": { "label": "Cashless payments", "value": "Card/contactless" },
-      "sp5": { "label": "Turnstile", "value": "Stainless tripod" },
-      "sp6": { "label": "Access speed", "value": "30-40 pers/min" },
-      "sp7": { "label": "Communication", "value": "Ethernet / 4G" },
-      "sp8": { "label": "Management", "value": "BackOffice Cloud" }
+      "sp1": {
+        "label": "Display",
+        "value": "7\" Touch IP65"
+      },
+      "sp2": {
+        "label": "Coin acceptance",
+        "value": "Multi-coin"
+      },
+      "sp3": {
+        "label": "Banknote acceptance",
+        "value": "Multi-currency"
+      },
+      "sp4": {
+        "label": "Cashless payments",
+        "value": "Card/contactless"
+      },
+      "sp5": {
+        "label": "Turnstile",
+        "value": "Stainless tripod"
+      },
+      "sp6": {
+        "label": "Access speed",
+        "value": "30-40 pers/min"
+      },
+      "sp7": {
+        "label": "Communication",
+        "value": "Ethernet / 4G"
+      },
+      "sp8": {
+        "label": "Management",
+        "value": "BackOffice Cloud"
+      }
     },
     "integrationTitle": "Full integration",
     "integrationDesc": "RAccess WC integrates perfectly with the entire RParking ecosystem and can be administered centrally from BackOffice.",
@@ -893,19 +1719,46 @@
     "featuresTitle": "Banknote to <span>coin or token exchange</span>",
     "featuresDesc": "RChange is the ideal solution for high-traffic locations. Offers fast banknote to coin or token exchange without hidden fees, available 24/7.",
     "key": {
-      "k1": { "title": "Available", "accent": "24/7", "desc": "Works 24/7 without human supervision." },
-      "k2": { "title": "Fast exchange", "accent": "and simple", "desc": "Instant validation and automatic coin dispensing." },
-      "k3": { "title": "No fees", "accent": "hidden", "desc": "Full transparency in pricing." }
+      "k1": {
+        "title": "Available",
+        "accent": "24/7",
+        "desc": "Works 24/7 without human supervision."
+      },
+      "k2": {
+        "title": "Fast exchange",
+        "accent": "and simple",
+        "desc": "Instant validation and automatic coin dispensing."
+      },
+      "k3": {
+        "title": "No fees",
+        "accent": "hidden",
+        "desc": "Full transparency in pricing."
+      }
     },
     "componentsSubtitle": "Equipment",
     "componentsTitle": "Main <span>components</span>",
     "componentsDesc": "Each RChange terminal integrates high-quality components for a fast and secure banknote to coin exchange experience.",
     "componentFeatures": {
-      "c1": { "title": "Intuitive touch screen", "desc": "Friendly interface with clear step-by-step instructions." },
-      "c2": { "title": "Banknote validator", "desc": "Advanced banknote authenticity detection." },
-      "c3": { "title": "Automatic coin dispenser", "desc": "Fast and precise coin dispensing." },
-      "c4": { "title": "Accepts banknotes and dispenses coins", "desc": "Fully automated exchange without personnel." },
-      "c5": { "title": "Compact and modern design", "desc": "Elegantly integrates into any location." }
+      "c1": {
+        "title": "Intuitive touch screen",
+        "desc": "Friendly interface with clear step-by-step instructions."
+      },
+      "c2": {
+        "title": "Banknote validator",
+        "desc": "Advanced banknote authenticity detection."
+      },
+      "c3": {
+        "title": "Automatic coin dispenser",
+        "desc": "Fast and precise coin dispensing."
+      },
+      "c4": {
+        "title": "Accepts banknotes and dispenses coins",
+        "desc": "Fully automated exchange without personnel."
+      },
+      "c5": {
+        "title": "Compact and modern design",
+        "desc": "Elegantly integrates into any location."
+      }
     },
     "locationsTitle": "Where it can be installed",
     "locations": {
@@ -920,20 +1773,53 @@
     "howTitle": "Banknote to coin or token exchange",
     "stepsDesc": "Four simple steps for fast and automatic banknote exchange",
     "steps": {
-      "s1": { "title": "Insert banknote", "desc": "Customer inserts banknote into validation slot." },
-      "s2": { "title": "Machine verifies", "desc": "System validates banknote and calculates coin amount." },
-      "s3": { "title": "Coins are dispensed", "desc": "Dispenser automatically prepares required coins." },
-      "s4": { "title": "Collect coins", "desc": "Transaction completed in just a few seconds." }
+      "s1": {
+        "title": "Insert banknote",
+        "desc": "Customer inserts banknote into validation slot."
+      },
+      "s2": {
+        "title": "Machine verifies",
+        "desc": "System validates banknote and calculates coin amount."
+      },
+      "s3": {
+        "title": "Coins are dispensed",
+        "desc": "Dispenser automatically prepares required coins."
+      },
+      "s4": {
+        "title": "Collect coins",
+        "desc": "Transaction completed in just a few seconds."
+      }
     },
     "specsTitle": "Technical specifications",
     "specs": {
-      "sp1": { "label": "Display", "value": "10\" Touch" },
-      "sp2": { "label": "Validator", "value": "Multi nominal" },
-      "sp3": { "label": "Dispenser", "value": "8 coin types" },
-      "sp4": { "label": "Capacity", "value": "2000+ coins" },
-      "sp5": { "label": "Speed", "value": "< 10 seconds" },
-      "sp6": { "label": "Communication", "value": "Ethernet / 4G" },
-      "sp7": { "label": "Management", "value": "Cloud BackOffice" }
+      "sp1": {
+        "label": "Display",
+        "value": "10\" Touch"
+      },
+      "sp2": {
+        "label": "Validator",
+        "value": "Multi nominal"
+      },
+      "sp3": {
+        "label": "Dispenser",
+        "value": "8 coin types"
+      },
+      "sp4": {
+        "label": "Capacity",
+        "value": "2000+ coins"
+      },
+      "sp5": {
+        "label": "Speed",
+        "value": "< 10 seconds"
+      },
+      "sp6": {
+        "label": "Communication",
+        "value": "Ethernet / 4G"
+      },
+      "sp7": {
+        "label": "Management",
+        "value": "Cloud BackOffice"
+      }
     },
     "integrationTitle": "Full integration",
     "integrationDesc": "RChange integrates perfectly with the BackOffice platform for real-time monitoring of transactions, coin stock and detailed reports.",
@@ -1055,23 +1941,59 @@
     "loadMore": "Load more products",
     "noResults": "No products match the selected filters.",
     "benefits": {
-      "delivery": { "title": "Fast delivery", "desc": "We deliver nationwide within 1-3 business days." },
-      "warranty": { "title": "Extended warranty", "desc": "All products come with a 24-month warranty." },
-      "support": { "title": "Technical support", "desc": "Our team is always available to help." },
-      "custom": { "title": "Custom solutions", "desc": "We offer solutions tailored to your business needs." }
+      "delivery": {
+        "title": "Fast delivery",
+        "desc": "We deliver nationwide within 1-3 business days."
+      },
+      "warranty": {
+        "title": "Extended warranty",
+        "desc": "All products come with a 24-month warranty."
+      },
+      "support": {
+        "title": "Technical support",
+        "desc": "Our team is always available to help."
+      },
+      "custom": {
+        "title": "Custom solutions",
+        "desc": "We offer solutions tailored to your business needs."
+      }
     },
     "ctaTitle": "Haven't found the right product?",
     "ctaDesc": "Contact us for a personalized offer.",
     "ctaButton": "Request a personalized offer",
     "products": {
-      "entry": { "name": "RParking Entry Point", "desc": "Entry terminal with ticket reading, LPR camera and barrier control." },
-      "exit": { "name": "RParking Exit Point", "desc": "Exit terminal with ticket reading, payment and barrier release." },
-      "pay": { "name": "RParking Pay Point", "desc": "Automatic payment station accepting cash and card." },
-      "backoffice": { "name": "RParking BackOffice", "desc": "Administration and real-time monitoring software." },
-      "wc": { "name": "RAccess WC", "desc": "WC access control system with cash and card payment." },
-      "rchange": { "name": "RChange", "desc": "Banknote-to-coin changer, fast and secure." },
-      "barrier": { "name": "Automatic barrier", "desc": "High-performance automatic barrier for access control." },
-      "detector": { "name": "Inductive loop detector", "desc": "Vehicle detector for access control systems." }
+      "entry": {
+        "name": "RParking Entry Point",
+        "desc": "Entry terminal with ticket reading, LPR camera and barrier control."
+      },
+      "exit": {
+        "name": "RParking Exit Point",
+        "desc": "Exit terminal with ticket reading, payment and barrier release."
+      },
+      "pay": {
+        "name": "RParking Pay Point",
+        "desc": "Automatic payment station accepting cash and card."
+      },
+      "backoffice": {
+        "name": "RParking BackOffice",
+        "desc": "Administration and real-time monitoring software."
+      },
+      "wc": {
+        "name": "RAccess WC",
+        "desc": "WC access control system with cash and card payment."
+      },
+      "rchange": {
+        "name": "RChange",
+        "desc": "Banknote-to-coin changer, fast and secure."
+      },
+      "barrier": {
+        "name": "Automatic barrier",
+        "desc": "High-performance automatic barrier for access control."
+      },
+      "detector": {
+        "name": "Inductive loop detector",
+        "desc": "Vehicle detector for access control systems."
+      }
     }
   },
   "PartnersPage": {
@@ -1081,19 +2003,58 @@
     "heroDesc": "Join our partner network and offer your customers modern, reliable and profitable solutions.",
     "heroCta": "Fill in the form",
     "benefits": {
-      "revenue": { "title": "Grow your revenue", "desc": "Solutions with constant demand and attractive margins." },
-      "reliable": { "title": "Reliable products", "desc": "Quality equipment and advanced technology." },
-      "support": { "title": "Dedicated support", "desc": "Technical and commercial assistance throughout the partnership." },
-      "training": { "title": "Training & certification", "desc": "Complete training for your team." },
-      "marketing": { "title": "Marketing & sales", "desc": "Promotional materials and business development support." }
+      "revenue": {
+        "title": "Grow your revenue",
+        "desc": "Solutions with constant demand and attractive margins."
+      },
+      "reliable": {
+        "title": "Reliable products",
+        "desc": "Quality equipment and advanced technology."
+      },
+      "support": {
+        "title": "Dedicated support",
+        "desc": "Technical and commercial assistance throughout the partnership."
+      },
+      "training": {
+        "title": "Training & certification",
+        "desc": "Complete training for your team."
+      },
+      "marketing": {
+        "title": "Marketing & sales",
+        "desc": "Promotional materials and business development support."
+      }
     },
     "typesTitle": "Partnership types",
     "learnMore": "Learn more",
     "types": {
-      "installer": { "title": "Installer Partner", "desc": "Companies specialized in installing parking systems.", "f1": "Attractive commissions", "f2": "Dedicated technical support", "f3": "Installation training" },
-      "distributor": { "title": "Distributor Partner", "desc": "Companies reselling RParking solutions in their area.", "f1": "Preferential pricing", "f2": "Sales and marketing support", "f3": "Access to commercial materials" },
-      "integrator": { "title": "Integrator Partner", "desc": "System integrators and software/hardware solution providers.", "f1": "API & SDK integration", "f2": "Advanced technical support", "f3": "Custom projects" },
-      "international": { "title": "International Partner", "desc": "Companies from other countries interested in promoting RParking.", "f1": "Special cooperation terms", "f2": "Local and global support", "f3": "Long-term development" }
+      "installer": {
+        "title": "Installer Partner",
+        "desc": "Companies specialized in installing parking systems.",
+        "f1": "Attractive commissions",
+        "f2": "Dedicated technical support",
+        "f3": "Installation training"
+      },
+      "distributor": {
+        "title": "Distributor Partner",
+        "desc": "Companies reselling RParking solutions in their area.",
+        "f1": "Preferential pricing",
+        "f2": "Sales and marketing support",
+        "f3": "Access to commercial materials"
+      },
+      "integrator": {
+        "title": "Integrator Partner",
+        "desc": "System integrators and software/hardware solution providers.",
+        "f1": "API & SDK integration",
+        "f2": "Advanced technical support",
+        "f3": "Custom projects"
+      },
+      "international": {
+        "title": "International Partner",
+        "desc": "Companies from other countries interested in promoting RParking.",
+        "f1": "Special cooperation terms",
+        "f2": "Local and global support",
+        "f3": "Long-term development"
+      }
     },
     "programTitle": "The RParking partnership program",
     "programDesc": "We provide our partners with all the resources needed for success:",
@@ -1134,11 +2095,26 @@
     },
     "stepsTitle": "How to become a partner?",
     "steps": {
-      "s1": { "title": "Fill in the form", "desc": "Send us information about your company." },
-      "s2": { "title": "Initial discussion", "desc": "Our team contacts you to understand your needs." },
-      "s3": { "title": "Cooperation proposal", "desc": "We offer you partnership terms that suit you." },
-      "s4": { "title": "Signing the agreement", "desc": "We agree on terms and start working together." },
-      "s5": { "title": "Growing together", "desc": "You benefit from support and resources to grow your business." }
+      "s1": {
+        "title": "Fill in the form",
+        "desc": "Send us information about your company."
+      },
+      "s2": {
+        "title": "Initial discussion",
+        "desc": "Our team contacts you to understand your needs."
+      },
+      "s3": {
+        "title": "Cooperation proposal",
+        "desc": "We offer you partnership terms that suit you."
+      },
+      "s4": {
+        "title": "Signing the agreement",
+        "desc": "We agree on terms and start working together."
+      },
+      "s5": {
+        "title": "Growing together",
+        "desc": "You benefit from support and resources to grow your business."
+      }
     },
     "partnersTitle": "Our partners",
     "viewAll": "View all implementations"

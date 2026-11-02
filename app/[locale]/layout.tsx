@@ -8,6 +8,7 @@ import "../globals.css";
 import ScrollAnimations from "../components/ScrollAnimations";
 import Chatbot from "../components/Chatbot";
 import CookieConsentBanner from "../components/CookieConsentBanner";
+import SiteEditLayer from "../components/SiteEditLayer";
 import { SITE_URL, SITE_NAME, COMPANY_NAME, SITE_PHONE, SITE_EMAIL, COMPANY_ADDRESS, DEFAULT_OG_IMAGE, GLOBAL_KEYWORDS } from "../lib/seo";
 
 const manrope = Manrope({
@@ -29,6 +30,10 @@ const OG_LOCALES: Record<string, string> = {
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+// ISR: pages are served from cache and regenerate at most every 120s; saving
+// in the admin panel calls revalidatePath('/', 'layout') to apply immediately.
+export const revalidate = 120;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -286,6 +291,7 @@ export default async function LocaleLayout({
           {children}
           <Chatbot />
           <CookieConsentBanner />
+          <SiteEditLayer />
         </NextIntlClientProvider>
       </body>
     </html>

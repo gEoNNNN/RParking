@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "title": "Entry Point", "descKey": "entryDesc", "link": "/products/entry-point", "image": "/img/produs1 - Copy.png", "isPhoto": true, "cover": false },
+    { "title": "Exit Point", "descKey": "exitDesc", "link": "/products/exit-point-cardpass", "image": "/img/produs2 - Copy.png", "isPhoto": true, "cover": false },
+    { "title": "Pay Point", "descKey": "payDesc", "link": "/products/pay-point", "image": "/img/paypoint.png", "isPhoto": true, "cover": false },
+    { "title": "BackOffice", "descKey": "backofficeDesc", "link": "/products/backoffice", "image": "/img/produs 4.png", "isPhoto": true, "cover": false }
+  ]
+}

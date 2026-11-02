@@ -4,14 +4,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '../../../i18n/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { PiBuildingApartment } from 'react-icons/pi';
-import { CiShop } from 'react-icons/ci';
-import { IoBusinessOutline } from 'react-icons/io5';
-import { SlPlane } from 'react-icons/sl';
-import { FaRegHospital } from 'react-icons/fa';
-import { BiHotel } from 'react-icons/bi';
 import { LuSettings2, LuZap, LuHeadphones, LuTrendingUp, LuShieldCheck, LuMapPin, LuArrowRight, LuCheck, LuHouse, LuChevronRight } from 'react-icons/lu';
 import { LiaLeafSolid } from 'react-icons/lia';
+import { Icon } from '../../lib/icon-registry';
+import { readCollection } from '../../lib/content';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '../../lib/seo';
 
 export const metadata: Metadata = {
@@ -54,15 +50,6 @@ export const metadata: Metadata = {
   },
 };
 
-const domains = [
-  { key: 'residential', image: '/img/parcari%20rezidentiale.png', icon: <PiBuildingApartment className="text-white" style={{ fontSize: '1.4rem' }} /> },
-  { key: 'mall', image: '/img/centrul%20comercial.png', icon: <CiShop className="text-white" style={{ fontSize: '1.4rem' }} /> },
-  { key: 'corporate', image: '/img/parcari%20corporate.png', icon: <IoBusinessOutline className="text-white" style={{ fontSize: '1.4rem' }} /> },
-  { key: 'airports', image: '/img/aeropturi.png', icon: <SlPlane className="text-white" style={{ fontSize: '1.4rem' }} /> },
-  { key: 'hospitals', image: '/img/spitale.png', icon: <FaRegHospital className="text-white" style={{ fontSize: '1.4rem' }} /> },
-  { key: 'hotels', image: '/img/hoteluri.png', icon: <BiHotel className="text-white" style={{ fontSize: '1.4rem' }} /> },
-];
-
 const whyFeatures = [
   { key: 'custom', icon: <LuSettings2 className="w-5 h-5 text-green-600" /> },
   { key: 'tech', icon: <LuZap className="w-5 h-5 text-green-600" /> },
@@ -76,6 +63,7 @@ export default async function SolutiiPage({ params }: { params: Promise<{ locale
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('SolutiiPage');
+  const domains = readCollection('solutii-domains').items;
   return (
     <main>
       {/* Navbar + Logo */}
@@ -124,7 +112,7 @@ export default async function SolutiiPage({ params }: { params: Promise<{ locale
                 <div className="relative h-48 overflow-hidden">
                   <Image src={d.image} alt={t(`domains.${d.key}.title`)} fill quality={95} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute bottom-3 left-3 w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center shadow-md">
-                    {d.icon}
+                    <Icon name={d.icon} className="text-white" style={{ fontSize: '1.4rem' }} />
                   </div>
                 </div>
 

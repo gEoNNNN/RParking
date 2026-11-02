@@ -32,6 +32,12 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# admin panel runtime artifacts (keep data/content/ in git – it is the live content source)
+/data/backup/
+/public/uploads/*
+!/public/uploads/.gitkeep
 
 # vercel
 .vercel

@@ -1,0 +1,151 @@
+{
+  "waNumber": "37369116121",
+  "categories": [
+    {
+      "key": "entry",
+      "icon": "LuLogIn"
+    },
+    {
+      "key": "exit",
+      "icon": "LuLogOut"
+    },
+    {
+      "key": "pay",
+      "icon": "LuCreditCard"
+    },
+    {
+      "key": "backoffice",
+      "icon": "LuLayoutDashboard"
+    },
+    {
+      "key": "wc",
+      "icon": "LuShieldCheck"
+    },
+    {
+      "key": "rchange",
+      "icon": "LuZap"
+    },
+    {
+      "key": "accessories",
+      "icon": "TbBarrierBlock"
+    }
+  ],
+  "items": [
+    {
+      "key": "entry",
+      "category": "entry",
+      "type": "hardware",
+      "usage": [
+        "parking"
+      ],
+      "price": 2450,
+      "inStock": true,
+      "image": "/img/produs1.png",
+      "contain": true,
+      "href": "/products/entry-point",
+      "icon": "LuLogIn"
+    },
+    {
+      "key": "exit",
+      "category": "exit",
+      "type": "hardware",
+      "usage": [
+        "parking"
+      ],
+      "price": 2750,
+      "inStock": true,
+      "image": "/img/produs2.png",
+      "contain": true,
+      "href": "/products/exit-point-cardpass",
+      "icon": "LuLogOut"
+    },
+    {
+      "key": "pay",
+      "category": "pay",
+      "type": "hardware",
+      "usage": [
+        "parking",
+        "payment"
+      ],
+      "price": 3350,
+      "inStock": true,
+      "image": "/img/paypoint.png",
+      "contain": true,
+      "href": "/products/pay-point",
+      "icon": "LuCreditCard"
+    },
+    {
+      "key": "backoffice",
+      "category": "backoffice",
+      "type": "software",
+      "usage": [
+        "parking"
+      ],
+      "price": 1250,
+      "inStock": true,
+      "image": "/img/produs 4.png",
+      "contain": true,
+      "href": "/products/backoffice",
+      "icon": "LuLayoutDashboard"
+    },
+    {
+      "key": "wc",
+      "category": "wc",
+      "type": "hardware",
+      "usage": [
+        "access",
+        "payment"
+      ],
+      "price": 1150,
+      "inStock": true,
+      "image": "/img/wc.png",
+      "contain": true,
+      "href": "/products/raccess-wc",
+      "icon": "LuShieldCheck"
+    },
+    {
+      "key": "rchange",
+      "category": "rchange",
+      "type": "hardware",
+      "usage": [
+        "payment"
+      ],
+      "price": 980,
+      "inStock": true,
+      "image": "/img/exchange.png",
+      "contain": true,
+      "href": "/products/rchange",
+      "icon": "LuZap"
+    },
+    {
+      "key": "barrier",
+      "category": "accessories",
+      "type": "hardware",
+      "usage": [
+        "parking",
+        "access"
+      ],
+      "price": 980,
+      "inStock": false,
+      "image": "/img/implementari/bare automate.png",
+      "contain": false,
+      "href": null,
+      "icon": "TbBarrierBlock"
+    },
+    {
+      "key": "detector",
+      "category": "accessories",
+      "type": "hardware",
+      "usage": [
+        "parking",
+        "access"
+      ],
+      "price": 120,
+      "inStock": false,
+      "image": "/img/photo_2026-05-27_13-07-42.jpg",
+      "contain": false,
+      "href": null,
+      "icon": "LuRadar"
+    }
+  ]
+}

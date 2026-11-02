@@ -1,37 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
-
-const products = [
-  {
-    title: 'Entry Point',
-    descKey: 'entryDesc',
-    link: '/products/entry-point',
-    image: '/img/produs1 - Copy.png',
-    isPhoto: true,
-  },
-  {
-    title: 'Exit Point',
-    descKey: 'exitDesc',
-    link: '/products/exit-point-cardpass',
-    image: '/img/produs2 - Copy.png',
-    isPhoto: true,
-  },
-  {
-    title: 'Pay Point',
-    descKey: 'payDesc',
-    link: '/products/pay-point',
-    image: '/img/paypoint.png',
-    isPhoto: true,
-  },
-  {
-    title: 'BackOffice',
-    descKey: 'backofficeDesc',
-    link: '/products/backoffice',
-    image: '/img/produs 4.png',
-    isPhoto: true,
-  },
-];
+import { readCollection } from '../lib/content';
 
 function BackOfficeIllustration() {
   return (
@@ -85,6 +55,7 @@ function BackOfficeIllustration() {
 
 export default function ProductEcosystem() {
   const t = useTranslations('ProductEcosystem');
+  const products = readCollection('ecosystem-cards').items;
   return (
     <section id="products" className="py-16 bg-white">
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
@@ -102,7 +73,7 @@ export default function ProductEcosystem() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {products.map((product, idx) => (
             <div
-              key={product.title}
+              key={`${product.title}-${idx}`}
               data-reveal
               data-reveal-delay={String(idx * 100)}
               className="group border border-gray-200 hover:border-green-300 hover:shadow-xl hover:-translate-y-1 rounded-xl overflow-hidden transition-all duration-300 bg-white"

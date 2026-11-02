@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { setRequestLocale } from 'next-intl/server';
 import { GLOBAL_KEYWORDS } from '../lib/seo';
+import { readCollection } from '../lib/content';
 import { Link } from '../../i18n/navigation';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
@@ -88,7 +89,7 @@ export default async function Home({
       <BenefitsBar />
       <ProductEcosystem />
       <HowItWorks />
-      <RealImplementations />
+      <RealImplementations images={readCollection('gallery').items} />
       <MobileAppSection />
       <TargetAudience />
       <WhyRParking />

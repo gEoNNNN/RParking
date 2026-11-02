@@ -2,30 +2,11 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
 import { LuArrowRight } from 'react-icons/lu';
-
-const rtiProducts = [
-  {
-    title: 'RParking',
-    descKey: 'rparking',
-    image: '/img/rparkingcarnobg.png',
-    href: '/products',
-  },
-  {
-    title: 'RAccess WC',
-    descKey: 'racess',
-    image: '/img/wc.png',
-    href: '/products/raccess-wc',
-  },
-  {
-    title: 'RChange',
-    descKey: 'rchange',
-    image: '/img/exchange.png',
-    href: '/products/rchange',
-  },
-];
+import { readCollection } from '../lib/content';
 
 export default function RTISolutions() {
   const t = useTranslations('RtiSolutions');
+  const rtiProducts = readCollection('rti-solutions').items;
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -43,7 +24,7 @@ export default function RTISolutions() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {rtiProducts.map((product, idx) => (
             <Link
-              key={product.title}
+              key={`${product.title}-${idx}`}
               href={product.href}
               data-reveal
               data-reveal-delay={String(idx * 100)}
@@ -54,8 +35,8 @@ export default function RTISolutions() {
                 <Image
                   src={product.image}
                   alt={product.title}
-                  width={idx === 0 ? 180 : 120}
-                  height={idx === 0 ? 120 : 80}
+                  width={product.imageWidth}
+                  height={product.imageHeight}
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>

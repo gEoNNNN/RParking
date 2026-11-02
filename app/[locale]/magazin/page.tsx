@@ -5,6 +5,7 @@ import { Link } from '../../../i18n/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import ShopCatalog from '../../components/ShopCatalog';
+import { readCollection } from '../../lib/content';
 import {
   LuShieldCheck, LuHeadphones, LuTruck, LuSettings2, LuBadgeCheck, LuArrowRight,
 } from 'react-icons/lu';
@@ -105,7 +106,7 @@ export default async function ShopPage({ params }: { params: Promise<{ locale: s
       </div>
 
       {/* ── Catalog ── */}
-      <ShopCatalog />
+      <ShopCatalog data={readCollection('shop-products')} />
 
       {/* ── Benefits bar ── */}
       <section className="py-16 bg-white border-t border-gray-100">

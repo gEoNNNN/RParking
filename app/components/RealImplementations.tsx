@@ -1,19 +1,22 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
-const IMGS = Array.from({ length: 17 }, (_, i) => `/img/implementarea ${i + 1}.jpg`);
 const VISIBLE = 4;
 const CLONES = VISIBLE;
-// Extended array: CLONES at start (tail of IMGS) + all IMGS + CLONES at end (head of IMGS)
-const extended = [...IMGS.slice(-CLONES), ...IMGS, ...IMGS.slice(0, CLONES)];
-const TOTAL = extended.length; // 25
 
-export default function RealImplementations() {
+export default function RealImplementations({ images }: { images: string[] }) {
   const t = useTranslations('RealImplementations');
+  const IMGS = images;
+  // Extended array: CLONES at start (tail of IMGS) + all IMGS + CLONES at end (head of IMGS)
+  const extended = useMemo(
+    () => (IMGS.length ? [...IMGS.slice(-CLONES), ...IMGS, ...IMGS.slice(0, CLONES)] : []),
+    [IMGS]
+  );
+  const TOTAL = extended.length;
   const [lightbox, setLightbox] = useState<string | null>(null);
   // trackIdx into extended[], starts at CLONES so first real image is visible
   const [trackIdx, setTrackIdx] = useState(CLONES);
@@ -29,6 +32,7 @@ export default function RealImplementations() {
 
   // Seamless infinite snap-back
   useEffect(() => {
+    if (IMGS.length === 0) return;
     if (trackIdx >= CLONES + IMGS.length) {
       const timer = setTimeout(() => {
         setAnimated(false);
@@ -43,7 +47,7 @@ export default function RealImplementations() {
       }, 600);
       return () => clearTimeout(timer);
     }
-  }, [trackIdx]);
+  }, [trackIdx, IMGS]);
 
   // Re-enable animation after instant snap
   useEffect(() => {
@@ -66,7 +70,9 @@ export default function RealImplementations() {
   }, []);
 
   // translateX % is relative to the track's own width
-  const translatePct = trackIdx * (100 / TOTAL);
+  const translatePct = TOTAL ? trackIdx * (100 / TOTAL) : 0;
+
+  if (IMGS.length === 0) return null;
 
   return (
     <section id="implementations" className="py-16 bg-white">

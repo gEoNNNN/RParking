@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title": "RParking",
+      "descKey": "rparking",
+      "image": "/img/rparkingcarnobg.png",
+      "href": "/products",
+      "imageWidth": 180,
+      "imageHeight": 120
+    },
+    {
+      "title": "RAccess WC",
+      "descKey": "racess",
+      "image": "/img/wc.png",
+      "href": "/products/raccess-wc",
+      "imageWidth": 120,
+      "imageHeight": 80
+    },
+    {
+      "title": "RChange",
+      "descKey": "rchange",
+      "image": "/img/exchange.png",
+      "href": "/products/rchange",
+      "imageWidth": 120,
+      "imageHeight": 80
+    }
+  ]
+}

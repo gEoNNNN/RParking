@@ -4,64 +4,29 @@ import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
-import {
-  LuLogIn, LuLogOut, LuCreditCard, LuLayoutDashboard,
-  LuShieldCheck, LuZap, LuList, LuArrowRight, LuRotateCcw,
-  LuChevronDown, LuRadar,
-} from 'react-icons/lu';
-import { TbBarrierBlock } from 'react-icons/tb';
+import { Icon } from '../lib/icon-registry';
+import { LuChevronDown, LuRotateCcw, LuArrowRight, LuList } from 'react-icons/lu';
 import { FaWhatsapp } from 'react-icons/fa';
+import type { ShopData } from '../lib/content-types';
 
-type CategoryKey = 'entry' | 'exit' | 'pay' | 'backoffice' | 'wc' | 'rchange' | 'accessories';
 type ProductType = 'hardware' | 'software';
 type Usage = 'parking' | 'access' | 'payment';
 
-type Product = {
-  key: string;
-  category: CategoryKey;
-  type: ProductType;
-  usage: Usage[];
-  price: number;
-  inStock: boolean;
-  image: string;
-  contain: boolean;
-  href: string | null;
-  icon: React.ReactNode;
-};
-
-const WA_NUMBER = '37369116121';
 const PAGE_SIZE = 8;
-
-const products: Product[] = [
-  { key: 'entry', category: 'entry', type: 'hardware', usage: ['parking'], price: 2450, inStock: true, image: '/img/produs1.png', contain: true, href: '/products/entry-point', icon: <LuLogIn className="w-5 h-5" /> },
-  { key: 'exit', category: 'exit', type: 'hardware', usage: ['parking'], price: 2750, inStock: true, image: '/img/produs2.png', contain: true, href: '/products/exit-point-cardpass', icon: <LuLogOut className="w-5 h-5" /> },
-  { key: 'pay', category: 'pay', type: 'hardware', usage: ['parking', 'payment'], price: 3350, inStock: true, image: '/img/paypoint.png', contain: true, href: '/products/pay-point', icon: <LuCreditCard className="w-5 h-5" /> },
-  { key: 'backoffice', category: 'backoffice', type: 'software', usage: ['parking'], price: 1250, inStock: true, image: '/img/produs 4.png', contain: true, href: '/products/backoffice', icon: <LuLayoutDashboard className="w-5 h-5" /> },
-  { key: 'wc', category: 'wc', type: 'hardware', usage: ['access', 'payment'], price: 1150, inStock: true, image: '/img/wc.png', contain: true, href: '/products/raccess-wc', icon: <LuShieldCheck className="w-5 h-5" /> },
-  { key: 'rchange', category: 'rchange', type: 'hardware', usage: ['payment'], price: 980, inStock: true, image: '/img/exchange.png', contain: true, href: '/products/rchange', icon: <LuZap className="w-5 h-5" /> },
-  { key: 'barrier', category: 'accessories', type: 'hardware', usage: ['parking', 'access'], price: 980, inStock: false, image: '/img/implementari/bare automate.png', contain: false, href: null, icon: <TbBarrierBlock className="w-5 h-5" /> },
-  { key: 'detector', category: 'accessories', type: 'hardware', usage: ['parking', 'access'], price: 120, inStock: false, image: '/img/photo_2026-05-27_13-07-42.jpg', contain: false, href: null, icon: <LuRadar className="w-5 h-5" /> },
-];
-
-const categories: { key: CategoryKey | 'all'; icon: React.ReactNode }[] = [
-  { key: 'all', icon: <LuList className="w-4 h-4" /> },
-  { key: 'entry', icon: <LuLogIn className="w-4 h-4" /> },
-  { key: 'exit', icon: <LuLogOut className="w-4 h-4" /> },
-  { key: 'pay', icon: <LuCreditCard className="w-4 h-4" /> },
-  { key: 'backoffice', icon: <LuLayoutDashboard className="w-4 h-4" /> },
-  { key: 'wc', icon: <LuShieldCheck className="w-4 h-4" /> },
-  { key: 'rchange', icon: <LuZap className="w-4 h-4" /> },
-  { key: 'accessories', icon: <TbBarrierBlock className="w-4 h-4" /> },
-];
 
 function formatPrice(value: number) {
   return `€${value.toLocaleString('en-US')}`;
 }
 
-export default function ShopCatalog() {
+export default function ShopCatalog({ data }: { data: ShopData }) {
   const t = useTranslations('ShopPage');
+  const products = data.items;
+  const WA_NUMBER = data.waNumber;
+  const categoryIcons: Record<string, string> = Object.fromEntries(
+    data.categories.map((c) => [c.key, c.icon])
+  );
 
-  const [category, setCategory] = useState<CategoryKey | 'all'>('all');
+  const [category, setCategory] = useState<string>('all');
   const [draftType, setDraftType] = useState<'all' | ProductType>('all');
   const [draftUsage, setDraftUsage] = useState<'all' | Usage>('all');
   const [draftStock, setDraftStock] = useState<{ inStock: boolean; onOrder: boolean }>({ inStock: false, onOrder: false });
@@ -79,13 +44,13 @@ export default function ShopCatalog() {
     if (sort === 'asc') list = [...list].sort((a, b) => a.price - b.price);
     if (sort === 'desc') list = [...list].sort((a, b) => b.price - a.price);
     return list;
-  }, [category, applied, sort]);
+  }, [products, category, applied, sort]);
 
   const shown = filtered.slice(0, visible);
   const inStockCount = products.filter((p) => p.inStock).length;
   const onOrderCount = products.length - inStockCount;
 
-  const selectCategory = (c: CategoryKey | 'all') => {
+  const selectCategory = (c: string) => {
     setCategory(c);
     setVisible(PAGE_SIZE);
   };
@@ -117,19 +82,21 @@ export default function ShopCatalog() {
             <div className="bg-white rounded-2xl border border-gray-200 p-5">
               <h3 className="text-gray-900 font-bold text-sm mb-3 uppercase tracking-wide">{t('categoriesTitle')}</h3>
               <ul className="space-y-1">
-                {categories.map((c) => {
-                  const count = c.key === 'all' ? products.length : products.filter((p) => p.category === c.key).length;
-                  const active = category === c.key;
+                {(['all', ...data.categories.map((c) => c.key)] as string[]).map((cKey) => {
+                  const count = cKey === 'all' ? products.length : products.filter((p) => p.category === cKey).length;
+                  const active = category === cKey;
                   return (
-                    <li key={c.key}>
+                    <li key={cKey}>
                       <button
-                        onClick={() => selectCategory(c.key)}
+                        onClick={() => selectCategory(cKey)}
                         className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                           active ? 'bg-green-50 text-green-700' : 'text-gray-600 hover:bg-gray-50 hover:text-green-600'
                         }`}
                       >
-                        <span className={active ? 'text-green-600' : 'text-gray-400'}>{c.icon}</span>
-                        <span className="flex-1 text-left">{t(`categories.${c.key}`)}</span>
+                        <span className={active ? 'text-green-600' : 'text-gray-400'}>
+                          {cKey === 'all' ? <LuList className="w-4 h-4" /> : <Icon name={categoryIcons[cKey]} className="w-4 h-4" />}
+                        </span>
+                        <span className="flex-1 text-left">{t(`categories.${cKey}`)}</span>
                         <span className={`text-xs ${active ? 'text-green-600' : 'text-gray-400'}`}>{count}</span>
                       </button>
                     </li>

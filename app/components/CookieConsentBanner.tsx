@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/navigation';
 import {
@@ -27,6 +28,9 @@ interface ConsentPreferences {
 
 export default function CookieConsentBanner() {
   const t = useTranslations('CookieBanner');
+  const pathname = usePathname();
+  const p = (pathname || '').replace(/^\/(ro|en|ru)(?=\/|$)/, '');
+  const isAdmin = p === '/admin' || p.startsWith('/admin/');
   const [visible, setVisible] = useState(false);
   const [showCustomize, setShowCustomize] = useState(false);
   const [prefs, setPrefs] = useState({
@@ -117,7 +121,7 @@ export default function CookieConsentBanner() {
     });
   };
 
-  if (!visible) return null;
+  if (!visible || isAdmin) return null;
 
   return (
     <div

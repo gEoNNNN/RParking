@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { LuSend, LuX, LuMessageCircle } from 'react-icons/lu';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useTranslations, useLocale } from 'next-intl';
@@ -14,6 +15,9 @@ const nowTime = () => {
 export default function Chatbot() {
   const t = useTranslations('Chatbot');
   const locale = useLocale();
+  const pathname = usePathname();
+  const p = (pathname || '').replace(/^\/(ro|en|ru)(?=\/|$)/, '');
+  const isAdmin = p === '/admin' || p.startsWith('/admin/');
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState<Array<{ text: string; isBot: boolean; time: string }>>([]);
@@ -91,6 +95,8 @@ export default function Chatbot() {
       handleSend();
     }
   };
+
+  if (isAdmin) return null;
 
   return (
     <>

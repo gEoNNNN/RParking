@@ -5,6 +5,7 @@ import { Link } from '../../../i18n/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import RealImplementations from '../../components/RealImplementations';
+import { readCollection } from '../../lib/content';
 import TrademarkCertificate from '../../components/TrademarkCertificate';
 import {
   LuArrowRight, LuCheck, LuChevronRight, LuHouse,
@@ -284,7 +285,7 @@ export default async function DespreNoiPage({ params }: { params: Promise<{ loca
       </section>
 
       {/* ── Implementări reale ── */}
-      <RealImplementations />
+      <RealImplementations images={readCollection('gallery').items} />
 
       {/* ── Valorile noastre ── */}
       <section className="py-16 bg-white">

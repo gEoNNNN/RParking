@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "key": "entry",
+      "title": "Entry Point",
+      "href": "/products/entry-point",
+      "image": "/img/produs1 - Copy.png",
+      "icon": "LuLogIn"
+    },
+    {
+      "key": "exit",
+      "title": "Exit Point",
+      "href": "/products/exit-point-cardpass",
+      "image": "/img/produs2 - Copy.png",
+      "icon": "LuLogOut"
+    },
+    {
+      "key": "pay",
+      "title": "Pay Point",
+      "href": "/products/pay-point",
+      "image": "/img/paypoint.png",
+      "icon": "LuCreditCard"
+    },
+    {
+      "key": "backoffice",
+      "title": "BackOffice",
+      "href": "/products/backoffice",
+      "image": "/img/back.jpg",
+      "icon": "LuLayoutDashboard"
+    },
+    {
+      "key": "raccess-wc",
+      "title": "RAccess WC",
+      "href": "/products/raccess-wc",
+      "image": "/img/wc.png",
+      "icon": "LuShieldCheck"
+    },
+    {
+      "key": "rchange",
+      "title": "RChange",
+      "href": "/products/rchange",
+      "image": "/img/exchange.png",
+      "icon": "LuZap"
+    }
+  ]
+}
