@@ -55,8 +55,8 @@ export default function AdminDashboardPage() {
           <div className="text-sm leading-relaxed text-amber-800">
             <p className="font-bold">Folosesti parola implicita de admin.</p>
             <p className="mt-0.5">
-              Schimb-o in fisierul <code className="rounded bg-amber-100 px-1.5 py-0.5 font-mono text-xs">.env.local</code>
-              {' '}(cheia <code className="rounded bg-amber-100 px-1.5 py-0.5 font-mono text-xs">ADMIN_PASSWORD</code>) si reporneste serverul.
+              Pentru schimbare, seteaza <code className="rounded bg-amber-100 px-1.5 py-0.5 font-mono text-xs">ADMIN_PASSWORD</code>
+              {' '}pe server sau modifica hash-ul din <code className="rounded bg-amber-100 px-1.5 py-0.5 font-mono text-xs">app/lib/admin/auth.ts</code> (vezi README-ADMIN).
             </p>
           </div>
         </div>

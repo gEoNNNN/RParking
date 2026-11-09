@@ -69,7 +69,7 @@ export default function LoginForm() {
             {busy ? 'Se conecteaza…' : 'Conectare'}
           </button>
           <p className="mt-4 text-center text-[11px] leading-snug text-gray-400">
-            Parola se seteaza in fisierul <code className="font-mono">.env.local</code> (ADMIN_PASSWORD)
+            Parola este inclusa in aplicatie, nu in fisiere de configurare.
           </p>
         </form>
       </div>

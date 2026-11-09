@@ -51,10 +51,13 @@ const decodeSafe = (s: string) => {
 };
 
 const IMG_RE = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
-const isImgValue = (v: string) => v.startsWith('/img/') || v.startsWith('/uploads/') || IMG_RE.test(v);
+// A valid image reference is either a local path or an absolute http(s) link.
+const isValidImgRef = (v: string) =>
+  /^https?:\/\/[^\s]+$/i.test(v) || (/^\/[^/]/.test(v.trim()) && !v.startsWith('//'));
+const isImgValue = (v: string) => isValidImgRef(v) && (v.startsWith('http') || IMG_RE.test(v));
 
 // next/image renders <img src="/_next/image?url=%2Fimg%2Fx.png&w=640&q=75">;
-// unwrap it back to the original site path.
+// unwrap it back to the original path or absolute link.
 function unwrapRawSrc(raw: string): string {
   if (!raw) return '';
   const i = raw.indexOf('/_next/image');
@@ -62,7 +65,7 @@ function unwrapRawSrc(raw: string): string {
   const q = raw.indexOf('?', i);
   if (q === -1) return raw;
   const u = new URLSearchParams(raw.slice(q + 1)).get('url') || '';
-  return u.startsWith('/') ? u : raw;
+  return u || raw;
 }
 
 function bgImageUrl(el: HTMLElement): string | null {
@@ -71,7 +74,7 @@ function bgImageUrl(el: HTMLElement): string | null {
   const m = /url\((['"]?)(.*?)\1\)/.exec(bg);
   if (!m || !m[2]) return null;
   const url = m[2];
-  return url.startsWith('/') ? url : null;
+  return isValidImgRef(url) ? url : null;
 }
 
 // Deep-set a dotted path ("items.2.title") inside a plain JSON object/array.
@@ -362,7 +365,12 @@ export default function SiteEditLayer() {
     try {
       const isText = editor.kind === 'text';
       const m = isText ? editor.options[editor.sel] : editor.match;
-      const value = isText ? editor.value : editor.src;
+      const rawValue = isText ? editor.value : editor.src;
+      const value = isText ? rawValue : rawValue.trim();
+      if (!isText && !isValidImgRef(value)) {
+        showToast('Imagine invalida: foloseste o cale /img/... sau un link http(s).');
+        return;
+      }
       const r = await fetch('/api/admin/edit', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
@@ -560,6 +568,7 @@ export default function SiteEditLayer() {
                 <input
                   className="rp-edit-input"
                   value={editor.src}
+                  placeholder="cale locala (/img/...) sau link https://..."
                   onChange={(e) => setEditor({ ...editor, src: e.target.value })}
                   spellCheck={false}
                 />
@@ -573,6 +582,9 @@ export default function SiteEditLayer() {
                     onChange={(e) => upload(e.target.files?.[0] || null)}
                   />
                 </label>
+              </div>
+              <div className="rp-edit-hintimg">
+                Imaginea aleasa aici se aplica pe toate cele 3 limbi (RO / EN / RU).
               </div>
               <input
                 className="rp-edit-input rp-edit-search"
@@ -766,6 +778,11 @@ export default function SiteEditLayer() {
           outline-offset: 1px;
           border-color: #16a34a;
         }
+        .rp-edit-hintimg {
+          font-size: 11.5px;
+          color: #64748b;
+          margin-top: -2px;
+        }
         .rp-edit-check {
           display: flex;
           gap: 8px;
@@ -788,7 +805,11 @@ export default function SiteEditLayer() {
         .rp-edit-imgwrap {
           display: flex;
           gap: 10px;
-          align-items: stretch;
+          align-items: center;
+        }
+        .rp-edit-imgwrap .rp-edit-input {
+          flex: 1;
+          min-width: 0;
         }
         .rp-edit-imgprev {
           width: 84px;

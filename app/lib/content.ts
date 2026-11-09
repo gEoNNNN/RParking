@@ -1,7 +1,19 @@
-// Server-only content store: reads/writes the JSON files that back the site's
-// structured data (products, cards, gallery) and the next-intl message files.
-// The admin panel mutates these through /api/admin/*, then calls
-// revalidateSite() so published pages regenerate with the new content.
+// Server-only content store.
+//
+// Layout (all paths are relative to the project root):
+//   data/content/*.json      tracked SEED files (default content, shipped in git)
+//   messages/*.json          tracked SEED files (default texts, shipped in git)
+//   storage/content/*.json   LIVE content (written by the admin panel)
+//   storage/messages/*.json  LIVE texts (written by the admin panel)
+//   storage/backup/          automatic backups (last 40 per file)
+//   public/uploads/          uploaded images
+//
+// Why two layers? The host may only receive the repository (no env file, no
+// external volume). Writes go to ./storage, which is git-ignored, so a normal
+// deploy (git pull / reset --hard) keeps every change made from the panel.
+// On the very first read the live file is seeded from the tracked file, so an
+// existing host keeps its current content when this layer is introduced.
+//
 // Never import this file from a client component.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,41 +30,59 @@ import type {
 } from './content-types';
 
 const ROOT = process.cwd();
-const CONTENT_DIR = path.join(ROOT, 'data', 'content');
-const BACKUP_DIR = path.join(ROOT, 'data', 'backup');
-const MESSAGES_DIR = path.join(ROOT, 'messages');
+// Optional override for unusual hosts; by default everything lives in ./storage.
+const DATA_ROOT = process.env.RP_DATA_DIR
+  ? path.resolve(process.env.RP_DATA_DIR)
+  : path.join(ROOT, 'storage');
+
+const LIVE_CONTENT_DIR = path.join(DATA_ROOT, 'content');
+const LIVE_MESSAGES_DIR = path.join(DATA_ROOT, 'messages');
+const BACKUP_DIR = path.join(DATA_ROOT, 'backup');
+
+const SEED_CONTENT_DIR = path.join(ROOT, 'data', 'content');
+const SEED_MESSAGES_DIR = path.join(ROOT, 'messages');
 
 // ─── tiny mtime-based cache so hot fs reads stay cheap during SSR ───
-const cache = new Map<string, { mtimeMs: number; data: unknown }>();
+const cache = new Map<string, { stamp: string; data: unknown }>();
 
 function readJsonCached<T>(file: string): T {
   const st = fs.statSync(file);
+  const stamp = `${st.mtimeMs}:${st.size}`;
   const hit = cache.get(file);
-  if (hit && hit.mtimeMs === st.mtimeMs) return hit.data as T;
+  if (hit && hit.stamp === stamp) return hit.data as T;
   const data = JSON.parse(fs.readFileSync(file, 'utf8')) as T;
-  cache.set(file, { mtimeMs: st.mtimeMs, data });
+  cache.set(file, { stamp, data });
   return data;
 }
 
 function writeJsonAtomic(file: string, data: unknown) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  const tmp = `${file}.${process.pid}.tmp`;
+  const tmp = `${file}.${process.pid}.${Math.random().toString(36).slice(2, 8)}.tmp`;
   fs.writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n', 'utf8');
   fs.renameSync(tmp, file);
-  try {
-    cache.delete(file);
-  } catch {
-    /* noop */
-  }
+  cache.delete(file);
 }
 
-function backup(file: string) {
-  if (!fs.existsSync(file)) return;
+// First run: copy the tracked seed into the live folder. This also migrates a
+// host that already had content written into data/content or messages/.
+function ensureLive(liveFile: string, seedFile: string): string {
+  if (fs.existsSync(liveFile)) return liveFile;
+  if (!fs.existsSync(seedFile)) {
+    throw new Error(`Missing content file: ${path.relative(ROOT, seedFile)}`);
+  }
+  fs.mkdirSync(path.dirname(liveFile), { recursive: true });
+  fs.copyFileSync(seedFile, liveFile);
+  return liveFile;
+}
+
+function backup(file: string, fallbackSeed?: string) {
+  const source = fs.existsSync(file) ? file : fallbackSeed;
+  if (!source || !fs.existsSync(source)) return;
   fs.mkdirSync(BACKUP_DIR, { recursive: true });
   const name = path.basename(file, '.json');
   const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-  fs.copyFileSync(file, path.join(BACKUP_DIR, `${name}.${stamp}.json`));
-  // keep the latest 40 backups per collection
+  fs.copyFileSync(source, path.join(BACKUP_DIR, `${name}.${stamp}.json`));
+  // keep the latest 40 backups per file
   const siblings = fs
     .readdirSync(BACKUP_DIR)
     .filter((f) => f.startsWith(`${name}.`) && f.endsWith('.json'))
@@ -75,6 +105,41 @@ const isBool = (v: unknown): v is boolean => typeof v === 'boolean';
 
 function fail(what: string): never {
   throw new Error(`Invalid content: ${what}`);
+}
+
+// Image references may be either a local path (/img/..., /uploads/...) or an
+// absolute http(s) link. Anything else (javascript:, data:, empty) is rejected
+// so a pasted link cannot inject a script URL into the pages.
+export function isValidImageRef(value: unknown): value is string {
+  if (!isStr(value)) return false;
+  const s = value.trim();
+  if (!s || s.length > 4096) return false;
+  if (/^https?:\/\/[^\s]+$/i.test(s)) return true;
+  if (s.startsWith('/')) return !s.startsWith('//');
+  return false;
+}
+
+function imageRef(what: string, value: unknown, allowNull = false): void {
+  if (allowNull && value === null) return;
+  if (!isValidImageRef(value)) fail(`${what} (cale locala /img/... /uploads/... sau link http(s))`);
+}
+
+// Strip accidental whitespace around image references before validation/store.
+function trimImageRefs(name: CollectionName, data: Record<string, unknown>): void {
+  const items = data.items;
+  if (!Array.isArray(items)) return;
+  const trimAt = (obj: unknown, key: string) => {
+    if (!isObj(obj)) return;
+    const v = obj[key];
+    if (typeof v === 'string') obj[key] = v.trim();
+  };
+  if (name === 'gallery') {
+    for (let i = 0; i < items.length; i++) {
+      if (typeof items[i] === 'string') items[i] = (items[i] as string).trim();
+    }
+    return;
+  }
+  for (const it of items) trimAt(it, 'image');
 }
 
 function validateCollection(name: CollectionName, data: unknown): void {
@@ -101,7 +166,7 @@ function validateCollection(name: CollectionName, data: unknown): void {
       if (!Array.isArray(p.usage) || !p.usage.every(isStr)) fail(`product ${p.key}: usage`);
       if (!isNum(p.price)) fail(`product ${p.key}: price must be a number`);
       if (!isBool(p.inStock)) fail(`product ${p.key}: inStock`);
-      if (!isStr(p.image)) fail(`product ${p.key}: image`);
+      imageRef(`product ${p.key}: image`, p.image);
       if (!isBool(p.contain)) fail(`product ${p.key}: contain`);
       if (!(p.href === null || isStr(p.href))) fail(`product ${p.key}: href`);
       if (!isStr(p.icon)) fail(`product ${p.key}: icon`);
@@ -113,8 +178,8 @@ function validateCollection(name: CollectionName, data: unknown): void {
       const c = it as EcosystemData['items'][number];
       if (!isObj(c) || !isStr(c.title) || !isStr(c.descKey) || !isStr(c.link))
         fail('ecosystem-cards item shape');
-      if (!(c.image === null || isStr(c.image)) || !isBool(c.isPhoto))
-        fail('ecosystem-cards image/isPhoto');
+      imageRef('ecosystem-cards image', c.image, true);
+      if (!isBool(c.isPhoto)) fail('ecosystem-cards isPhoto');
     }
   }
 
@@ -126,18 +191,17 @@ function validateCollection(name: CollectionName, data: unknown): void {
         fail('catalog-cards item shape');
       if (keys.has(c.key)) fail(`duplicate catalog card key "${c.key}"`);
       keys.add(c.key);
-      if (!(c.image === null || isStr(c.image))) fail('catalog-cards image');
+      imageRef('catalog-cards image', c.image, true);
     }
   }
 
   if (name === 'rti-solutions') {
     for (const it of items) {
       const c = it as RtiData['items'][number];
-      if (
-        !isObj(c) || !isStr(c.title) || !isStr(c.descKey) || !isStr(c.image) || !isStr(c.href) ||
-        !isNum(c.imageWidth) || !isNum(c.imageHeight)
-      )
+      if (!isObj(c) || !isStr(c.title) || !isStr(c.descKey) || !isStr(c.href))
         fail('rti-solutions item shape');
+      imageRef('rti-solutions image', c.image);
+      if (!isNum(c.imageWidth) || !isNum(c.imageHeight)) fail('rti-solutions image size');
     }
   }
 
@@ -145,16 +209,18 @@ function validateCollection(name: CollectionName, data: unknown): void {
     const keys = new Set<string>();
     for (const it of items) {
       const c = it as SolDomainData['items'][number];
-      if (!isObj(c) || !isStr(c.key) || !isStr(c.image) || !isStr(c.icon))
-        fail('solutii-domains item shape');
+      if (!isObj(c) || !isStr(c.key) || !isStr(c.icon)) fail('solutii-domains item shape');
       if (keys.has(c.key)) fail(`duplicate domain key "${c.key}"`);
       keys.add(c.key);
+      imageRef('solutii-domains image', c.image);
     }
   }
 
   if (name === 'gallery') {
     for (const it of items) {
-      if (!isStr(it) || !it) fail('gallery entries must be non-empty strings');
+      if (typeof it !== 'string' || !isValidImageRef(it)) {
+        fail('gallery entries must be image paths or http(s) links');
+      }
     }
   }
 }
@@ -169,15 +235,21 @@ export type CollectionDataMap = {
   'gallery': GalleryData;
 };
 
+function liveContentFile(name: CollectionName): string {
+  return path.join(LIVE_CONTENT_DIR, `${name}.json`);
+}
+
 export function readCollection<K extends CollectionName>(name: K): CollectionDataMap[K] {
-  const file = path.join(CONTENT_DIR, `${name}.json`);
+  const file = ensureLive(liveContentFile(name), path.join(SEED_CONTENT_DIR, `${name}.json`));
   return readJsonCached<CollectionDataMap[K]>(file);
 }
 
 export function writeCollection(name: CollectionName, data: unknown) {
+  if (!isObj(data)) fail(`${name}: root must be an object`);
+  trimImageRefs(name, data);
   validateCollection(name, data);
-  const file = path.join(CONTENT_DIR, `${name}.json`);
-  backup(file);
+  const file = liveContentFile(name);
+  backup(file, path.join(SEED_CONTENT_DIR, `${name}.json`));
   writeJsonAtomic(file, data);
   revalidateSite();
 }
@@ -201,8 +273,30 @@ export function isValidLocale(locale: string): locale is Locale {
   return locale === 'ro' || locale === 'en' || locale === 'ru';
 }
 
+function liveMessagesFile(locale: Locale): string {
+  return path.join(LIVE_MESSAGES_DIR, `${locale}.json`);
+}
+
+// Live texts win; keys that only exist in the tracked seed (new texts added by
+// a deploy) are filled in so next-intl never reports a missing message.
+function mergeMissing(live: unknown, seed: unknown): unknown {
+  if (isObj(live) && isObj(seed)) {
+    const out: Record<string, unknown> = { ...live };
+    for (const [k, v] of Object.entries(seed)) {
+      out[k] = k in out ? mergeMissing(out[k], v) : v;
+    }
+    return out;
+  }
+  return live === undefined ? seed : live;
+}
+
 export function readMessages(locale: Locale): Record<string, unknown> {
-  return readJsonCached(path.join(MESSAGES_DIR, `${locale}.json`));
+  const live = ensureLive(liveMessagesFile(locale), path.join(SEED_MESSAGES_DIR, `${locale}.json`));
+  const data = readJsonCached<Record<string, unknown>>(live);
+  const seed = readJsonCached<Record<string, unknown>>(
+    path.join(SEED_MESSAGES_DIR, `${locale}.json`),
+  );
+  return mergeMissing(data, seed) as Record<string, unknown>;
 }
 
 function validateMessagesTree(obj: unknown, depth = 0, ctx = { size: 0 }): void {
@@ -232,8 +326,8 @@ export function writeMessages(locale: Locale, messages: unknown) {
   const ctx = { size: 0 };
   validateMessagesTree(messages, 0, ctx);
   if (ctx.size > 4_000_000) fail('messages file too large (>4MB of text)');
-  const file = path.join(MESSAGES_DIR, `${locale}.json`);
-  backup(file);
+  const file = liveMessagesFile(locale);
+  backup(file, path.join(SEED_MESSAGES_DIR, `${locale}.json`));
   writeJsonAtomic(file, messages);
   revalidateSite();
 }
@@ -281,6 +375,19 @@ export function sanitizeUploadName(originalName: string): string {
   return `${Date.now().toString(36)}-${rand}-${stem}.${ext}`;
 }
 
+// SVGs are served same-origin, so strip script-capable parts before writing.
+export function sanitizeUploadBytes(fileName: string, bytes: Buffer): Buffer {
+  if (!/\.svg$/i.test(fileName)) return bytes;
+  const text = bytes
+    .toString('utf8')
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/\son[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
+    .replace(/(href|xlink:href)\s*=\s*("[^"]*"|'[^']*')/gi, (m) =>
+      /javascript:/i.test(m) ? '' : m,
+    );
+  return Buffer.from(text, 'utf8');
+}
+
 export function saveUpload(fileName: string, bytes: Buffer) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
   const target = path.join(UPLOADS_DIR, fileName);
@@ -299,7 +406,10 @@ export function deleteUpload(uploadedPath: string) {
 
 export function revalidateSite() {
   try {
+    // The root layout covers every locale; the explicit locale paths are a
+    // second safety net for cached ISR entries.
     revalidatePath('/', 'layout');
+    for (const locale of ['ro', 'en', 'ru']) revalidatePath(`/${locale}`, 'layout');
   } catch (e) {
     console.error('[content] revalidate failed', e);
   }

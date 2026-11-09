@@ -19,6 +19,8 @@ export default function ImagePicker({
   const [assets, setAssets] = useState<Img[]>([]);
   const [tab, setTab] = useState<'uploads' | 'assets'>('uploads');
   const [query, setQuery] = useState('');
+  const [url, setUrl] = useState('');
+  const [urlError, setUrlError] = useState('');
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState('');
@@ -70,6 +72,18 @@ export default function ImagePicker({
     setUploads((u) => u.filter((i) => i.path !== path));
   }
 
+  function useUrl() {
+    const v = url.trim();
+    const ok = /^https?:\/\/[^\s]+$/i.test(v) || (/^\/[^/]/.test(v) && !v.startsWith('//'));
+    if (!ok) {
+      setUrlError('Scrie un link complet (https://...) sau o cale locala (/img/...).');
+      return;
+    }
+    setUrlError('');
+    onSelect(v);
+    setUrl('');
+  }
+
   return (
     <Modal open={open} onClose={onClose} title="Alege imagine" wide>
       <div className="mb-3 flex flex-wrap items-center gap-2">
@@ -98,6 +112,31 @@ export default function ImagePicker({
         </div>
       </div>
       {uploadError ? <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">{uploadError}</p> : null}
+
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <input
+          className={inputClass + ' min-w-0 flex-1 font-mono text-xs'}
+          placeholder="sau lipeste un link https://... (imagine de pe alt site)"
+          value={url}
+          onChange={(e) => {
+            setUrl(e.target.value);
+            setUrlError('');
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              useUrl();
+            }
+          }}
+        />
+        <Btn kind="outline" onClick={useUrl}>
+          Foloseste link
+        </Btn>
+      </div>
+      {urlError ? <p className="mb-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">{urlError}</p> : null}
+      <p className="mb-3 text-[11px] text-gray-500">
+        Imaginea aleasa se aplica pe toate cele 3 limbi (RO / EN / RU).
+      </p>
 
       {loading ? (
         <Skeleton lines={4} />

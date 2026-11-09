@@ -7,6 +7,7 @@
 import { NextResponse } from 'next/server';
 import { requireAdmin, jsonError } from '../../../lib/admin/guard';
 import {
+  isValidImageRef,
   isValidLocale,
   readCollection,
   readMessages,
@@ -32,6 +33,21 @@ const FORBIDDEN = new Set(['__proto__', 'constructor', 'prototype']);
 // image, features... vs key, icon, category, href...
 const DENIED_FIELDS = new Set(['key', 'icon', 'descKey', 'waNumber', 'category', 'type', 'href', 'link']);
 const isIndex = (seg: string) => /^(0|[1-9]\d*)$/.test(seg);
+
+const IMG_EXT_RE = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
+
+// A leaf is treated as an image when it is a valid image ref that also looks
+// like one (absolute link or a file with an image extension).
+function looksLikeImage(value: unknown): value is string {
+  return isValidImageRef(value) && (value.startsWith('http') || IMG_EXT_RE.test(value));
+}
+
+// Image-bearing fields inside collections (all other fields are plain text).
+function isImageField(name: CollectionName, path: string): boolean {
+  const segs = path.split('.').filter(Boolean);
+  if (name === 'gallery') return segs.length === 2 && segs[0] === 'items';
+  return segs[segs.length - 1] === 'image';
+}
 
 class EditError extends Error {}
 
@@ -115,8 +131,28 @@ export async function PATCH(req: Request) {
       if (typeof t.current !== 'string') {
         throw new EditError('Aici pot fi editate doar valori text.');
       }
-      setLeaf(t, value);
+      // Changing an image leaf in one language updates all three languages.
+      const imageChange = looksLikeImage(t.current) || looksLikeImage(value);
+      if (imageChange && !isValidImageRef(value)) {
+        return jsonError('Imaginea trebuie sa fie o cale locala (/img/... sau /uploads/...) sau un link http(s).');
+      }
+      setLeaf(t, imageChange ? value.trim() : value);
       writeMessages(locale as Locale, data);
+
+      if (imageChange) {
+        for (const other of ['ro', 'en', 'ru'] as Locale[]) {
+          if (other === locale) continue;
+          try {
+            const otherData = readMessages(other);
+            const ot = resolveTarget(otherData, path);
+            if (typeof ot.current !== 'string') continue;
+            setLeaf(ot, value.trim());
+            writeMessages(other, otherData);
+          } catch {
+            /* the path does not exist in that language; keep going */
+          }
+        }
+      }
     } else if (file.startsWith('content:')) {
       const name = file.slice('content:'.length) as CollectionName;
       if (!COLLECTIONS.has(name)) return jsonError('Colectie necunoscuta.');
@@ -126,12 +162,15 @@ export async function PATCH(req: Request) {
           `Campul "${lastField}" este un identificator intern si nu poate fi editat aici; foloseste panoul /admin.`,
         );
       }
+      if (isImageField(name, path) && !isValidImageRef(value)) {
+        return jsonError('Imaginea trebuie sa fie o cale locala (/img/... sau /uploads/...) sau un link http(s).');
+      }
       const data = readCollection(name);
       const t = resolveTarget(data, path);
       if (typeof t.current !== 'string' && t.current !== null) {
         throw new EditError('Aici pot fi editate doar texte si imagini.');
       }
-      setLeaf(t, value);
+      setLeaf(t, isImageField(name, path) ? value.trim() : value);
       writeCollection(name, data);
     } else {
       return jsonError('Fisier necunoscut.');

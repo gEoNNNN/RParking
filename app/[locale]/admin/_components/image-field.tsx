@@ -26,13 +26,16 @@ export default function ImageField({
         <input
           className={inputClass + ' flex-1 font-mono text-xs'}
           value={value}
-          placeholder="/img/… sau /uploads/…"
+          placeholder="/img/… , /uploads/… sau link https://…"
           onChange={(e) => onChange(e.target.value)}
         />
         <Btn kind="outline" onClick={() => setOpen(true)}>
           Alege
         </Btn>
       </div>
+      <p className="mt-1 text-[11px] text-gray-500">
+        Poti incarca un fisier, alege o poza existenta sau lipi un link. Imaginea se aplica pe toate cele 3 limbi.
+      </p>
       <ImagePicker
         open={open}
         onClose={() => setOpen(false)}

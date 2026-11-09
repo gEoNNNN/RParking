@@ -34,7 +34,10 @@ yarn-error.log*
 .env*
 !.env.example
 
-# admin panel runtime artifacts (keep data/content/ in git – it is the live content source)
+# admin panel live data: written at runtime, must survive git pull / redeploy
+/storage/
+
+# legacy backup folder (from before the storage layer)
 /data/backup/
 /public/uploads/*
 !/public/uploads/.gitkeep

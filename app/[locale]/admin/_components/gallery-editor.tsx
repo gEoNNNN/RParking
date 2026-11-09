@@ -52,7 +52,8 @@ export default function GalleryEditor({
         <div>
           <h1 className="text-2xl font-black text-gray-900">Galerie implementari – homepage</h1>
           <p className="mt-1 text-sm text-gray-500">
-            Caruselul „Implementari reale”. Adauga poze din sectiunea Imagini sau incarca-le direct de aici.
+            Caruselul „Implementari reale”. Adauga poze din sectiunea Imagini, incarca-le direct de aici sau lipi un link.
+            Pozele sunt comune pentru toate cele 3 limbi.
           </p>
         </div>
         <div className="flex items-center gap-3">

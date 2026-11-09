@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { requireAdmin, jsonError } from '../../../lib/admin/guard';
-import { deleteUpload, listImages, sanitizeUploadName, saveUpload } from '../../../lib/content';
+import { deleteUpload, listImages, sanitizeUploadBytes, sanitizeUploadName, saveUpload } from '../../../lib/content';
 
 const MAX_BYTES = 10 * 1024 * 1024;
 const ALLOWED_EXT = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     }
     const bytes = Buffer.from(await file.arrayBuffer());
     const name = sanitizeUploadName(file.name);
-    const webPath = saveUpload(name, bytes);
+    const webPath = saveUpload(name, sanitizeUploadBytes(name, bytes));
     saved.push({ path: webPath, name, size: file.size });
   }
 

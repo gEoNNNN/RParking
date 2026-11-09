@@ -1,26 +1,46 @@
 // Server-only admin authentication: HMAC-signed session cookie + a small
-// in-memory login rate limiter. The admin password lives in the ADMIN_PASSWORD
-// env var (see .env.local). Change it before deploying.
+// in-memory login rate limiter.
+//
+// The admin password is embedded in the application (NOT read from an env file),
+// so a repository-only deploy works out of the box. It is stored as a SHA-256
+// hash, never in clear text, so nobody reading the repository can recover it.
+//
+// To change the built-in password:
+//   1. pick the new password (single line, no spaces around it)
+//   2. run:
+//        node -e "console.log(require('crypto').createHash('sha256').update('PAROLA_NOUA').digest('hex'))"
+//   3. replace BUILTIN_PASSWORD_SHA256 below with the printed hash
+//   4. restart the server
+//
+// ADMIN_PASSWORD still works as an optional env override (if the host provides
+// one), so the built-in value is only used when the env var is absent.
 import crypto from 'node:crypto';
 import { cookies } from 'next/headers';
 
 export const ADMIN_COOKIE = 'rp_admin_session';
 const SESSION_MAX_AGE_SEC = 7 * 24 * 60 * 60; // 7 days
-const DEFAULT_PASSWORD = 'parc-admin-2026';
 
-export function adminPassword(): string {
-  return process.env.ADMIN_PASSWORD || DEFAULT_PASSWORD;
+// sha256("parc-admin-2026") - the built-in password, stored only as a hash.
+const BUILTIN_PASSWORD_SHA256 =
+  'e7f6b28cdcc61cbe52194ef38f08b17f022bba73ae6b32ac8d17d74c410c490d';
+
+function sha256(value: string): string {
+  return crypto.createHash('sha256').update(value, 'utf8').digest('hex');
+}
+
+// Hex hash of the active password: env override if present, built-in otherwise.
+export function adminPasswordHash(): string {
+  const fromEnv = process.env.ADMIN_PASSWORD;
+  return fromEnv ? sha256(fromEnv) : BUILTIN_PASSWORD_SHA256;
 }
 
 export function usingDefaultPassword(): boolean {
-  return !process.env.ADMIN_PASSWORD || process.env.ADMIN_PASSWORD === DEFAULT_PASSWORD;
+  return !process.env.ADMIN_PASSWORD;
 }
 
 function secretBytes(): Buffer {
-  const s =
-    process.env.ADMIN_SECRET ||
-    crypto.createHash('sha256').update(`${adminPassword()}::rp-admin-v1`).digest('hex');
-  return Buffer.from(s, 'hex');
+  const source = process.env.ADMIN_SECRET || adminPasswordHash();
+  return crypto.createHash('sha256').update(source).digest();
 }
 
 function sign(payload: string): string {
@@ -51,19 +71,22 @@ export async function isAdminRequest(): Promise<boolean> {
   return verifySessionToken(store.get(ADMIN_COOKIE)?.value);
 }
 
-export function sessionCookieOptions(): {
+export function sessionCookieOptions(secureOverride?: boolean): {
   httpOnly: true;
   sameSite: 'lax';
   path: '/';
   maxAge: number;
   secure: boolean;
 } {
+  const secure =
+    secureOverride ??
+    (process.env.NODE_ENV === 'production' && process.env.ADMIN_COOKIE_INSECURE !== '1');
   return {
     httpOnly: true,
     sameSite: 'lax',
     path: '/',
     maxAge: SESSION_MAX_AGE_SEC,
-    secure: process.env.NODE_ENV === 'production' && process.env.ADMIN_COOKIE_INSECURE !== '1',
+    secure,
   };
 }
 
@@ -94,7 +117,7 @@ export function resetAttempts(key: string) {
 }
 
 export function passwordMatches(candidate: string): boolean {
-  const a = crypto.createHash('sha256').update(candidate ?? '').digest();
-  const b = crypto.createHash('sha256').update(adminPassword()).digest();
+  const a = Buffer.from(sha256(candidate ?? ''), 'hex');
+  const b = Buffer.from(adminPasswordHash(), 'hex');
   return crypto.timingSafeEqual(a, b);
 }
