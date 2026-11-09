@@ -47,6 +47,29 @@ La fiecare salvare, serverul:
 3. scrie fișierul live;
 4. apelează `revalidatePath` → paginile publice se regenerează, modificarea apare **imediat**, fără rebuild sau repornire.
 
+## Instalare pe server (clone și gata)
+
+Nu este nevoie de `.env`, de foldere create manual sau de editarea vreunei căi. Pe un VPS cu Node.js 20+:
+
+```bash
+git clone https://github.com/gEoNNNN/RParking.git rparking
+cd rparking
+npm ci
+npm run build
+pm2 start ecosystem.config.js
+pm2 save
+```
+
+Alternativ, fără pm2:
+
+```bash
+npm run start
+```
+
+La prima cerere, aplicația creează singură `storage/` (conținutul live) și folosește `public/uploads/` pentru poze. Nu rula `git clean -fdx`.
+
+Dacă vrei alt port: `PORT=8080 pm2 start ecosystem.config.js`.
+
 ## Paginile panoului
 
 - **Panou** – sumar + avertisment parolă implicită + unde se salvează conținutul.

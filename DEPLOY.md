@@ -20,15 +20,12 @@ sudo apt-get install -y certbot python3-certbot-nginx
 ## 2. Codul sursă pe VM
 
 ```bash
-# Creează folderul aplicației
 sudo mkdir -p /var/www/rparking
 sudo chown $USER:$USER /var/www/rparking
-
-# Copiază codul (de pe mașina locală via scp sau git clone)
-scp -r ./RParking/* user@IP_VM:/var/www/rparking/
-# SAU dacă ai git:
-# git clone https://github.com/...  /var/www/rparking
+git clone https://github.com/gEoNNNN/RParking.git /var/www/rparking
 ```
+
+Nu este nevoie de `.env`: parola, secretele și căile sunt incluse în proiect. Folderele `storage/` și `public/uploads/` se creează automat la prima rulare.
 
 ## 3. Build pe VM
 
@@ -46,6 +43,8 @@ pm2 start ecosystem.config.js
 pm2 save
 pm2 startup   # urmează instrucțiunile afișate
 ```
+
+`ecosystem.config.js` folosește calea relativă și portul 3000, deci funcționează indiferent de folderul în care ai clonat proiectul.
 
 ## 5. Nginx
 
@@ -70,3 +69,15 @@ pm2 logs rparking   # logs live
 pm2 restart rparking  # restart
 pm2 stop rparking   # oprire
 ```
+
+## Actualizare (fără pierderea conținutului)
+
+```bash
+cd /var/www/rparking
+git pull
+npm install
+npm run build
+pm2 restart rparking
+```
+
+Conținutul editat din panou stă în `storage/`, iar pozele în `public/uploads/`. Aceste două foldere nu sunt în git și trebuie păstrate. Nu rula `git clean -fdx`. Dacă vrei să le muti, copiază-le înainte de actualizare și pune-le la loc după.
