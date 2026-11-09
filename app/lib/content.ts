@@ -58,8 +58,20 @@ function readJsonCached<T>(file: string): T {
 function writeJsonAtomic(file: string, data: unknown) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   const tmp = `${file}.${process.pid}.${Math.random().toString(36).slice(2, 8)}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n', 'utf8');
+  const payload = JSON.stringify(data, null, 2) + '\n';
+  // Write and fsync before the rename, so a crash cannot leave a half file.
+  const fd = fs.openSync(tmp, 'w');
+  try {
+    fs.writeFileSync(fd, payload, 'utf8');
+    fs.fsyncSync(fd);
+  } finally {
+    fs.closeSync(fd);
+  }
   fs.renameSync(tmp, file);
+  // Read back: on read-only or overlay filesystems the write can silently fail.
+  if (fs.readFileSync(file, 'utf8') !== payload) {
+    throw new Error('Salvarea nu a putut fi confirmata pe disc.');
+  }
   cache.delete(file);
 }
 

@@ -31,9 +31,9 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-// ISR: pages are served from cache and regenerate at most every 120s; saving
-// in the admin panel calls revalidatePath('/', 'layout') to apply immediately.
-export const revalidate = 120;
+// Content is edited from the admin panel, so every page is rendered on demand
+// and always reads the latest files from storage. No ISR cache to go stale.
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
